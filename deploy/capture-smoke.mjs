@@ -56,6 +56,7 @@ async function perimeter(path, expected) {
   if (r.status === 303) assert(r.headers.get('location')?.startsWith('/_device/login'));
 
 }
+let activePage;
 try {
   for (const path of ['/', '/start', '/api/preview-start', '/api/v1/me', '/f/probe', '/assets/probe.js']) {
     await perimeter(path, [303, 401]);
@@ -78,6 +79,7 @@ try {
   await publicContext.close();
   pass('real public browser reaches shared password login from onboarding at three mobile widths');
   const context = await innerContext(), page = await context.newPage();
+  activePage = page;
   await page.goto('/signin');
   await page.getByLabel('Email or username', { exact: true }).fill('owner@kept.test');
   await page.getByLabel('Password', { exact: true }).fill(fixture.owner);
@@ -104,8 +106,10 @@ try {
   await page.goto(`/capture?place=${original.placeId}`);
   const field = page.getByRole('textbox', { name: 'Name', exact: true });
   await field.waitFor();
+  // The name field mounts before the offline snapshot has resolved the target room.
+  await page.getByRole('button', {name:'Add tags',exact:true}).waitFor();
   assert.equal(await field.getAttribute('aria-required') === 'true' || await field.getAttribute('required') !== null, true);
-  const gallery = page.locator('input[type=file][multiple]').first();
+  const gallery = page.locator('input[type=file][multiple]').last();
   const photo = { name: 'synthetic.png', mimeType: 'image/png', buffer: Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRz8AAAAASUVORK5CYII=', 'base64') };
   await gallery.setInputFiles(photo);
   await page.getByText('Enter a name before saving.', { exact: true }).waitFor();
@@ -154,6 +158,7 @@ try {
 } catch(error) {
   report.passed=false; report.errorType=error.name;
   await writeFile(`${dir}/capture-error.log`, error.stack || String(error), {mode:0o600});
+  if (activePage) { await activePage.screenshot({path:`${dir}/capture-failure.png`}); await writeFile(`${dir}/capture-page.txt`, await activePage.locator('body').innerText(), {mode:0o600}); }
   console.error('Capture check failed; inspect the private report and current assertion.');
   process.exitCode=1;
 } finally {

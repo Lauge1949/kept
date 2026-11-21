@@ -47,7 +47,7 @@ export const TAPE_CUT =
 const K_MARK = 'translate(21.4 48) scale(0.042 -0.042)';
 
 /** The lockup's width in mark units (the mark is 64): KEPT at the mark's K size and baseline. */
-export const LOCKUP_W = 320;
+export const LOCKUP_W = 360;
 /** KEPT: the mark's K scale (0.042) and baseline (48), 0.12 em tracking, from x=74. */
 const WORDMARK =
   '<text x="76" y="46" font-family="IBM Plex Mono, monospace" font-size="42" font-weight="600" letter-spacing="1">TINGFINDER</text>';

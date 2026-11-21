@@ -53,7 +53,16 @@ try {
   assert.equal(await page.locator('html').getAttribute('lang'), 'da');
   assert.equal(await page.getByRole('combobox').inputValue(), 'Dansk');
   await page.getByRole('img', { name: 'Tingfinder', exact: true }).waitFor();
-  const manifest = await page.evaluate(async () => (await fetch('/manifest.webmanifest')).json());
+  await page.evaluate(() => document.fonts.ready);
+  assert(await page.getByRole('img', { name: 'Tingfinder', exact: true }).evaluate((svg) => {
+    const text = svg.querySelector('text').getBBox();
+    return text.x + text.width <= svg.viewBox.baseVal.width;
+  }), 'Full wordmark fits the logo viewport');
+  const manifest = await page.evaluate(async () => {
+    const response = await fetch('/manifest.webmanifest');
+    if (!response.ok) throw new Error('PWA manifest is not readable');
+    return response.json();
+  });
   assert.equal(manifest.name, 'Tingfinder');
   assert.equal(manifest.short_name, 'Tingfinder');
   pass('Danish browser starts in Danish; document, logo and install name are Tingfinder');

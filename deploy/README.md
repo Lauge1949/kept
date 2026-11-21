@@ -110,3 +110,28 @@ It previews the unconsumed invitation form without submitting it. Physical iPhon
 Android installation, WebKit and full public authenticated flows remain to test
 on the owner's devices. Browser service workers are blocked in this inner check;
 the original baseline separately checked the manifest and private cache behavior.
+
+### Required capture details and web-only builds
+
+`./deploy/build-capture-web.sh kept-lauge:capture-20261121` builds the pinned
+1.14.7 source (`f74f2f3`) with the listed capture files and the guarded local-queue removal method and their message catalogues from this fork.
+It replaces only the web bundle in the exact existing runtime image; no server
+upgrade or database migration. The client protocol version stays 1.14.7.
+The script verifies pnpm11.23.0 integrity, installs the existing frozen lockfile
+with all install hooks disabled in Docker, then tests/typechecks/builds offline.
+Build containers have no runtime credentials, data volumes or host sockets.
+No package installation on the host. The original server/API capture rules are
+unchanged; required name and concrete room/container are enforced by this UI
+for new Thing/Label captures. Existing things can receive extra photos without
+renaming. Receipt, meter and AI room modes retain their existing rules.
+Single-item Delete in the session summary cancels unsent creation/dependent
+operations or moves the synced thing to trash. An in-flight sync may require a
+retry; failure keeps the capture visible. Removing an item also removes its
+extra photos from this session; extra-photo tiles are not independent items.
+
+The final image source URL must name the committed fork revision. Commit the
+reviewed source before the final build. `deploy/capture-smoke.mjs` checks the
+HTTPS perimeter separately and uses only the existing synthetic account for the
+inner capture/create/delete flow; it never consumes an invitation. Its report
+and screenshots stay in `KEPT_SMOKE_STATE`. Synced deletion waits for dependent
+photo uploads to finish; no pending photos are discarded after a failed delete.

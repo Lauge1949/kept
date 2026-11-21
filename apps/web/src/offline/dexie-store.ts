@@ -345,12 +345,21 @@ export class DexieStore implements SyncStore {
     return rows.sort((a, b) => (a.seq ?? 0) - (b.seq ?? 0)).map(toEntry);
   }
 
-  async unqueue(idempotencyKeys: string[]): Promise<string[]> {
+  async unqueue(idempotencyKeys: string[], requiredUnsentKey?: string): Promise<string[]> {
     const db = this.db;
     // One transaction: an op the engine has already marked `uploading` or `sent` stays (the
     // engine re-reads what it marked before sending, so nothing taken back here is sent).
     return db.transaction('rw', db.queue, db.blobs, async () => {
       const rows = await db.queue.where('idempotencyKey').anyOf(idempotencyKeys).toArray();
+      if (
+        requiredUnsentKey &&
+        !rows.some(
+          (e) =>
+            e.idempotencyKey === requiredUnsentKey &&
+            (e.state === 'pending' || e.state === 'blocked'),
+        )
+      )
+        return [];
       const gone = rows
         .filter((e) => e.state === 'pending' || e.state === 'blocked')
         .sort((a, b) => (a.seq ?? 0) - (b.seq ?? 0));

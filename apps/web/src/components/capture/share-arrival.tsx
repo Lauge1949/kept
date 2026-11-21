@@ -8,9 +8,11 @@
  * - `?share=failed` / `?share=empty`: the worker couldn't read it, or nothing in it was an image
  *   or a PDF.
  */
-import { Trans } from '@lingui/react/macro';
-import { useEffect, useState } from 'react';
+import { Trans, useLingui } from '@lingui/react/macro';
+import { useEffect, useRef, useState } from 'react';
 import { Notice } from '@/components/page';
+import { Button } from '@/components/ui/button';
+import { toast } from '@/components/ui/toast';
 import { offlineSupported } from '@/offline/open';
 import { useOffline } from '@/offline/provider';
 import type { OfflineStore, SharedInto } from '@/offline/store';
@@ -38,10 +40,14 @@ export function ShareArrival({
   onDone: () => void;
   onKeep?: (share: SharedInto, mode: SharedMode) => Promise<void>;
 }) {
+  const { t } = useLingui();
   const [state, setState] = useState<
     { kind: 'loading' } | { kind: 'ready'; share: SharedInto } | { kind: 'gone' } | null
   >(sharedId ? { kind: 'loading' } : null);
   const [open, setOpen] = useState(true);
+  const [keeping, setKeeping] = useState(false);
+  const inFlight = useRef(false);
+  const kept = useRef(false);
   // Wait for the person's own store: a share kept in memory would be lost on reload.
   const loaded = useOffline()?.store;
   const store = storeProp ?? loaded ?? (offlineSupported() ? undefined : pageStore());
@@ -83,24 +89,51 @@ export function ShareArrival({
   const { share } = state;
   if (!store) return null;
   return (
-    <SharedSheet
-      share={share}
-      isOpen={open}
-      onClose={() => setOpen(false)}
-      onDiscard={() => {
-        void store.dropShared(share.id).then(onDone);
-        setOpen(false);
-      }}
-      onKeep={
-        onKeep
-          ? (mode) => {
-              void onKeep(share, mode)
-                .then(() => store.dropShared(share.id))
-                .then(onDone);
-              setOpen(false);
-            }
-          : undefined
-      }
-    />
+    <>
+      {!open ? (
+        <Button onPress={() => setOpen(true)}>
+          <Trans>Shared into Kept</Trans>
+        </Button>
+      ) : null}
+      <SharedSheet
+        share={share}
+        keeping={keeping}
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        onDiscard={() => {
+          void store.dropShared(share.id).then(onDone);
+          setOpen(false);
+        }}
+        onKeep={
+          onKeep
+            ? (mode, name) => {
+                if (inFlight.current) return;
+                inFlight.current = true;
+                setKeeping(true);
+                void (async () => {
+                  try {
+                    if (!kept.current) {
+                      await onKeep({ ...share, title: mode === 'thing' ? name : '' }, mode);
+                      kept.current = true;
+                    }
+                    await store.dropShared(share.id);
+                    setOpen(false);
+                    onDone();
+                  } catch {
+                    setOpen(false);
+                    toast({
+                      title: t`Couldn't finish keeping this share. Check the name, room and available storage, then try again.`,
+                      tone: 'danger',
+                    });
+                  } finally {
+                    inFlight.current = false;
+                    setKeeping(false);
+                  }
+                })();
+              }
+            : undefined
+        }
+      />
+    </>
   );
 }

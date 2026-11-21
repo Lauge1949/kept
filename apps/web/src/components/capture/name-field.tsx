@@ -19,7 +19,7 @@ export function NameField({
   onChange,
   onSubmit,
   kind,
-  aiOn,
+  aiOn: _aiOn,
   error,
 }: {
   value: string;
@@ -31,7 +31,7 @@ export function NameField({
   error: string | null;
 }) {
   const { t, i18n } = useLingui();
-  const label = kind === 'note' ? t`Note (optional)` : aiOn ? t`Name (optional)` : t`Name`;
+  const label = kind === 'note' ? t`Note (optional)` : t`Name`;
   const dictation = useDictation({ locale: i18n.locale, onText: onChange });
   useEffect(() => {
     if (dictation.deniedNow)
@@ -46,7 +46,7 @@ export function NameField({
       aria-label={label}
       value={value}
       onChange={onChange}
-      isRequired={kind === 'name' && !aiOn}
+      isRequired={kind === 'name'}
       isInvalid={error !== null}
       maxLength={kind === 'note' ? 500 : 200}
       className="mx-3 mt-2.5 grid gap-1"
@@ -61,7 +61,7 @@ export function NameField({
               onSubmit();
             }
           }}
-          className="min-h-11 min-w-0 flex-1 bg-transparent text-[#F2EFE9] text-[15px] outline-none placeholder:text-[#9A948A]"
+          className="min-h-11 min-w-0 flex-1 bg-transparent text-[#F2EFE9] text-[16px] outline-none placeholder:text-[#9A948A]"
         />
         {dictation.available ? (
           <Button

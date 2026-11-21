@@ -170,14 +170,20 @@ export const modeForFile = (type: string, chosen: CaptureMode): CaptureMode =>
 export async function enqueueFiles(
   store: OfflineStore,
   files: readonly { blob: Blob; type: string }[],
-  ctx: { target: Target; batchId: string; mode: CaptureMode; decode?: Decode },
+  ctx: { target: Target; batchId: string; mode: CaptureMode; decode?: Decode; name?: string },
 ): Promise<Queued[]> {
   const out: Queued[] = [];
   for (const f of files) {
     const mode = modeForFile(f.type, ctx.mode);
     const image = await fromFile(f.blob, mode, ctx.decode);
     out.push(
-      await enqueueCapture(store, { target: ctx.target, batchId: ctx.batchId, mode, image }),
+      await enqueueCapture(store, {
+        target: ctx.target,
+        batchId: ctx.batchId,
+        mode,
+        image,
+        ...(ctx.name ? { name: ctx.name } : {}),
+      }),
     );
   }
   return out;
@@ -219,4 +225,46 @@ export async function undoBatch(
   const rest = keys.length - removed.length;
   if (rest > 0) await serverUndo(batchId);
   return { unqueued: removed.length, sentToServer: rest };
+}
+
+/** Delete one capture without discarding queued photos when sync is still in flight. */
+export async function removeCapturedThing(
+  store: OfflineStore,
+  id: string,
+  key: string,
+  relatedKeys: readonly string[],
+  trash: (id: string) => Promise<unknown>,
+): Promise<Set<string>> {
+  const pending = await store.pending();
+  const root = pending.find((entry) => entry.idempotencyKey === key);
+  if (root && root.state !== 'pending' && root.state !== 'blocked') {
+    throw new Error('Wait for capture sync');
+  }
+  const keys = new Set([key, ...relatedKeys]);
+  let changed = true;
+  while (changed) {
+    changed = false;
+    for (const entry of pending) {
+      if (!keys.has(entry.idempotencyKey) && entry.dependsOn?.some((k) => keys.has(k))) {
+        keys.add(entry.idempotencyKey);
+        changed = true;
+      }
+    }
+  }
+  if (root) {
+    // A sync may have claimed it since pending() was read. In that case remove nothing else.
+    const removed = await store.unqueue([...keys], key);
+    if (!removed.includes(key)) throw new Error('Capture sync started');
+    return new Set(removed);
+  } else {
+    // Preserve dependent photos until the server confirms the trash operation.
+    if (
+      pending.some(
+        (e) => keys.has(e.idempotencyKey),
+      )
+    )
+      throw new Error('Wait for photo sync');
+    await trash(id);
+  }
+  return keys;
 }

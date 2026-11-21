@@ -14,6 +14,8 @@ export type SummaryShot = {
   key: string;
   thumb: string | null;
   waiting: boolean;
+  name?: string | null;
+  removable?: boolean;
 };
 
 export function CaptureSummary({
@@ -27,6 +29,8 @@ export function CaptureSummary({
   onDone,
   onUndo,
   undoing,
+  onRemove,
+  removing,
 }: {
   shots: readonly SummaryShot[];
   /** "Garage › Shelf A", or null when the batch went to several places. */
@@ -39,6 +43,8 @@ export function CaptureSummary({
   onDone: () => void;
   onUndo: (() => void) | null;
   undoing: boolean;
+  onRemove?: (key: string) => void;
+  removing?: string | null;
 }) {
   const { t } = useLingui();
   const n = shots.length;
@@ -91,7 +97,10 @@ export function CaptureSummary({
             </span>
           </div>
         ) : null}
-        <ul aria-label={t`This batch`} className="m-0 grid list-none grid-cols-6 gap-1.5 p-0">
+        <ul
+          aria-label={t`This batch`}
+          className="m-0 grid list-none grid-cols-3 gap-2 sm:grid-cols-4 p-0"
+        >
           {shots.map((s) => (
             <li
               key={s.key}
@@ -102,6 +111,17 @@ export function CaptureSummary({
               ) : (
                 <DocumentIcon className="size-6" />
               )}
+              {onRemove && s.removable ? (
+                <Button
+                  variant="secondary"
+                  className="absolute end-0 top-0 min-h-11 min-w-11 bg-surface px-2 text-small"
+                  aria-label={t`Delete capture: ${s.name ?? t`Unnamed`}`}
+                  isDisabled={undoing || removing != null}
+                  onPress={() => onRemove(s.key)}
+                >
+                  <Trans>Delete</Trans>
+                </Button>
+              ) : null}
               <span
                 role="img"
                 aria-label={s.waiting ? t`Waiting · ID pending` : t`Synced`}
@@ -135,10 +155,15 @@ export function CaptureSummary({
         ) : null}
       </div>
       <footer className="flex gap-2 border-t border-line bg-surface p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
-        <Button variant="secondary" className="flex-1" onPress={onKeepCapturing}>
+        <Button
+          variant="secondary"
+          className="flex-1"
+          onPress={onKeepCapturing}
+          isDisabled={undoing}
+        >
           <Trans>Keep capturing</Trans>
         </Button>
-        <Button className="flex-1" onPress={onDone}>
+        <Button className="flex-1" onPress={onDone} isDisabled={undoing}>
           <Trans>Done</Trans>
         </Button>
       </footer>

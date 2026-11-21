@@ -163,12 +163,12 @@ describe('the capture screen', () => {
   });
 
   it('with AI off, Name is the primary input and a capture with no photo needs one', async () => {
-    const { user, store } = await renderCapture();
+    const { user, store } = await renderCapture({ placeId: KITCHEN });
     const name = await screen.findByRole('textbox', { name: 'Name' });
     expect(name).toBeRequired();
     await user.click(name);
     await user.keyboard('{Enter}');
-    expect(await screen.findByText('Type a name, or take a photo.')).toBeInTheDocument();
+    expect(await screen.findByText('Enter a name before saving.')).toBeInTheDocument();
     expect(await store.pending()).toHaveLength(0);
     await user.type(name, 'Step ladder{Enter}');
     await waitFor(async () => expect(await store.pending()).toHaveLength(1));
@@ -176,7 +176,7 @@ describe('the capture screen', () => {
     expect(entry?.payload).toMatchObject({ name: 'Step ladder', files: [], mode: 'thing' });
   });
 
-  it('with AI on, the name is optional', async () => {
+  it('with AI on, the name is still required', async () => {
     const store = await world((p) => ({
       ...p,
       locations: p.locations.map((l) =>
@@ -184,13 +184,15 @@ describe('the capture screen', () => {
       ),
     }));
     await renderCapture({ store });
-    expect(await screen.findByRole('textbox', { name: 'Name (optional)' })).not.toBeRequired();
+    expect(await screen.findByRole('textbox', { name: 'Name' })).toBeRequired();
   });
 
   it('writes one queue entry per shutter press, into the place on the chip', async () => {
-    const { user, store } = await renderCapture();
-    await screen.findByRole('button', { name: /Capturing into Home › Unplaced/ });
+    const { user, store } = await renderCapture({ placeId: KITCHEN });
+    await screen.findByRole('button', { name: /Capturing into Cabin › Kitchen/ });
+    await user.type(screen.getByRole('textbox', { name: 'Name' }), 'Test item');
     await user.click(await shutter());
+    await user.type(screen.getByRole('textbox', { name: 'Name' }), 'Test item');
     await user.click(await shutter());
     await waitFor(async () => expect(await store.pending()).toHaveLength(2));
     const entries = await store.pending();
@@ -207,15 +209,18 @@ describe('the capture screen', () => {
 
   it('during the guided tour, records the batch once so Discard can undo it; outside it, nothing', async () => {
     tourLedger.clear();
-    const { user, store } = await renderCapture();
-    await screen.findByRole('button', { name: /Capturing into Home › Unplaced/ });
+    const { user, store } = await renderCapture({ placeId: KITCHEN });
+    await screen.findByRole('button', { name: /Capturing into Cabin › Kitchen/ });
+    await user.type(screen.getByRole('textbox', { name: 'Name' }), 'Test item');
     await user.click(await shutter());
     await waitFor(async () => expect(await store.pending()).toHaveLength(1));
     expect(tourLedger.list()).toEqual([]);
 
     hintSlot.take('tour');
     try {
+      await user.type(screen.getByRole('textbox', { name: 'Name' }), 'Test item');
       await user.click(await shutter());
+      await user.type(screen.getByRole('textbox', { name: 'Name' }), 'Test item');
       await user.click(await shutter());
       await waitFor(async () => expect(await store.pending()).toHaveLength(3));
       const [first] = await store.pending();
@@ -228,13 +233,14 @@ describe('the capture screen', () => {
   });
 
   it('"+ photo to this thing" attaches the next shot to the draft just taken', async () => {
-    const { user, store } = await renderCapture();
+    const { user, store } = await renderCapture({ placeId: KITCHEN });
     const plus = await screen.findByRole('button', { name: /\+ photo to this thing/ });
     expect(plus).toBeDisabled();
+    await user.type(screen.getByRole('textbox', { name: 'Name' }), 'Test item');
     await user.click(await shutter());
     await waitFor(() => expect(plus).toBeEnabled());
     await user.click(plus);
-    expect(await shutter()).toHaveAccessibleName('Take photo: add to this thing');
+    expect(await shutter()).toHaveAccessibleName('Take photo: add to Test item');
     await user.click(await shutter());
     await waitFor(async () => expect(await store.pending()).toHaveLength(2));
     const [first, second] = await store.pending();
@@ -247,7 +253,7 @@ describe('the capture screen', () => {
     // Before, Gallery always made THING drafts, so a saved receipt picked in Receipt mode (the
     // iPhone's way in, with no share target) arrived as a Thing draft.
     const decode = vi.fn().mockRejectedValue(new Error('no canvas in jsdom'));
-    const { user, store } = await renderCapture({ decode });
+    const { user, store } = await renderCapture({ decode, placeId: KITCHEN });
     const strip = await screen.findByRole('radiogroup', { name: 'Capture mode' });
     const [thingMode, receiptMode] = within(strip).getAllByRole('radio');
     const gallery = () => {
@@ -268,7 +274,11 @@ describe('the capture screen', () => {
     });
 
     await user.click(thingMode as HTMLElement);
-    await user.upload(gallery(), [photo('a.jpg'), photo('b.jpg')]);
+    await user.type(screen.getByRole('textbox', { name: 'Name' }), 'First item');
+    await user.upload(gallery(), [photo('a.jpg')]);
+    await waitFor(async () => expect(await store.pending()).toHaveLength(2));
+    await user.type(screen.getByRole('textbox', { name: 'Name' }), 'Second item');
+    await user.upload(gallery(), [photo('b.jpg')]);
     await waitFor(async () => expect(await store.pending()).toHaveLength(3));
     const modes = (await store.pending()).map((e) => (e.payload as { mode: string }).mode);
     expect(modes).toEqual(['receipt', 'thing', 'thing']);
@@ -337,14 +347,15 @@ describe('the capture screen', () => {
   });
 
   it('Done with nothing captured goes back; with captures it shows the summary', async () => {
-    const { user, onExit } = await renderCapture();
+    const { user, onExit } = await renderCapture({ placeId: KITCHEN });
     await user.click(await screen.findByRole('button', { name: 'Done' }));
-    expect(onExit).toHaveBeenCalledTimes(1);
+    await waitFor(() => expect(onExit).toHaveBeenCalledTimes(1));
+    await user.type(screen.getByRole('textbox', { name: 'Name' }), 'Test item');
     await user.click(await shutter());
     await screen.findByText('1 captured');
     await user.click(screen.getByRole('button', { name: 'Done' }));
     expect(await screen.findByRole('heading', { name: 'Capture done' })).toBeInTheDocument();
-    expect(screen.getByText('1 captured into Home › Unplaced')).toBeInTheDocument();
+    expect(screen.getByText('1 captured into Cabin › Kitchen')).toBeInTheDocument();
     expect(screen.getByText('1 waiting to sync')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Undo this batch' })).toBeInTheDocument();
   });
@@ -352,13 +363,14 @@ describe('the capture screen', () => {
   it('Done on the summary offers Undo for 10 s; captures still queued leave the phone', async () => {
     const store = await world();
     const serverUndo = vi.fn(async () => ({ trashed: [] }));
-    const { user, onExit } = await renderCapture({ store, serverUndo });
+    const { user, onExit } = await renderCapture({ store, serverUndo, placeId: KITCHEN });
+    await user.type(screen.getByRole('textbox', { name: 'Name' }), 'Test item');
     await user.click(await shutter());
     await screen.findByText('1 captured');
     await user.click(screen.getByRole('button', { name: 'Done' }));
     await screen.findByRole('heading', { name: 'Capture done' });
     await user.click(screen.getByRole('button', { name: 'Done' }));
-    expect(onExit).toHaveBeenCalledTimes(1);
+    await waitFor(() => expect(onExit).toHaveBeenCalledTimes(1));
     const region = () => screen.getByRole('region', { name: 'Notifications' });
     expect(within(region()).getByText('1 captured')).toBeInTheDocument();
     expect(toastQueue.visibleToasts[0]?.timeout).toBe(10_000);

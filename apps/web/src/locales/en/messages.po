@@ -29320,3 +29320,39 @@ msgstr "An owner or admin turns them on in a location's What to track."
 #: src/components/counts/counts-list.tsx
 msgid "Counts are off here: this lists the box checks."
 msgstr "Counts are off here: this lists the box checks."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Enter a name before saving."
+msgstr "Enter a name before saving."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Choose a room or container before saving."
+msgstr "Choose a room or container before saving."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Choose one photo at a time and give each item a name."
+msgstr "Choose one photo at a time and give each item a name."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Delete this capture?"
+msgstr "Delete this capture?"
+
+#: src/components/capture/capture-screen.tsx
+msgid "This capture"
+msgstr "This capture"
+
+#: src/components/capture/capture-screen.tsx
+msgid "Couldn't delete that capture. Try again when syncing has finished."
+msgstr "Couldn't delete that capture. Try again when syncing has finished."
+
+#: src/components/capture/share-arrival.tsx
+msgid "Couldn't finish keeping this share. Check the name, room and available storage, then try again."
+msgstr "Couldn't finish keeping this share. Check the name, room and available storage, then try again."
+
+#: src/components/capture/shared-sheet.tsx
+msgid "Share one item at a time so each can have its own name."
+msgstr "Share one item at a time so each can have its own name."
+
+#: src/components/capture/summary.tsx
+msgid "Delete capture: {0}"
+msgstr "Delete capture: {0}"

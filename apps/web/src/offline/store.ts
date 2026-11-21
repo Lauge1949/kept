@@ -144,8 +144,9 @@ export interface OfflineStore {
    * Takes back ops the server has never seen (capture's "Undo this batch"): those
    * still `pending` or `blocked` leave the queue with their files. Ops that are `uploading`,
    * `sent` or answered stay; the server undoes those. Answers the idempotency keys removed.
+   * With requiredUnsentKey, cancel nothing unless that op is unsent in the same transaction.
    */
-  unqueue(idempotencyKeys: string[]): Promise<string[]>;
+  unqueue(idempotencyKeys: string[], requiredUnsentKey?: string): Promise<string[]>;
   // ----- tray and notices -----
   /** The carrying tray (D175): thing ids, in the order they were picked up. */
   tray(): Promise<string[]>;
@@ -369,7 +370,16 @@ export class MemoryStore implements OfflineStore {
   async pending() {
     return this.queue.filter((e) => UNANSWERED.has(e.state)).sort((a, b) => a.seq - b.seq);
   }
-  async unqueue(idempotencyKeys: string[]) {
+  async unqueue(idempotencyKeys: string[], requiredUnsentKey?: string) {
+    if (
+      requiredUnsentKey &&
+      !this.queue.some(
+        (e) =>
+          e.idempotencyKey === requiredUnsentKey &&
+          (e.state === 'pending' || e.state === 'blocked'),
+      )
+    )
+      return [];
     const keys = new Set(idempotencyKeys);
     const gone = this.queue.filter(
       (e) => keys.has(e.idempotencyKey) && (e.state === 'pending' || e.state === 'blocked'),

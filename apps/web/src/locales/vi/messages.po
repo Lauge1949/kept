@@ -21368,3 +21368,39 @@ msgstr "Chủ sở hữu hoặc quản trị viên bật nó trong mục Theo d�
 #: src/components/counts/counts-list.tsx
 msgid "Counts are off here: this lists the box checks."
 msgstr "Kiểm kê đang tắt ở đây: danh sách này hiện các lần kiểm tra hộp."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Enter a name before saving."
+msgstr "Nhập tên trước khi lưu."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Choose a room or container before saving."
+msgstr "Chọn phòng hoặc vật chứa trước khi lưu."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Choose one photo at a time and give each item a name."
+msgstr "Chọn từng ảnh một và đặt tên cho mỗi món đồ."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Delete this capture?"
+msgstr "Xóa bản chụp này?"
+
+#: src/components/capture/capture-screen.tsx
+msgid "This capture"
+msgstr "Bản chụp này"
+
+#: src/components/capture/capture-screen.tsx
+msgid "Couldn't delete that capture. Try again when syncing has finished."
+msgstr "Không thể xóa bản chụp. Hãy thử lại sau khi đồng bộ xong."
+
+#: src/components/capture/share-arrival.tsx
+msgid "Couldn't finish keeping this share. Check the name, room and available storage, then try again."
+msgstr "Không thể hoàn tất lưu. Kiểm tra tên, phòng và dung lượng trống rồi thử lại."
+
+#: src/components/capture/shared-sheet.tsx
+msgid "Share one item at a time so each can have its own name."
+msgstr "Chia sẻ từng món đồ một để mỗi món có tên riêng."
+
+#: src/components/capture/summary.tsx
+msgid "Delete capture: {0}"
+msgstr "Xóa bản chụp: {0}"

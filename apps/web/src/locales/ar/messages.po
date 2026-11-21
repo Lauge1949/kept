@@ -29320,3 +29320,39 @@ msgstr "يفعّله المالك أو المشرف من «ما الذي تتا�
 #: src/components/counts/counts-list.tsx
 msgid "Counts are off here: this lists the box checks."
 msgstr "العدّ متوقف هنا: تعرض هذه القائمة فحوص الصناديق."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Enter a name before saving."
+msgstr "أدخل اسمًا قبل الحفظ."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Choose a room or container before saving."
+msgstr "اختر غرفة أو حاوية قبل الحفظ."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Choose one photo at a time and give each item a name."
+msgstr "اختر صورة واحدة في كل مرة وسمِّ كل غرض."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Delete this capture?"
+msgstr "حذف هذا الالتقاط؟"
+
+#: src/components/capture/capture-screen.tsx
+msgid "This capture"
+msgstr "هذا الالتقاط"
+
+#: src/components/capture/capture-screen.tsx
+msgid "Couldn't delete that capture. Try again when syncing has finished."
+msgstr "تعذر حذف هذا الالتقاط. حاول مجددًا بعد اكتمال المزامنة."
+
+#: src/components/capture/share-arrival.tsx
+msgid "Couldn't finish keeping this share. Check the name, room and available storage, then try again."
+msgstr "تعذر إكمال الحفظ. تحقق من الاسم والغرفة ومساحة التخزين المتاحة ثم حاول مجددًا."
+
+#: src/components/capture/shared-sheet.tsx
+msgid "Share one item at a time so each can have its own name."
+msgstr "شارك غرضًا واحدًا في كل مرة ليكون لكل غرض اسم خاص."
+
+#: src/components/capture/summary.tsx
+msgid "Delete capture: {0}"
+msgstr "حذف الالتقاط: {0}"

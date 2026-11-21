@@ -29320,3 +29320,39 @@ msgstr "Un propriétaire ou un administrateur les active dans « Ce que vous sui
 #: src/components/counts/counts-list.tsx
 msgid "Counts are off here: this lists the box checks."
 msgstr "Les comptages sont désactivés ici : cette liste montre les vérifications de boîtes."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Enter a name before saving."
+msgstr "Saisissez un nom avant de sauvegarder."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Choose a room or container before saving."
+msgstr "Choisissez une pièce ou un contenant avant de sauvegarder."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Choose one photo at a time and give each item a name."
+msgstr "Choisissez une photo à la fois et nommez chaque objet."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Delete this capture?"
+msgstr "Supprimer cette capture ?"
+
+#: src/components/capture/capture-screen.tsx
+msgid "This capture"
+msgstr "Cette capture"
+
+#: src/components/capture/capture-screen.tsx
+msgid "Couldn't delete that capture. Try again when syncing has finished."
+msgstr "Impossible de supprimer cette capture. Réessayez une fois la synchronisation terminée."
+
+#: src/components/capture/share-arrival.tsx
+msgid "Couldn't finish keeping this share. Check the name, room and available storage, then try again."
+msgstr "Impossible de terminer cet enregistrement. Vérifiez le nom, la pièce et le stockage disponible, puis réessayez."
+
+#: src/components/capture/shared-sheet.tsx
+msgid "Share one item at a time so each can have its own name."
+msgstr "Partagez un seul objet à la fois pour pouvoir nommer chacun."
+
+#: src/components/capture/summary.tsx
+msgid "Delete capture: {0}"
+msgstr "Supprimer la capture : {0}"

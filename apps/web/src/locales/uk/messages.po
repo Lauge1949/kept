@@ -31303,3 +31303,39 @@ msgstr "Власник або адміністратор вмикає їх у р
 #: src/components/counts/counts-list.tsx
 msgid "Counts are off here: this lists the box checks."
 msgstr "Підрахунки тут вимкнено: цей список показує перевірки коробок."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Enter a name before saving."
+msgstr "Введіть назву перед збереженням."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Choose a room or container before saving."
+msgstr "Виберіть кімнату або контейнер перед збереженням."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Choose one photo at a time and give each item a name."
+msgstr "Вибирайте по одному фото та називайте кожну річ."
+
+#: src/components/capture/capture-screen.tsx
+msgid "Delete this capture?"
+msgstr "Видалити цей знімок?"
+
+#: src/components/capture/capture-screen.tsx
+msgid "This capture"
+msgstr "Цей знімок"
+
+#: src/components/capture/capture-screen.tsx
+msgid "Couldn't delete that capture. Try again when syncing has finished."
+msgstr "Не вдалося видалити знімок. Спробуйте після завершення синхронізації."
+
+#: src/components/capture/share-arrival.tsx
+msgid "Couldn't finish keeping this share. Check the name, room and available storage, then try again."
+msgstr "Не вдалося завершити збереження. Перевірте назву, кімнату та вільне місце й повторіть спробу."
+
+#: src/components/capture/shared-sheet.tsx
+msgid "Share one item at a time so each can have its own name."
+msgstr "Надсилайте по одній речі, щоб кожна мала власну назву."
+
+#: src/components/capture/summary.tsx
+msgid "Delete capture: {0}"
+msgstr "Видалити знімок: {0}"

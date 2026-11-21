@@ -24,15 +24,18 @@ export function SharedSheet({
   onClose,
   onDiscard,
   onKeep,
+  keeping = false,
 }: {
   share: SharedInto;
   isOpen: boolean;
   onClose: () => void;
   onDiscard: () => void;
-  onKeep?: (mode: SharedMode) => void;
+  keeping?: boolean;
+  onKeep?: (mode: SharedMode, name: string) => void;
 }) {
   const { t } = useLingui();
   const [mode, setMode] = useState<SharedMode>('receipt');
+  const [name, setName] = useState(share.title ?? '');
   const count = share.files.length;
   return (
     <Sheet
@@ -80,13 +83,36 @@ export function SharedSheet({
             { id: 'thing', label: <Trans>Thing</Trans> },
           ]}
         />
+        {mode === 'thing' && count > 1 ? (
+          <p>
+            <Trans>Share one item at a time so each can have its own name.</Trans>
+          </p>
+        ) : null}
+        {mode === 'thing' ? (
+          <label className="grid gap-1">
+            <Trans>Name</Trans>
+            <input
+              aria-label={t`Name`}
+              required
+              maxLength={200}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="min-h-11 rounded-lg border border-line bg-surface px-3 text-[16px]"
+            />
+          </label>
+        ) : null}
         <div className="flex flex-wrap gap-2">
           {onKeep ? (
-            <Button variant="primary" className="flex-1" onPress={() => onKeep(mode)}>
+            <Button
+              variant="primary"
+              className="flex-1"
+              isDisabled={keeping || (mode === 'thing' && (!name.trim() || count > 1))}
+              onPress={() => onKeep(mode, name.trim())}
+            >
               <Trans>Keep</Trans>
             </Button>
           ) : null}
-          <Button variant="secondary" className="flex-1" onPress={onDiscard}>
+          <Button variant="secondary" className="flex-1" isDisabled={keeping} onPress={onDiscard}>
             <Trans>Discard</Trans>
           </Button>
         </div>

@@ -34,10 +34,12 @@ Preserve the upstream license and attribution.
 
 ## Development status (2026-11-21)
 
-Fork and development branch prepared. An unmodified, digest-pinned stable Kept
-1.14.7 reference instance runs with its own database, storage and network, exposed
+Fork and development branch prepared. The digest-pinned stable Kept
+1.14.7 server runs with its own database, storage and network, exposed
 through an authenticated HTTPS development preview. See [development setup and acceptance checks](deploy/README.md).
-No application source behavior has changed. The preview preserves the original
+The capture UI now requires a name and concrete room/container for new items,
+with individual item deletion from the session summary. A web-only image build
+keeps the existing server and migrations. The preview preserves the original
 Kept UI and requires both shared server access and a Kept account.
 
 The baseline acceptance flow covers item/photo creation, recorded location,

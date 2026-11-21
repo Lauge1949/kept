@@ -28,6 +28,7 @@ import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } fro
 import { Button, useLocale } from 'react-aria-components';
 import { getMe, setSuggestLocation } from '@/api/account';
 import { captureApi, captureKeys } from '@/api/capture/queries';
+import { inventoryApi } from '@/api/inventory/queries';
 import type { ThingTag } from '@/api/inventory/types';
 import { keys as appKeys } from '@/api/queries';
 import type { Me } from '@/api/types';
@@ -75,6 +76,7 @@ import {
   enqueueRoom,
   modeForFile,
   type Queued,
+  removeCapturedThing,
   undoBatch,
 } from './enqueue';
 import { FileFallback } from './file-fallback';
@@ -146,6 +148,7 @@ type Shot = Queued & {
   /** Added to another capture by "+ photo": not a draft of its own. */
   added: boolean;
   pageOf?: string;
+  parentId?: string;
   target: ChipTarget;
 };
 
@@ -476,7 +479,13 @@ export function CaptureScreen({
     if (hintSlot.get() === 'tour') tourLedger.record('capture', batchId);
     onQueued?.();
   }, [batchId, onQueued]);
-  const [shots, setShots] = useState<Shot[]>([]);
+  const [shots, commitShots] = useState<Shot[]>([]);
+  const shotsRef = useRef(shots);
+  const setShots = (update: Shot[] | ((current: Shot[]) => Shot[])) => {
+    const next = typeof update === 'function' ? update(shotsRef.current) : update;
+    shotsRef.current = next;
+    commitShots(next);
+  };
   /** ROOM: the photos of the room being taken, on this phone until Send. */
   const [roomShots, setRoomShots] = useState<(RoomShot & { image: CapturedImage })[]>([]);
   const [sendingRoom, setSendingRoom] = useState(false);
@@ -571,9 +580,25 @@ export function CaptureScreen({
     return th ? { id: th.id, name: th.name, receipt: false } : null;
   }, [shots, mode]);
 
+  /** Every new inventory item needs its own name and a concrete room or container. */
+  const validateCapture = (m: CaptureMode, typed: string, allowAttachment = true): boolean => {
+    if (m !== 'thing' && m !== 'label') return true;
+    if (allowAttachment && ((armed && addTo) || (m === 'label' && labelThing))) return true;
+    if (!typed.trim()) {
+      setNameError(t`Enter a name before saving.`);
+      return false;
+    }
+    if (!target || unplacedTarget) {
+      setNameError(t`Choose a room or container before saving.`);
+      setSheet(true);
+      return false;
+    }
+    return true;
+  };
+
   const record = async (m: CaptureMode, image: CapturedImage | null, typed: string, value = '') => {
     if (m === 'reading') return recordReading(image, typed, value);
-    if (!target) return;
+    if (!target || !validateCapture(m, typed)) return;
     // The capture's own mode decides what the typed text is, not the strip's (a PDF from the
     // gallery is a receipt in any mode).
     const text: 'name' | 'note' = m === 'receipt' ? 'note' : 'name';
@@ -614,6 +639,7 @@ export function CaptureScreen({
         thumb,
         name: text === 'name' && typed ? typed : null,
         added: add !== null || onThing !== null,
+        ...(add ? { parentId: add.id } : {}),
         ...(add?.receipt ? { pageOf: add.id } : {}),
         target,
       },
@@ -698,7 +724,7 @@ export function CaptureScreen({
 
   const shoot = () => {
     const v = video.current;
-    if (!v || !target) return;
+    if (!v || !target || !validateCapture(mode, name)) return;
     if (mode === 'reading' && !reading) {
       setReadingSheet(true);
       return;
@@ -739,12 +765,13 @@ export function CaptureScreen({
   const submitName = () => {
     const typed = name.trim();
     if (!typed) {
-      setNameError(t`Type a name, or take a photo.`);
+      setNameError(t`Enter a name before saving.`);
       return;
     }
+    const m = mode === 'label' ? 'label' : 'thing';
+    if (!validateCapture(m, typed)) return;
     setName('');
     setNameError(null);
-    const m = mode === 'label' ? 'label' : 'thing';
     later(() => record(m, null, typed));
     setArmed(false);
   };
@@ -755,7 +782,17 @@ export function CaptureScreen({
    * (iPhone's way in for a saved receipt). A PDF is a receipt whatever the mode.
    */
   const takeFiles = (files: File[], fromCamera: boolean) => {
-    if (!target) return;
+    if (!target || files.length === 0) return;
+    if (
+      files.length > 1 &&
+      !(armed && addTo) &&
+      !(mode === 'label' && labelThing) &&
+      files.some((f) => ['thing', 'label'].includes(modeForFile(f.type, mode)))
+    ) {
+      setNameError(t`Choose one photo at a time and give each item a name.`);
+      return;
+    }
+    if (files.some((f) => !validateCapture(modeForFile(f.type, mode), name))) return;
     const m: CaptureMode = mode;
     if (m === 'room') {
       later(async () => {
@@ -772,8 +809,9 @@ export function CaptureScreen({
     }
     const value = m === 'reading' && fromCamera ? takeReadingValue() : '';
     if (value === null) return;
-    const typed = fromCamera ? name.trim() : '';
-    if (fromCamera) setName('');
+    const typed = name.trim();
+    setName('');
+    setNameError(null);
     later(async () => {
       if (fromCamera && files[0]) {
         await record(m, await fromFile(files[0], m, decode), typed, value);
@@ -781,7 +819,7 @@ export function CaptureScreen({
       }
       for (const f of files) {
         const fm = modeForFile(f.type, m);
-        await record(fm, await fromFile(f, fm, decode), '');
+        await record(fm, await fromFile(f, fm, decode), typed);
       }
     });
     setArmed(false);
@@ -856,28 +894,45 @@ export function CaptureScreen({
   };
 
   /** "Shared into Kept" (T23's sheet): one capture per file, into the chip's place. */
-  const keepShare = useCallback(
-    async (share: SharedInto, m: SharedMode) => {
-      if (!target) return;
-      const queued = await enqueueFiles(
-        store,
-        share.files.map((f) => ({ blob: f.blob, type: f.type || f.blob.type })),
-        { target, batchId, mode: m, decode },
-      );
-      setShots((s) => [
-        ...s,
-        ...queued.map((q) => ({ ...q, thumb: null, name: null, added: false, target })),
-      ]);
-      noteQueued();
-      toast({
-        title: plural(queued.length, { one: 'Kept # file', other: 'Kept # files' }),
-        tone: 'ok',
-      });
-    },
-    [store, target, batchId, decode, noteQueued],
-  );
+  const keepShare = async (share: SharedInto, m: SharedMode) => {
+    if (m === 'thing' && share.files.length > 1) {
+      throw new Error('Share one item at a time');
+    }
+    if (!target || !validateCapture(m, share.title || '', false)) {
+      throw new Error('Capture needs a name and place');
+    }
+    const queued = await enqueueFiles(
+      store,
+      share.files.map((f) => ({ blob: f.blob, type: f.type || f.blob.type })),
+      { target, batchId, mode: m, decode, ...(m === 'thing' ? { name: share.title || '' } : {}) },
+    );
+    setShots((s) => [
+      ...s,
+      ...queued.map((q) => ({
+        ...q,
+        thumb: null,
+        name: share.title || null,
+        added: false,
+        target,
+      })),
+    ]);
+    noteQueued();
+    toast({
+      title: plural(queued.length, { one: 'Kept # file', other: 'Kept # files' }),
+      tone: 'ok',
+    });
+  };
 
-  const toSummary = () => (shots.length ? setPhase('summary') : onExit());
+  const [finishing, setFinishing] = useState(false);
+  const toSummary = () => {
+    if (finishing) return;
+    setFinishing(true);
+    void chain.current.finally(() => {
+      setFinishing(false);
+      if (shotsRef.current.length) setPhase('summary');
+      else onExit();
+    });
+  };
 
   /**
    * Done: the batch stays undoable from a 10-second toast (D150), the same undo as the
@@ -927,7 +982,7 @@ export function CaptureScreen({
         store={store}
         shots={shots}
         where={
-          where.size === 1 && world
+          shots.length > 0 && where.size === 1 && world
             ? targetPath(
                 shots[0]?.target as ChipTarget,
                 world.locations,
@@ -940,6 +995,40 @@ export function CaptureScreen({
         aiOn={aiOn}
         onKeepCapturing={() => setPhase('camera')}
         onDone={finish}
+        onRemove={async (key) => {
+          const shot = shots.find((s) => s.idempotencyKey === key);
+          if (
+            !shot ||
+            shot.added ||
+            shots.some((s) => s.target.containerId === shot.id) ||
+            (shot.mode !== 'thing' && shot.mode !== 'label')
+          )
+            return;
+          const ok = await confirm({
+            title: t`Delete this capture?`,
+            body: shot.name ?? t`This capture`,
+            confirmLabel: t`Delete`,
+            destructive: true,
+          });
+          if (!ok) return;
+          try {
+            const keys = await removeCapturedThing(
+              store,
+              shot.id,
+              key,
+              shots.filter((s) => s.parentId === shot.id).map((s) => s.idempotencyKey),
+              inventoryApi.trashThing,
+            );
+            setShots((list) => list.filter((s) => !keys.has(s.idempotencyKey) && s.id !== shot.id));
+            noteQueued();
+            void refreshCounts();
+          } catch {
+            toast({
+              title: t`Couldn't delete that capture. Try again when syncing has finished.`,
+              tone: 'danger',
+            });
+          }
+        }}
         onUndo={async () => {
           const ok = await confirm({
             title: t`Undo this batch?`,
@@ -975,7 +1064,7 @@ export function CaptureScreen({
   return (
     <div
       data-focused-task="capture"
-      className="fixed inset-0 z-40 flex flex-col bg-[#0F0E0D] pt-[env(safe-area-inset-top)] text-[#F2EFE9] md:relative md:inset-auto md:z-auto md:mx-auto md:my-4 md:min-h-[calc(100dvh-2rem)] md:max-w-[480px] md:rounded-2xl"
+      className="fixed inset-0 z-40 flex flex-col overflow-y-auto bg-[#0F0E0D] pt-[env(safe-area-inset-top)] text-[#F2EFE9] md:relative md:inset-auto md:z-auto md:mx-auto md:my-4 md:min-h-[calc(100dvh-2rem)] md:max-w-[480px] md:rounded-2xl"
     >
       <h1 className="sr-only">
         <Trans>Capture</Trans>
@@ -997,6 +1086,7 @@ export function CaptureScreen({
           )}
           <Button
             onPress={toSummary}
+            isDisabled={finishing}
             className="min-h-12 cursor-pointer rounded-xl border border-[#4A463F] bg-transparent px-4 font-semibold text-[#F2EFE9] text-[14px] outline-none data-focus-visible:outline-2 data-focus-visible:outline-[#F2EFE9]"
           >
             <Trans>Done</Trans>
@@ -1327,6 +1417,7 @@ function SummaryPhase({
   onKeepCapturing,
   onDone,
   onUndo,
+  onRemove,
 }: {
   store: OfflineStore;
   shots: readonly Shot[];
@@ -1337,9 +1428,11 @@ function SummaryPhase({
   onKeepCapturing: () => void;
   onDone: () => void;
   onUndo: () => Promise<void>;
+  onRemove: (key: string) => Promise<void>;
 }) {
   const [pending, setPending] = useState<Set<string> | null>(null);
   const [undoing, setUndoing] = useState(false);
+  const [removing, setRemoving] = useState<string | null>(null);
   useEffect(() => {
     let live = true;
     const read = async () => {
@@ -1362,6 +1455,11 @@ function SummaryPhase({
         shots={shots.map((s) => ({
           key: s.idempotencyKey,
           thumb: s.thumb,
+          name: s.name,
+          removable:
+            !s.added &&
+            !shots.some((other) => other.target.containerId === s.id) &&
+            (s.mode === 'thing' || s.mode === 'label'),
           waiting: pending ? pending.has(s.idempotencyKey) : true,
         }))}
         where={where}
@@ -1379,7 +1477,12 @@ function SummaryPhase({
               }
             : null
         }
-        undoing={undoing}
+        undoing={undoing || removing !== null}
+        removing={removing}
+        onRemove={(key) => {
+          setRemoving(key);
+          void onRemove(key).finally(() => setRemoving(null));
+        }}
       />
     </div>
   );

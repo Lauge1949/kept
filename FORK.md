@@ -32,13 +32,19 @@ Preserve the upstream license and attribution.
 - Enforce user-scoped, read-only assistant access outside the model. Recheck
   access and current record fields when rendering results.
 
-## Initial status (2026-11-21)
+## Development status (2026-11-21)
 
-Fork and development branch prepared. No application behavior has changed.
-No dependencies have been installed and no service has been deployed.
+Fork and development branch prepared. An unmodified, digest-pinned stable Kept
+1.14.7 reference instance runs on server loopback with its own database, storage
+and network. See [development setup and acceptance checks](deploy/README.md).
+No application behavior has changed and no public deployment exists.
 
-Next: validate a pinned baseline, mobile registration/capture/search and account
-isolation, then implement and test the AI adapter. Kept's API-key-based providers
+The baseline acceptance flow covers item/photo creation, recorded location,
+description, search, separate-user access and Chromium mobile layouts. Physical
+iPhone/PWA installation and WebKit coverage remain unverified.
+
+Next: establish an authenticated HTTPS preview, then implement and test the AI
+adapter. Kept's API-key-based providers
 are not already connected to the existing subscription/quota runtime. Semantic
 search embeddings need a separate compatibility decision.
 

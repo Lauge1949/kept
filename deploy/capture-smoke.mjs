@@ -153,6 +153,7 @@ try {
   await page.getByRole('alertdialog').getByRole('button', {name:'Delete',exact:true}).click();
   await page.getByRole('button', {name:`Delete capture: ${secondTitle}`,exact:true}).waitFor({state:'detached'});
   pass('both synthetic test captures removed to trash; original fixture untouched');
+  await context.unrouteAll({ behavior: 'ignoreErrors' });
   await context.close();
   report.passed=true;
 } catch(error) {
@@ -163,5 +164,6 @@ try {
   process.exitCode=1;
 } finally {
   await writeFile(`${dir}/capture-report.json`,JSON.stringify(report,null,2),{mode:0o600});
+  for (const context of browser.contexts()) await context.unrouteAll({ behavior: 'ignoreErrors' });
   await browser.close();
 }

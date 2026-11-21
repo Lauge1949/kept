@@ -118,6 +118,9 @@ try {
   assert.equal(profile.locale, 'da');
   await page.reload();
   await page.waitForFunction(() => document.documentElement.lang === 'da');
+  await page.locator('main').waitFor({ state: 'visible' });
+  await page.locator('main').getByRole('heading').first().waitFor({ state: 'visible' });
+  await page.evaluate(() => document.fonts.ready);
   for (const width of [320, 390, 430, 844, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     await page.waitForFunction(() => document.documentElement.scrollWidth <= innerWidth + 1);
@@ -137,6 +140,7 @@ try {
     });
     if (!r.ok) throw new Error('Fixture locale reset failed');
   });
+  await context.unrouteAll({ behavior: 'ignoreErrors' });
   await context.close();
   await writeFile(`${dir}/tingfinder-smoke-report.json`, JSON.stringify(report, null, 2) + '\n', {
     mode: 0o600,
@@ -145,5 +149,6 @@ try {
   if (page) await page.screenshot({ path: `${dir}/tingfinder-smoke-error.png` }).catch(() => {});
   throw error;
 } finally {
+  for (const context of browser.contexts()) await context.unrouteAll({ behavior: 'ignoreErrors' });
   await browser.close();
 }

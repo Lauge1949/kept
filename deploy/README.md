@@ -16,17 +16,17 @@ docker compose --env-file /path/to/private/runtime.env \
   -f compose.yaml -f deploy/development.compose.yaml up -d
 ```
 
-Open `http://127.0.0.1:18740` on the server. There is no public route. A small Caddy
+For a fresh HTTP-only baseline, open `http://127.0.0.1:18740` on the server. A small Caddy
 proxy publishes only that loopback port; the app itself stays on the internal
 network (Docker does not publish ports for internal-only containers). The database
 has no published port; the internal Docker network blocks external AI, telemetry,
 mail and update calls. No host credentials, source tree or Docker socket are
-mounted. The upstream read-only app filesystem, non-root user and dropped
+mounted into Kept. The upstream read-only app filesystem, non-root user and dropped
 capabilities are retained. Named volumes use the `kept-lauge-dev` project prefix.
 
 Use only synthetic accounts and photos. The instance is for evaluating login,
-inventory, search and mobile layout. HTTP on loopback is sufficient for browser
-tests, but real-phone camera/PWA installation needs an authenticated HTTPS preview.
+inventory, search and mobile layout. HTTP on loopback is sufficient for the original baseline browser
+tests. The server now has the authenticated HTTPS preview described below.
 Do not call this a production deployment or a verified iPhone installation.
 
 Stop without deleting data with the same command and `stop` instead of `up -d`.
@@ -59,6 +59,52 @@ Chromium as Safari. No physical-phone installation is claimed.
 
 Kept serves photos via five-minute signed bearer URLs: someone possessing such a
 URL can read it until expiry without a session. Tests verify unauthorised users
-cannot obtain new URLs and tampered links fail. Before publishing a preview, put
-the entire origin, including `/f/`, behind the server's shared login. Private data
-and API endpoints must never be cached by an outer proxy.
+cannot obtain new URLs and tampered links fail. The HTTPS preview protects
+the entire origin, including `/f/`, with the server's shared login and disables
+shared caching. Private data and API endpoints must never be cached by an outer proxy.
+
+## Authenticated HTTPS preview
+
+The server's reference instance uses `KEPT_PUBLIC_URL=https://dev-kept.laugesbin.win`.
+Open [Kept](https://dev-kept.laugesbin.win/). Its entire origin is behind the
+existing device-access server password, followed by Kept's own user login.
+A single-use, seven-day invitation is exposed only after shared login at `/start`.
+It creates the owner's chosen account in the synthetic `Prøvehjem` location;
+ordinary sign-up remains closed. After joining, use `/` to reopen the app.
+The invitation URL and all test credentials live only in private server files.
+
+`https-preview.caddy` is the reviewed site for the existing shared gateway on
+loopback 18600, which proxies Kept's loopback 18740. The live site has the extension
+`.preview`, outside the `dev-preview` CLI's managed `*.caddy` files. The gateway's
+main Caddyfile imports `*.preview`; a CLI guard reserves names with that extension.
+Its `kept-entry.inc` import contains only the private onboarding redirect, under
+the same auth gate. This is a mandatory import: after the invitation is consumed or
+expires, retain an empty/comment-only include unless removing the importing site
+at the same time. Preserve the CLI collision guard when updating that tool.
+Auth registration is marked `managed_by: kept-development`,
+so CLI sync does not remove it. Gateway configuration must validate before restart.
+The Cloudflare tunnel and proxied DNS add only this exact hostname.
+
+The upstream application and storage remain isolated. No AI keys are connected.
+The outer proxy strips Authorization, so this preview is for browser use, without
+personal API-token, MCP or unauthenticated feed/webhook access. All users currently
+share Kept's inner proxy IP for login rate limits. Synthetic SMTP/AI traffic remains
+blocked by the internal network. Private configuration and rollback locations are
+recorded in the server's canonical development documentation.
+
+The original `smoke.mjs` expects an HTTP-only instance and is not the acceptance
+command for the running HTTPS configuration: its Origin and Secure cookies differ.
+Do not switch a published instance to HTTP to run it. Run `preview-smoke.mjs` with
+the same Playwright/Chrome/private-state variables instead. That checks public
+unauthenticated HTTPS gating, real signed-photo and JavaScript URLs, no-store and
+Secure Kept cookies. An optional `KEPT_PREVIEW_RESOLVER=1.1.1.1` avoids stale local
+NXDOMAIN immediately after hostname creation; TLS verification stays enabled.
+
+For inner UI checks the browser keeps the canonical HTTPS origin, but Playwright
+routes requests directly to the isolated loopback backend. This verifies Kept's
+Origin/cookie behavior and existing data independently of the outer password.
+It does **not** prove a successful device-access password login through Cloudflare.
+It previews the unconsumed invitation form without submitting it. Physical iPhone,
+Android installation, WebKit and full public authenticated flows remain to test
+on the owner's devices. Browser service workers are blocked in this inner check;
+the original baseline separately checked the manifest and private cache behavior.

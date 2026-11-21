@@ -35,16 +35,18 @@ Preserve the upstream license and attribution.
 ## Development status (2026-11-21)
 
 Fork and development branch prepared. An unmodified, digest-pinned stable Kept
-1.14.7 reference instance runs on server loopback with its own database, storage
-and network. See [development setup and acceptance checks](deploy/README.md).
-No application behavior has changed and no public deployment exists.
+1.14.7 reference instance runs with its own database, storage and network, exposed
+through an authenticated HTTPS development preview. See [development setup and acceptance checks](deploy/README.md).
+No application source behavior has changed. The preview preserves the original
+Kept UI and requires both shared server access and a Kept account.
 
 The baseline acceptance flow covers item/photo creation, recorded location,
 description, search, separate-user access and Chromium mobile layouts. Physical
 iPhone/PWA installation and WebKit coverage remain unverified.
 
-Next: establish an authenticated HTTPS preview, then implement and test the AI
-adapter. Kept's API-key-based providers
+HTTPS preview protection, canonical-origin login/cookies and the account invitation
+form are checked. Full public authenticated phone use still needs device testing.
+Next: implement and test the AI adapter. Kept's API-key-based providers
 are not already connected to the existing subscription/quota runtime. Semantic
 search embeddings need a separate compatibility decision.
 

@@ -1,0 +1,33 @@
+# Kept standalone Docker preview. Source: /mnt/SSD1000/github/kept/deploy/https-preview.caddy
+http://dev-kept.laugesbin.win:18600 {
+	bind 127.0.0.1
+	import security
+	header >Cache-Control "private, no-store"
+	route {
+		respond /_device/verify 404
+		handle /_device/* {
+			reverse_proxy 127.0.0.1:18510 {
+				header_up Host dev-kept.laugesbin.win
+				header_up X-Forwarded-Proto https
+				header_up -X-Device-Verify
+			}
+		}
+		forward_auth 127.0.0.1:18510 {
+			uri /_device/verify
+			header_up X-Forwarded-Upgrade {http.request.header.Upgrade}
+			header_up -Upgrade
+			header_up -Connection
+			header_up Host dev-kept.laugesbin.win
+			header_up X-Forwarded-Proto https
+			header_up X-Device-Verify {env.QBT_PROXY_PASSWORD_HASH}
+		}
+		# Private, seven-day, single-use onboarding invitation; never commit its URL.
+		import /etc/caddy/sites/kept-entry.inc
+		reverse_proxy 127.0.0.1:18740 {
+			header_up Host dev-kept.laugesbin.win
+			header_up X-Forwarded-Proto https
+			header_up -Authorization
+			header_up -X-Device-Verify
+		}
+	}
+}

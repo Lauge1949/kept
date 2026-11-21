@@ -21404,3 +21404,6 @@ msgstr "Chia sẻ từng món đồ một để mỗi món có tên riêng."
 #: src/components/capture/summary.tsx
 msgid "Delete capture: {0}"
 msgstr "Xóa bản chụp: {0}"
+
+msgid "A price needs a purchase date; kept in the notes."
+msgstr "Giá cần có ngày mua; được giữ trong ghi chú."

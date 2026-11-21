@@ -29356,3 +29356,7 @@ msgstr "شارك غرضًا واحدًا في كل مرة ليكون لكل غر
 #: src/components/capture/summary.tsx
 msgid "Delete capture: {0}"
 msgstr "حذف الالتقاط: {0}"
+
+#: src/components/import/labels.ts
+msgid "A price needs a purchase date; kept in the notes."
+msgstr "السعر يحتاج إلى تاريخ شراء؛ حُفظ في الملاحظات."

@@ -29356,3 +29356,7 @@ msgstr "Condividi un oggetto alla volta per assegnare a ciascuno il proprio nome
 #: src/components/capture/summary.tsx
 msgid "Delete capture: {0}"
 msgstr "Elimina acquisizione: {0}"
+
+#: src/components/import/labels.ts
+msgid "A price needs a purchase date; kept in the notes."
+msgstr "Un prezzo richiede una data di acquisto; tenuto nelle note."

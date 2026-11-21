@@ -141,7 +141,9 @@ try {
   await page.getByRole('button', {name:`Delete capture: ${title}`,exact:true}).waitFor({state:'detached'});
   assert(await page.getByRole('button', {name:`Delete capture: ${secondTitle}`,exact:true}).isVisible());
   const result = await get(`/api/v1/search?q=${encodeURIComponent(secondTitle)}&kind=things`);
-  assert(result.things.items.some(t => t.name === secondTitle && t.placeId === original.placeId));
+  const remaining = result.things.items.find(t => t.name === secondTitle);
+  assert(remaining);
+  assert.equal((await get(`/api/v1/things/${remaining.id}`)).placeId, original.placeId);
   pass('deleting one synced capture leaves the other saved item and the session intact');
   await page.getByRole('button', {name:`Delete capture: ${secondTitle}`,exact:true}).click();
   await page.getByRole('alertdialog').getByRole('button', {name:'Delete',exact:true}).click();

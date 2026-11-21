@@ -29356,3 +29356,7 @@ msgstr "Partagez un seul objet à la fois pour pouvoir nommer chacun."
 #: src/components/capture/summary.tsx
 msgid "Delete capture: {0}"
 msgstr "Supprimer la capture : {0}"
+
+#: src/components/import/labels.ts
+msgid "A price needs a purchase date; kept in the notes."
+msgstr "Un prix demande une date d'achat ; gardé dans les notes."

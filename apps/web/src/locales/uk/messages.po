@@ -31339,3 +31339,7 @@ msgstr "Надсилайте по одній речі, щоб кожна мал�
 #: src/components/capture/summary.tsx
 msgid "Delete capture: {0}"
 msgstr "Видалити знімок: {0}"
+
+#: src/components/import/labels.ts
+msgid "A price needs a purchase date; kept in the notes."
+msgstr "Ціні потрібна дата покупки; збережено в нотатках."

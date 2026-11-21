@@ -29356,3 +29356,7 @@ msgstr "Comparte un objeto cada vez para que cada uno tenga su propio nombre."
 #: src/components/capture/summary.tsx
 msgid "Delete capture: {0}"
 msgstr "Eliminar captura: {0}"
+
+#: src/components/import/labels.ts
+msgid "A price needs a purchase date; kept in the notes."
+msgstr "Un precio necesita una fecha de compra; se guardó en las notas."

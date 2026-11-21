@@ -449,7 +449,7 @@ describe('the PDF', () => {
       };
       expect(run.status, JSON.stringify(run)).toBe('done');
       const res = await t.app.inject({ method: 'GET', url: run.fileUrl as string });
-      expect(String(res.headers['content-disposition'])).toMatch(/kept-condition-report-/);
+      expect(String(res.headers['content-disposition'])).toMatch(/tingfinder-condition-report-/);
       const text = pdfText(res.rawPayload);
       expect(text).toContain('Condition report');
       expect(text).toContain('Kitchen');

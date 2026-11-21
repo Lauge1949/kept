@@ -120,3 +120,27 @@ export function cardLine(line: string): string {
   const end = /[.?](?=\s+[A-Z]|\s*$)/.exec(rest);
   return `${lead}${end ? rest.slice(0, end.index + 1) : rest}`.trim();
 }
+
+/** The installed upstream release's highlights, translated with its interface. */
+export function localizedSlide(slide: Slide, version: string, locale: string): Slide {
+  if (version !== '1.14.7' || locale !== 'da') return slide;
+  const danish: Record<string, { title: string; line: string }> = {
+    'Home Assistant in one click': {
+      title: 'Home Assistant med ét klik',
+      line: 'Home Assistant finder Tingfinder og spørger om adgang. En bruger i Tingfinder godkender med en kode. Ingen token skal kopieres.',
+    },
+    'Racks in rack units': {
+      title: 'Rackskabe i rackenheder',
+      line: '19-tommers og 10-tommers rackskabe set forfra eller bagfra med udstyret placeret i den rigtige enhed.',
+    },
+    'Metric or imperial': {
+      title: 'Metriske eller britiske enheder',
+      line: 'Vælg én gang i Indstillinger. Kort, møbler, etiketter og brændstofforbrug følger dit valg.',
+    },
+    'PDFs in your language': {
+      title: 'PDF-filer på dit sprog',
+      line: 'Rapporter, tilstandsrapporter, køretøjsrapporter, indholdslister, den læsbare kopi og forsikringsmapper på læserens sprog.',
+    },
+  };
+  return { ...slide, ...danish[slide.title] };
+}

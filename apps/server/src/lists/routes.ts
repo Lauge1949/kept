@@ -78,7 +78,7 @@ export async function listExportRoutes(app: KeptApp, deps: InventoryDeps): Promi
       .type('text/csv; charset=utf-8')
       .header(
         'content-disposition',
-        `attachment; filename="kept-things-${new Date().toISOString().slice(0, 10)}.csv"`,
+        `attachment; filename="tingfinder-things-${new Date().toISOString().slice(0, 10)}.csv"`,
       )
       .header('cache-control', 'no-store');
     return csv;

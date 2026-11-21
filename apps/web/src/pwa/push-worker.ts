@@ -34,7 +34,7 @@ export function readPushPayload(data: { json(): unknown } | null | undefined): P
     raw = null;
   }
   const o = raw && typeof raw === 'object' ? (raw as Record<string, unknown>) : {};
-  const title = text(o.title, 200) ?? 'Kept';
+  const title = text(o.title, 200) ?? 'Tingfinder';
   const body = text(o.body, 1000);
   const url = text(o.url, 2000);
   const tag = text(o.tag, 200);

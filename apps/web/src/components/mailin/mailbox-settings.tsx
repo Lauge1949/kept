@@ -177,7 +177,7 @@ function MailboxForm({ locationId, box }: { locationId: string; box: Mailbox | n
   const [port, setPort] = useState(String(box?.port ?? PORTS.tls));
   const [username, setUsername] = useState(box?.username ?? '');
   const [password, setPassword] = useState('');
-  const [folder, setFolder] = useState(box?.folder ?? 'Kept');
+  const [folder, setFolder] = useState(box?.folder ?? 'Tingfinder');
   const [senders, setSenders] = useState((box?.allowedSenders ?? []).join(', '));
   const [problem, setProblem] = useState<string | null>(null);
   const save = useMutation({

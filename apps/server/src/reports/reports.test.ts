@@ -102,7 +102,7 @@ async function report(as: Person, body: object): Promise<{ id: string; pdf: Buff
   expect(res.statusCode).toBe(200);
   expect(res.headers['content-type']).toBe('application/pdf');
   expect(String(res.headers['content-disposition'])).toMatch(
-    /^attachment; filename="kept-inventory-/,
+    /^attachment; filename="tingfinder-inventory-/,
   );
   expect(res.headers['x-content-type-options']).toBe('nosniff');
   const pdf = res.rawPayload;
@@ -116,7 +116,7 @@ async function report(as: Person, body: object): Promise<{ id: string; pdf: Buff
   expect(view.statusCode).toBe(200);
   expect(view.headers['content-type']).toBe('application/pdf');
   expect(String(view.headers['content-disposition'])).toMatch(
-    /^inline; filename="kept-inventory-\d{4}-\d{2}-\d{2}\.pdf"/,
+    /^inline; filename="tingfinder-inventory-\d{4}-\d{2}-\d{2}\.pdf"/,
   );
   expect(view.headers['x-content-type-options']).toBe('nosniff');
   expect(view.headers['content-security-policy']).toBe("default-src 'none'; sandbox");
@@ -602,7 +602,7 @@ describe('emailed and scheduled reports', () => {
     });
     const pdf = mail?.attachments?.[0];
     expect(pdf?.contentType).toBe('application/pdf');
-    expect(pdf?.filename).toMatch(/^kept-inventory-\d{4}-\d{2}-\d{2}\.pdf$/);
+    expect(pdf?.filename).toMatch(/^tingfinder-inventory-\d{4}-\d{2}-\d{2}\.pdf$/);
     expect(pdf?.content.subarray(0, 5).toString()).toBe('%PDF-');
   });
 

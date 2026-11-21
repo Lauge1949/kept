@@ -10,7 +10,8 @@
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
-    <title>Kept</title>
+    <title>Tingfinder</title>
+    <meta name="apple-mobile-web-app-title" content="Tingfinder" />
     <!-- D135: the tape square with its punched hole and a heavy K (scripts/render-icons.mjs draws all of these). -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
@@ -69,7 +70,7 @@
         }
         // The app's languages (D204, and later Spanish, Ukrainian and Vietnamese); the browser's
         // language when it is one of them.
-        const locales = ['ar', 'de', 'en', 'es', 'fr', 'it', 'uk', 'vi'];
+        const locales = ['ar', 'da', 'de', 'en', 'es', 'fr', 'it', 'uk', 'vi'];
         if (!locales.includes(locale)) {
           const nav = (navigator.language || 'en').toLowerCase().split(/[-_]/)[0];
           locale = locales.includes(nav) ? nav : 'en';

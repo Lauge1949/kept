@@ -14,16 +14,16 @@ msgid ", "
 msgstr ", "
 
 msgid "Home Assistant backs up Kept"
-msgstr "Home Assistant sao lưu Kept"
+msgstr "Home Assistant sao lưu Tingfinder"
 
 msgid "Home Assistant backs up Kept: the database, photos and files, and Kept's keys. Take or schedule backups in Home Assistant → {place}."
-msgstr "Home Assistant sao lưu Kept: cơ sở dữ liệu, ảnh, tệp và khóa của Kept. Tạo hoặc lên lịch sao lưu trong Home Assistant → {place}."
+msgstr "Home Assistant sao lưu Tingfinder: cơ sở dữ liệu, ảnh, tệp và khóa của Tingfinder. Tạo hoặc lên lịch sao lưu trong Home Assistant → {place}."
 
 msgid "Settings → System → Backups"
 msgstr "Cài đặt → Hệ thống → Sao lưu"
 
 msgid "Home Assistant backs up Kept here: take or schedule backups in Home Assistant."
-msgstr "Home Assistant sao lưu Kept tại đây: tạo hoặc lên lịch sao lưu trong Home Assistant."
+msgstr "Home Assistant sao lưu Tingfinder tại đây: tạo hoặc lên lịch sao lưu trong Home Assistant."
 
 msgid "Take or schedule them in Home Assistant → {place}."
 msgstr "Tạo hoặc lên lịch chúng trong Home Assistant → {place}."
@@ -38,13 +38,13 @@ msgid "Set up email"
 msgstr "Thiết lập email"
 
 msgid "Without it, Kept sends no sign-in links, password resets, email invites or reminders."
-msgstr "Không có nó, Kept sẽ không gửi liên kết đăng nhập, đặt lại mật khẩu, lời mời qua email hay nhắc nhở."
+msgstr "Không có nó, Tingfinder sẽ không gửi liên kết đăng nhập, đặt lại mật khẩu, lời mời qua email hay nhắc nhở."
 
 msgid "Any provider that offers SMTP works, such as your email provider's app password or a sending service. Admin → Status shows Sending once it's on."
 msgstr "Bất kỳ nhà cung cấp nào hỗ trợ SMTP cũng dùng được, chẳng hạn mật khẩu ứng dụng của nhà cung cấp email hoặc một dịch vụ gửi thư. Quản trị → Trạng thái sẽ hiển thị Đang gửi khi tính năng được bật."
 
 msgid "the sender, for example <0>Kept <kept@example.org></0>"
-msgstr "người gửi, ví dụ <0>Kept <kept@example.org></0>"
+msgstr "người gửi, ví dụ <0>Tingfinder <kept@example.org></0>"
 
 msgid "your mail server, for example <0>smtps://user:password@smtp.example.org:465</0>"
 msgstr "máy chủ thư của bạn, ví dụ <0>smtps://user:password@smtp.example.org:465</0>"
@@ -80,7 +80,7 @@ msgid "{0, plural, =0 {no fields} one {# field} other {# fields}}"
 msgstr "{0, plural, =0 {không có trường} one {# trường} other {# trường}}"
 
 msgid "Set these where Kept's other settings live (the .env file with Docker Compose; with the Helm chart, the URL in the secret named by smtp.existingSecret and the sender in smtp.from), then restart Kept:"
-msgstr "Đặt các giá trị này ở nơi các cài đặt khác của Kept nằm (tệp .env khi dùng Docker Compose; với Helm chart, URL trong secret có tên smtp.existingSecret và người gửi trong smtp.from), rồi khởi động lại Kept:"
+msgstr "Đặt các giá trị này ở nơi các cài đặt khác của Tingfinder nằm (tệp .env khi dùng Docker Compose; với Helm chart, URL trong secret có tên smtp.existingSecret và người gửi trong smtp.from), rồi khởi động lại Tingfinder:"
 
 msgid "the request was more than the plan allows in one minute"
 msgstr "yêu cầu vượt quá giới hạn gói cho phép trong một phút"
@@ -575,7 +575,7 @@ msgid "A computer: the camera icon in the address bar, then Allow."
 msgstr "Máy tính: biểu tượng máy ảnh trên thanh địa chỉ, rồi chọn Cho phép."
 
 msgid "A contact, without a Kept account"
-msgstr "Một liên hệ, không cần tài khoản Kept"
+msgstr "Một liên hệ, không cần tài khoản Tingfinder"
 
 msgid "A copy without the serial or purchase."
 msgstr "Một bản sao không có số sê-ri hoặc thông tin mua hàng."
@@ -593,7 +593,7 @@ msgid "A field group"
 msgstr "Một nhóm trường"
 
 msgid "A Kept code is 6 letters and digits, like 7KQ‑4MZ."
-msgstr "Mã Kept gồm 6 chữ cái và chữ số, ví dụ 7KQ-4MZ."
+msgstr "Mã Tingfinder gồm 6 chữ cái và chữ số, ví dụ 7KQ-4MZ."
 
 msgid "A key is a lower-case word in English letters, digits and _, starting with a letter."
 msgstr "Khóa là một từ viết thường gồm chữ cái tiếng Anh, chữ số và _, bắt đầu bằng một chữ cái."
@@ -887,7 +887,7 @@ msgid "AI"
 msgstr "AI"
 
 msgid "AI and barcode lookup can be connected later, from Settings. Kept works without them."
-msgstr "AI và tra cứu mã vạch có thể kết nối sau, từ Cài đặt. Kept vẫn hoạt động mà không cần chúng."
+msgstr "AI và tra cứu mã vạch có thể kết nối sau, từ Cài đặt. Tingfinder vẫn hoạt động mà không cần chúng."
 
 msgid "AI assistant"
 msgstr "Trợ lý AI"
@@ -956,7 +956,7 @@ msgid "Already claimed"
 msgstr "Đã được nhận"
 
 msgid "Already in Kept"
-msgstr "Đã có trong Kept"
+msgstr "Đã có trong Tingfinder"
 
 msgid "Also called"
 msgstr "Còn được gọi là"
@@ -1245,7 +1245,7 @@ msgid "Camera"
 msgstr "Máy ảnh"
 
 msgid "Camera access is off for Kept."
-msgstr "Quyền truy cập máy ảnh cho Kept đang tắt."
+msgstr "Quyền truy cập máy ảnh cho Tingfinder đang tắt."
 
 msgid "Camera view"
 msgstr "Chế độ xem máy ảnh"
@@ -2147,7 +2147,7 @@ msgid "Every addition, move and edit in the locations you belong to shows here, 
 msgstr "Mọi lần thêm, di chuyển và sửa trong các địa điểm bạn thuộc về đều hiển thị ở đây, mới nhất trước."
 
 msgid "Every control Kept's screens are built from, on React Aria. Switch the theme and the language above: everything here should mirror cleanly."
-msgstr "Mọi thành phần điều khiển mà các màn hình của Kept được xây dựng từ đó, trên React Aria. Hãy chuyển giao diện và ngôn ngữ ở trên: mọi thứ ở đây đều phải hiển thị đối xứng một cách rõ ràng."
+msgstr "Mọi thành phần điều khiển mà các màn hình của Tingfinder được xây dựng từ đó, trên React Aria. Hãy chuyển giao diện và ngôn ngữ ở trên: mọi thứ ở đây đều phải hiển thị đối xứng một cách rõ ràng."
 
 msgid "Every device {who} is signed in on is signed out. They get an email about it."
 msgstr "Mọi thiết bị mà {who} đang đăng nhập đều sẽ đăng xuất. Họ sẽ nhận được email về việc này."
@@ -2475,7 +2475,7 @@ msgid "Go to Home"
 msgstr "Đến Trang chủ"
 
 msgid "Go to Kept"
-msgstr "Đến Kept"
+msgstr "Đến Tingfinder"
 
 msgid "Go to Settings"
 msgstr "Đến Cài đặt"
@@ -2502,7 +2502,7 @@ msgid "Hallway"
 msgstr "Hành lang"
 
 msgid "Has a Kept account"
-msgstr "Có tài khoản Kept"
+msgstr "Có tài khoản Tingfinder"
 
 msgid "Has a reading that grows, like kilometres or hours."
 msgstr "Có chỉ số tăng dần, ví dụ ki-lô-mét hoặc giờ."
@@ -2592,7 +2592,7 @@ msgid "How many to take off"
 msgstr "Lấy ra bao nhiêu"
 
 msgid "How should this Kept work?"
-msgstr "Kept này nên hoạt động ra sao?"
+msgstr "Tingfinder này nên hoạt động ra sao?"
 
 msgid "How to allow it"
 msgstr "Cách cho phép"
@@ -2649,7 +2649,7 @@ msgid "In a sentence: the drill <0/> is on the tool wall."
 msgstr "Nói gọn trong một câu: máy khoan <0/> đang ở trên tường dụng cụ."
 
 msgid "In Chrome or Edge, click the install icon at the end of the address bar, or open the menu and choose <0>Install Kept</0>."
-msgstr "Trong Chrome hoặc Edge, hãy nhấp vào biểu tượng cài đặt ở cuối thanh địa chỉ, hoặc mở menu và chọn <0>Cài đặt Kept</0>."
+msgstr "Trong Chrome hoặc Edge, hãy nhấp vào biểu tượng cài đặt ở cuối thanh địa chỉ, hoặc mở menu và chọn <0>Cài đặt Tingfinder</0>."
 
 msgid "In Safari on a Mac, choose <0>File › Add to Dock</0>."
 msgstr "Trong Safari trên máy Mac, hãy chọn <0>Tệp › Thêm vào Dock</0>."
@@ -2682,10 +2682,10 @@ msgid "Insights"
 msgstr "Thống kê"
 
 msgid "Install Kept"
-msgstr "Cài đặt Kept"
+msgstr "Cài đặt Tingfinder"
 
 msgid "Install Kept on your phone"
-msgstr "Cài đặt Kept trên điện thoại của bạn"
+msgstr "Cài đặt Tingfinder trên điện thoại của bạn"
 
 msgid "Install on your phone"
 msgstr "Cài đặt trên điện thoại của bạn"
@@ -2745,7 +2745,7 @@ msgid "iPhone, iPad"
 msgstr "iPhone, iPad"
 
 msgid "iPhone: Settings › Safari › Camera › Allow, then reopen Kept."
-msgstr "iPhone: Cài đặt › Safari › Camera › Cho phép, rồi mở lại Kept."
+msgstr "iPhone: Cài đặt › Safari › Camera › Cho phép, rồi mở lại Tingfinder."
 
 msgid "is any of"
 msgstr "là bất kỳ giá trị nào trong"
@@ -2871,7 +2871,7 @@ msgid "Join {name}"
 msgstr "Tham gia {name}"
 
 msgid "Join {place} on Kept"
-msgstr "Tham gia {place} trên Kept"
+msgstr "Tham gia {place} trên Tingfinder"
 
 msgid "joined {joined}"
 msgstr "đã tham gia {joined}"
@@ -2880,7 +2880,7 @@ msgid "Joined {joinedName}"
 msgstr "Đã tham gia {joinedName}"
 
 msgid "Joining someone's Kept?"
-msgstr "Đang tham gia Kept của người khác?"
+msgstr "Đang tham gia Tingfinder của người khác?"
 
 msgid "Jump to"
 msgstr "Chuyển đến"
@@ -2934,7 +2934,7 @@ msgid "Keep your backup codes"
 msgstr "Giữ mã dự phòng của bạn"
 
 msgid "Kept"
-msgstr "Kept"
+msgstr "Tingfinder"
 
 msgid "Kept apart and encrypted, and revealed only per its policy. Only you, the account owner, can make a field secret, and only now."
 msgstr "Được tách riêng và mã hóa, và chỉ được tiết lộ theo chính sách của nó. Chỉ bạn, chủ tài khoản, mới có thể đặt một trường thành bí mật, và chỉ ngay lúc này."
@@ -2943,61 +2943,61 @@ msgid "Kept both"
 msgstr "Đã giữ cả hai"
 
 msgid "Kept can't scan here"
-msgstr "Kept không thể quét tại đây"
+msgstr "Tingfinder không thể quét tại đây"
 
 msgid "Kept can't tell what this is from here."
-msgstr "Kept không thể nhận biết đây là gì từ đây."
+msgstr "Tingfinder không thể nhận biết đây là gì từ đây."
 
 msgid "Kept can't use the camera"
-msgstr "Kept không thể dùng máy ảnh"
+msgstr "Tingfinder không thể dùng máy ảnh"
 
 msgid "Kept emails you a sign-in link; opening it confirms the address. Opening it also removes this account's password, passkeys and other sessions, so nobody who set them up before you keeps a way in. Two-factor needs a password, so afterwards set a new one with “Forgot your password?” on the sign-in page, then come back here."
-msgstr "Kept sẽ gửi email cho bạn một liên kết đăng nhập; mở liên kết đó sẽ xác nhận địa chỉ. Mở liên kết đó cũng sẽ xóa mật khẩu, khóa truy cập và các phiên khác của tài khoản này, để không ai từng thiết lập chúng trước bạn còn giữ đường vào. Xác thực hai yếu tố cần mật khẩu, vì vậy sau đó hãy đặt mật khẩu mới bằng “Quên mật khẩu của bạn?” trên trang đăng nhập, rồi quay lại đây."
+msgstr "Tingfinder sẽ gửi email cho bạn một liên kết đăng nhập; mở liên kết đó sẽ xác nhận địa chỉ. Mở liên kết đó cũng sẽ xóa mật khẩu, khóa truy cập và các phiên khác của tài khoản này, để không ai từng thiết lập chúng trước bạn còn giữ đường vào. Xác thực hai yếu tố cần mật khẩu, vì vậy sau đó hãy đặt mật khẩu mới bằng “Quên mật khẩu của bạn?” trên trang đăng nhập, rồi quay lại đây."
 
 msgid "Kept from an earlier type. They're not lost; re-type back to use them again."
 msgstr "Được giữ lại từ một loại trước đó. Chúng không bị mất; hãy đổi lại loại cũ để dùng lại."
 
 msgid "Kept label in view"
-msgstr "Đã thấy nhãn Kept trong khung hình"
+msgstr "Đã thấy nhãn Tingfinder trong khung hình"
 
 msgid "Kept limits admin actions over HTTP. Put Kept on HTTPS before you rely on them."
-msgstr "Kept hạn chế các thao tác quản trị qua HTTP. Hãy đưa Kept lên HTTPS trước khi dựa vào chúng."
+msgstr "Tingfinder hạn chế các thao tác quản trị qua HTTP. Hãy đưa Tingfinder lên HTTPS trước khi dựa vào chúng."
 
 msgid "Kept makes at most five reports an hour. Try again later."
-msgstr "Kept tạo tối đa năm báo cáo mỗi giờ. Hãy thử lại sau."
+msgstr "Tingfinder tạo tối đa năm báo cáo mỗi giờ. Hãy thử lại sau."
 
 msgid "Kept needs at least one instance admin"
-msgstr "Kept cần ít nhất một quản trị viên máy chủ"
+msgstr "Tingfinder cần ít nhất một quản trị viên máy chủ"
 
 msgid "Kept needs at least one instance admin, so the last one can't be removed."
-msgstr "Kept cần ít nhất một quản trị viên máy chủ, vì vậy không thể xóa người cuối cùng."
+msgstr "Tingfinder cần ít nhất một quản trị viên máy chủ, vì vậy không thể xóa người cuối cùng."
 
 msgid "Kept on the server is older than this app; ask your admin."
-msgstr "Kept trên máy chủ cũ hơn ứng dụng này; hãy hỏi quản trị viên của bạn."
+msgstr "Tingfinder trên máy chủ cũ hơn ứng dụng này; hãy hỏi quản trị viên của bạn."
 
 msgid "Kept opens from its own icon, full screen, and works offline."
-msgstr "Kept mở từ biểu tượng riêng của nó, toàn màn hình, và hoạt động ngoại tuyến."
+msgstr "Tingfinder mở từ biểu tượng riêng của nó, toàn màn hình, và hoạt động ngoại tuyến."
 
 msgid "Kept raises an alert here, and emails the instance admins at most once a day, when something on the server needs a person."
-msgstr "Kept đưa ra cảnh báo tại đây, và gửi email cho các quản trị viên máy chủ tối đa một lần mỗi ngày, khi có việc trên máy chủ cần người xử lý."
+msgstr "Tingfinder đưa ra cảnh báo tại đây, và gửi email cho các quản trị viên máy chủ tối đa một lần mỗi ngày, khi có việc trên máy chủ cần người xử lý."
 
 msgid "Kept safe"
 msgstr "Đã cất an toàn"
 
 msgid "Kept sends no email: no sign-in links, password resets, email invites or alerts. Set <0>KEPT_SMTP_URL</0> and restart Kept. Link invites and passwords work without it."
-msgstr "Kept không gửi email: không có liên kết đăng nhập, đặt lại mật khẩu, lời mời qua email hay cảnh báo. Hãy đặt <0>KEPT_SMTP_URL</0> và khởi động lại Kept. Lời mời bằng liên kết và mật khẩu vẫn hoạt động mà không cần nó."
+msgstr "Tingfinder không gửi email: không có liên kết đăng nhập, đặt lại mật khẩu, lời mời qua email hay cảnh báo. Hãy đặt <0>KEPT_SMTP_URL</0> và khởi động lại Tingfinder. Lời mời bằng liên kết và mật khẩu vẫn hoạt động mà không cần nó."
 
 msgid "Kept stores the barcode with it."
-msgstr "Kept lưu mã vạch cùng với nó."
+msgstr "Tingfinder lưu mã vạch cùng với nó."
 
 msgid "Kept takes photos and PDFs. Share those, or use Gallery."
-msgstr "Kept nhận ảnh và PDF. Hãy chia sẻ những thứ đó, hoặc dùng Thư viện."
+msgstr "Tingfinder nhận ảnh và PDF. Hãy chia sẻ những thứ đó, hoặc dùng Thư viện."
 
 msgid "Kept the reading"
 msgstr "Đã giữ chỉ số"
 
 msgid "Kept wasn't ready to receive files on this device yet. It is now: go back to the other app and share again."
-msgstr "Kept chưa sẵn sàng nhận tệp trên thiết bị này. Giờ thì đã sẵn sàng: hãy quay lại ứng dụng kia và chia sẻ lại."
+msgstr "Tingfinder chưa sẵn sàng nhận tệp trên thiết bị này. Giờ thì đã sẵn sàng: hãy quay lại ứng dụng kia và chia sẻ lại."
 
 msgid "Key"
 msgstr "Khóa"
@@ -3248,7 +3248,7 @@ msgid "Location"
 msgstr "Địa điểm"
 
 msgid "Location access is off for Kept in this browser's settings."
-msgstr "Quyền truy cập vị trí đang tắt cho Kept trong cài đặt của trình duyệt này."
+msgstr "Quyền truy cập vị trí đang tắt cho Tingfinder trong cài đặt của trình duyệt này."
 
 msgid "Location created"
 msgstr "Đã tạo địa điểm"
@@ -3726,7 +3726,7 @@ msgid "Next photo"
 msgstr "Ảnh tiếp theo"
 
 msgid "Next time you sign in, Kept asks for a code from your app."
-msgstr "Lần đăng nhập sau, Kept sẽ hỏi mã từ ứng dụng của bạn."
+msgstr "Lần đăng nhập sau, Tingfinder sẽ hỏi mã từ ứng dụng của bạn."
 
 msgid "no"
 msgstr "không"
@@ -3735,7 +3735,7 @@ msgid "No"
 msgstr "Không"
 
 msgid "No account yet? Ask someone who uses this Kept to invite you. The invite link creates your account."
-msgstr "Chưa có tài khoản? Hãy nhờ người đang dùng Kept này mời bạn. Liên kết mời sẽ tạo tài khoản cho bạn."
+msgstr "Chưa có tài khoản? Hãy nhờ người đang dùng Tingfinder này mời bạn. Liên kết mời sẽ tạo tài khoản cho bạn."
 
 msgid "No activity matches"
 msgstr "Không có hoạt động nào khớp"
@@ -3831,7 +3831,7 @@ msgid "Not a duplicate · keep both"
 msgstr "Không phải trùng lặp · giữ cả hai"
 
 msgid "Not a Kept label"
-msgstr "Không phải nhãn Kept"
+msgstr "Không phải nhãn Tingfinder"
 
 msgid "Not answering"
 msgstr "Không trả lời"
@@ -3852,7 +3852,7 @@ msgid "Not here"
 msgstr "Không ở đây"
 
 msgid "Not in your Kept"
-msgstr "Không có trong Kept của bạn"
+msgstr "Không có trong Tingfinder của bạn"
 
 msgid "Not inside another type"
 msgstr "Không nằm trong loại khác"
@@ -3864,7 +3864,7 @@ msgid "Not on this phone"
 msgstr "Không có trên điện thoại này"
 
 msgid "Not on this phone. Kept checks it when you open it online."
-msgstr "Không có trên điện thoại này. Kept sẽ kiểm tra khi bạn mở trực tuyến."
+msgstr "Không có trên điện thoại này. Tingfinder sẽ kiểm tra khi bạn mở trực tuyến."
 
 msgid "Not recorded"
 msgstr "Chưa ghi nhận"
@@ -3936,7 +3936,7 @@ msgid "Nothing on this phone matches ‘<0>{q}</0>’"
 msgstr "Không có gì trên điện thoại này khớp với ‘<0>{q}</0>’"
 
 msgid "Nothing on this phone yet. Open Kept once while online to bring your places."
-msgstr "Chưa có gì trên điện thoại này. Hãy mở Kept một lần khi đang trực tuyến để đồng bộ các vị trí của bạn."
+msgstr "Chưa có gì trên điện thoại này. Hãy mở Tingfinder một lần khi đang trực tuyến để đồng bộ các vị trí của bạn."
 
 msgid "Nothing recorded yet."
 msgstr "Chưa ghi nhận gì."
@@ -4014,10 +4014,10 @@ msgid "On Home until every step is done."
 msgstr "Hiện trên Trang chủ cho đến khi mọi bước hoàn tất."
 
 msgid "On iPhone, Kept uploads only while it's open. Keep it open when you're back in signal."
-msgstr "Trên iPhone, Kept chỉ tải lên khi đang mở. Hãy giữ ứng dụng mở khi bạn trở lại vùng có tín hiệu."
+msgstr "Trên iPhone, Tingfinder chỉ tải lên khi đang mở. Hãy giữ ứng dụng mở khi bạn trở lại vùng có tín hiệu."
 
 msgid "On iPhone, notifications only reach Kept once it's on your Home Screen. Until then, reminders can come by email."
-msgstr "Trên iPhone, thông báo chỉ đến được Kept khi ứng dụng đã có trên Màn hình chính. Trước đó, lời nhắc có thể gửi qua email."
+msgstr "Trên iPhone, thông báo chỉ đến được Tingfinder khi ứng dụng đã có trên Màn hình chính. Trước đó, lời nhắc có thể gửi qua email."
 
 msgid "On iPhone, reminders only reach the installed app."
 msgstr "Trên iPhone, lời nhắc chỉ đến được ứng dụng đã cài đặt."
@@ -4050,7 +4050,7 @@ msgid "On. Signing in asks for a code from your authenticator app."
 msgstr "Đã bật. Khi đăng nhập sẽ yêu cầu mã từ ứng dụng xác thực của bạn."
 
 msgid "Once Kept is installed it's in the Share sheet. Share photos or PDFs to it from any app, and they open in Capture."
-msgstr "Khi Kept đã được cài đặt, nó sẽ xuất hiện trong bảng Chia sẻ. Chia sẻ ảnh hoặc PDF tới Kept từ bất kỳ ứng dụng nào, chúng sẽ mở trong Chụp."
+msgstr "Khi Tingfinder đã được cài đặt, nó sẽ xuất hiện trong bảng Chia sẻ. Chia sẻ ảnh hoặc PDF tới Tingfinder từ bất kỳ ứng dụng nào, chúng sẽ mở trong Chụp."
 
 msgid "One at a time with the move picker, or use Select below to move several at once."
 msgstr "Từng cái một bằng công cụ chọn di chuyển, hoặc dùng Chọn bên dưới để di chuyển nhiều cái cùng lúc."
@@ -4092,10 +4092,10 @@ msgid "Only me"
 msgstr "Chỉ mình tôi"
 
 msgid "Only part of your Kept is on this phone."
-msgstr "Chỉ một phần Kept của bạn có trên điện thoại này."
+msgstr "Chỉ một phần Tingfinder của bạn có trên điện thoại này."
 
 msgid "Only say yes once the two keys from kept admin recovery-kit are stored away from this server. Kept can't check."
-msgstr "Chỉ đồng ý khi hai khóa từ kept admin recovery-kit đã được lưu ở nơi khác ngoài máy chủ này. Kept không thể kiểm tra việc này."
+msgstr "Chỉ đồng ý khi hai khóa từ kept admin recovery-kit đã được lưu ở nơi khác ngoài máy chủ này. Tingfinder không thể kiểm tra việc này."
 
 msgid "Only something nothing uses can be deleted. Otherwise, merge it into another."
 msgstr "Chỉ thứ không được dùng cho gì mới xóa được. Nếu không, hãy gộp nó vào một thứ khác."
@@ -4160,13 +4160,13 @@ msgid "Open it"
 msgstr "Mở nó"
 
 msgid "Open Kept"
-msgstr "Mở Kept"
+msgstr "Mở Tingfinder"
 
 msgid "Open Kept from its new icon."
-msgstr "Mở Kept từ biểu tượng mới của nó."
+msgstr "Mở Tingfinder từ biểu tượng mới của nó."
 
 msgid "Open Kept once, then share again"
-msgstr "Mở Kept một lần, rồi chia sẻ lại"
+msgstr "Mở Tingfinder một lần, rồi chia sẻ lại"
 
 msgid "Open that box"
 msgstr "Mở hộp đó"
@@ -4202,7 +4202,7 @@ msgid "Opening the camera"
 msgstr "Đang mở camera"
 
 msgid "Opening this phone's copy of your Kept…"
-msgstr "Đang mở bản sao Kept của bạn trên điện thoại này…"
+msgstr "Đang mở bản sao Tingfinder của bạn trên điện thoại này…"
 
 msgid "Optional: without one it waits in the Inbox to be named."
 msgstr "Không bắt buộc: nếu không có, nó sẽ chờ trong Hộp thư đến để được đặt tên."
@@ -4211,7 +4211,7 @@ msgid "or"
 msgstr "hoặc"
 
 msgid "Or reach Kept through Tailscale and turn on HTTPS for your tailnet; the address ends in <0>.ts.net</0>."
-msgstr "Hoặc truy cập Kept qua Tailscale và bật HTTPS cho tailnet của bạn; địa chỉ kết thúc bằng <0>.ts.net</0>."
+msgstr "Hoặc truy cập Tingfinder qua Tailscale và bật HTTPS cho tailnet của bạn; địa chỉ kết thúc bằng <0>.ts.net</0>."
 
 msgid "Or search"
 msgstr "Hoặc tìm kiếm"
@@ -4230,10 +4230,10 @@ msgid "Other"
 msgstr "Khác"
 
 msgid "Over plain HTTP, phones block the camera, installing Kept, push notifications and location."
-msgstr "Qua HTTP thuần, điện thoại sẽ chặn camera, việc cài đặt Kept, thông báo đẩy và vị trí."
+msgstr "Qua HTTP thuần, điện thoại sẽ chặn camera, việc cài đặt Tingfinder, thông báo đẩy và vị trí."
 
 msgid "Over plain HTTP, phones won't install Kept. Put Kept on HTTPS first."
-msgstr "Qua HTTP thuần, điện thoại sẽ không cài đặt Kept. Hãy đưa Kept lên HTTPS trước."
+msgstr "Qua HTTP thuần, điện thoại sẽ không cài đặt Tingfinder. Hãy đưa Tingfinder lên HTTPS trước."
 
 msgid "Owner"
 msgstr "Chủ sở hữu"
@@ -4390,10 +4390,10 @@ msgid "Places · <0>{placeCount}</0>"
 msgstr "Vị trí · <0>{placeCount}</0>"
 
 msgid "Point at a Kept label"
-msgstr "Hướng vào một nhãn Kept"
+msgstr "Hướng vào một nhãn Tingfinder"
 
 msgid "Point at a Kept label, or a product's barcode."
-msgstr "Hướng vào một nhãn Kept, hoặc mã vạch của sản phẩm."
+msgstr "Hướng vào một nhãn Tingfinder, hoặc mã vạch của sản phẩm."
 
 msgid "Point at the label of the place or box they go in."
 msgstr "Hướng vào nhãn của vị trí hoặc hộp chứa chúng."
@@ -4504,7 +4504,7 @@ msgid "Put it inside another place in {locationName}"
 msgstr "Đặt nó vào một vị trí khác trong {locationName}"
 
 msgid "Put Kept on HTTPS"
-msgstr "Đưa Kept lên HTTPS"
+msgstr "Đưa Tingfinder lên HTTPS"
 
 msgid "Put them back"
 msgstr "Đặt chúng trở lại"
@@ -5162,7 +5162,7 @@ msgid "Set up"
 msgstr "Thiết lập"
 
 msgid "Set up this Kept"
-msgstr "Thiết lập Kept này"
+msgstr "Thiết lập Tingfinder này"
 
 msgid "Setting it signs you out on every device."
 msgstr "Đặt mục này sẽ đăng xuất bạn khỏi mọi thiết bị."
@@ -5180,7 +5180,7 @@ msgid "Share a link or a QR code. Choose what they can do and for how long."
 msgstr "Chia sẻ một liên kết hoặc mã QR. Chọn những gì họ có thể làm và trong bao lâu."
 
 msgid "Share the files into Kept again."
-msgstr "Chia sẻ lại các tệp vào Kept."
+msgstr "Chia sẻ lại các tệp vào Tingfinder."
 
 msgid "Share…"
 msgstr "Chia sẻ…"
@@ -5192,7 +5192,7 @@ msgid "Shared files"
 msgstr "Tệp đã chia sẻ"
 
 msgid "Shared into Kept"
-msgstr "Đã chia sẻ vào Kept"
+msgstr "Đã chia sẻ vào Tingfinder"
 
 msgid "Shared with {name}"
 msgstr "Đã chia sẻ với {name}"
@@ -5255,7 +5255,7 @@ msgid "Sign in as someone else"
 msgstr "Đăng nhập bằng tài khoản khác"
 
 msgid "Sign in to Kept"
-msgstr "Đăng nhập vào Kept"
+msgstr "Đăng nhập vào Tingfinder"
 
 msgid "Sign in with a one-time code"
 msgstr "Đăng nhập bằng mã dùng một lần"
@@ -5405,7 +5405,7 @@ msgid "Start"
 msgstr "Bắt đầu"
 
 msgid "Start Kept's Compose file with the <0>https</0> profile. It adds a reverse proxy that gets a certificate for your domain."
-msgstr "Khởi động tệp Compose của Kept với hồ sơ <0>https</0>. Hồ sơ này thêm một reverse proxy lấy chứng chỉ cho tên miền của bạn."
+msgstr "Khởi động tệp Compose của Tingfinder với hồ sơ <0>https</0>. Hồ sơ này thêm một reverse proxy lấy chứng chỉ cho tên miền của bạn."
 
 msgid "State"
 msgstr "Tỉnh/Bang"
@@ -5414,7 +5414,7 @@ msgid "Status"
 msgstr "Trạng thái"
 
 msgid "Stay signed in and open Kept with a connection to finish syncing first."
-msgstr "Giữ đăng nhập và mở Kept khi có kết nối để hoàn tất đồng bộ trước."
+msgstr "Giữ đăng nhập và mở Tingfinder khi có kết nối để hoàn tất đồng bộ trước."
 
 msgid "Step {step} of {steps}"
 msgstr "Bước {step} trên {steps}"
@@ -5540,7 +5540,7 @@ msgid "Taken"
 msgstr "Đã chụp"
 
 msgid "Tap <0>Add</0>, then open Kept from its new icon."
-msgstr "Nhấn <0>Thêm</0>, rồi mở Kept từ biểu tượng mới của nó."
+msgstr "Nhấn <0>Thêm</0>, rồi mở Tingfinder từ biểu tượng mới của nó."
 
 msgid "Tap <0>Install app</0>, or <1>Add to Home screen</1>."
 msgstr "Nhấn <0>Cài đặt ứng dụng</0>, hoặc <1>Thêm vào Màn hình chính</1>."
@@ -5594,7 +5594,7 @@ msgid "That key is already a field of this type, one it inherits from, or one be
 msgstr "Khóa đó đã là một trường của loại này, của một loại mà nó kế thừa, hoặc của một loại bên dưới nó. Hãy chọn khóa khác."
 
 msgid "That label isn't on a thing in your Kept."
-msgstr "Nhãn đó không gắn với đồ vật nào trong Kept của bạn."
+msgstr "Nhãn đó không gắn với đồ vật nào trong Tingfinder của bạn."
 
 msgid "That name is already in this list. Merge the two instead."
 msgstr "Tên đó đã có trong danh sách này. Thay vào đó, hãy gộp hai cái lại."
@@ -5642,7 +5642,7 @@ msgid "The assistant may read it"
 msgstr "Trợ lý có thể đọc nó"
 
 msgid "The camera needs a secure (HTTPS) address, and this page doesn't have one. Your admin can put Kept on HTTPS."
-msgstr "Máy ảnh cần một địa chỉ bảo mật (HTTPS), mà trang này không có. Quản trị viên của bạn có thể đưa Kept lên HTTPS."
+msgstr "Máy ảnh cần một địa chỉ bảo mật (HTTPS), mà trang này không có. Quản trị viên của bạn có thể đưa Tingfinder lên HTTPS."
 
 msgid "The code is 6 letters and digits, like K7Q-2M9."
 msgstr "Mã gồm 6 chữ cái và chữ số, ví dụ K7Q-2M9."
@@ -5693,7 +5693,7 @@ msgid "The old meter's last reading ({unit})"
 msgstr "Chỉ số cuối cùng của đồng hồ cũ ({unit})"
 
 msgid "The one already in Kept, <0>{0}</0>"
-msgstr "Cái đã có trong Kept, <0>{0}</0>"
+msgstr "Cái đã có trong Tingfinder, <0>{0}</0>"
 
 msgid "The original is kept. This format can't be previewed yet."
 msgstr "Bản gốc được giữ lại. Định dạng này chưa xem trước được."
@@ -5753,7 +5753,7 @@ msgid "Theme"
 msgstr "Chủ đề"
 
 msgid "Then set KEPT_PUBLIC_URL to the https address and restart Kept."
-msgstr "Sau đó đặt KEPT_PUBLIC_URL thành địa chỉ https và khởi động lại Kept."
+msgstr "Sau đó đặt KEPT_PUBLIC_URL thành địa chỉ https và khởi động lại Tingfinder."
 
 msgid "There are {0}. The ones you take off get their own row, keeping the same purchase."
 msgstr "Có {0}. Những cái bạn gỡ ra sẽ có hàng riêng, vẫn giữ cùng lần mua."
@@ -5828,7 +5828,7 @@ msgid "This account runs the server: users, sign-up and backups. It can't see in
 msgstr "Tài khoản này vận hành máy chủ: người dùng, đăng ký và sao lưu. Nó không thể xem bên trong nhà của bất kỳ ai trừ khi họ mời."
 
 msgid "This address doesn't lead to a page in Kept. The link may be old."
-msgstr "Địa chỉ này không dẫn đến một trang trong Kept. Liên kết có thể đã cũ."
+msgstr "Địa chỉ này không dẫn đến một trang trong Tingfinder. Liên kết có thể đã cũ."
 
 msgid "This batch"
 msgstr "Đợt này"
@@ -5843,19 +5843,19 @@ msgid "The scanner didn't start."
 msgstr "Máy quét không khởi động được."
 
 msgid "This browser may clear Kept's offline copy after weeks unused. Open Kept to sync soon."
-msgstr "Trình duyệt này có thể xóa bản sao ngoại tuyến của Kept sau vài tuần không dùng. Hãy mở Kept để đồng bộ sớm."
+msgstr "Trình duyệt này có thể xóa bản sao ngoại tuyến của Tingfinder sau vài tuần không dùng. Hãy mở Tingfinder để đồng bộ sớm."
 
 msgid "This changed since you opened it. Reload and try again."
 msgstr "Nội dung này đã thay đổi từ khi bạn mở. Hãy tải lại và thử lại."
 
 msgid "This code isn't one of Kept's labels. It says:"
-msgstr "Mã này không phải là một nhãn của Kept. Nó ghi:"
+msgstr "Mã này không phải là một nhãn của Tingfinder. Nó ghi:"
 
 msgid "This device"
 msgstr "Thiết bị này"
 
 msgid "This device has no camera Kept can use."
-msgstr "Thiết bị này không có camera mà Kept có thể dùng."
+msgstr "Thiết bị này không có camera mà Tingfinder có thể dùng."
 
 msgid "This device stays signed in. The others need your password or passkey again."
 msgstr "Thiết bị này vẫn giữ đăng nhập. Các thiết bị khác cần mật khẩu hoặc khóa truy cập của bạn lần nữa."
@@ -5885,7 +5885,7 @@ msgid "This isn't here any more, or you can't see it."
 msgstr "Nội dung này không còn ở đây nữa, hoặc bạn không xem được."
 
 msgid "This Kept is already set up. Sign in instead."
-msgstr "Kept này đã được thiết lập. Hãy đăng nhập thay vì tạo mới."
+msgstr "Tingfinder này đã được thiết lập. Hãy đăng nhập thay vì tạo mới."
 
 msgid "This label isn't on anything yet. Use it for:"
 msgstr "Nhãn này chưa gắn vào thứ gì. Dùng nó cho:"
@@ -5921,7 +5921,7 @@ msgid "This phone format can't be previewed yet. The original is kept."
 msgstr "Định dạng điện thoại này chưa xem trước được. Bản gốc vẫn được giữ."
 
 msgid "This phone is out of space for Kept. Free some space to keep capturing offline."
-msgstr "Điện thoại này đã hết dung lượng cho Kept. Hãy giải phóng dung lượng để tiếp tục chụp ngoại tuyến."
+msgstr "Điện thoại này đã hết dung lượng cho Tingfinder. Hãy giải phóng dung lượng để tiếp tục chụp ngoại tuyến."
 
 msgid "This phone may be out of space."
 msgstr "Điện thoại này có thể đã hết dung lượng."
@@ -5930,7 +5930,7 @@ msgid "This sign-in timed out. Start again from the sign-in page."
 msgstr "Lần đăng nhập này đã hết thời gian. Hãy bắt đầu lại từ trang đăng nhập."
 
 msgid "This step ticks itself the first time you open Kept from its icon."
-msgstr "Bước này sẽ tự đánh dấu lần đầu bạn mở Kept từ biểu tượng của nó."
+msgstr "Bước này sẽ tự đánh dấu lần đầu bạn mở Tingfinder từ biểu tượng của nó."
 
 msgid "This thing is…"
 msgstr "Thứ này là…"
@@ -6223,7 +6223,7 @@ msgid "Up to {0}"
 msgstr "Lên đến {0}"
 
 msgid "Update Kept to finish syncing."
-msgstr "Cập nhật Kept để hoàn tất đồng bộ."
+msgstr "Cập nhật Tingfinder để hoàn tất đồng bộ."
 
 msgid "Updated"
 msgstr "Đã cập nhật"
@@ -6280,7 +6280,7 @@ msgid "Used up by"
 msgstr "Được dùng hết bởi"
 
 msgid "Used when Kept is in Arabic, for amounts, dates and counts. Short IDs, codes and serials always stay 0–9."
-msgstr "Dùng khi Kept ở tiếng Ả Rập, cho số tiền, ngày tháng và số lượng. ID ngắn, mã và số sê-ri luôn giữ dạng 0–9."
+msgstr "Dùng khi Tingfinder ở tiếng Ả Rập, cho số tiền, ngày tháng và số lượng. ID ngắn, mã và số sê-ri luôn giữ dạng 0–9."
 
 msgid "Username"
 msgstr "Tên người dùng"
@@ -6463,7 +6463,7 @@ msgid "When AI fills in a thing here, it adds search words in each of these lang
 msgstr "Khi AI điền thông tin cho một đồ vật ở đây, nó thêm từ khóa tìm kiếm bằng từng ngôn ngữ này, để ai cũng tìm được bằng ngôn ngữ của mình."
 
 msgid "When Kept started for the first time, it printed a one-time setup code in the server's logs. Entering it shows you're the person who installed this server. The code stops working once it's used."
-msgstr "Khi Kept chạy lần đầu, nó in một mã thiết lập dùng một lần trong nhật ký của máy chủ. Nhập mã đó chứng tỏ bạn là người đã cài đặt máy chủ này. Mã sẽ hết hiệu lực sau khi dùng."
+msgstr "Khi Tingfinder chạy lần đầu, nó in một mã thiết lập dùng một lần trong nhật ký của máy chủ. Nhập mã đó chứng tỏ bạn là người đã cài đặt máy chủ này. Mã sẽ hết hiệu lực sau khi dùng."
 
 msgid "When two places are really the same one"
 msgstr "Khi hai vị trí thực ra là một"
@@ -6769,7 +6769,7 @@ msgid "{0}% used"
 msgstr "Đã dùng {0}%"
 
 msgid "{held, plural, one {# held back by Kept} other {# held back by Kept}}"
-msgstr "{held, plural, one {# bị Kept giữ lại} other {# bị Kept giữ lại}}"
+msgstr "{held, plural, one {# bị Tingfinder giữ lại} other {# bị Tingfinder giữ lại}}"
 
 msgid "{name}'s terms, checked {0}"
 msgstr "Điều khoản của {name}, đã kiểm tra {0}"
@@ -6856,7 +6856,7 @@ msgid "add a price to see cost"
 msgstr "thêm giá để xem chi phí"
 
 msgid "Add a price to see cost. Until then Kept counts tokens only."
-msgstr "Thêm giá để xem chi phí. Cho đến lúc đó Kept chỉ đếm token."
+msgstr "Thêm giá để xem chi phí. Cho đến lúc đó Tingfinder chỉ đếm token."
 
 msgid "Admin settings"
 msgstr "Cài đặt quản trị"
@@ -7117,7 +7117,7 @@ msgid "Images"
 msgstr "Hình ảnh"
 
 msgid "In Kept's test on {date}, it read receipts, labels and nameplates correctly for the least money of any model measured:"
-msgstr "Trong thử nghiệm của Kept vào {date}, nó đọc biên lai, nhãn và tem thông số chính xác với chi phí thấp nhất trong các mô hình đã đo:"
+msgstr "Trong thử nghiệm của Tingfinder vào {date}, nó đọc biên lai, nhãn và tem thông số chính xác với chi phí thấp nhất trong các mô hình đã đo:"
 
 msgid "Input {0} · output {1} per million tokens"
 msgstr "Đầu vào {0} · đầu ra {1} cho mỗi triệu token"
@@ -7135,19 +7135,19 @@ msgid "Keep paused"
 msgstr "Giữ tạm dừng"
 
 msgid "Kept (background)"
-msgstr "Kept (nền)"
+msgstr "Tingfinder (nền)"
 
 msgid "Kept can't tell which provider this key is for. Choose it under Advanced."
-msgstr "Kept không biết khóa này dành cho nhà cung cấp nào. Chọn nhà cung cấp trong Nâng cao."
+msgstr "Tingfinder không biết khóa này dành cho nhà cung cấp nào. Chọn nhà cung cấp trong Nâng cao."
 
 msgid "Kept estimated {0} before sending."
-msgstr "Kept đã ước tính {0} trước khi gửi."
+msgstr "Tingfinder đã ước tính {0} trước khi gửi."
 
 msgid "Kept fills in {0}'s address."
-msgstr "Kept điền địa chỉ của {0}."
+msgstr "Tingfinder điền địa chỉ của {0}."
 
 msgid "Kept reads the provider from the key. It sends the key to the server once and never shows it again."
-msgstr "Kept đọc nhà cung cấp từ khóa. Nó gửi khóa lên máy chủ một lần và không bao giờ hiển thị lại."
+msgstr "Tingfinder đọc nhà cung cấp từ khóa. Nó gửi khóa lên máy chủ một lần và không bao giờ hiển thị lại."
 
 msgid "Key saved"
 msgstr "Đã lưu khóa"
@@ -7189,7 +7189,7 @@ msgid "Low (the default)"
 msgstr "Thấp (mặc định)"
 
 msgid "Measured by Kept on {0} with Groq · <0>{1}</0>"
-msgstr "Kept đo vào {0} với Groq · <0>{1}</0>"
+msgstr "Tingfinder đo vào {0} với Groq · <0>{1}</0>"
 
 msgid "Medium"
 msgstr "Trung bình"
@@ -7270,7 +7270,7 @@ msgid "Not sent"
 msgstr "Chưa gửi"
 
 msgid "Not sent: Kept held it back, so nothing was used."
-msgstr "Chưa gửi: Kept đã giữ lại, nên không dùng gì cả."
+msgstr "Chưa gửi: Tingfinder đã giữ lại, nên không dùng gì cả."
 
 msgid "Not set: name things by hand"
 msgstr "Chưa đặt: đặt tên đồ vật thủ công"
@@ -7294,7 +7294,7 @@ msgid "Only a copy of the photo with location and camera data removed, never the
 msgstr "Chỉ một bản sao của ảnh đã xóa dữ liệu vị trí và máy ảnh, không bao giờ là ảnh gốc. Các hướng dẫn cố định và ngôn ngữ của địa điểm của bạn. Đối với trợ lý, câu hỏi của bạn và kho đồ mà nó tra cứu, trong phạm vi vai trò của bạn. Không bao giờ là trường bí mật."
 
 msgid "Only a copy with the location and camera data removed. Kept never keeps it."
-msgstr "Chỉ một bản sao đã xóa dữ liệu vị trí và máy ảnh. Kept không bao giờ giữ nó."
+msgstr "Chỉ một bản sao đã xóa dữ liệu vị trí và máy ảnh. Tingfinder không bao giờ giữ nó."
 
 msgid "Only where the provider bills images apart from tokens."
 msgstr "Chỉ khi nhà cung cấp tính phí hình ảnh riêng ngoài token."
@@ -7447,7 +7447,7 @@ msgid "Run Test to check photos"
 msgstr "Chạy Kiểm tra để kiểm tra ảnh"
 
 msgid "Save a key first: Kept then loads the provider's models to choose from."
-msgstr "Lưu khóa trước: sau đó Kept sẽ tải các mô hình của nhà cung cấp để bạn chọn."
+msgstr "Lưu khóa trước: sau đó Tingfinder sẽ tải các mô hình của nhà cung cấp để bạn chọn."
 
 msgid "Save and test"
 msgstr "Lưu và kiểm tra"
@@ -7540,7 +7540,7 @@ msgid "That currency isn't turned on. An instance admin can add it."
 msgstr "Loại tiền tệ này chưa được bật. Quản trị viên máy chủ có thể thêm nó."
 
 msgid "That was a test with made-up photos; Kept's evaluation with real photos checks it again. Groq has no embeddings model, so semantic search needs another provider or stays keyword only. On the key tier Kept measured, Groq reads {low}–{high} photos a minute; Kept paces to it, so a {photos}-photo session is named over {fromMin}–{toMin} minutes while you carry on."
-msgstr "Đó chỉ là lần kiểm tra với ảnh giả; Kept sẽ kiểm tra lại bằng ảnh thật khi đánh giá. Groq không có mô hình embeddings, nên tìm kiếm ngữ nghĩa cần một nhà cung cấp khác hoặc chỉ dùng từ khóa. Trên gói khóa mà Kept đã đo, Groq đọc {low}–{high} ảnh mỗi phút; Kept điều chỉnh tốc độ theo đó, nên một phiên {photos} ảnh kéo dài {fromMin}–{toMin} phút trong khi bạn tiếp tục làm việc."
+msgstr "Đó chỉ là lần kiểm tra với ảnh giả; Tingfinder sẽ kiểm tra lại bằng ảnh thật khi đánh giá. Groq không có mô hình embeddings, nên tìm kiếm ngữ nghĩa cần một nhà cung cấp khác hoặc chỉ dùng từ khóa. Trên gói khóa mà Tingfinder đã đo, Groq đọc {low}–{high} ảnh mỗi phút; Tingfinder điều chỉnh tốc độ theo đó, nên một phiên {photos} ảnh kéo dài {fromMin}–{toMin} phút trong khi bạn tiếp tục làm việc."
 
 msgid "That was already undone"
 msgstr "Việc đó đã được hoàn tác rồi"
@@ -7558,16 +7558,16 @@ msgid "the answer was cut off"
 msgstr "câu trả lời bị cắt ngang"
 
 msgid "the answer wasn't in the shape Kept asked for"
-msgstr "câu trả lời không đúng định dạng Kept yêu cầu"
+msgstr "câu trả lời không đúng định dạng Tingfinder yêu cầu"
 
 msgid "The cheapest reliable result in Kept's test: about USD {perReceipt} a receipt, with <0>{0}</0>. On the key tier Kept measured, Groq reads {low}–{high} photos a minute; Kept paces to it."
-msgstr "Kết quả đáng tin cậy rẻ nhất trong bài kiểm tra của Kept: khoảng USD {perReceipt} mỗi biên lai, với <0>{0}</0>. Trên gói khóa mà Kept đã đo, Groq đọc {low}–{high} ảnh mỗi phút; Kept điều chỉnh tốc độ theo đó."
+msgstr "Kết quả đáng tin cậy rẻ nhất trong bài kiểm tra của Tingfinder: khoảng USD {perReceipt} mỗi biên lai, với <0>{0}</0>. Trên gói khóa mà Tingfinder đã đo, Groq đọc {low}–{high} ảnh mỗi phút; Tingfinder điều chỉnh tốc độ theo đó."
 
 msgid "The first AI key is a secret Kept must be able to recover. Save the recovery kit on the status page, then paste the key again."
-msgstr "Khóa AI đầu tiên là một bí mật mà Kept phải có thể khôi phục. Hãy lưu bộ khôi phục trên trang trạng thái, rồi dán lại khóa."
+msgstr "Khóa AI đầu tiên là một bí mật mà Tingfinder phải có thể khôi phục. Hãy lưu bộ khôi phục trên trang trạng thái, rồi dán lại khóa."
 
 msgid "The listing has no prices Kept can use."
-msgstr "Bảng giá không có mức giá nào Kept có thể dùng."
+msgstr "Bảng giá không có mức giá nào Tingfinder có thể dùng."
 
 msgid "the monthly cap was reached"
 msgstr "đã đạt giới hạn hàng tháng"
@@ -7579,7 +7579,7 @@ msgid "The person who runs this server needs to save the recovery kit before the
 msgstr "Người vận hành máy chủ này cần lưu bộ khôi phục trước khóa AI đầu tiên. Hãy hỏi họ, rồi dán lại khóa."
 
 msgid "the provider asked Kept to slow down"
-msgstr "nhà cung cấp yêu cầu Kept giảm tốc độ"
+msgstr "nhà cung cấp yêu cầu Tingfinder giảm tốc độ"
 
 msgid "the provider couldn't be reached"
 msgstr "không thể kết nối tới nhà cung cấp"
@@ -7705,7 +7705,7 @@ msgid "What it belongs to opens, with what's inside. A worn label, or no camera?
 msgstr "Mở ra thứ nó thuộc về, cùng với những gì bên trong. Nhãn đã mờ, hoặc không có máy ảnh? Hãy nhập mã thay vào đó."
 
 msgid "What uses AI in Kept"
-msgstr "Những gì dùng AI trong Kept"
+msgstr "Những gì dùng AI trong Tingfinder"
 
 msgid "Where and who"
 msgstr "Ở đâu và của ai"
@@ -7906,7 +7906,7 @@ msgid "Importing…"
 msgstr "Đang nhập…"
 
 msgid "In any of Kept's languages. Off, the type is kept in the notes."
-msgstr "Bằng bất kỳ ngôn ngữ nào của Kept. Khi tắt, loại được giữ trong ghi chú."
+msgstr "Bằng bất kỳ ngôn ngữ nào của Tingfinder. Khi tắt, loại được giữ trong ghi chú."
 
 msgid "It hasn't moved for a while. What it already imported stays."
 msgstr "Nó đã không tiến triển một lúc rồi. Những gì nó đã nhập vẫn còn."
@@ -7966,10 +7966,10 @@ msgid "No type has this name; kept in the notes."
 msgstr "Không có loại nào mang tên này; giữ trong ghi chú."
 
 msgid "Not a condition Kept knows; kept in the notes."
-msgstr "Không phải tình trạng Kept biết; giữ trong ghi chú."
+msgstr "Không phải tình trạng Tingfinder biết; giữ trong ghi chú."
 
 msgid "Not a currency turned on in Kept; the price is kept in the notes."
-msgstr "Không phải tiền tệ đang bật trong Kept; giá được giữ trong ghi chú."
+msgstr "Không phải tiền tệ đang bật trong Tingfinder; giá được giữ trong ghi chú."
 
 msgid "Not a date written as {format}; kept in the notes."
 msgstr "Không phải ngày viết theo dạng {format}; giữ trong ghi chú."
@@ -8218,7 +8218,7 @@ msgid "Things already started from it keep their details."
 msgstr "Các đồ vật đã bắt đầu từ nó giữ nguyên thông tin của chúng."
 
 msgid "Kept labels"
-msgstr "Nhãn Kept"
+msgstr "Nhãn Tingfinder"
 
 msgid "Saved the label images"
 msgstr "Đã lưu các ảnh nhãn"
@@ -8236,7 +8236,7 @@ msgid "Share as images"
 msgstr "Chia sẻ dưới dạng hình ảnh"
 
 msgid "Share into Kept"
-msgstr "Chia sẻ vào Kept"
+msgstr "Chia sẻ vào Tingfinder"
 
 msgid "Print"
 msgstr "In"
@@ -8347,10 +8347,10 @@ msgid "{count, plural, one {Print # label} other {Print # labels}}"
 msgstr "{count, plural, one {In # nhãn} other {In # nhãn}}"
 
 msgid "Opens the print dialog at {stockTitle}, scale 100%. Afterwards Kept asks \"Printed OK?\" and records the print date."
-msgstr "Mở hộp thoại in với {stockTitle}, tỉ lệ 100%. Sau đó Kept hỏi “Đã in xong?” và ghi lại ngày in."
+msgstr "Mở hộp thoại in với {stockTitle}, tỉ lệ 100%. Sau đó Tingfinder hỏi “Đã in xong?” và ghi lại ngày in."
 
 msgid "Opens the print dialog: choose your label printer and this label size. Afterwards Kept asks \"Printed OK?\" and records the print date."
-msgstr "Mở hộp thoại in: chọn máy in nhãn của bạn và kích thước nhãn này. Sau đó Kept hỏi “Đã in xong?” và ghi lại ngày in."
+msgstr "Mở hộp thoại in: chọn máy in nhãn của bạn và kích thước nhãn này. Sau đó Tingfinder hỏi “Đã in xong?” và ghi lại ngày in."
 
 msgid "Label preview"
 msgstr "Xem trước nhãn"
@@ -8527,19 +8527,19 @@ msgid "Former addresses"
 msgstr "Các địa chỉ cũ"
 
 msgid "Look up products Kept doesn't know by their barcode"
-msgstr "Tra cứu sản phẩm mà Kept chưa biết bằng mã vạch của chúng"
+msgstr "Tra cứu sản phẩm mà Tingfinder chưa biết bằng mã vạch của chúng"
 
 msgid "None. Kept answers only at its own address."
-msgstr "Không có. Kept chỉ trả lời tại địa chỉ của chính nó."
+msgstr "Không có. Tingfinder chỉ trả lời tại địa chỉ của chính nó."
 
 msgid "Off. A scanned product barcode finds only what Kept already holds."
-msgstr "Tắt. Mã vạch sản phẩm đã quét chỉ tìm được những gì Kept đã có."
+msgstr "Tắt. Mã vạch sản phẩm đã quét chỉ tìm được những gì Tingfinder đã có."
 
 msgid "Old host name"
 msgstr "Tên máy chủ cũ"
 
 msgid "On. A scanned product barcode Kept doesn't know is looked up in Open Food Facts, Open Products Facts and Open Beauty Facts. Only the barcode is sent."
-msgstr "Bật. Mã vạch sản phẩm đã quét mà Kept chưa biết sẽ được tra cứu trong Open Food Facts, Open Products Facts và Open Beauty Facts. Chỉ mã vạch được gửi đi."
+msgstr "Bật. Mã vạch sản phẩm đã quét mà Tingfinder chưa biết sẽ được tra cứu trong Open Food Facts, Open Products Facts và Open Beauty Facts. Chỉ mã vạch được gửi đi."
 
 msgid "Only the name, like kept.home.example."
 msgstr "Chỉ tên, ví dụ kept.home.example."
@@ -8557,10 +8557,10 @@ msgid "That name is already listed."
 msgstr "Tên đó đã được liệt kê."
 
 msgid "The databases ask each app for a contact. Kept sends this email with each lookup, and nothing else about you."
-msgstr "Các cơ sở dữ liệu yêu cầu mỗi ứng dụng cung cấp một liên hệ. Kept gửi email này kèm mỗi lần tra cứu, và không gửi gì khác về bạn."
+msgstr "Các cơ sở dữ liệu yêu cầu mỗi ứng dụng cung cấp một liên hệ. Tingfinder gửi email này kèm mỗi lần tra cứu, và không gửi gì khác về bạn."
 
 msgid "When Kept moves to a new address, list the old names here and point them at this server. A label printed under an old address still opens: the request is sent to this one."
-msgstr "Khi Kept chuyển sang địa chỉ mới, hãy liệt kê các tên cũ tại đây và trỏ chúng về máy chủ này. Nhãn in dưới địa chỉ cũ vẫn mở được: yêu cầu sẽ được gửi tới máy chủ này."
+msgstr "Khi Tingfinder chuyển sang địa chỉ mới, hãy liệt kê các tên cũ tại đây và trỏ chúng về máy chủ này. Nhãn in dưới địa chỉ cũ vẫn mở được: yêu cầu sẽ được gửi tới máy chủ này."
 
 msgid "{n, plural, one {Picked up # thing} other {Picked up # things}}"
 msgstr "{n, plural, one {Đã lấy # đồ vật} other {Đã lấy # đồ vật}}"
@@ -8704,7 +8704,7 @@ msgid "In plain words, for whoever types the code."
 msgstr "Bằng lời đơn giản, dành cho người nhập mã."
 
 msgid "Kept can't read this pattern. Check its brackets."
-msgstr "Kept không đọc được mẫu này. Hãy kiểm tra dấu ngoặc của nó."
+msgstr "Tingfinder không đọc được mẫu này. Hãy kiểm tra dấu ngoặc của nó."
 
 msgid "Message when a code doesn't match"
 msgstr "Thông báo khi mã không khớp"
@@ -8794,7 +8794,7 @@ msgid "Expiring"
 msgstr "Sắp hết hạn"
 
 msgid "How Kept reaches you"
-msgstr "Cách Kept liên hệ với bạn"
+msgstr "Cách Tingfinder liên hệ với bạn"
 
 msgid "Incident"
 msgstr "Sự cố"
@@ -8839,13 +8839,13 @@ msgid "Share it to save it to Files or send it on."
 msgstr "Chia sẻ nó để lưu vào Tệp hoặc gửi tiếp."
 
 msgid "This browser can't save files here. Open Kept in Safari to export it."
-msgstr "Trình duyệt này không lưu được tệp tại đây. Mở Kept trong Safari để xuất tệp."
+msgstr "Trình duyệt này không lưu được tệp tại đây. Mở Tingfinder trong Safari để xuất tệp."
 
 msgid "This file can't be shared from the installed app"
 msgstr "Tệp này không chia sẻ được từ ứng dụng đã cài đặt"
 
 msgid "Open Kept in Safari to download it."
-msgstr "Mở Kept trong Safari để tải tệp xuống."
+msgstr "Mở Tingfinder trong Safari để tải tệp xuống."
 
 msgid "Couldn't get the file ready. Try again."
 msgstr "Không chuẩn bị được tệp. Thử lại."
@@ -8857,7 +8857,7 @@ msgid "Couldn't share the file. Try again."
 msgstr "Không chia sẻ được tệp. Thử lại."
 
 msgid "Kept can't reach its database right now. Try again in a minute."
-msgstr "Hiện Kept không kết nối được với cơ sở dữ liệu. Thử lại sau một phút."
+msgstr "Hiện Tingfinder không kết nối được với cơ sở dữ liệu. Thử lại sau một phút."
 
 msgid "{0, plural, one {# day overdue} other {# days overdue}}"
 msgstr "{0, plural, one {# ngày quá hạn} other {# ngày quá hạn}}"
@@ -8914,7 +8914,7 @@ msgid "Add a line"
 msgstr "Thêm một dòng"
 
 msgid "Add a service or a check that comes round, like the boiler every year or the car every 10,000 km, and Kept reminds you before it's due."
-msgstr "Thêm một dịch vụ hoặc lần kiểm tra định kỳ, như bảo dưỡng nồi hơi mỗi năm hoặc ô tô mỗi 10.000 km, và Kept sẽ nhắc bạn trước khi đến hạn."
+msgstr "Thêm một dịch vụ hoặc lần kiểm tra định kỳ, như bảo dưỡng nồi hơi mỗi năm hoặc ô tô mỗi 10.000 km, và Tingfinder sẽ nhắc bạn trước khi đến hạn."
 
 msgid "Add line items or an invoice"
 msgstr "Thêm các dòng mục hoặc một hóa đơn"
@@ -9230,7 +9230,7 @@ msgid "Search schedules"
 msgstr "Tìm lịch trình"
 
 msgid "Send it however you like. Kept never sends it."
-msgstr "Gửi nó bằng cách nào tùy bạn. Kept không bao giờ gửi nó."
+msgstr "Gửi nó bằng cách nào tùy bạn. Tingfinder không bao giờ gửi nó."
 
 msgid "Service logged"
 msgstr "Đã ghi nhận bảo dưỡng"
@@ -9569,13 +9569,13 @@ msgid "A claim needs the day it was opened."
 msgstr "Một yêu cầu cần ngày nó được mở."
 
 msgid "A new person: added to your people when you save. Kept never contacts them."
-msgstr "Một người mới: được thêm vào danh sách người của bạn khi bạn lưu. Kept không bao giờ liên hệ với họ."
+msgstr "Một người mới: được thêm vào danh sách người của bạn khi bạn lưu. Tingfinder không bao giờ liên hệ với họ."
 
 msgid "A phone number, an email or a web page."
 msgstr "Một số điện thoại, một email hoặc một trang web."
 
 msgid "A service or a check that comes round: Kept reminds you before it's due."
-msgstr "Một dịch vụ hoặc lần kiểm tra định kỳ: Kept nhắc bạn trước khi đến hạn."
+msgstr "Một dịch vụ hoặc lần kiểm tra định kỳ: Tingfinder nhắc bạn trước khi đến hạn."
 
 msgid "A term"
 msgstr "Một thời hạn"
@@ -9791,13 +9791,13 @@ msgid "It's in repair: lend it once it's back."
 msgstr "Nó đang sửa chữa: hãy cho mượn khi nó đã về."
 
 msgid "Kept never contacts them."
-msgstr "Kept không bao giờ liên hệ với họ."
+msgstr "Tingfinder không bao giờ liên hệ với họ."
 
 msgid "Kept never messages {0}; the reminder text is yours to send."
-msgstr "Kept không bao giờ nhắn tin cho {0}; bạn tự gửi lời nhắc."
+msgstr "Tingfinder không bao giờ nhắn tin cho {0}; bạn tự gửi lời nhắc."
 
 msgid "Kept reminds you on {0}. It never messages {1}; the reminder text is yours to send."
-msgstr "Kept nhắc bạn vào {0}. Kept không bao giờ nhắn tin cho {1}; bạn tự gửi lời nhắc."
+msgstr "Tingfinder nhắc bạn vào {0}. Tingfinder không bao giờ nhắn tin cho {1}; bạn tự gửi lời nhắc."
 
 msgid "Lend"
 msgstr "Cho mượn"
@@ -9905,13 +9905,13 @@ msgid "Opened {0}"
 msgstr "Đã mở {0}"
 
 msgid "Optional. Kept reminds you before this day."
-msgstr "Không bắt buộc. Kept nhắc bạn trước ngày này."
+msgstr "Không bắt buộc. Tingfinder nhắc bạn trước ngày này."
 
 msgid "Optional. Kept reminds you when it's due back."
-msgstr "Không bắt buộc. Kept nhắc bạn khi đến hạn trả."
+msgstr "Không bắt buộc. Tingfinder nhắc bạn khi đến hạn trả."
 
 msgid "Optional. Kept reminds you, never them, when it's overdue."
-msgstr "Không bắt buộc. Kept nhắc bạn, không nhắc họ, khi quá hạn."
+msgstr "Không bắt buộc. Tingfinder nhắc bạn, không nhắc họ, khi quá hạn."
 
 msgid "Optional. Shown as \"Warranty saved you\" when the repair cost nothing."
 msgstr "Không bắt buộc. Hiển thị là \"Bảo hành đã giúp bạn tiết kiệm\" khi việc sửa chữa không tốn chi phí."
@@ -10002,10 +10002,10 @@ msgid "Update the claim"
 msgstr "Cập nhật yêu cầu bảo hành"
 
 msgid "uses Kept"
-msgstr "dùng Kept"
+msgstr "dùng Tingfinder"
 
 msgid "Uses Kept"
-msgstr "Dùng Kept"
+msgstr "Dùng Tingfinder"
 
 msgid "Usually in"
 msgstr "Thường ở"
@@ -10059,7 +10059,7 @@ msgid "What's wrong"
 msgstr "Có vấn đề gì"
 
 msgid "When it breaks, open a claim: Kept fills in the warranty that covers longest and remembers where it went for repair."
-msgstr "Khi nó hỏng, hãy mở yêu cầu bảo hành: Kept sẽ điền bảo hành có thời hạn dài nhất và ghi nhớ nơi nó được mang đi sửa."
+msgstr "Khi nó hỏng, hãy mở yêu cầu bảo hành: Tingfinder sẽ điền bảo hành có thời hạn dài nhất và ghi nhớ nơi nó được mang đi sửa."
 
 msgid "Where it goes"
 msgstr "Nó sẽ đi đâu"
@@ -10128,7 +10128,7 @@ msgid "{MAX_CALENDAR_FEEDS, plural, one {# link is the most. Revoke one to make 
 msgstr "{MAX_CALENDAR_FEEDS, plural, one {# liên kết là tối đa. Hãy thu hồi một liên kết để tạo liên kết khác.} other {# liên kết là tối đa. Hãy thu hồi một liên kết để tạo liên kết khác.}}"
 
 msgid "{MAX_WEBHOOK_CHANNELS, plural, one {You have # webhook, the most Kept allows.} other {You have # webhooks, the most Kept allows.}}"
-msgstr "{MAX_WEBHOOK_CHANNELS, plural, one {Bạn có # webhook, mức tối đa Kept cho phép.} other {Bạn có # webhook, mức tối đa Kept cho phép.}}"
+msgstr "{MAX_WEBHOOK_CHANNELS, plural, one {Bạn có # webhook, mức tối đa Tingfinder cho phép.} other {Bạn có # webhook, mức tối đa Tingfinder cho phép.}}"
 
 msgid "{unreadText} unread"
 msgstr "{unreadText} chưa đọc"
@@ -10161,7 +10161,7 @@ msgid "AI used 80% of this month's cap"
 msgstr "AI đã dùng 80% giới hạn tháng này"
 
 msgid "Allow notifications for Kept in this browser's settings, then try again."
-msgstr "Hãy cho phép thông báo cho Kept trong cài đặt của trình duyệt này, rồi thử lại."
+msgstr "Hãy cho phép thông báo cho Tingfinder trong cài đặt của trình duyệt này, rồi thử lại."
 
 msgid "Browser"
 msgstr "Trình duyệt"
@@ -10248,7 +10248,7 @@ msgid "Enter the full address, starting with https://"
 msgstr "Nhập địa chỉ đầy đủ, bắt đầu bằng https://"
 
 msgid "Everything lands in the notification centre. These reach you outside Kept as well."
-msgstr "Mọi thứ đều vào trung tâm thông báo. Những thứ này cũng đến với bạn ngoài Kept."
+msgstr "Mọi thứ đều vào trung tâm thông báo. Những thứ này cũng đến với bạn ngoài Tingfinder."
 
 msgid "Failed jobs shows why it stopped; if the worker isn't running, start it again. The next good check resolves this alert."
 msgstr "Công việc thất bại cho biết vì sao nó dừng; nếu worker không chạy, hãy khởi động lại. Lần kiểm tra thành công tiếp theo sẽ giải quyết cảnh báo này."
@@ -10257,13 +10257,13 @@ msgid "Failing since {since}"
 msgstr "Lỗi từ {since}"
 
 msgid "For your own automations: Kept posts a signed message when something is due, with ids and dates only, never names."
-msgstr "Cho các tự động hóa của riêng bạn: Kept đăng một thông báo đã ký khi có việc đến hạn, chỉ gồm id và ngày, không bao giờ có tên."
+msgstr "Cho các tự động hóa của riêng bạn: Tingfinder đăng một thông báo đã ký khi có việc đến hạn, chỉ gồm id và ngày, không bao giờ có tên."
 
 msgid "How to install"
 msgstr "Cách cài đặt"
 
 msgid "In Kept"
-msgstr "Trong Kept"
+msgstr "Trong Tingfinder"
 
 msgid "It answered {code}."
 msgstr "Máy chủ đã phản hồi mã {code}."
@@ -10275,19 +10275,19 @@ msgid "It's no longer there."
 msgstr "Nó không còn ở đó nữa."
 
 msgid "Kept last checked for due reminders {lastOk}. Until it checks again, nobody gets new reminders."
-msgstr "Kept kiểm tra lời nhắc đến hạn lần cuối lúc {lastOk}. Cho đến khi kiểm tra lại, không ai nhận được lời nhắc mới."
+msgstr "Tingfinder kiểm tra lời nhắc đến hạn lần cuối lúc {lastOk}. Cho đến khi kiểm tra lại, không ai nhận được lời nhắc mới."
 
 msgid "Kept sends at most 5 tests an hour, across all your channels and devices. Try again later."
-msgstr "Kept gửi tối đa 5 bản thử mỗi giờ, trên tất cả kênh và thiết bị của bạn. Hãy thử lại sau."
+msgstr "Tingfinder gửi tối đa 5 bản thử mỗi giờ, trên tất cả kênh và thiết bị của bạn. Hãy thử lại sau."
 
 msgid "Kept shows it only this once. Anyone with it can read the titles and dates."
-msgstr "Kept chỉ hiển thị nó một lần duy nhất này. Bất kỳ ai có nó đều có thể đọc tiêu đề và ngày."
+msgstr "Tingfinder chỉ hiển thị nó một lần duy nhất này. Bất kỳ ai có nó đều có thể đọc tiêu đề và ngày."
 
 msgid "Kept shows it only this once. Your receiver checks each message's Kept-Signature header with it."
-msgstr "Kept chỉ hiển thị nó một lần duy nhất này. Bộ nhận của bạn kiểm tra tiêu đề Kept-Signature của mỗi thông báo bằng nó."
+msgstr "Tingfinder chỉ hiển thị nó một lần duy nhất này. Bộ nhận của bạn kiểm tra tiêu đề Tingfinder-Signature của mỗi thông báo bằng nó."
 
 msgid "Kept stops posting to it. Its secret can't be used again."
-msgstr "Kept ngừng gửi tới webhook này. Mã bí mật của nó không dùng lại được nữa."
+msgstr "Tingfinder ngừng gửi tới webhook này. Mã bí mật của nó không dùng lại được nữa."
 
 msgid "Last fetched {fetched}"
 msgstr "Lấy lần cuối lúc {fetched}"
@@ -10299,7 +10299,7 @@ msgid "Link made {made}"
 msgstr "Liên kết tạo lúc {made}"
 
 msgid "Locations that require two-factor are left out of the feed. Google Calendar fetches the link from Google's servers, so it works there only when Kept can be reached from the internet."
-msgstr "Các địa điểm yêu cầu xác thực hai lớp sẽ không có trong nguồn cấp. Google Calendar lấy liên kết từ máy chủ của Google, vì vậy nó chỉ hoạt động ở đó khi Kept có thể truy cập được từ internet."
+msgstr "Các địa điểm yêu cầu xác thực hai lớp sẽ không có trong nguồn cấp. Google Calendar lấy liên kết từ máy chủ của Google, vì vậy nó chỉ hoạt động ở đó khi Tingfinder có thể truy cập được từ internet."
 
 msgid "Mail isn't configured on this server, so no email goes out yet."
 msgstr "Email chưa được cấu hình trên máy chủ này, vì vậy chưa có email nào được gửi đi."
@@ -10341,13 +10341,13 @@ msgid "Notifications are blocked"
 msgstr "Thông báo đang bị chặn"
 
 msgid "Notifications are blocked for Kept in this browser's settings. Allow them there, then come back."
-msgstr "Thông báo cho Kept đang bị chặn trong cài đặt của trình duyệt này. Hãy cho phép chúng ở đó, rồi quay lại."
+msgstr "Thông báo cho Tingfinder đang bị chặn trong cài đặt của trình duyệt này. Hãy cho phép chúng ở đó, rồi quay lại."
 
 msgid "Notifications are on for this device"
 msgstr "Thông báo đang bật cho thiết bị này"
 
 msgid "On iPhone and iPad, notifications work only from the installed app. Add Kept to your Home Screen, open it from there and turn them on. Until then, email reaches you."
-msgstr "Trên iPhone và iPad, thông báo chỉ hoạt động từ ứng dụng đã cài đặt. Hãy thêm Kept vào Màn hình chính, mở từ đó và bật thông báo. Cho đến lúc đó, email vẫn gửi tới bạn."
+msgstr "Trên iPhone và iPad, thông báo chỉ hoạt động từ ứng dụng đã cài đặt. Hãy thêm Tingfinder vào Màn hình chính, mở từ đó và bật thông báo. Cho đến lúc đó, email vẫn gửi tới bạn."
 
 msgid "Once a month: what AI did for you and what it used."
 msgstr "Mỗi tháng một lần: AI đã làm gì cho bạn và đã dùng những gì."
@@ -10389,7 +10389,7 @@ msgid "Reminders have stopped going out"
 msgstr "Lời nhắc đã ngừng được gửi đi"
 
 msgid "Reminders pop up here even when Kept is closed. Your browser asks first."
-msgstr "Lời nhắc vẫn hiện ở đây ngay cả khi Kept đã đóng. Trình duyệt của bạn sẽ hỏi trước."
+msgstr "Lời nhắc vẫn hiện ở đây ngay cả khi Tingfinder đã đóng. Trình duyệt của bạn sẽ hỏi trước."
 
 msgid "Remove {name}"
 msgstr "Xóa {name}"
@@ -10437,7 +10437,7 @@ msgid "Test sent"
 msgstr "Đã gửi bản thử"
 
 msgid "That device stops receiving push from Kept. Turn it on again from the device itself."
-msgstr "Thiết bị đó sẽ ngừng nhận thông báo đẩy từ Kept. Hãy bật lại từ chính thiết bị đó."
+msgstr "Thiết bị đó sẽ ngừng nhận thông báo đẩy từ Tingfinder. Hãy bật lại từ chính thiết bị đó."
 
 msgid "The mail server didn't take it. Try again later."
 msgstr "Máy chủ thư đã không nhận nó. Hãy thử lại sau."
@@ -10446,7 +10446,7 @@ msgid "The test didn't arrive"
 msgstr "Bản thử chưa đến"
 
 msgid "This browser can't receive notifications from Kept. Email still reaches you."
-msgstr "Trình duyệt này không thể nhận thông báo từ Kept. Email vẫn gửi tới bạn."
+msgstr "Trình duyệt này không thể nhận thông báo từ Tingfinder. Email vẫn gửi tới bạn."
 
 msgid "Times are in <0>{zone}</0>, your time zone."
 msgstr "Giờ hiển thị theo <0>{zone}</0>, múi giờ của bạn."
@@ -10494,10 +10494,10 @@ msgid "What's coming up arrives together, once a day."
 msgstr "Những việc sắp tới sẽ gửi gộp lại, mỗi ngày một lần."
 
 msgid "Where Kept posts. Only its host is shown after this."
-msgstr "Nơi Kept gửi tới. Sau bước này chỉ hiển thị máy chủ của nó."
+msgstr "Nơi Tingfinder gửi tới. Sau bước này chỉ hiển thị máy chủ của nó."
 
 msgid "Your account has no email address, so Kept tells you here, in the app."
-msgstr "Tài khoản của bạn không có địa chỉ email, vì vậy Kept sẽ thông báo cho bạn tại đây, trong ứng dụng."
+msgstr "Tài khoản của bạn không có địa chỉ email, vì vậy Tingfinder sẽ thông báo cho bạn tại đây, trong ứng dụng."
 
 msgid "Your account has no email address."
 msgstr "Tài khoản của bạn không có địa chỉ email."
@@ -10638,7 +10638,7 @@ msgid "Claims under {name}"
 msgstr "Các yêu cầu bồi thường thuộc {name}"
 
 msgid "Copy it now: Kept shows it only this once."
-msgstr "Sao chép ngay: Kept chỉ hiển thị mã này một lần duy nhất."
+msgstr "Sao chép ngay: Tingfinder chỉ hiển thị mã này một lần duy nhất."
 
 msgid "Couldn't check on the claim pack"
 msgstr "Không kiểm tra được gói hồ sơ bồi thường"
@@ -10725,10 +10725,10 @@ msgid "Keep the notes under {NOTES_MAX} characters."
 msgstr "Giữ ghi chú dưới {NOTES_MAX} ký tự."
 
 msgid "Kept converts only with a rate you entered, never an estimate. Add one dated on or before the report's day, or make the report without a converted total."
-msgstr "Kept chỉ quy đổi bằng tỷ giá bạn đã nhập, không bao giờ ước tính. Hãy thêm một tỷ giá có ngày vào hoặc trước ngày báo cáo, hoặc lập báo cáo mà không có tổng đã quy đổi."
+msgstr "Tingfinder chỉ quy đổi bằng tỷ giá bạn đã nhập, không bao giờ ước tính. Hãy thêm một tỷ giá có ngày vào hoặc trước ngày báo cáo, hoặc lập báo cáo mà không có tổng đã quy đổi."
 
 msgid "Kept converts totals only with a rate you entered here, for that pair or its inverse. It never estimates one, and never goes through a third currency: without a rate, totals stay per currency."
-msgstr "Kept chỉ quy đổi tổng bằng tỷ giá bạn đã nhập tại đây, cho cặp tiền đó hoặc cặp nghịch đảo của nó. Kept không bao giờ ước tính tỷ giá, và không bao giờ quy đổi qua một loại tiền tệ thứ ba: nếu không có tỷ giá, các tổng vẫn giữ nguyên theo từng loại tiền tệ."
+msgstr "Tingfinder chỉ quy đổi tổng bằng tỷ giá bạn đã nhập tại đây, cho cặp tiền đó hoặc cặp nghịch đảo của nó. Tingfinder không bao giờ ước tính tỷ giá, và không bao giờ quy đổi qua một loại tiền tệ thứ ba: nếu không có tỷ giá, các tổng vẫn giữ nguyên theo từng loại tiền tệ."
 
 msgid "Kept until {keptUntil}."
 msgstr "Giữ đến {keptUntil}."
@@ -10873,7 +10873,7 @@ msgid "The things stay as they are; only the incident and its references go. You
 msgstr "Các đồ vật vẫn giữ nguyên; chỉ sự cố và các tham chiếu của nó bị xóa. Bạn có thể hoàn tác việc này trong 7 ngày từ lịch sử."
 
 msgid "This browser can't save files here. Open Kept in Safari to download it."
-msgstr "Trình duyệt này không thể lưu tệp tại đây. Mở Kept trong Safari để tải xuống."
+msgstr "Trình duyệt này không thể lưu tệp tại đây. Mở Tingfinder trong Safari để tải xuống."
 
 msgid "This claim pack has expired"
 msgstr "Gói hồ sơ bồi thường này đã hết hạn"
@@ -11098,7 +11098,7 @@ msgid "Past {at}"
 msgstr "Đã qua {at}"
 
 msgid "Kept exports at most five lists an hour. Try again later."
-msgstr "Kept xuất tối đa năm danh sách mỗi giờ. Hãy thử lại sau."
+msgstr "Tingfinder xuất tối đa năm danh sách mỗi giờ. Hãy thử lại sau."
 
 msgid "Export or print this list"
 msgstr "Xuất hoặc in danh sách này"
@@ -11134,7 +11134,7 @@ msgid "Homebox"
 msgstr "Homebox"
 
 msgid "Kept export"
-msgstr "Xuất Kept"
+msgstr "Xuất Tingfinder"
 
 msgid "LubeLogger CSV"
 msgstr "CSV LubeLogger"
@@ -11470,7 +11470,7 @@ msgid "{typed} {unit} is lower than {before} {unit} on {on}. Readings can't go d
 msgstr "{typed} {unit} thấp hơn {before} {unit} vào {on}. Chỉ số không thể giảm: hãy kiểm tra các chữ số, hoặc ghi nhận rằng đồng hồ đã được thay."
 
 msgid "A new meter starts again from 0. Kept adds what the old one had reached, so the history keeps going up."
-msgstr "Đồng hồ mới bắt đầu lại từ 0. Kept cộng thêm mức đồng hồ cũ đã đạt tới, nên lịch sử vẫn tiếp tục tăng."
+msgstr "Đồng hồ mới bắt đầu lại từ 0. Tingfinder cộng thêm mức đồng hồ cũ đã đạt tới, nên lịch sử vẫn tiếp tục tăng."
 
 msgid "Add the first reading"
 msgstr "Thêm chỉ số đầu tiên"
@@ -11548,13 +11548,13 @@ msgid "Kept as proof"
 msgstr "Giữ làm bằng chứng"
 
 msgid "Kept checks it against your other readings when it syncs; if it doesn't fit, it waits in your Inbox."
-msgstr "Khi đồng bộ, Kept đối chiếu nó với các chỉ số khác của bạn; nếu không khớp, nó chờ trong Hộp thư đến của bạn."
+msgstr "Khi đồng bộ, Tingfinder đối chiếu nó với các chỉ số khác của bạn; nếu không khớp, nó chờ trong Hộp thư đến của bạn."
 
 msgid "Kept couldn't read the invoice. Type the lines."
-msgstr "Kept không đọc được hóa đơn. Hãy nhập các dòng."
+msgstr "Tingfinder không đọc được hóa đơn. Hãy nhập các dòng."
 
 msgid "Kept tracks <0>{0}</0> from this reading on: its estimates and the services due by distance start here. You can add it later from its page."
-msgstr "Kept theo dõi <0>{0}</0> từ chỉ số này trở đi: các ước tính của nó và các lần bảo dưỡng đến hạn theo quãng đường bắt đầu từ đây. Bạn có thể thêm sau từ trang của nó."
+msgstr "Tingfinder theo dõi <0>{0}</0> từ chỉ số này trở đi: các ước tính của nó và các lần bảo dưỡng đến hạn theo quãng đường bắt đầu từ đây. Bạn có thể thêm sau từ trang của nó."
 
 msgid "Label photos go on <0>{0}</0>"
 msgstr "Ảnh nhãn được gắn lên <0>{0}</0>"
@@ -11590,7 +11590,7 @@ msgid "Nothing on this phone has a meter yet"
 msgstr "Chưa có đồ vật nào trên điện thoại này có đồng hồ"
 
 msgid "Open Kept once while online, so this phone has your things and their meters."
-msgstr "Mở Kept một lần khi có mạng, để điện thoại này có các đồ vật của bạn và đồng hồ của chúng."
+msgstr "Mở Tingfinder một lần khi có mạng, để điện thoại này có các đồ vật của bạn và đồng hồ của chúng."
 
 msgid "Optional. It joins the meter's proof photos."
 msgstr "Không bắt buộc. Ảnh sẽ được thêm vào các ảnh bằng chứng của đồng hồ."
@@ -11731,7 +11731,7 @@ msgid "Its values show to everyone who can see the thing, and history keeps them
 msgstr "Các giá trị của nó hiển thị với mọi người có thể xem đồ vật, và lịch sử sẽ giữ chúng từ nay trở đi."
 
 msgid "Secrets are values Kept must be able to recover. Save the recovery kit on the status page, then make the field secret again."
-msgstr "Các bí mật là những giá trị Kept phải có thể khôi phục. Hãy lưu bộ khôi phục trên trang trạng thái, rồi đặt trường thành bí mật lại."
+msgstr "Các bí mật là những giá trị Tingfinder phải có thể khôi phục. Hãy lưu bộ khôi phục trên trang trạng thái, rồi đặt trường thành bí mật lại."
 
 msgid "The person who runs this server needs to save the recovery kit before secrets can be kept. Ask them, then make the field secret again."
 msgstr "Người vận hành máy chủ này cần lưu bộ khôi phục trước khi có thể giữ các bí mật. Hãy hỏi họ, rồi đặt trường thành bí mật lại."
@@ -11851,10 +11851,10 @@ msgid "Set a minimum"
 msgstr "Đặt mức tối thiểu"
 
 msgid "No minimum. Set one and Kept lists it as low when fewer are left."
-msgstr "Chưa có mức tối thiểu. Đặt một mức và Kept sẽ liệt kê là sắp hết khi số còn lại ít hơn."
+msgstr "Chưa có mức tối thiểu. Đặt một mức và Tingfinder sẽ liệt kê là sắp hết khi số còn lại ít hơn."
 
 msgid "One file per location: everything in it, the original photos and documents, and a copy you can read without Kept. Import it into this Kept or another one."
-msgstr "Một tệp cho mỗi địa điểm: mọi thứ trong đó, ảnh và tài liệu gốc, cùng một bản sao mà bạn có thể đọc mà không cần Kept. Nhập nó vào Kept này hoặc một Kept khác."
+msgstr "Một tệp cho mỗi địa điểm: mọi thứ trong đó, ảnh và tài liệu gốc, cùng một bản sao mà bạn có thể đọc mà không cần Tingfinder. Nhập nó vào Tingfinder này hoặc một Tingfinder khác."
 
 msgid "Export a location"
 msgstr "Xuất một địa điểm"
@@ -11863,7 +11863,7 @@ msgid "Export my data"
 msgstr "Xuất dữ liệu của tôi"
 
 msgid "Each download link is made when you click Download and lasts 5 minutes; Kept checks you're still an owner or admin every time. Exports are kept 7 days."
-msgstr "Mỗi liên kết tải xuống được tạo khi bạn nhấn Tải xuống và có hiệu lực 5 phút; Kept kiểm tra bạn vẫn là chủ sở hữu hoặc quản trị viên mỗi lần. Các bản xuất được giữ 7 ngày."
+msgstr "Mỗi liên kết tải xuống được tạo khi bạn nhấn Tải xuống và có hiệu lực 5 phút; Tingfinder kiểm tra bạn vẫn là chủ sở hữu hoặc quản trị viên mỗi lần. Các bản xuất được giữ 7 ngày."
 
 msgid "Your data"
 msgstr "Dữ liệu của bạn"
@@ -11875,13 +11875,13 @@ msgid "Someone changed this import in the meantime. It has been reloaded; check 
 msgstr "Ai đó đã thay đổi lần nhập này trong lúc đó. Nó đã được tải lại; hãy kiểm tra và thử lại."
 
 msgid "Kept can't read this archive"
-msgstr "Kept không đọc được tệp nén này"
+msgstr "Tingfinder không đọc được tệp nén này"
 
 msgid "Nothing was imported"
 msgstr "Không có gì được nhập"
 
 msgid "It isn't an export Kept can read. Export it again and try once more."
-msgstr "Đây không phải bản xuất mà Kept có thể đọc. Hãy xuất lại và thử một lần nữa."
+msgstr "Đây không phải bản xuất mà Tingfinder có thể đọc. Hãy xuất lại và thử một lần nữa."
 
 msgid "Choose another file"
 msgstr "Chọn tệp khác"
@@ -11983,7 +11983,7 @@ msgid "The Homebox export"
 msgstr "Bản xuất Homebox"
 
 msgid "The Kept export"
-msgstr "Bản xuất Kept"
+msgstr "Bản xuất Tingfinder"
 
 msgid "Checking the file"
 msgstr "Đang kiểm tra tệp"
@@ -12007,7 +12007,7 @@ msgid "Restart Homebox and export again: v0.26 exports once each time it starts.
 msgstr "Khởi động lại Homebox và xuất lại: v0.26 chỉ xuất một lần mỗi khi khởi động."
 
 msgid "A Kept export always comes in as a new location, with its photos, documents, history and printed labels."
-msgstr "Bản xuất Kept luôn được nhập thành một địa điểm mới, kèm ảnh, tài liệu, lịch sử và nhãn in của nó."
+msgstr "Bản xuất Tingfinder luôn được nhập thành một địa điểm mới, kèm ảnh, tài liệu, lịch sử và nhãn in của nó."
 
 msgid "Adding search words"
 msgstr "Đang thêm từ tìm kiếm"
@@ -12082,7 +12082,7 @@ msgid "Homebox's export has no currency. Choosing one relabels the amounts; it d
 msgstr "Bản xuất của Homebox không có đơn vị tiền tệ. Chọn một đơn vị chỉ đổi nhãn cho các số tiền; nó không quy đổi chúng."
 
 msgid "Homebox's currency, <0>{fromConnection}</0>, isn't turned on in Kept. An instance admin can turn it on in Admin → Currencies."
-msgstr "Đơn vị tiền tệ của Homebox, <0>{fromConnection}</0>, chưa được bật trong Kept. Quản trị viên máy chủ có thể bật nó trong Quản trị → Tiền tệ."
+msgstr "Đơn vị tiền tệ của Homebox, <0>{fromConnection}</0>, chưa được bật trong Tingfinder. Quản trị viên máy chủ có thể bật nó trong Quản trị → Tiền tệ."
 
 msgid "This location counts in <0>{locationCurrency}</0>; prices in another currency are kept as they are."
 msgstr "Địa điểm này tính bằng <0>{locationCurrency}</0>; giá bằng đơn vị tiền tệ khác được giữ nguyên."
@@ -12124,7 +12124,7 @@ msgid "Keep in notes"
 msgstr "Giữ trong ghi chú"
 
 msgid "Homebox's types are matched to Kept's by name, and its custom fields are added to their types. The check shows what that does before anything is imported."
-msgstr "Các loại của Homebox được khớp với loại của Kept theo tên, và các trường tùy chỉnh của nó được thêm vào các loại của chúng. Việc kiểm tra cho thấy điều đó làm gì trước khi bất cứ thứ gì được nhập."
+msgstr "Các loại của Homebox được khớp với loại của Tingfinder theo tên, và các trường tùy chỉnh của nó được thêm vào các loại của chúng. Việc kiểm tra cho thấy điều đó làm gì trước khi bất cứ thứ gì được nhập."
 
 msgid "number"
 msgstr "số"
@@ -12139,7 +12139,7 @@ msgid "text"
 msgstr "văn bản"
 
 msgid "A Kept type"
-msgstr "Một loại Kept"
+msgstr "Một loại Tingfinder"
 
 msgid "Created"
 msgstr "Đã tạo"
@@ -12154,7 +12154,7 @@ msgid "{0, plural, one {# item} other {# items}}"
 msgstr "{0, plural, one {# mục} other {# mục}}"
 
 msgid "Kept type for {name}"
-msgstr "Loại Kept cho {name}"
+msgstr "Loại Tingfinder cho {name}"
 
 msgid "Create \"{name}\""
 msgstr "Tạo \"{name}\""
@@ -12226,7 +12226,7 @@ msgid "Couldn't connect"
 msgstr "Không thể kết nối"
 
 msgid "A Kept <0>{0}</0> export{1}{2}"
-msgstr "Một bản xuất Kept <0>{0}</0>{1}{2}"
+msgstr "Một bản xuất Tingfinder <0>{0}</0>{1}{2}"
 
 msgid "{0, plural, one {event in the history} other {events in the history}}"
 msgstr "{0, plural, one {sự kiện trong lịch sử} other {sự kiện trong lịch sử}}"
@@ -12262,22 +12262,22 @@ msgid "Nobody is invited by the import: invite each person yourself, with their 
 msgstr "Quá trình nhập không mời ai cả: tự mời từng người bằng email của họ."
 
 msgid "Not imported: a file type Kept doesn't keep."
-msgstr "Không được nhập: loại tệp mà Kept không giữ."
+msgstr "Không được nhập: loại tệp mà Tingfinder không giữ."
 
 msgid "The file isn't in the archive, so it's left out."
 msgstr "Tệp không có trong bản lưu trữ nên bị bỏ qua."
 
 msgid "The file is larger than Kept takes, so it's left out."
-msgstr "Tệp lớn hơn mức Kept nhận nên bị bỏ qua."
+msgstr "Tệp lớn hơn mức Tingfinder nhận nên bị bỏ qua."
 
 msgid "Not something Kept reads from an export; ignored."
-msgstr "Không phải thứ Kept đọc từ bản xuất; bị bỏ qua."
+msgstr "Không phải thứ Tingfinder đọc từ bản xuất; bị bỏ qua."
 
 msgid "Archived in Homebox, left out."
 msgstr "Đã lưu trữ trong Homebox, bị bỏ qua."
 
 msgid "Counted one by one in Kept; Homebox's quantity is kept in the notes."
-msgstr "Đếm từng cái một trong Kept; số lượng của Homebox được giữ trong ghi chú."
+msgstr "Đếm từng cái một trong Tingfinder; số lượng của Homebox được giữ trong ghi chú."
 
 msgid "Quantity 0 became 1: Homebox gives 0 when none was set."
 msgstr "Số lượng 0 thành 1: Homebox cho ra 0 khi không đặt số lượng nào."
@@ -12286,16 +12286,16 @@ msgid "Homebox keeps numbers whole, so any decimals were already lost there."
 msgstr "Homebox chỉ giữ số nguyên nên mọi số thập phân đã mất ở đó rồi."
 
 msgid "Kept has no icon like Homebox's; the type's own icon is used."
-msgstr "Kept không có biểu tượng giống của Homebox; biểu tượng riêng của loại được dùng."
+msgstr "Tingfinder không có biểu tượng giống của Homebox; biểu tượng riêng của loại được dùng."
 
 msgid "A Kept template can't hold money or secrets; the rest of the template is imported."
-msgstr "Mẫu Kept không chứa được tiền hay bí mật; phần còn lại của mẫu được nhập."
+msgstr "Mẫu Tingfinder không chứa được tiền hay bí mật; phần còn lại của mẫu được nhập."
 
 msgid "This currency isn't turned on in Kept; the prices are kept in the notes."
-msgstr "Đơn vị tiền tệ này chưa bật trong Kept; giá được giữ trong ghi chú."
+msgstr "Đơn vị tiền tệ này chưa bật trong Tingfinder; giá được giữ trong ghi chú."
 
 msgid "Kept can't hold this record yet; its text is kept in the thing's notes."
-msgstr "Kept chưa chứa được bản ghi này; văn bản của nó được giữ trong ghi chú của đồ vật."
+msgstr "Tingfinder chưa chứa được bản ghi này; văn bản của nó được giữ trong ghi chú của đồ vật."
 
 msgid "A location inside an item became a container."
 msgstr "Một địa điểm bên trong một mục trở thành một vật chứa."
@@ -12331,10 +12331,10 @@ msgid "It's incomplete: the download or the copy stopped before the end."
 msgstr "Nó chưa đầy đủ: quá trình tải xuống hoặc sao chép đã dừng trước khi xong."
 
 msgid "It's from a newer version than this Kept reads. Update Kept, then import it."
-msgstr "Nó thuộc phiên bản mới hơn phiên bản Kept này đọc được. Cập nhật Kept rồi nhập nó."
+msgstr "Nó thuộc phiên bản mới hơn phiên bản Tingfinder này đọc được. Cập nhật Tingfinder rồi nhập nó."
 
 msgid "It's protected with a ZIP password, which Kept can't open. Export it again without one."
-msgstr "Nó được bảo vệ bằng mật khẩu ZIP mà Kept không mở được. Xuất lại mà không dùng mật khẩu."
+msgstr "Nó được bảo vệ bằng mật khẩu ZIP mà Tingfinder không mở được. Xuất lại mà không dùng mật khẩu."
 
 msgid "One of its data files is too large to read."
 msgstr "Một trong các tệp dữ liệu của nó quá lớn để đọc."
@@ -12349,10 +12349,10 @@ msgid "Homebox v0.26 or newer: Collection settings → Export. Older than v0.26:
 msgstr "Homebox v0.26 trở lên: Cài đặt bộ sưu tập → Xuất. Cũ hơn v0.26: cập nhật Homebox trước."
 
 msgid "A Kept export"
-msgstr "Một bản xuất Kept"
+msgstr "Một bản xuất Tingfinder"
 
 msgid "A location exported from this Kept or another one. It comes in as a new location."
-msgstr "Một địa điểm xuất từ Kept này hoặc Kept khác. Nó được nhập thành một địa điểm mới."
+msgstr "Một địa điểm xuất từ Tingfinder này hoặc Tingfinder khác. Nó được nhập thành một địa điểm mới."
 
 msgid "Give the new location a name."
 msgstr "Đặt tên cho địa điểm mới."
@@ -12367,7 +12367,7 @@ msgid "Made in your account, with its own Unplaced area."
 msgstr "Được tạo trong tài khoản của bạn, kèm khu vực Chưa có vị trí riêng."
 
 msgid "A Kept export always comes in as a new location."
-msgstr "Bản xuất Kept luôn được nhập thành một địa điểm mới."
+msgstr "Bản xuất Tingfinder luôn được nhập thành một địa điểm mới."
 
 msgid "A location you run"
 msgstr "Một địa điểm bạn quản lý"
@@ -12472,7 +12472,7 @@ msgid "Things in the Trash"
 msgstr "Đồ vật trong Thùng rác"
 
 msgid "A copy you can read without Kept"
-msgstr "Một bản sao bạn có thể đọc mà không cần Kept"
+msgstr "Một bản sao bạn có thể đọc mà không cần Tingfinder"
 
 msgid "with the inventory PDF"
 msgstr "kèm PDF danh sách đồ vật"
@@ -12490,7 +12490,7 @@ msgid "Encrypted with a passphrase you choose. The readable copy never holds the
 msgstr "Được mã hóa bằng cụm mật khẩu do bạn chọn. Bản sao đọc được không bao giờ chứa chúng."
 
 msgid "Anyone with this file and the passphrase can read every secret in it. Kept can't recover a forgotten passphrase."
-msgstr "Bất kỳ ai có tệp này và cụm mật khẩu đều có thể đọc mọi bí mật trong đó. Kept không thể khôi phục cụm mật khẩu đã quên."
+msgstr "Bất kỳ ai có tệp này và cụm mật khẩu đều có thể đọc mọi bí mật trong đó. Tingfinder không thể khôi phục cụm mật khẩu đã quên."
 
 msgid "Export <0>{name}</0>"
 msgstr "Xuất <0>{name}</0>"
@@ -12526,7 +12526,7 @@ msgid "Five exports an hour at most. Try again a little later."
 msgstr "Tối đa năm bản xuất mỗi giờ. Hãy thử lại sau một lát."
 
 msgid "Secrets leave Kept only once the recovery kit is saved. An instance admin saves it from the status page."
-msgstr "Bí mật chỉ rời khỏi Kept khi bộ khôi phục đã được lưu. Quản trị viên máy chủ lưu nó từ trang trạng thái."
+msgstr "Bí mật chỉ rời khỏi Tingfinder khi bộ khôi phục đã được lưu. Quản trị viên máy chủ lưu nó từ trang trạng thái."
 
 msgid "Use a passphrase of at least 12 characters, the same both times."
 msgstr "Dùng cụm mật khẩu ít nhất 12 ký tự, giống nhau cả hai lần."
@@ -12631,7 +12631,7 @@ msgid "{name}, {unit}"
 msgstr "{name}, {unit}"
 
 msgid "A car, a motorbike or a generator: Kept keeps its odometer, what's due, fuel and running costs."
-msgstr "Ô tô, xe máy hay máy phát điện: Kept theo dõi đồng hồ công-tơ-mét, những gì đến hạn, nhiên liệu và chi phí vận hành của chúng."
+msgstr "Ô tô, xe máy hay máy phát điện: Tingfinder theo dõi đồng hồ công-tơ-mét, những gì đến hạn, nhiên liệu và chi phí vận hành của chúng."
 
 msgid "Accepted"
 msgstr "Đã chấp nhận"
@@ -12898,7 +12898,7 @@ msgid "{label}: {plain}"
 msgstr "{label}: {plain}"
 
 msgid "{name} can't reach your Kept any more"
-msgstr "{name} không còn kết nối được tới Kept của bạn nữa"
+msgstr "{name} không còn kết nối được tới Tingfinder của bạn nữa"
 
 msgid "{scope} · <0>{where}</0> · allowed {granted} · not used yet"
 msgstr "{scope} · <0>{where}</0> · đã cấp {granted} · chưa dùng lần nào"
@@ -12919,10 +12919,10 @@ msgid "{scope} · <0>{where}</0> · used {used}"
 msgstr "{scope} · <0>{where}</0> · đã dùng {used}"
 
 msgid "<0>{name}</0> wants to use your Kept"
-msgstr "<0>{name}</0> muốn dùng Kept của bạn"
+msgstr "<0>{name}</0> muốn dùng Tingfinder của bạn"
 
 msgid "<0>{who}</0> hasn't confirmed your email address, so Kept can't use it. Confirm it there, then try again."
-msgstr "<0>{who}</0> chưa xác nhận địa chỉ email của bạn, nên Kept không dùng được địa chỉ đó. Hãy xác nhận ở đó, rồi thử lại."
+msgstr "<0>{who}</0> chưa xác nhận địa chỉ email của bạn, nên Tingfinder không dùng được địa chỉ đó. Hãy xác nhận ở đó, rồi thử lại."
 
 msgid "~{0} tokens"
 msgstr "~{0} token"
@@ -12937,7 +12937,7 @@ msgid "A reminder is due"
 msgstr "Một lời nhắc đến hạn"
 
 msgid "A Shortcut that asks for the reading and sends it to Kept with a token."
-msgstr "Một Phím tắt hỏi chỉ số rồi gửi tới Kept bằng token."
+msgstr "Một Phím tắt hỏi chỉ số rồi gửi tới Tingfinder bằng token."
 
 msgid "A signed message to your own server when things change here. It carries ids and the names of changed fields, never names, places or values."
 msgstr "Một thông điệp đã ký gửi tới máy chủ của bạn khi đồ vật thay đổi ở đây. Nó chỉ mang id và tên các trường đã đổi, không bao giờ mang tên, vị trí hay giá trị."
@@ -12979,7 +12979,7 @@ msgid "Add webhook"
 msgstr "Thêm webhook"
 
 msgid "Add your car to Kept with an odometer reading first; its address appears here then."
-msgstr "Thêm xe của bạn vào Kept với chỉ số đồng hồ công-tơ-mét trước; địa chỉ của nó sẽ hiện ở đây sau đó."
+msgstr "Thêm xe của bạn vào Tingfinder với chỉ số đồng hồ công-tơ-mét trước; địa chỉ của nó sẽ hiện ở đây sau đó."
 
 msgid "Added by <0>{0}</0>"
 msgstr "Được thêm bởi <0>{0}</0>"
@@ -13039,7 +13039,7 @@ msgid "Copy it now. You won't see it again; rotate it if it's lost."
 msgstr "Sao chép ngay. Bạn sẽ không thấy lại nó nữa; hãy thay mới nó nếu bị mất."
 
 msgid "Copy it now. You won't see this again: Kept keeps only a fingerprint of it."
-msgstr "Sao chép ngay. Bạn sẽ không thấy lại nó nữa: Kept chỉ giữ dấu vân tay của nó."
+msgstr "Sao chép ngay. Bạn sẽ không thấy lại nó nữa: Tingfinder chỉ giữ dấu vân tay của nó."
 
 msgid "Copy secret"
 msgstr "Sao chép mã bí mật"
@@ -13111,7 +13111,7 @@ msgid "Find things and read what's recorded. No changes, no secret fields."
 msgstr "Tìm đồ vật và đọc những gì đã ghi lại. Không thay đổi, không trường bí mật."
 
 msgid "Fix it, then restart Kept. Everything else works meanwhile."
-msgstr "Sửa nó, rồi khởi động lại Kept. Mọi thứ khác vẫn hoạt động trong lúc đó."
+msgstr "Sửa nó, rồi khởi động lại Tingfinder. Mọi thứ khác vẫn hoạt động trong lúc đó."
 
 msgid "Gave up"
 msgstr "Đã ngừng thử lại"
@@ -13132,28 +13132,28 @@ msgid "Issuer"
 msgstr "Nhà phát hành"
 
 msgid "It stops reaching your Kept at once. To use it again, connect it again from the app."
-msgstr "Nó sẽ ngừng truy cập Kept của bạn ngay lập tức. Để dùng lại, hãy kết nối lại từ ứng dụng."
+msgstr "Nó sẽ ngừng truy cập Tingfinder của bạn ngay lập tức. Để dùng lại, hãy kết nối lại từ ứng dụng."
 
 msgid "Join with <0>{oidcName}</0>"
 msgstr "Tham gia bằng <0>{oidcName}</0>"
 
 msgid "Kept downloads the model once ({size}) and runs it on this server: no key, no per-call cost. Everything is indexed again with it."
-msgstr "Kept tải mô hình một lần ({size}) và chạy nó trên máy chủ này: không cần khóa, không tính phí theo mỗi lần gọi. Mọi thứ được lập chỉ mục lại bằng nó."
+msgstr "Tingfinder tải mô hình một lần ({size}) và chạy nó trên máy chủ này: không cần khóa, không tính phí theo mỗi lần gọi. Mọi thứ được lập chỉ mục lại bằng nó."
 
 msgid "Kept needs an address that can receive mail for an account."
-msgstr "Kept cần một địa chỉ có thể nhận thư cho tài khoản."
+msgstr "Tingfinder cần một địa chỉ có thể nhận thư cho tài khoản."
 
 msgid "Kept never matches accounts by their email. If you're new here, open the invite someone sent you and join with <0>{who}</0> from there. If you already have an account, sign in another way."
-msgstr "Kept không bao giờ khớp tài khoản theo email. Nếu bạn mới ở đây, hãy mở lời mời ai đó đã gửi cho bạn và tham gia bằng <0>{who}</0> từ đó. Nếu bạn đã có tài khoản, hãy đăng nhập bằng cách khác."
+msgstr "Tingfinder không bao giờ khớp tài khoản theo email. Nếu bạn mới ở đây, hãy mở lời mời ai đó đã gửi cho bạn và tham gia bằng <0>{who}</0> từ đó. Nếu bạn đã có tài khoản, hãy đăng nhập bằng cách khác."
 
 msgid "Kept runs the model on this server: no key, no per-call cost. Everything is indexed again with it."
-msgstr "Kept chạy mô hình trên máy chủ này: không cần khóa, không tính phí theo mỗi lần gọi. Mọi thứ được lập chỉ mục lại bằng nó."
+msgstr "Tingfinder chạy mô hình trên máy chủ này: không cần khóa, không tính phí theo mỗi lần gọi. Mọi thứ được lập chỉ mục lại bằng nó."
 
 msgid "Kept signs every delivery with this secret, so your server can tell it came from Kept."
-msgstr "Kept ký mọi lần gửi bằng mã bí mật này, để máy chủ của bạn biết nó đến từ Kept."
+msgstr "Tingfinder ký mọi lần gửi bằng mã bí mật này, để máy chủ của bạn biết nó đến từ Tingfinder."
 
 msgid "Kept stops sending to it, and its deliveries are forgotten."
-msgstr "Kept ngừng gửi tới nó, và lịch sử gửi của nó bị xóa."
+msgstr "Tingfinder ngừng gửi tới nó, và lịch sử gửi của nó bị xóa."
 
 msgid "Keyword only (semantic search is off on this server)"
 msgstr "Chỉ từ khóa (tìm kiếm ngữ nghĩa đang tắt trên máy chủ này)"
@@ -13216,7 +13216,7 @@ msgid "No changes by connections"
 msgstr "Không có thay đổi nào từ các kết nối"
 
 msgid "No Kept account uses that sign-in yet"
-msgstr "Chưa có tài khoản Kept nào dùng cách đăng nhập đó"
+msgstr "Chưa có tài khoản Tingfinder nào dùng cách đăng nhập đó"
 
 msgid "No tokens yet"
 msgstr "Chưa có token nào"
@@ -13339,7 +13339,7 @@ msgid "Server address"
 msgstr "Địa chỉ máy chủ"
 
 msgid "Set <0>KEPT_OIDC_ISSUER</0>, <1>KEPT_OIDC_CLIENT_ID</1> and <2>KEPT_OIDC_CLIENT_SECRET</2>, then restart Kept."
-msgstr "Đặt <0>KEPT_OIDC_ISSUER</0>, <1>KEPT_OIDC_CLIENT_ID</1> và <2>KEPT_OIDC_CLIENT_SECRET</2>, rồi khởi động lại Kept."
+msgstr "Đặt <0>KEPT_OIDC_ISSUER</0>, <1>KEPT_OIDC_CLIENT_ID</1> và <2>KEPT_OIDC_CLIENT_SECRET</2>, rồi khởi động lại Tingfinder."
 
 msgid "Set Request Body to JSON with two text fields: <0>value</0>, the number you typed, and <1>takenAt</1>, the Current Date formatted as ISO 8601 with the time."
 msgstr "Đặt Nội dung yêu cầu thành JSON với hai trường văn bản: <0>value</0>, con số bạn đã nhập, và <1>takenAt</1>, Ngày hiện tại được định dạng theo ISO 8601 kèm giờ."
@@ -13354,7 +13354,7 @@ msgid "Sign-in with OIDC"
 msgstr "Đăng nhập bằng OIDC"
 
 msgid "Signing in this way reaches only an account already linked to it, or someone invited here. Kept never joins accounts because their emails match."
-msgstr "Đăng nhập theo cách này chỉ tới được một tài khoản đã liên kết với nó, hoặc người được mời tại đây. Kept không bao giờ gộp tài khoản chỉ vì email của chúng trùng nhau."
+msgstr "Đăng nhập theo cách này chỉ tới được một tài khoản đã liên kết với nó, hoặc người được mời tại đây. Tingfinder không bao giờ gộp tài khoản chỉ vì email của chúng trùng nhau."
 
 msgid "Signing in with <0>{who}</0> didn't work"
 msgstr "Đăng nhập bằng <0>{who}</0> không thành công"
@@ -13366,7 +13366,7 @@ msgid "Start connecting again from the app."
 msgstr "Bắt đầu kết nối lại từ ứng dụng."
 
 msgid "Tap the Shortcut at the pump or in the car park, type the odometer, and the reading is in Kept, with undo, as if you'd logged it here."
-msgstr "Chạm vào Phím tắt tại trạm xăng hoặc trong bãi đỗ xe, nhập đồng hồ công-tơ-mét, và chỉ số sẽ có trong Kept, kèm hoàn tác, như thể bạn đã ghi lại tại đây."
+msgstr "Chạm vào Phím tắt tại trạm xăng hoặc trong bãi đỗ xe, nhập đồng hồ công-tơ-mét, và chỉ số sẽ có trong Tingfinder, kèm hoàn tác, như thể bạn đã ghi lại tại đây."
 
 msgid "Tell your own server when things change here."
 msgstr "Báo cho máy chủ của riêng bạn khi đồ vật thay đổi tại đây."
@@ -13381,7 +13381,7 @@ msgid "That email address can't be used"
 msgstr "Không thể dùng địa chỉ email đó"
 
 msgid "That's the name the app gives itself. Kept can't confirm who made it."
-msgstr "Đó là tên mà ứng dụng tự đặt cho mình. Kept không thể xác nhận ai đã tạo ra nó."
+msgstr "Đó là tên mà ứng dụng tự đặt cho mình. Tingfinder không thể xác nhận ai đã tạo ra nó."
 
 msgid "The app could move what it finds in one into another, so people in one could see what came from the other. Connect it to one location unless you mean that."
 msgstr "Ứng dụng có thể chuyển những gì nó tìm thấy ở một nơi sang nơi khác, nên người ở một nơi có thể thấy những gì đến từ nơi kia. Chỉ kết nối nó với một địa điểm trừ khi bạn thực sự muốn vậy."
@@ -13405,7 +13405,7 @@ msgid "The old secret stopped working. Put this one on your server; every delive
 msgstr "Khóa cũ đã ngừng hoạt động. Đặt khóa này lên máy chủ của bạn; mọi lần gửi từ nay sẽ được ký bằng nó."
 
 msgid "The provider couldn't be reached when Kept started."
-msgstr "Không thể liên hệ được với nhà cung cấp khi Kept khởi động."
+msgstr "Không thể liên hệ được với nhà cung cấp khi Tingfinder khởi động."
 
 msgid "The provider says it's a different issuer from KEPT_OIDC_ISSUER."
 msgstr "Nhà cung cấp cho biết đó là một nhà phát hành khác với KEPT_OIDC_ISSUER."
@@ -13426,7 +13426,7 @@ msgid "Things indexed for search"
 msgstr "Đồ vật đã lập chỉ mục để tìm kiếm"
 
 msgid "This Kept lets people in by invite. Ask someone who uses it to invite you, then join from the invite link."
-msgstr "Kept này chỉ cho người vào bằng lời mời. Hãy nhờ một người đang dùng nó mời bạn, rồi tham gia từ liên kết mời."
+msgstr "Tingfinder này chỉ cho người vào bằng lời mời. Hãy nhờ một người đang dùng nó mời bạn, rồi tham gia từ liên kết mời."
 
 msgid "This request isn't valid any more"
 msgstr "Yêu cầu này không còn hợp lệ nữa"
@@ -13507,7 +13507,7 @@ msgid "Your server didn't answer"
 msgstr "Máy chủ của bạn không trả lời"
 
 msgid "Your server's address. Kept sends a signed POST there."
-msgstr "Địa chỉ máy chủ của bạn. Kept gửi một yêu cầu POST đã ký tới đó."
+msgstr "Địa chỉ máy chủ của bạn. Tingfinder gửi một yêu cầu POST đã ký tới đó."
 
 msgid "Delete this thread"
 msgstr "Xóa cuộc trò chuyện này"
@@ -13546,7 +13546,7 @@ msgid "Ask the assistant about “{0}”"
 msgstr "Hỏi trợ lý về “{0}”"
 
 msgid "Kept can't use the microphone"
-msgstr "Kept không thể dùng mic"
+msgstr "Tingfinder không thể dùng mic"
 
 msgid "Allow it in the browser's settings, or type instead."
 msgstr "Cho phép trong cài đặt của trình duyệt, hoặc gõ thay vào đó."
@@ -13666,7 +13666,7 @@ msgid "{count} of {total} ×"
 msgstr "{count} trên {total} ×"
 
 msgid "Something Kept can't name"
-msgstr "Thứ Kept không gọi tên được"
+msgstr "Thứ Tingfinder không gọi tên được"
 
 msgid "Include: {0} {1}"
 msgstr "Bao gồm: {0} {1}"
@@ -13711,7 +13711,7 @@ msgid "Only ticked rows are saved"
 msgstr "Chỉ các hàng đã chọn mới được lưu"
 
 msgid "Changes for you to confirm, drawn by Kept"
-msgstr "Các thay đổi để bạn xác nhận, do Kept soạn"
+msgstr "Các thay đổi để bạn xác nhận, do Tingfinder soạn"
 
 msgid "Time left to confirm"
 msgstr "Thời gian còn lại để xác nhận"
@@ -13759,7 +13759,7 @@ msgid "Viewers can ask; changes need an admin"
 msgstr "Người xem có thể hỏi; thay đổi cần quản trị viên"
 
 msgid "Ask where something is or what's due, or ask for a change. Nothing changes until you confirm the card Kept shows you."
-msgstr "Hỏi đồ vật ở đâu hay sắp đến hạn gì, hoặc yêu cầu thay đổi. Không gì thay đổi cho đến khi bạn xác nhận thẻ Kept hiển thị cho bạn."
+msgstr "Hỏi đồ vật ở đâu hay sắp đến hạn gì, hoặc yêu cầu thay đổi. Không gì thay đổi cho đến khi bạn xác nhận thẻ Tingfinder hiển thị cho bạn."
 
 msgid "Say or type a list, like “in the garage I have a drill, a ladder and two paint cans”, and add them all with one Confirm."
 msgstr "Nói hoặc gõ một danh sách, ví dụ “trong gara tôi có một máy khoan, một cái thang và hai lon sơn”, rồi thêm tất cả chỉ bằng một lần Xác nhận."
@@ -13829,7 +13829,7 @@ msgid "Backups"
 msgstr "Sao lưu"
 
 msgid "Lock Kept on this device"
-msgstr "Khóa Kept trên thiết bị này"
+msgstr "Khóa Tingfinder trên thiết bị này"
 
 msgid "Issued on"
 msgstr "Ngày cấp"
@@ -13847,10 +13847,10 @@ msgid "Starter schedules added"
 msgstr "Đã thêm lịch trình khởi đầu"
 
 msgid "{nudgeDays, plural, one {A fresh one keeps ~{next} honest; Kept nudges you at # day.} other {A fresh one keeps ~{next} honest; Kept nudges you at # days.}}"
-msgstr "{nudgeDays, plural, one {Một chỉ số mới giúp ~{next} chính xác; Kept nhắc bạn sau # ngày.} other {Một chỉ số mới giúp ~{next} chính xác; Kept nhắc bạn sau # ngày.}}"
+msgstr "{nudgeDays, plural, one {Một chỉ số mới giúp ~{next} chính xác; Tingfinder nhắc bạn sau # ngày.} other {Một chỉ số mới giúp ~{next} chính xác; Tingfinder nhắc bạn sau # ngày.}}"
 
 msgid "{nudgeDays, plural, one {Kept nudges you at # day.} other {Kept nudges you at # days.}}"
-msgstr "{nudgeDays, plural, one {Kept nhắc bạn sau # ngày.} other {Kept nhắc bạn sau # ngày.}}"
+msgstr "{nudgeDays, plural, one {Tingfinder nhắc bạn sau # ngày.} other {Tingfinder nhắc bạn sau # ngày.}}"
 
 msgid "A location's webhook keeps failing"
 msgstr "Webhook của một địa điểm liên tục lỗi"
@@ -13892,7 +13892,7 @@ msgid "Download the recovery kit"
 msgstr "Tải xuống bộ khôi phục"
 
 msgid "Everything needed to bring Kept back on a new server: the secret keys, the backup's location, its password and storage keys, and the restore steps."
-msgstr "Mọi thứ cần thiết để khôi phục Kept trên máy chủ mới: khóa bí mật, nơi lưu bản sao lưu, mật khẩu và khóa lưu trữ của nó, cùng các bước khôi phục."
+msgstr "Mọi thứ cần thiết để khôi phục Tingfinder trên máy chủ mới: khóa bí mật, nơi lưu bản sao lưu, mật khẩu và khóa lưu trữ của nó, cùng các bước khôi phục."
 
 msgid "Keep it off this server"
 msgstr "Đừng lưu nó trên máy chủ này"
@@ -13931,7 +13931,7 @@ msgid "Keep the recovery kit somewhere else"
 msgstr "Giữ bộ khôi phục ở nơi khác"
 
 msgid "Kept encrypts secret fields, AI keys and the backup password with KEPT_SECRET_KEY. If this server and its key are lost together, a backup still restores your things, but not those. Download the recovery kit (or print it with <0>kept admin recovery-kit</0>) and keep it away from this server. Kept asks for this before the first secret, AI key or backup."
-msgstr "Kept mã hóa các trường bí mật, khóa AI và mật khẩu sao lưu bằng KEPT_SECRET_KEY. Nếu máy chủ này và khóa của nó bị mất cùng lúc, bản sao lưu vẫn khôi phục được đồ vật của bạn, nhưng không khôi phục được những thứ đó. Hãy tải bộ khôi phục (hoặc in bằng <0>kept admin recovery-kit</0>) và giữ nó ở nơi khác, không phải trên máy chủ này. Kept sẽ hỏi việc này trước bí mật, khóa AI hay bản sao lưu đầu tiên."
+msgstr "Tingfinder mã hóa các trường bí mật, khóa AI và mật khẩu sao lưu bằng KEPT_SECRET_KEY. Nếu máy chủ này và khóa của nó bị mất cùng lúc, bản sao lưu vẫn khôi phục được đồ vật của bạn, nhưng không khôi phục được những thứ đó. Hãy tải bộ khôi phục (hoặc in bằng <0>kept admin recovery-kit</0>) và giữ nó ở nơi khác, không phải trên máy chủ này. Tingfinder sẽ hỏi việc này trước bí mật, khóa AI hay bản sao lưu đầu tiên."
 
 msgid "Changed since you downloaded it"
 msgstr "Đã thay đổi kể từ khi bạn tải xuống"
@@ -13973,7 +13973,7 @@ msgid "App lock"
 msgstr "Khóa ứng dụng"
 
 msgid "Ask for a PIN when Kept opens and after five minutes away. Keeping a location offline needs it."
-msgstr "Yêu cầu mã PIN khi Kept mở và sau năm phút không dùng. Cần có mã PIN để giữ một địa điểm ngoại tuyến."
+msgstr "Yêu cầu mã PIN khi Tingfinder mở và sau năm phút không dùng. Cần có mã PIN để giữ một địa điểm ngoại tuyến."
 
 msgid "Change PIN"
 msgstr "Đổi mã PIN"
@@ -14006,7 +14006,7 @@ msgid "Face ID"
 msgstr "Face ID"
 
 msgid "Face ID or fingerprint can unlock Kept now"
-msgstr "Giờ đây Face ID hoặc vân tay có thể mở khóa Kept"
+msgstr "Giờ đây Face ID hoặc vân tay có thể mở khóa Tingfinder"
 
 msgid "Face ID or fingerprint didn’t work. Enter your PIN."
 msgstr "Face ID hoặc vân tay không hoạt động. Hãy nhập mã PIN của bạn."
@@ -14036,19 +14036,19 @@ msgid "Keeping {0} offline didn’t finish"
 msgstr "Giữ {0} ngoại tuyến chưa hoàn tất"
 
 msgid "Kept app lock"
-msgstr "Khóa ứng dụng Kept"
+msgstr "Khóa ứng dụng Tingfinder"
 
 msgid "Kept locks on this device now"
-msgstr "Giờ đây Kept sẽ khóa trên thiết bị này"
+msgstr "Giờ đây Tingfinder sẽ khóa trên thiết bị này"
 
 msgid "Kept offline is locked behind your PIN."
-msgstr "Kept ngoại tuyến được khóa bằng mã PIN của bạn."
+msgstr "Tingfinder ngoại tuyến được khóa bằng mã PIN của bạn."
 
 msgid "Kept on this device"
-msgstr "Kept trên thiết bị này"
+msgstr "Tingfinder trên thiết bị này"
 
 msgid "Lock Kept with a PIN, and keep a location available offline."
-msgstr "Khóa Kept bằng mã PIN và giữ một địa điểm sẵn dùng ngoại tuyến."
+msgstr "Khóa Tingfinder bằng mã PIN và giữ một địa điểm sẵn dùng ngoại tuyến."
 
 msgid "Not available in this browser"
 msgstr "Không khả dụng trong trình duyệt này"
@@ -14057,7 +14057,7 @@ msgid "Now turn on Face ID or fingerprint again"
 msgstr "Bây giờ hãy bật lại Face ID hoặc vân tay"
 
 msgid "On this phone Face ID or fingerprint opens Kept, but prices and documents kept offline still ask for the PIN."
-msgstr "Trên điện thoại này, Face ID hoặc vân tay mở được Kept, nhưng giá và tài liệu giữ ngoại tuyến vẫn yêu cầu mã PIN."
+msgstr "Trên điện thoại này, Face ID hoặc vân tay mở được Tingfinder, nhưng giá và tài liệu giữ ngoại tuyến vẫn yêu cầu mã PIN."
 
 msgid "PIN"
 msgstr "Mã PIN"
@@ -14078,10 +14078,10 @@ msgid "That is more than this device can keep offline."
 msgstr "Vượt quá mức thiết bị này có thể giữ ngoại tuyến."
 
 msgid "The app lock needs storage this browser doesn’t give Kept."
-msgstr "Khóa ứng dụng cần bộ nhớ mà trình duyệt này không cấp cho Kept."
+msgstr "Khóa ứng dụng cần bộ nhớ mà trình duyệt này không cấp cho Tingfinder."
 
 msgid "The PIN keeps out someone holding this phone. Forgot it? Sign out and sign in again."
-msgstr "Mã PIN ngăn người đang cầm điện thoại này mở Kept. Quên rồi? Hãy đăng xuất rồi đăng nhập lại."
+msgstr "Mã PIN ngăn người đang cầm điện thoại này mở Tingfinder. Quên rồi? Hãy đăng xuất rồi đăng nhập lại."
 
 msgid "The PINs don’t match. Type the new PIN again."
 msgstr "Các mã PIN không khớp. Hãy nhập lại mã PIN mới."
@@ -14114,13 +14114,13 @@ msgid "Use Face ID or fingerprint"
 msgstr "Dùng Face ID hoặc vân tay"
 
 msgid "Whoever unlocks Kept on this phone sees prices and documents for this location."
-msgstr "Bất kỳ ai mở khóa Kept trên điện thoại này cũng thấy giá và tài liệu của địa điểm này."
+msgstr "Bất kỳ ai mở khóa Tingfinder trên điện thoại này cũng thấy giá và tài liệu của địa điểm này."
 
 msgid "Whoever unlocks Kept on this phone sees prices and documents for this location. About {0} to download."
-msgstr "Bất kỳ ai mở khóa Kept trên điện thoại này cũng thấy giá và tài liệu của địa điểm này. Khoảng {0} cần tải xuống."
+msgstr "Bất kỳ ai mở khóa Tingfinder trên điện thoại này cũng thấy giá và tài liệu của địa điểm này. Khoảng {0} cần tải xuống."
 
 msgid "Whoever unlocks Kept sees prices and documents for these locations. The PIN keeps out someone holding the phone, not someone who has copied the browser’s storage."
-msgstr "Bất kỳ ai mở khóa Kept cũng thấy giá và tài liệu của các địa điểm này. Mã PIN chỉ ngăn người đang cầm điện thoại, chứ không ngăn người đã sao chép bộ nhớ của trình duyệt."
+msgstr "Bất kỳ ai mở khóa Tingfinder cũng thấy giá và tài liệu của các địa điểm này. Mã PIN chỉ ngăn người đang cầm điện thoại, chứ không ngăn người đã sao chép bộ nhớ của trình duyệt."
 
 msgid "Wrong PIN."
 msgstr "Sai mã PIN."
@@ -14159,7 +14159,7 @@ msgid "Access key ID"
 msgstr "ID khóa truy cập"
 
 msgid "An absolute path as the server sees it: another disk, or a NAS mount. Not the disk Kept's data is on."
-msgstr "Đường dẫn tuyệt đối theo cách máy chủ nhìn thấy: một ổ đĩa khác, hoặc điểm gắn NAS. Không phải ổ đĩa chứa dữ liệu của Kept."
+msgstr "Đường dẫn tuyệt đối theo cách máy chủ nhìn thấy: một ổ đĩa khác, hoặc điểm gắn NAS. Không phải ổ đĩa chứa dữ liệu của Tingfinder."
 
 msgid "An OpenSSH private key. It replaces the saved key when you save."
 msgstr "Một khóa riêng OpenSSH. Nó sẽ thay thế khóa đã lưu khi bạn lưu."
@@ -14168,7 +14168,7 @@ msgid "Another run holds the repository. Try again when it finishes."
 msgstr "Một lần chạy khác đang giữ kho lưu trữ. Hãy thử lại khi nó hoàn tất."
 
 msgid "At least 12 characters. Without it nobody can read the backups, Kept included."
-msgstr "Ít nhất 12 ký tự. Không có nó thì không ai đọc được các bản sao lưu, kể cả Kept."
+msgstr "Ít nhất 12 ký tự. Không có nó thì không ai đọc được các bản sao lưu, kể cả Tingfinder."
 
 msgid "Backup password"
 msgstr "Mật khẩu sao lưu"
@@ -14192,7 +14192,7 @@ msgid "Backups need a password: no password, no backup."
 msgstr "Sao lưu cần mật khẩu: không có mật khẩu thì không có sao lưu."
 
 msgid "Backups should run every night. Check the runs in Backups, and that Kept's worker is running."
-msgstr "Sao lưu nên chạy mỗi đêm. Hãy kiểm tra các lần chạy trong mục Sao lưu, và xem worker của Kept có đang chạy không."
+msgstr "Sao lưu nên chạy mỗi đêm. Hãy kiểm tra các lần chạy trong mục Sao lưu, và xem worker của Tingfinder có đang chạy không."
 
 msgid "Before upgrade"
 msgstr "Trước khi nâng cấp"
@@ -14204,7 +14204,7 @@ msgid "Can't check this build"
 msgstr "Không thể kiểm tra bản build này"
 
 msgid "Change the locked settings in the server's configuration (<0>{0}</0>) and restart Kept."
-msgstr "Hãy thay đổi các cài đặt bị khóa trong cấu hình của máy chủ (<0>{0}</0>) rồi khởi động lại Kept."
+msgstr "Hãy thay đổi các cài đặt bị khóa trong cấu hình của máy chủ (<0>{0}</0>) rồi khởi động lại Tingfinder."
 
 msgid "Check for new versions"
 msgstr "Kiểm tra phiên bản mới"
@@ -14219,7 +14219,7 @@ msgid "Checked for new versions"
 msgstr "Đã kiểm tra phiên bản mới"
 
 msgid "Choose where backups go and a password. Kept then backs up the database, the files and a readable copy of every location every night, encrypted."
-msgstr "Chọn nơi lưu bản sao lưu và một mật khẩu. Kept sau đó sẽ sao lưu cơ sở dữ liệu, các tệp và một bản sao đọc được của mọi địa điểm mỗi đêm, đã mã hóa."
+msgstr "Chọn nơi lưu bản sao lưu và một mật khẩu. Tingfinder sau đó sẽ sao lưu cơ sở dữ liệu, các tệp và một bản sao đọc được của mọi địa điểm mỗi đêm, đã mã hóa."
 
 msgid "Choose where backups go and set their password first."
 msgstr "Hãy chọn nơi lưu bản sao lưu và đặt mật khẩu cho chúng trước."
@@ -14279,7 +14279,7 @@ msgid "Every night at <0>{time}</0> UTC, keeping {daily} daily, {weekly} weekly 
 msgstr "Mỗi đêm lúc <0>{time}</0> UTC, giữ {daily} ảnh chụp nhanh hàng ngày, {weekly} ảnh chụp nhanh hàng tuần và {monthly} ảnh chụp nhanh hàng tháng."
 
 msgid "Every week, Kept checks that every snapshot can be read."
-msgstr "Mỗi tuần, Kept kiểm tra rằng mọi ảnh chụp nhanh đều đọc được."
+msgstr "Mỗi tuần, Tingfinder kiểm tra rằng mọi ảnh chụp nhanh đều đọc được."
 
 msgid "File bucket versioning"
 msgstr "Phiên bản hóa bucket tệp"
@@ -14297,7 +14297,7 @@ msgid "GitHub shows no published release for this server's source repository. It
 msgstr "GitHub không hiển thị bản phát hành đã công bố nào cho kho mã nguồn của máy chủ này. Kho có thể là riêng tư, hoặc chưa có bản nào."
 
 msgid "GitHub's answer wasn't what Kept expected. Kept asks again tomorrow."
-msgstr "Câu trả lời của GitHub không như Kept mong đợi. Kept sẽ hỏi lại vào ngày mai."
+msgstr "Câu trả lời của GitHub không như Tingfinder mong đợi. Tingfinder sẽ hỏi lại vào ngày mai."
 
 msgid "GitHub's limit reached"
 msgstr "Đã đạt giới hạn của GitHub"
@@ -14309,25 +14309,25 @@ msgid "Keep the saved one"
 msgstr "Giữ lại bản đã lưu"
 
 msgid "Kept {v} is available"
-msgstr "Đã có Kept {v}"
+msgstr "Đã có Tingfinder {v}"
 
 msgid "Kept <0>{version}</0> is available"
-msgstr "Đã có Kept <0>{version}</0>"
+msgstr "Đã có Tingfinder <0>{version}</0>"
 
 msgid "Kept allows one release back. Upgrade again when the problem that made you roll back is fixed."
-msgstr "Kept cho phép quay lại một bản phát hành. Hãy nâng cấp lại khi sự cố khiến bạn quay lại đã được khắc phục."
+msgstr "Tingfinder cho phép quay lại một bản phát hành. Hãy nâng cấp lại khi sự cố khiến bạn quay lại đã được khắc phục."
 
 msgid "Kept checks it with each backup."
-msgstr "Kept kiểm tra nó với mỗi lần sao lưu."
+msgstr "Tingfinder kiểm tra nó với mỗi lần sao lưu."
 
 msgid "Kept doesn't ask for new versions. Turn it on in Admin → Sign-up."
-msgstr "Kept không hỏi về phiên bản mới. Bật tính năng này trong Quản trị → Đăng ký."
+msgstr "Tingfinder không hỏi về phiên bản mới. Bật tính năng này trong Quản trị → Đăng ký."
 
 msgid "Kept got no answer from the backup storage. Check the address, the credentials and the network."
-msgstr "Kept không nhận được câu trả lời từ nơi lưu bản sao lưu. Kiểm tra địa chỉ, thông tin đăng nhập và mạng."
+msgstr "Tingfinder không nhận được câu trả lời từ nơi lưu bản sao lưu. Kiểm tra địa chỉ, thông tin đăng nhập và mạng."
 
 msgid "Kept warns at {warnAt}%."
-msgstr "Kept cảnh báo ở mức {warnAt}%."
+msgstr "Tingfinder cảnh báo ở mức {warnAt}%."
 
 msgid "Last checked {checked}"
 msgstr "Kiểm tra lần cuối {checked}"
@@ -14387,7 +14387,7 @@ msgid "Not known yet"
 msgstr "Chưa biết"
 
 msgid "Not made by Kept"
-msgstr "Không phải do Kept tạo"
+msgstr "Không phải do Tingfinder tạo"
 
 msgid "Not measured yet"
 msgstr "Chưa đo"
@@ -14396,10 +14396,10 @@ msgid "Nothing on this server is backed up. Choose where backups go (another dis
 msgstr "Không có gì trên máy chủ này được sao lưu. Chọn nơi lưu bản sao lưu (một ổ đĩa khác, một bucket S3 hoặc một máy chủ SFTP) và mật khẩu trong Sao lưu."
 
 msgid "Off. Kept never asks; check the releases page yourself."
-msgstr "Tắt. Kept không bao giờ hỏi; tự kiểm tra trang phát hành."
+msgstr "Tắt. Tingfinder không bao giờ hỏi; tự kiểm tra trang phát hành."
 
 msgid "On. Once a day the server asks GitHub for Kept's newest release, sending nothing but the request. Admin → Status says when one is out."
-msgstr "Bật. Mỗi ngày một lần, máy chủ hỏi GitHub về bản phát hành mới nhất của Kept, chỉ gửi đúng yêu cầu. Quản trị → Trạng thái cho biết khi nào có bản mới."
+msgstr "Bật. Mỗi ngày một lần, máy chủ hỏi GitHub về bản phát hành mới nhất của Tingfinder, chỉ gửi đúng yêu cầu. Quản trị → Trạng thái cho biết khi nào có bản mới."
 
 msgid "Once a month, restore into a scratch database and compare: <0>{command}</0>"
 msgstr "Mỗi tháng một lần, khôi phục vào cơ sở dữ liệu tạm và so sánh: <0>{command}</0>"
@@ -14528,13 +14528,13 @@ msgid "The backup stopped before it finished: the server restarted or ran out of
 msgstr "Bản sao lưu đã dừng trước khi hoàn tất: máy chủ đã khởi động lại hoặc hết bộ nhớ. Lần sao lưu tiếp theo chạy như bình thường."
 
 msgid "The database dump tool doesn't match the database's version. Use Kept's own image."
-msgstr "Công cụ kết xuất cơ sở dữ liệu không khớp với phiên bản của cơ sở dữ liệu. Hãy dùng image của chính Kept."
+msgstr "Công cụ kết xuất cơ sở dữ liệu không khớp với phiên bản của cơ sở dữ liệu. Hãy dùng image của chính Tingfinder."
 
 msgid "The dump was much smaller than the last good one. Older snapshots were kept."
 msgstr "Bản kết xuất nhỏ hơn nhiều so với bản thành công gần nhất. Các ảnh chụp nhanh cũ hơn đã được giữ lại."
 
 msgid "The last check got no answer. Kept asks again tomorrow."
-msgstr "Lần kiểm tra gần nhất không nhận được phản hồi. Kept sẽ hỏi lại vào ngày mai."
+msgstr "Lần kiểm tra gần nhất không nhận được phản hồi. Tingfinder sẽ hỏi lại vào ngày mai."
 
 msgid "The repository is locked by another run. If none is running, {unlock} removes the lock."
 msgstr "Kho lưu trữ đang bị khóa bởi một lần chạy khác. Nếu không có lần chạy nào đang hoạt động, {unlock} sẽ gỡ khóa."
@@ -14549,7 +14549,7 @@ msgid "The server's environment sets that, so it can't be changed here."
 msgstr "Môi trường của máy chủ đặt giá trị này, nên không thể thay đổi tại đây."
 
 msgid "The server's own key, as ssh-keyscan prints it without the host name. Kept connects to no other."
-msgstr "Khóa riêng của máy chủ, như ssh-keyscan in ra mà không có tên máy chủ. Kept không kết nối tới máy nào khác."
+msgstr "Khóa riêng của máy chủ, như ssh-keyscan in ra mà không có tên máy chủ. Tingfinder không kết nối tới máy nào khác."
 
 msgid "The snapshot was taken, but something needs a look. The server's log has the details."
 msgstr "Ảnh chụp nhanh đã được tạo, nhưng có thứ cần xem lại. Nhật ký của máy chủ có chi tiết."
@@ -14564,16 +14564,16 @@ msgid "They need a decision: retry or discard."
 msgstr "Chúng cần một quyết định: thử lại hay loại bỏ."
 
 msgid "This needs a secure (HTTPS) connection to Kept."
-msgstr "Cần kết nối an toàn (HTTPS) tới Kept."
+msgstr "Cần kết nối an toàn (HTTPS) tới Tingfinder."
 
 msgid "This server runs <0>{current}</0>. Upgrading is the release notes' steps; Kept never updates itself."
-msgstr "Máy chủ này đang chạy <0>{current}</0>. Nâng cấp theo các bước trong ghi chú phát hành; Kept không bao giờ tự cập nhật."
+msgstr "Máy chủ này đang chạy <0>{current}</0>. Nâng cấp theo các bước trong ghi chú phát hành; Tingfinder không bao giờ tự cập nhật."
 
 msgid "This server's source code address isn't a GitHub repository, so Kept doesn't ask."
-msgstr "Địa chỉ mã nguồn của máy chủ này không phải là kho GitHub, nên Kept không hỏi."
+msgstr "Địa chỉ mã nguồn của máy chủ này không phải là kho GitHub, nên Tingfinder không hỏi."
 
 msgid "Too many requests came from this server's address. Kept asks again tomorrow."
-msgstr "Quá nhiều yêu cầu đến từ địa chỉ của máy chủ này. Kept sẽ hỏi lại vào ngày mai."
+msgstr "Quá nhiều yêu cầu đến từ địa chỉ của máy chủ này. Tingfinder sẽ hỏi lại vào ngày mai."
 
 msgid "Up to date"
 msgstr "Đã là bản mới nhất"
@@ -14618,7 +14618,7 @@ msgid "Low since {day}"
 msgstr "Sắp hết từ {day}"
 
 msgid "Kept can't reach that address. Check it for typos."
-msgstr "Kept không thể tới được địa chỉ đó. Hãy kiểm tra lỗi gõ."
+msgstr "Tingfinder không thể tới được địa chỉ đó. Hãy kiểm tra lỗi gõ."
 
 msgid "You have no AI of your own to answer here. Ask from a location's page, where its AI answers."
 msgstr "Bạn không có AI riêng để trả lời tại đây. Hãy hỏi từ trang của một địa điểm, nơi AI của địa điểm đó trả lời."
@@ -14645,7 +14645,7 @@ msgid "Other names requested for an import"
 msgstr "Đã yêu cầu tên khác cho một lần nhập"
 
 msgid "Kept set up"
-msgstr "Đã thiết lập Kept"
+msgstr "Đã thiết lập Tingfinder"
 
 msgid "Instance settings changed"
 msgstr "Đã thay đổi cài đặt máy chủ"
@@ -14804,7 +14804,7 @@ msgid "This account was made for you by someone who runs a location. Ask them to
 msgstr "Tài khoản này do người quản lý một địa điểm tạo cho bạn. Hãy nhờ họ xóa nó."
 
 msgid "You're the only person who runs this Kept. Make someone else an instance admin first."
-msgstr "Bạn là người duy nhất quản lý Kept này. Hãy đặt một người khác làm quản trị viên máy chủ trước."
+msgstr "Bạn là người duy nhất quản lý Tingfinder này. Hãy đặt một người khác làm quản trị viên máy chủ trước."
 
 msgid "You own these locations. Hand each one to someone else, or delete it, first."
 msgstr "Bạn sở hữu các địa điểm này. Hãy bàn giao từng địa điểm cho người khác, hoặc xóa nó, trước."
@@ -14825,7 +14825,7 @@ msgid "Keep my account"
 msgstr "Giữ tài khoản của tôi"
 
 msgid "Your account is going to be deleted. Keep it to use Kept again."
-msgstr "Tài khoản của bạn sắp bị xóa. Hãy giữ lại để dùng Kept trở lại."
+msgstr "Tài khoản của bạn sắp bị xóa. Hãy giữ lại để dùng Tingfinder trở lại."
 
 msgid "Your account can't be deleted yet."
 msgstr "Chưa thể xóa tài khoản của bạn."
@@ -14870,13 +14870,13 @@ msgid "Unlink"
 msgstr "Hủy liên kết"
 
 msgid "Once linked, that account signs you in here. Kept never links one because the email matches."
-msgstr "Sau khi liên kết, tài khoản đó sẽ đăng nhập bạn tại đây. Kept không bao giờ liên kết tài khoản chỉ vì email trùng khớp."
+msgstr "Sau khi liên kết, tài khoản đó sẽ đăng nhập bạn tại đây. Tingfinder không bao giờ liên kết tài khoản chỉ vì email trùng khớp."
 
 msgid "Sign-in with Google"
 msgstr "Đăng nhập bằng Google"
 
 msgid "Make an OAuth client in Google Cloud, set <0>KEPT_GOOGLE_CLIENT_ID</0> and <1>KEPT_GOOGLE_CLIENT_SECRET</1>, then restart Kept."
-msgstr "Tạo một OAuth client trong Google Cloud, đặt <0>KEPT_GOOGLE_CLIENT_ID</0> và <1>KEPT_GOOGLE_CLIENT_SECRET</1>, rồi khởi động lại Kept."
+msgstr "Tạo một OAuth client trong Google Cloud, đặt <0>KEPT_GOOGLE_CLIENT_ID</0> và <1>KEPT_GOOGLE_CLIENT_SECRET</1>, rồi khởi động lại Tingfinder."
 
 msgid "Redirect URI to register with Google"
 msgstr "URI chuyển hướng để đăng ký với Google"
@@ -14885,10 +14885,10 @@ msgid "Google sign-in reaches only an account already linked to it, or someone i
 msgstr "Đăng nhập bằng Google chỉ tới được tài khoản đã liên kết với nó, hoặc người được mời tại đây. Không ai tự vào được."
 
 msgid "That server is on a private network, which this Kept doesn't allow. An instance admin can allow it."
-msgstr "Máy chủ đó nằm trên mạng riêng, mà Kept này không cho phép. Quản trị viên máy chủ có thể cho phép."
+msgstr "Máy chủ đó nằm trên mạng riêng, mà Tingfinder này không cho phép. Quản trị viên máy chủ có thể cho phép."
 
 msgid "Kept stops sending to it, and forgets its settings."
-msgstr "Kept ngừng gửi tới nó và xóa các cài đặt của nó."
+msgstr "Tingfinder ngừng gửi tới nó và xóa các cài đặt của nó."
 
 msgid "Add ntfy"
 msgstr "Thêm ntfy"
@@ -14897,7 +14897,7 @@ msgid "Add Telegram"
 msgstr "Thêm Telegram"
 
 msgid "You have {MAX_RELAY_CHANNELS}, the most Kept allows."
-msgstr "Bạn có {MAX_RELAY_CHANNELS}, mức tối đa Kept cho phép."
+msgstr "Bạn có {MAX_RELAY_CHANNELS}, mức tối đa Tingfinder cho phép."
 
 msgid "Reminders on your phone through ntfy.sh or your own ntfy server."
 msgstr "Lời nhắc trên điện thoại của bạn qua ntfy.sh hoặc máy chủ ntfy của riêng bạn."
@@ -14936,16 +14936,16 @@ msgid "Optional, to tell them apart."
 msgstr "Tùy chọn, để phân biệt chúng."
 
 msgid "Kept keeps these settings encrypted and never shows them again."
-msgstr "Kept giữ các cài đặt này ở dạng mã hóa và không bao giờ hiển thị lại."
+msgstr "Tingfinder giữ các cài đặt này ở dạng mã hóa và không bao giờ hiển thị lại."
 
 msgid "It's also on its way to your email."
 msgstr "Nó cũng đang được gửi tới email của bạn."
 
 msgid "Kept emails this location's inventory every Monday morning."
-msgstr "Kept gửi email danh mục của địa điểm này vào mỗi sáng thứ Hai."
+msgstr "Tingfinder gửi email danh mục của địa điểm này vào mỗi sáng thứ Hai."
 
 msgid "Kept emails this location's inventory on the 1st of every month."
-msgstr "Kept gửi email danh mục của địa điểm này vào ngày 1 mỗi tháng."
+msgstr "Tingfinder gửi email danh mục của địa điểm này vào ngày 1 mỗi tháng."
 
 msgid "Email it to me"
 msgstr "Gửi email cho tôi"
@@ -14969,7 +14969,7 @@ msgid "Skipped: you'd made five reports that hour."
 msgstr "Đã bỏ qua: bạn đã tạo năm báo cáo trong giờ đó."
 
 msgid "Skipped: that part of Kept is off in this location."
-msgstr "Đã bỏ qua: phần đó của Kept đang tắt trong địa điểm này."
+msgstr "Đã bỏ qua: phần đó của Tingfinder đang tắt trong địa điểm này."
 
 msgid "Skipped: you can't make this report there any more."
 msgstr "Đã bỏ qua: bạn không thể tạo báo cáo này ở đó nữa."
@@ -14978,7 +14978,7 @@ msgid "Stop this report?"
 msgstr "Dừng báo cáo này?"
 
 msgid "Kept stops emailing it. You can print it any time."
-msgstr "Kept ngừng gửi báo cáo này qua email. Bạn có thể in nó bất cứ lúc nào."
+msgstr "Tingfinder ngừng gửi báo cáo này qua email. Bạn có thể in nó bất cứ lúc nào."
 
 msgid "Stop"
 msgstr "Dừng"
@@ -15011,10 +15011,10 @@ msgid "This isn't a LubeLogger export of fuel, services or odometer."
 msgstr "Đây không phải là bản xuất LubeLogger của nhiên liệu, bảo dưỡng hoặc đồng hồ công-tơ-mét."
 
 msgid "Kept can't read this file. Export it from LubeLogger again as CSV."
-msgstr "Kept không đọc được tệp này. Hãy xuất lại từ LubeLogger dưới dạng CSV."
+msgstr "Tingfinder không đọc được tệp này. Hãy xuất lại từ LubeLogger dưới dạng CSV."
 
 msgid "Kept can't read this file."
-msgstr "Kept không đọc được tệp này."
+msgstr "Tingfinder không đọc được tệp này."
 
 msgid "Imported {0} records"
 msgstr "Đã nhập {0} bản ghi"
@@ -15050,7 +15050,7 @@ msgid "Check"
 msgstr "Kiểm tra"
 
 msgid "no date Kept can read"
-msgstr "không có ngày Kept đọc được"
+msgstr "không có ngày Tingfinder đọc được"
 
 msgid "no amount of fuel"
 msgstr "không có lượng nhiên liệu"
@@ -15071,7 +15071,7 @@ msgid "a cost below zero"
 msgstr "chi phí dưới 0"
 
 msgid "Kept refused it"
-msgstr "Kept đã từ chối nó"
+msgstr "Tingfinder đã từ chối nó"
 
 msgid "What it will do"
 msgstr "Nó sẽ làm gì"
@@ -15104,7 +15104,7 @@ msgid "That address is on a private network. An instance admin can allow it in A
 msgstr "Địa chỉ đó nằm trên mạng riêng. Quản trị viên hệ thống có thể cho phép trong Quản trị → Cài đặt."
 
 msgid "Kept couldn't reach that server. Check the host and port."
-msgstr "Kept không kết nối được tới máy chủ đó. Hãy kiểm tra máy chủ và cổng."
+msgstr "Tingfinder không kết nối được tới máy chủ đó. Hãy kiểm tra máy chủ và cổng."
 
 msgid "The server's encryption didn't check out. Check the host and the security."
 msgstr "Không xác minh được mã hóa của máy chủ. Hãy kiểm tra máy chủ và chế độ bảo mật."
@@ -15119,7 +15119,7 @@ msgid "The server took too long to answer."
 msgstr "Máy chủ trả lời quá lâu."
 
 msgid "Kept couldn't sign in to the mailbox."
-msgstr "Kept không đăng nhập được vào hộp thư."
+msgstr "Tingfinder không đăng nhập được vào hộp thư."
 
 msgid "The person who connected it no longer administers this location."
 msgstr "Người đã kết nối nó không còn quản trị địa điểm này nữa."
@@ -15149,13 +15149,13 @@ msgid "Remove this mailbox?"
 msgstr "Xóa hộp thư này?"
 
 msgid "Kept stops checking it. The receipts it already made stay."
-msgstr "Kept ngừng kiểm tra nó. Các hóa đơn đã tạo vẫn còn."
+msgstr "Tingfinder ngừng kiểm tra nó. Các hóa đơn đã tạo vẫn còn."
 
 msgid "Mailbox"
 msgstr "Hộp thư"
 
 msgid "Kept stopped checking this mailbox"
-msgstr "Kept đã ngừng kiểm tra hộp thư này"
+msgstr "Tingfinder đã ngừng kiểm tra hộp thư này"
 
 msgid "Save it again to turn it back on."
 msgstr "Lưu lại để bật lại."
@@ -15170,7 +15170,7 @@ msgid "Checked {0}"
 msgstr "Đã kiểm tra {0}"
 
 msgid "Not checked yet. Kept checks every 10 minutes."
-msgstr "Chưa kiểm tra. Kept kiểm tra mỗi 10 phút."
+msgstr "Chưa kiểm tra. Tingfinder kiểm tra mỗi 10 phút."
 
 msgid "Connected by {0}"
 msgstr "Được kết nối bởi {0}"
@@ -15188,7 +15188,7 @@ msgid "Connect a mailbox"
 msgstr "Kết nối hộp thư"
 
 msgid "Kept checks a folder in a mailbox you already have, every 10 minutes. Each message's photos and PDFs, or its text when it has none, become a draft receipt in the Inbox. Only mail that arrives after you connect is read, and nothing in the mailbox is changed."
-msgstr "Kept kiểm tra một thư mục trong hộp thư bạn đã có, mỗi 10 phút. Ảnh và PDF của mỗi thư, hoặc nội dung thư khi không có tệp đính kèm, trở thành một biên lai nháp trong Hộp thư đến. Chỉ thư đến sau khi bạn kết nối mới được đọc, và không có gì trong hộp thư bị thay đổi."
+msgstr "Tingfinder kiểm tra một thư mục trong hộp thư bạn đã có, mỗi 10 phút. Ảnh và PDF của mỗi thư, hoặc nội dung thư khi không có tệp đính kèm, trở thành một biên lai nháp trong Hộp thư đến. Chỉ thư đến sau khi bạn kết nối mới được đọc, và không có gì trong hộp thư bị thay đổi."
 
 msgid "IMAP server"
 msgstr "Máy chủ IMAP"
@@ -15221,7 +15221,7 @@ msgid "Optional, comma-separated. A filter against noise, not a security check: 
 msgstr "Không bắt buộc, phân tách bằng dấu phẩy. Bộ lọc chống thư rác, không phải kiểm tra bảo mật: địa chỉ From có thể bị giả mạo."
 
 msgid "Kept couldn't connect"
-msgstr "Kept không kết nối được"
+msgstr "Tingfinder không kết nối được"
 
 msgid "Recent mail"
 msgstr "Thư gần đây"
@@ -15233,7 +15233,7 @@ msgid "No mail read yet"
 msgstr "Chưa đọc thư nào"
 
 msgid "Messages that arrive in the folder show here once Kept has read them."
-msgstr "Thư đến thư mục sẽ hiển thị tại đây sau khi Kept đọc xong."
+msgstr "Thư đến thư mục sẽ hiển thị tại đây sau khi Tingfinder đọc xong."
 
 msgid "Add Apprise"
 msgstr "Thêm Apprise"
@@ -15263,10 +15263,10 @@ msgid "Condition report PDF"
 msgstr "PDF báo cáo tình trạng"
 
 msgid "Both walk-throughs room by room, the earlier one first: each room's condition, note and photos, with the time Kept received each photo."
-msgstr "Cả hai lần kiểm tra từng phòng, lần sớm hơn ở trước: tình trạng, ghi chú và ảnh của mỗi phòng, kèm thời gian Kept nhận mỗi ảnh."
+msgstr "Cả hai lần kiểm tra từng phòng, lần sớm hơn ở trước: tình trạng, ghi chú và ảnh của mỗi phòng, kèm thời gian Tingfinder nhận mỗi ảnh."
 
 msgid "Each room's condition, note and photos, with the time Kept received each photo."
-msgstr "Tình trạng, ghi chú và ảnh của mỗi phòng, kèm thời gian Kept nhận mỗi ảnh."
+msgstr "Tình trạng, ghi chú và ảnh của mỗi phòng, kèm thời gian Tingfinder nhận mỗi ảnh."
 
 msgid "This report isn't finished, and the PDF says so."
 msgstr "Báo cáo này chưa hoàn thành, và PDF cũng ghi như vậy."
@@ -15386,7 +15386,7 @@ msgid "Day of the walk-through"
 msgstr "Ngày kiểm tra"
 
 msgid "Shared from Kept · read-only"
-msgstr "Được chia sẻ từ Kept · chỉ đọc"
+msgstr "Được chia sẻ từ Tingfinder · chỉ đọc"
 
 msgid "Shared with you"
 msgstr "Được chia sẻ với bạn"
@@ -15482,7 +15482,7 @@ msgid "Anyone with this link can open it until {until}."
 msgstr "Bất kỳ ai có liên kết này cũng có thể mở nó đến {until}."
 
 msgid "Copy it now. Kept shows this link once; make a new one if it's lost."
-msgstr "Hãy sao chép ngay. Kept chỉ hiển thị liên kết này một lần; hãy tạo liên kết mới nếu bị mất."
+msgstr "Hãy sao chép ngay. Tingfinder chỉ hiển thị liên kết này một lần; hãy tạo liên kết mới nếu bị mất."
 
 msgid "See this location's share links"
 msgstr "Xem các liên kết chia sẻ của địa điểm này"
@@ -16001,7 +16001,7 @@ msgid "Throw away these changes?"
 msgstr "Hủy các thay đổi này?"
 
 msgid "The map goes back to how it was. Rooms and floors you added stay in Kept."
-msgstr "Bản đồ sẽ trở lại như cũ. Các phòng và tầng bạn đã thêm vẫn còn trong Kept."
+msgstr "Bản đồ sẽ trở lại như cũ. Các phòng và tầng bạn đã thêm vẫn còn trong Tingfinder."
 
 msgid "Throw away"
 msgstr "Hủy bỏ"
@@ -16160,7 +16160,7 @@ msgid "{what} by {how} in {where}"
 msgstr "{what} qua {how} tại {where}"
 
 msgid "In Kept is off, so nothing is sent."
-msgstr "Kênh Trong Kept đang tắt nên không có gì được gửi."
+msgstr "Kênh Trong Tingfinder đang tắt nên không có gì được gửi."
 
 msgid "Due dates"
 msgstr "Ngày đến hạn"
@@ -16184,7 +16184,7 @@ msgid "Applies to every location, ones you add later too. Pick a location to cha
 msgstr "Áp dụng cho mọi địa điểm, kể cả địa điểm bạn thêm sau này. Chọn một địa điểm để chỉ đổi ở đó."
 
 msgid "You're a member here: Kept starts with only the loans you record."
-msgstr "Bạn là thành viên ở đây: Kept bắt đầu chỉ với các khoản cho mượn bạn ghi lại."
+msgstr "Bạn là thành viên ở đây: Tingfinder bắt đầu chỉ với các khoản cho mượn bạn ghi lại."
 
 msgid "You're a viewer here: only members joining and leaving."
 msgstr "Bạn là người xem ở đây: chỉ có thành viên tham gia và rời đi."
@@ -16328,7 +16328,7 @@ msgid "The camera is off in this demo"
 msgstr "Máy ảnh đang tắt trong bản demo này"
 
 msgid "In your own Kept, Capture opens the camera here. Photos you pick stay in this tab."
-msgstr "Trong Kept của chính bạn, Chụp sẽ mở máy ảnh tại đây. Ảnh bạn chọn sẽ ở lại trong tab này."
+msgstr "Trong Tingfinder của chính bạn, Chụp sẽ mở máy ảnh tại đây. Ảnh bạn chọn sẽ ở lại trong tab này."
 
 msgid "The app lock is off in this demo."
 msgstr "Khóa ứng dụng đang tắt trong bản demo này."
@@ -16337,7 +16337,7 @@ msgid "Downloads are off in this demo."
 msgstr "Tải xuống đang tắt trong bản demo này."
 
 msgid "Your own Kept makes the PDF here. This demo has no files."
-msgstr "Kept của chính bạn sẽ tạo PDF tại đây. Bản demo này không có tệp nào."
+msgstr "Tingfinder của chính bạn sẽ tạo PDF tại đây. Bản demo này không có tệp nào."
 
 msgid "Sample answers in this demo: no AI is asked."
 msgstr "Câu trả lời mẫu trong bản demo này: không hỏi AI nào."
@@ -16361,7 +16361,7 @@ msgid "Disconnect Paperless?"
 msgstr "Ngắt kết nối Paperless?"
 
 msgid "The {links} links to its documents go too. Documents copied into Kept stay."
-msgstr "{links} liên kết tới tài liệu của nó cũng sẽ bị xóa. Tài liệu đã sao chép vào Kept vẫn còn."
+msgstr "{links} liên kết tới tài liệu của nó cũng sẽ bị xóa. Tài liệu đã sao chép vào Tingfinder vẫn còn."
 
 msgid "Members can no longer link its documents."
 msgstr "Thành viên không còn liên kết được tài liệu của nó nữa."
@@ -16397,7 +16397,7 @@ msgid "Connect Paperless-ngx"
 msgstr "Kết nối Paperless-ngx"
 
 msgid "Members can then link a thing or a place to its receipts, manuals and warranty cards in Paperless, without uploading them twice. Kept stores the document's number and title, not the file, unless someone copies it into Kept."
-msgstr "Thành viên sau đó có thể liên kết một đồ vật hoặc một vị trí tới các hóa đơn, hướng dẫn sử dụng và thẻ bảo hành của nó trong Paperless, mà không cần tải lên hai lần. Kept chỉ lưu số và tiêu đề của tài liệu, không lưu tệp, trừ khi ai đó sao chép nó vào Kept."
+msgstr "Thành viên sau đó có thể liên kết một đồ vật hoặc một vị trí tới các hóa đơn, hướng dẫn sử dụng và thẻ bảo hành của nó trong Paperless, mà không cần tải lên hai lần. Tingfinder chỉ lưu số và tiêu đề của tài liệu, không lưu tệp, trừ khi ai đó sao chép nó vào Tingfinder."
 
 msgid "Paperless address"
 msgstr "Địa chỉ Paperless"
@@ -16409,13 +16409,13 @@ msgid "Plain http"
 msgstr "Http thuần"
 
 msgid "Kept accepts http only for an address on your own network, and only when an instance admin allows private addresses. The token travels unencrypted there."
-msgstr "Kept chỉ chấp nhận http cho địa chỉ trên mạng của chính bạn, và chỉ khi quản trị viên máy chủ cho phép địa chỉ riêng. Token sẽ truyền không mã hóa ở đó."
+msgstr "Tingfinder chỉ chấp nhận http cho địa chỉ trên mạng của chính bạn, và chỉ khi quản trị viên máy chủ cho phép địa chỉ riêng. Token sẽ truyền không mã hóa ở đó."
 
 msgid "API token"
 msgstr "Token API"
 
 msgid "In Paperless, open My Profile and press the circular arrow by the API token. Kept sees what that user sees."
-msgstr "Trong Paperless, hãy mở Hồ sơ của tôi và nhấn mũi tên tròn bên cạnh token API. Kept sẽ thấy những gì người dùng đó thấy."
+msgstr "Trong Paperless, hãy mở Hồ sơ của tôi và nhấn mũi tên tròn bên cạnh token API. Tingfinder sẽ thấy những gì người dùng đó thấy."
 
 msgid "From Paperless-ngx"
 msgstr "Từ Paperless-ngx"
@@ -16427,7 +16427,7 @@ msgid "Paperless can't be reached"
 msgstr "Không kết nối được tới Paperless"
 
 msgid "The titles below are as Kept last saw them."
-msgstr "Các tiêu đề dưới đây là như Kept đã thấy lần cuối."
+msgstr "Các tiêu đề dưới đây là như Tingfinder đã thấy lần cuối."
 
 msgid "No Paperless documents of this kind."
 msgstr "Không có tài liệu Paperless nào thuộc loại này."
@@ -16439,7 +16439,7 @@ msgid "Paperless documents"
 msgstr "Tài liệu Paperless"
 
 msgid "Copied into Kept"
-msgstr "Đã sao chép vào Kept"
+msgstr "Đã sao chép vào Tingfinder"
 
 msgid "Couldn't copy it"
 msgstr "Không sao chép được"
@@ -16448,7 +16448,7 @@ msgid "Unlink this document?"
 msgstr "Hủy liên kết tài liệu này?"
 
 msgid "It comes off {name}. Paperless keeps it, and the copy in Kept stays."
-msgstr "Nó sẽ được gỡ khỏi {name}. Paperless vẫn giữ nó, và bản sao trong Kept vẫn còn."
+msgstr "Nó sẽ được gỡ khỏi {name}. Paperless vẫn giữ nó, và bản sao trong Tingfinder vẫn còn."
 
 msgid "It comes off {name}. Paperless keeps it."
 msgstr "Nó sẽ được gỡ khỏi {name}. Paperless vẫn giữ nó."
@@ -16460,7 +16460,7 @@ msgid "Open in Paperless"
 msgstr "Mở trong Paperless"
 
 msgid "Copy into Kept"
-msgstr "Sao chép vào Kept"
+msgstr "Sao chép vào Tingfinder"
 
 msgid "Unlink {0}"
 msgstr "Hủy liên kết {0}"
@@ -16499,7 +16499,7 @@ msgid "Use https:// for a Paperless outside your network. Over http the token wo
 msgstr "Hãy dùng https:// cho Paperless ngoài mạng của bạn. Qua http, token sẽ truyền không mã hóa."
 
 msgid "Kept couldn't reach Paperless at that address."
-msgstr "Kept không kết nối được tới Paperless tại địa chỉ đó."
+msgstr "Tingfinder không kết nối được tới Paperless tại địa chỉ đó."
 
 msgid "Paperless didn't answer within 10 seconds."
 msgstr "Paperless không trả lời trong 10 giây."
@@ -16514,13 +16514,13 @@ msgid "That address doesn't answer like Paperless-ngx."
 msgstr "Địa chỉ đó không trả lời như Paperless-ngx."
 
 msgid "Kept needs Paperless-ngx 2.16 or later."
-msgstr "Kept cần Paperless-ngx 2.16 trở lên."
+msgstr "Tingfinder cần Paperless-ngx 2.16 trở lên."
 
 msgid "Paperless no longer has this document, or the token's user can't see it."
 msgstr "Paperless không còn tài liệu này nữa, hoặc người dùng của token không xem được nó."
 
 msgid "That document is larger than Kept takes."
-msgstr "Tài liệu đó lớn hơn mức Kept nhận."
+msgstr "Tài liệu đó lớn hơn mức Tingfinder nhận."
 
 msgid "Paperless connected"
 msgstr "Paperless đã kết nối"
@@ -16535,7 +16535,7 @@ msgid "Paperless document unlinked"
 msgstr "Đã hủy liên kết tài liệu Paperless"
 
 msgid "Paperless document copied into Kept"
-msgstr "Đã sao chép tài liệu Paperless vào Kept"
+msgstr "Đã sao chép tài liệu Paperless vào Tingfinder"
 
 msgid "Small device"
 msgstr "Thiết bị nhỏ"
@@ -16982,7 +16982,7 @@ msgid "Add the box"
 msgstr "Thêm thùng"
 
 msgid "A page per box: its number, the room it goes to, what's inside and its code. Tape it to the box; scanning the code opens the box in Kept."
-msgstr "Một trang cho mỗi thùng: số thùng, phòng nó sẽ đến, đồ bên trong và mã của nó. Dán trang này lên thùng; quét mã sẽ mở thùng trong Kept."
+msgstr "Một trang cho mỗi thùng: số thùng, phòng nó sẽ đến, đồ bên trong và mã của nó. Dán trang này lên thùng; quét mã sẽ mở thùng trong Tingfinder."
 
 msgid "Add a box first."
 msgstr "Hãy thêm một thùng trước."
@@ -17681,13 +17681,13 @@ msgid "Capture & Inbox"
 msgstr "Chụp & Hộp thư đến"
 
 msgid "Check what Kept read, fix anything wrong, then tap Accept."
-msgstr "Kiểm tra những gì Kept đã đọc, sửa bất cứ gì sai, rồi nhấn Chấp nhận."
+msgstr "Kiểm tra những gì Tingfinder đã đọc, sửa bất cứ gì sai, rồi nhấn Chấp nhận."
 
 msgid "Choose how reminders reach you: in Kept, by email, push or a channel."
-msgstr "Chọn cách lời nhắc đến với bạn: trong Kept, qua email, thông báo đẩy hoặc một kênh."
+msgstr "Chọn cách lời nhắc đến với bạn: trong Tingfinder, qua email, thông báo đẩy hoặc một kênh."
 
 msgid "Choose what reaches you, and how: in Kept, by email, push or a channel."
-msgstr "Chọn nội dung nào đến với bạn, và bằng cách nào: trong Kept, qua email, thông báo đẩy hoặc một kênh."
+msgstr "Chọn nội dung nào đến với bạn, và bằng cách nào: trong Tingfinder, qua email, thông báo đẩy hoặc một kênh."
 
 msgid "Discard my change"
 msgstr "Hủy thay đổi của tôi"
@@ -17774,7 +17774,7 @@ msgid "Pick what it is, then add the file to the thing it belongs to."
 msgstr "Chọn xem nó là gì, rồi thêm tệp vào đồ vật mà nó thuộc về."
 
 msgid "Pick where it comes from: a spreadsheet, Homebox or another Kept."
-msgstr "Chọn xem nó đến từ đâu: một bảng tính, Homebox hoặc một Kept khác."
+msgstr "Chọn xem nó đến từ đâu: một bảng tính, Homebox hoặc một Tingfinder khác."
 
 msgid "Receipts, manuals and warranty cards from every thing and room."
 msgstr "Hóa đơn, hướng dẫn sử dụng và thẻ bảo hành từ mọi đồ vật và phòng."
@@ -17825,7 +17825,7 @@ msgid "Tap Mark returned when it comes back."
 msgstr "Nhấn Đánh dấu đã trả khi đồ vật được trả về."
 
 msgid "Tap Scan and point the camera at a Kept label. What it's on opens."
-msgstr "Nhấn Quét rồi hướng camera vào nhãn Kept. Đồ vật mang nhãn đó sẽ mở ra."
+msgstr "Nhấn Quét rồi hướng camera vào nhãn Tingfinder. Đồ vật mang nhãn đó sẽ mở ra."
 
 msgid "The file"
 msgstr "Tệp"
@@ -17891,13 +17891,13 @@ msgid "Keep room photos after review"
 msgstr "Giữ ảnh phòng sau khi xem lại"
 
 msgid "When you photograph a room, Kept cuts a picture for each thing it finds. Once you close the room in the inbox, the full photos are deleted, unless this is on: then they stay on the room's page."
-msgstr "Khi bạn chụp một phòng, Kept cắt một ảnh cho mỗi đồ vật nó tìm thấy. Khi bạn đóng phòng trong hộp thư đến, các ảnh đầy đủ sẽ bị xóa, trừ khi bật tùy chọn này: khi đó chúng sẽ ở lại trên trang của phòng."
+msgstr "Khi bạn chụp một phòng, Tingfinder cắt một ảnh cho mỗi đồ vật nó tìm thấy. Khi bạn đóng phòng trong hộp thư đến, các ảnh đầy đủ sẽ bị xóa, trừ khi bật tùy chọn này: khi đó chúng sẽ ở lại trên trang của phòng."
 
 msgid "Photograph this room"
 msgstr "Chụp phòng này"
 
 msgid "Placed by Kept from room photos: move them where they stand."
-msgstr "Được Kept đặt từ ảnh phòng: di chuyển chúng đến đúng vị trí chúng đang đứng."
+msgstr "Được Tingfinder đặt từ ảnh phòng: di chuyển chúng đến đúng vị trí chúng đang đứng."
 
 msgid "Photos of {name}"
 msgstr "Ảnh của {name}"
@@ -17954,7 +17954,7 @@ msgid "Reading photo {0} of {1}…"
 msgstr "Đang đọc ảnh {0} trên {1}…"
 
 msgid "Kept couldn't read these photos. Retry, or take them again."
-msgstr "Kept không đọc được các ảnh này. Thử lại, hoặc chụp lại."
+msgstr "Tingfinder không đọc được các ảnh này. Thử lại, hoặc chụp lại."
 
 msgid "AI capture is off here, so nothing was listed. The photos wait on <0>{name}</0>."
 msgstr "Chụp bằng AI đang tắt tại đây, nên không liệt kê được gì. Các ảnh đang chờ trên <0>{name}</0>."
@@ -18008,13 +18008,13 @@ msgid "{0, plural, one {# new thing to review below} other {# new things to revi
 msgstr "{0, plural, one {# đồ vật mới cần xem lại bên dưới} other {# đồ vật mới cần xem lại bên dưới}}"
 
 msgid "{0, plural, one {# already in Kept} other {# already in Kept}}"
-msgstr "{0, plural, one {# đã có trong Kept} other {# đã có trong Kept}}"
+msgstr "{0, plural, one {# đã có trong Tingfinder} other {# đã có trong Tingfinder}}"
 
 msgid "{0, plural, one {# piece of furniture to add as a place} other {# pieces of furniture to add as places}}"
 msgstr "{0, plural, one {# món nội thất cần thêm làm vị trí} other {# món nội thất cần thêm làm vị trí}}"
 
 msgid "Photographed {name} for Kept to list what is in it"
-msgstr "Đã chụp {name} để Kept liệt kê những gì có trong đó"
+msgstr "Đã chụp {name} để Tingfinder liệt kê những gì có trong đó"
 
 msgid "Thing, receipt, label, reading or room. Pick one before the photo."
 msgstr "Đồ vật, hóa đơn, nhãn, chỉ số hoặc phòng. Chọn một loại trước khi chụp."
@@ -18023,7 +18023,7 @@ msgid "A whole room"
 msgstr "Cả một phòng"
 
 msgid "Up to five photos of a room. AI lists what's in them as drafts, skipping what Kept already has."
-msgstr "Tối đa năm ảnh của một phòng. AI liệt kê những gì có trong đó thành bản nháp, bỏ qua những thứ Kept đã có."
+msgstr "Tối đa năm ảnh của một phòng. AI liệt kê những gì có trong đó thành bản nháp, bỏ qua những thứ Tingfinder đã có."
 
 msgid "Five photos at most. Send these, then take the next wall."
 msgstr "Tối đa năm ảnh. Gửi các ảnh này, rồi chụp bức tường tiếp theo."
@@ -18032,7 +18032,7 @@ msgid "Room sent"
 msgstr "Đã gửi phòng"
 
 msgid "Kept lists what is in it in your Inbox."
-msgstr "Kept liệt kê những gì có trong đó trong Hộp thư đến của bạn."
+msgstr "Tingfinder liệt kê những gì có trong đó trong Hộp thư đến của bạn."
 
 msgid "{n, plural, one {About # photo} other {About # photos}}"
 msgstr "{n, plural, one {Khoảng # ảnh} other {Khoảng # ảnh}}"
@@ -18065,7 +18065,7 @@ msgid "Remove photo {0}"
 msgstr "Xóa ảnh {0}"
 
 msgid "In Try Kept no AI runs: every room photo gives the same sample results."
-msgstr "Trong Thử Kept, không có AI nào chạy: mọi ảnh phòng đều cho cùng kết quả mẫu."
+msgstr "Trong Thử Tingfinder, không có AI nào chạy: mọi ảnh phòng đều cho cùng kết quả mẫu."
 
 msgid "Use a sample room photo"
 msgstr "Dùng ảnh phòng mẫu"
@@ -18338,7 +18338,7 @@ msgid "Blank labels can be claimed from Scan, one at a time."
 msgstr "Có thể gán nhãn trống từ Quét, mỗi lần một cái."
 
 msgid "Not in your Kept ({0})"
-msgstr "Không có trong Kept của bạn ({0})"
+msgstr "Không có trong Tingfinder của bạn ({0})"
 
 msgid "Check later ({0})"
 msgstr "Kiểm tra sau ({0})"
@@ -18494,7 +18494,7 @@ msgid "Import it as a spreadsheet"
 msgstr "Nhập nó dưới dạng bảng tính"
 
 msgid "Kept reads its asset IDs, so old Homebox labels still scan, and its archived and sold items, warranties and insured column. A spreadsheet can't carry photos, files, maintenance or items inside items: for those, update a copy of Homebox to v0.26.1 or newer (v0.27.0 recommended) and import its export ZIP."
-msgstr "Kept đọc các ID tài sản của nó, nên nhãn Homebox cũ vẫn quét được, cùng các mục đã lưu trữ và đã bán, bảo hành và cột đã bảo hiểm. Bảng tính không mang được ảnh, tệp, bảo dưỡng hay mục trong mục: để có những thứ đó, hãy cập nhật một bản sao Homebox lên v0.26.1 trở lên (khuyên dùng v0.27.0) rồi nhập tệp ZIP xuất của nó."
+msgstr "Tingfinder đọc các ID tài sản của nó, nên nhãn Homebox cũ vẫn quét được, cùng các mục đã lưu trữ và đã bán, bảo hành và cột đã bảo hiểm. Bảng tính không mang được ảnh, tệp, bảo dưỡng hay mục trong mục: để có những thứ đó, hãy cập nhật một bản sao Homebox lên v0.26.1 trở lên (khuyên dùng v0.27.0) rồi nhập tệp ZIP xuất của nó."
 
 msgid "One with a sale still ends sold."
 msgstr "Mục có giao dịch bán vẫn kết thúc ở trạng thái đã bán."
@@ -18671,7 +18671,7 @@ msgid "Open the previous count ({0})"
 msgstr "Mở lần kiểm kê trước ({0})"
 
 msgid "Counts saved before Kept 1.14 didn't record what was missing or elsewhere."
-msgstr "Các lần kiểm kê đã lưu trước Kept 1.14 không ghi lại những gì còn thiếu hay ở nơi khác."
+msgstr "Các lần kiểm kê đã lưu trước Tingfinder 1.14 không ghi lại những gì còn thiếu hay ở nơi khác."
 
 msgid "now in <0>{now}</0>"
 msgstr "hiện ở <0>{now}</0>"
@@ -18797,7 +18797,7 @@ msgid "Stayed here: {0}"
 msgstr "Còn ở đây: {0}"
 
 msgid "Optional. Kept reminds you, never them, two days before and when it's overdue."
-msgstr "Không bắt buộc. Kept nhắc bạn, không bao giờ nhắc họ, hai ngày trước hạn và khi đã quá hạn."
+msgstr "Không bắt buộc. Tingfinder nhắc bạn, không bao giờ nhắc họ, hai ngày trước hạn và khi đã quá hạn."
 
 msgid "What goes with it"
 msgstr "Những gì đi kèm với nó"
@@ -19022,7 +19022,7 @@ msgid "Indigo"
 msgstr "Chàm"
 
 msgid "Its tags aren't kept: in Kept only things have tags."
-msgstr "Thẻ của nó không được giữ lại: trong Kept chỉ đồ vật mới có thẻ."
+msgstr "Thẻ của nó không được giữ lại: trong Tingfinder chỉ đồ vật mới có thẻ."
 
 msgid "No colour"
 msgstr "Không màu"
@@ -19082,13 +19082,13 @@ msgid "Keep the code as"
 msgstr "Giữ mã dưới dạng"
 
 msgid "Kept stores it as the serial number."
-msgstr "Kept lưu nó dưới dạng số sê-ri."
+msgstr "Tingfinder lưu nó dưới dạng số sê-ri."
 
 msgid "Kept stores it as the serial number or the barcode: you pick."
-msgstr "Kept lưu nó dưới dạng số sê-ri hoặc mã vạch: bạn chọn."
+msgstr "Tingfinder lưu nó dưới dạng số sê-ri hoặc mã vạch: bạn chọn."
 
 msgid "Kept stores the barcode and serial number with it."
-msgstr "Kept lưu mã vạch và số sê-ri kèm theo nó."
+msgstr "Tingfinder lưu mã vạch và số sê-ri kèm theo nó."
 
 msgid "Add one in Sign-in and security"
 msgstr "Thêm một cái trong mục Đăng nhập và bảo mật"
@@ -19100,7 +19100,7 @@ msgid "They add one in Sign-in and security"
 msgstr "Họ thêm một cái trong mục Đăng nhập và bảo mật"
 
 msgid "Kept emails you a sign-in link; opening it confirms the address. Opening it also removes this account's password, passkeys and other sessions, so nobody who set them up before you keeps a way in. Then come back here within ten minutes."
-msgstr "Kept gửi cho bạn một liên kết đăng nhập qua email; mở liên kết sẽ xác nhận địa chỉ. Mở liên kết cũng sẽ xóa mật khẩu, khóa truy cập và các phiên khác của tài khoản này, để không ai từng thiết lập chúng trước bạn còn đường vào. Sau đó quay lại đây trong vòng mười phút."
+msgstr "Tingfinder gửi cho bạn một liên kết đăng nhập qua email; mở liên kết sẽ xác nhận địa chỉ. Mở liên kết cũng sẽ xóa mật khẩu, khóa truy cập và các phiên khác của tài khoản này, để không ai từng thiết lập chúng trước bạn còn đường vào. Sau đó quay lại đây trong vòng mười phút."
 
 msgid "After this, signing in with a sign-in link or Google also asks for a 6-digit code from an authenticator app (1Password, Google Authenticator, Aegis…)."
 msgstr "Sau bước này, đăng nhập bằng liên kết đăng nhập hoặc Google cũng sẽ yêu cầu mã 6 chữ số từ ứng dụng xác thực (1Password, Google Authenticator, Aegis…)."
@@ -19142,7 +19142,7 @@ msgid "Use {NAME_MAX} characters or fewer."
 msgstr "Dùng tối đa {NAME_MAX} ký tự."
 
 msgid "Your browser asks for Face ID, a fingerprint or your screen lock. The passkey is kept by this device or your password manager; Kept never sees it."
-msgstr "Trình duyệt của bạn sẽ yêu cầu Face ID, vân tay hoặc khóa màn hình. Khóa truy cập được giữ bởi thiết bị này hoặc trình quản lý mật khẩu của bạn; Kept không bao giờ thấy nó."
+msgstr "Trình duyệt của bạn sẽ yêu cầu Face ID, vân tay hoặc khóa màn hình. Khóa truy cập được giữ bởi thiết bị này hoặc trình quản lý mật khẩu của bạn; Tingfinder không bao giờ thấy nó."
 
 msgid "So you can tell your passkeys apart."
 msgstr "Để bạn phân biệt được các khóa truy cập của mình."
@@ -19244,7 +19244,7 @@ msgid "Unlock with Face ID or fingerprint"
 msgstr "Mở khóa bằng Face ID hoặc vân tay"
 
 msgid "Unlocks Kept on this device only. To sign in with a passkey, add one in <0>Sign-in and security</0>."
-msgstr "Chỉ mở khóa Kept trên thiết bị này. Để đăng nhập bằng khóa truy cập, hãy thêm một cái trong <0>Đăng nhập và bảo mật</0>."
+msgstr "Chỉ mở khóa Tingfinder trên thiết bị này. Để đăng nhập bằng khóa truy cập, hãy thêm một cái trong <0>Đăng nhập và bảo mật</0>."
 
 msgid "Added a passkey"
 msgstr "Đã thêm khóa truy cập"
@@ -19304,7 +19304,7 @@ msgid "Not confirmed as printed"
 msgstr "Chưa xác nhận đã in"
 
 msgid "Once these labels have printed, confirm it here, so Kept stops counting them as unprinted."
-msgstr "Khi các nhãn này đã in xong, hãy xác nhận tại đây, để Kept ngừng tính chúng là chưa in."
+msgstr "Khi các nhãn này đã in xong, hãy xác nhận tại đây, để Tingfinder ngừng tính chúng là chưa in."
 
 msgid "Each label: QR code and short ID. The codes are made when you print."
 msgstr "Mỗi nhãn: mã QR và ID ngắn. Các mã được tạo khi bạn in."
@@ -19484,7 +19484,7 @@ msgid "A location that came in as a box, as chosen."
 msgstr "Một vị trí Homebox đã nhập vào dưới dạng hộp, đúng như đã chọn."
 
 msgid "Its description isn't kept: places in Kept have no notes."
-msgstr "Mô tả của nó không được giữ lại: vị trí trong Kept không có ghi chú."
+msgstr "Mô tả của nó không được giữ lại: vị trí trong Tingfinder không có ghi chú."
 
 msgid "{joined}, and {more} more"
 msgstr "{joined}, và {more} nữa"
@@ -19496,7 +19496,7 @@ msgid "Repair this import"
 msgstr "Sửa lần nhập này"
 
 msgid "It was imported before Kept read Homebox the way it does now. Choose what to put right; one Undo takes it all back."
-msgstr "Nó đã được nhập trước khi Kept đọc Homebox theo cách hiện tại. Hãy chọn những gì cần sửa; một lần Hoàn tác sẽ khôi phục tất cả."
+msgstr "Nó đã được nhập trước khi Tingfinder đọc Homebox theo cách hiện tại. Hãy chọn những gì cần sửa; một lần Hoàn tác sẽ khôi phục tất cả."
 
 msgid "{0, plural, one {Archive the # thing that had quantity 0 in Homebox} other {Archive the # things that had quantity 0 in Homebox}}"
 msgstr "{0, plural, one {Lưu trữ # đồ vật có số lượng 0 trong Homebox} other {Lưu trữ # đồ vật có số lượng 0 trong Homebox}}"
@@ -19548,13 +19548,13 @@ msgid "Open {expected}"
 msgstr "Mở {expected}"
 
 msgid "This Kept is set up for <0>{expected}</0>. Open it there."
-msgstr "Kept này được thiết lập cho <0>{expected}</0>. Hãy mở nó ở đó."
+msgstr "Tingfinder này được thiết lập cho <0>{expected}</0>. Hãy mở nó ở đó."
 
 msgid "This Kept is set up for a different address. Open it at the address you were given."
-msgstr "Kept này được thiết lập cho một địa chỉ khác. Hãy mở nó tại địa chỉ bạn được cung cấp."
+msgstr "Tingfinder này được thiết lập cho một địa chỉ khác. Hãy mở nó tại địa chỉ bạn được cung cấp."
 
 msgid "This Kept is set up for {address}. Open it there."
-msgstr "Kept này được thiết lập cho {address}. Hãy mở nó ở đó."
+msgstr "Tingfinder này được thiết lập cho {address}. Hãy mở nó ở đó."
 
 msgid "In Homebox, open Collection → Tools → Backup & Restore and choose Create Backup. When the backup is listed, Download it: that .zip is the file."
 msgstr "Trong Homebox, mở Collection → Tools → Backup & Restore rồi chọn Create Backup. Khi bản sao lưu xuất hiện trong danh sách, hãy Download nó: tệp .zip đó chính là tệp cần dùng."
@@ -19563,7 +19563,7 @@ msgid "Homebox v0.26.1 or newer (v0.27.0 recommended): Collection → Tools → 
 msgstr "Homebox v0.26.1 trở lên (khuyên dùng v0.27.0): Collection → Tools → Backup & Restore → Create Backup → Download. Cũ hơn v0.26: hãy nhập bản xuất bảng tính của nó, hoặc cập nhật một bản sao Homebox trước."
 
 msgid "On a home network without HTTPS, the person who runs this Kept can make one on the server: kept admin token create."
-msgstr "Trên mạng gia đình không có HTTPS, người vận hành Kept này có thể tạo một token trên máy chủ: kept admin token create."
+msgstr "Trên mạng gia đình không có HTTPS, người vận hành Tingfinder này có thể tạo một token trên máy chủ: kept admin token create."
 
 msgid "Open the map"
 msgstr "Mở bản đồ"
@@ -19578,7 +19578,7 @@ msgid "Allow private addresses in Admin → Settings"
 msgstr "Cho phép địa chỉ riêng tư trong Quản trị → Cài đặt"
 
 msgid "Passkeys need HTTPS. On a plain-HTTP address browsers don't offer them; put Kept on HTTPS to add one."
-msgstr "Khóa truy cập cần HTTPS. Trên địa chỉ HTTP thuần, trình duyệt không cung cấp khóa truy cập; hãy đưa Kept lên HTTPS để thêm khóa truy cập."
+msgstr "Khóa truy cập cần HTTPS. Trên địa chỉ HTTP thuần, trình duyệt không cung cấp khóa truy cập; hãy đưa Tingfinder lên HTTPS để thêm khóa truy cập."
 
 msgid "{0, plural, one {secret value left out of the export} other {secret values left out of the export}}"
 msgstr "{0, plural, one {giá trị bí mật bị bỏ khỏi bản xuất} other {giá trị bí mật bị bỏ khỏi bản xuất}}"
@@ -19590,7 +19590,7 @@ msgid "Over plain HTTP, secret values stay out of the export. Each one is marked
 msgstr "Qua HTTP thuần, các giá trị bí mật sẽ không có trong bản xuất. Mỗi giá trị đều được đánh dấu là bị bỏ qua, và phần còn lại vẫn nhập như thường."
 
 msgid "Opening them needs HTTPS. Over plain HTTP everything else is imported without them; to bring them over too, import this file at Kept’s HTTPS address."
-msgstr "Mở chúng cần HTTPS. Qua HTTP thuần, mọi thứ khác đều được nhập mà không có chúng; để mang chúng theo cùng, hãy nhập tệp này tại địa chỉ HTTPS của Kept."
+msgstr "Mở chúng cần HTTPS. Qua HTTP thuần, mọi thứ khác đều được nhập mà không có chúng; để mang chúng theo cùng, hãy nhập tệp này tại địa chỉ HTTPS của Tingfinder."
 
 msgid "{0} moved to {1} of {2}"
 msgstr "{0} đã chuyển sang {1} trên {2}"
@@ -19761,7 +19761,7 @@ msgid "Show the whole house"
 msgstr "Hiện toàn bộ ngôi nhà"
 
 msgid "The graph is drawn from Kept’s server. The list has everything offline."
-msgstr "Sơ đồ được vẽ từ máy chủ của Kept. Danh sách có đầy đủ mọi thứ khi ngoại tuyến."
+msgstr "Sơ đồ được vẽ từ máy chủ của Tingfinder. Danh sách có đầy đủ mọi thứ khi ngoại tuyến."
 
 msgid "Where you are in the graph"
 msgstr "Vị trí của bạn trong sơ đồ"
@@ -19929,7 +19929,7 @@ msgid "Slide {n} of {total}"
 msgstr "Trang {n} trên {total}"
 
 msgid "What's new in Kept"
-msgstr "Có gì mới trong Kept"
+msgstr "Có gì mới trong Tingfinder"
 
 msgid "Version <0>{version}</0>"
 msgstr "Phiên bản <0>{version}</0>"
@@ -20226,7 +20226,7 @@ msgid "Set a room’s size"
 msgstr "Đặt kích thước của một phòng"
 
 msgid "Kept read the first 60 rooms. Add the rest by drawing."
-msgstr "Kept đã đọc 60 phòng đầu tiên. Thêm các phòng còn lại bằng cách vẽ."
+msgstr "Tingfinder đã đọc 60 phòng đầu tiên. Thêm các phòng còn lại bằng cách vẽ."
 
 msgid "Keep the plan with <0>{location}</0>"
 msgstr "Giữ sơ đồ cùng với <0>{location}</0>"
@@ -20259,7 +20259,7 @@ msgid "Add {room}"
 msgstr "Thêm {room}"
 
 msgid "A photo, a screenshot or a PDF of a plan. Kept reads the rooms and their sizes; you check them before anything is added."
-msgstr "Một ảnh, ảnh chụp màn hình hoặc PDF của một sơ đồ. Kept đọc các phòng và kích thước của chúng; bạn kiểm tra trước khi bất cứ thứ gì được thêm vào."
+msgstr "Một ảnh, ảnh chụp màn hình hoặc PDF của một sơ đồ. Tingfinder đọc các phòng và kích thước của chúng; bạn kiểm tra trước khi bất cứ thứ gì được thêm vào."
 
 msgid "Use a sample floor plan"
 msgstr "Dùng sơ đồ mặt bằng mẫu"
@@ -20280,7 +20280,7 @@ msgid "Up to ~{tokens} tokens"
 msgstr "Tối đa ~{tokens} token"
 
 msgid "Kept sends the plan, without its location data, to <0>{name}</0>. It is deleted when you finish, unless you keep it."
-msgstr "Kept gửi sơ đồ, không kèm dữ liệu định vị của nó, tới <0>{name}</0>. Nó sẽ bị xóa khi bạn hoàn tất, trừ khi bạn giữ lại."
+msgstr "Tingfinder gửi sơ đồ, không kèm dữ liệu định vị của nó, tới <0>{name}</0>. Nó sẽ bị xóa khi bạn hoàn tất, trừ khi bạn giữ lại."
 
 msgid "Read the plan"
 msgstr "Đọc sơ đồ"
@@ -20316,7 +20316,7 @@ msgid "Couldn't save the label image. Try again."
 msgstr "Không lưu được ảnh nhãn. Thử lại."
 
 msgid "Kept label"
-msgstr "Nhãn Kept"
+msgstr "Nhãn Tingfinder"
 
 msgid "Loading the label"
 msgstr "Đang tải nhãn"
@@ -20343,11 +20343,11 @@ msgstr "Tệp có thể chứa gì"
 
 #: src/components/import/csv-help.tsx
 msgid "The first row names the columns, in any of Kept's languages. Kept matches the names it knows, and you choose the rest in the next step. Only a name is needed."
-msgstr "Hàng đầu tiên ghi tên các cột, bằng bất kỳ ngôn ngữ nào của Kept. Kept tự khớp những tên nó biết, phần còn lại bạn chọn ở bước tiếp theo. Chỉ cần có tên."
+msgstr "Hàng đầu tiên ghi tên các cột, bằng bất kỳ ngôn ngữ nào của Tingfinder. Tingfinder tự khớp những tên nó biết, phần còn lại bạn chọn ở bước tiếp theo. Chỉ cần có tên."
 
 #: src/components/import/csv-help.tsx
 msgid "The columns Kept reads"
-msgstr "Các cột Kept đọc được"
+msgstr "Các cột Tingfinder đọc được"
 
 #: src/components/import/csv-help.tsx
 msgid "A field of your own types, such as Wattage"
@@ -20435,7 +20435,7 @@ msgstr "Dùng cho <0>{personal}</0>, các cuộc trò chuyện riêng tư của 
 
 #: src/components/delete-account.tsx
 msgid "You asked for it, with your own location and everything in it. Until then nothing else in Kept opens. Keep the account to go back to it as it was."
-msgstr "Bạn đã yêu cầu việc đó, cùng với địa điểm của riêng bạn và mọi thứ trong đó. Cho đến lúc đó, không có gì khác trong Kept mở được. Hãy giữ tài khoản để quay lại như trước."
+msgstr "Bạn đã yêu cầu việc đó, cùng với địa điểm của riêng bạn và mọi thứ trong đó. Cho đến lúc đó, không có gì khác trong Tingfinder mở được. Hãy giữ tài khoản để quay lại như trước."
 
 #: src/components/delete-account.tsx
 msgid "Your account, your own location <0>{personal}</0> and everything in it are deleted 30 days from now. Until then you can sign in and keep the account; nothing else opens."
@@ -20511,7 +20511,7 @@ msgid "Your Personal location, profile and preferences, as one file."
 msgstr "Địa điểm Cá nhân, hồ sơ và tùy chọn của bạn, trong một tệp."
 
 msgid "You asked for it, with your Personal location and everything in it. Until then nothing else in Kept opens. Keep the account to go back to it as it was."
-msgstr "Bạn đã yêu cầu việc đó, cùng với địa điểm Cá nhân của bạn và mọi thứ trong đó. Cho đến lúc đó, không có gì khác trong Kept mở được. Hãy giữ tài khoản để quay lại như trước."
+msgstr "Bạn đã yêu cầu việc đó, cùng với địa điểm Cá nhân của bạn và mọi thứ trong đó. Cho đến lúc đó, không có gì khác trong Tingfinder mở được. Hãy giữ tài khoản để quay lại như trước."
 
 msgid "Also for Personal"
 msgstr "Cũng áp dụng cho Cá nhân"
@@ -20874,7 +20874,7 @@ msgstr "Đổi độ rộng danh sách vị trí"
 
 #: src/components/import/labels.ts
 msgid "{count, plural, one {# link keeps its Homebox title: Kept couldn't get one from Paperless.} other {# links keep their Homebox titles: Kept couldn't get them from Paperless.}}"
-msgstr "{count, plural, one {# liên kết giữ tiêu đề từ Homebox: Kept không lấy được tiêu đề từ Paperless.} other {# liên kết giữ tiêu đề từ Homebox: Kept không lấy được tiêu đề từ Paperless.}}"
+msgstr "{count, plural, one {# liên kết giữ tiêu đề từ Homebox: Tingfinder không lấy được tiêu đề từ Paperless.} other {# liên kết giữ tiêu đề từ Homebox: Tingfinder không lấy được tiêu đề từ Paperless.}}"
 
 #: src/routes/signin/index.tsx
 msgid "Passkeys work only at <0/>, because browsers tie a passkey to one address. Here, use your password or an email link."
@@ -21105,7 +21105,7 @@ msgstr "Kết nối Home Assistant"
 
 #: src/components/connections/token-create.tsx
 msgid "Home Assistant reads Kept as you, in the locations you pick, and gets its token by itself: there is nothing to copy. Revoke it here any time."
-msgstr "Home Assistant đọc Kept với tư cách của bạn, trong các địa điểm bạn chọn, và tự lấy token của nó: không có gì để sao chép. Thu hồi nó tại đây bất cứ lúc nào."
+msgstr "Home Assistant đọc Tingfinder với tư cách của bạn, trong các địa điểm bạn chọn, và tự lấy token của nó: không có gì để sao chép. Thu hồi nó tại đây bất cứ lúc nào."
 
 #: src/components/connections/token-create.tsx
 msgid "Home Assistant is connected"

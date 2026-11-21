@@ -37,7 +37,7 @@ export const CORE_TOOLS: readonly ToolName[] = Object.freeze([
   'mark_seen',
 ]);
 
-type Lang = 'ar' | 'de' | 'en' | 'es' | 'fr' | 'it' | 'uk' | 'vi';
+type Lang = 'ar' | 'da' | 'de' | 'en' | 'es' | 'fr' | 'it' | 'uk' | 'vi';
 type Topic = { tools: readonly ToolName[]; words: Readonly<Record<Lang, string>> };
 
 /** Keywords per topic and language, `|` between them, written plainly: `normalise` (or, for
@@ -52,6 +52,7 @@ const TOPICS: Readonly<Record<string, Topic>> = {
   history: {
     tools: ['thing_history'],
     words: {
+      da: 'historik|skete|hvem flyttede|hvem ændrede|hvem tilføjede|hvornår|sidste gang',
       ar: 'سجل|تاريخ|حصل|حدث|من نقل|من غير|متى',
       de: 'verlauf|geschichte|passiert|wer hat|wann',
       en: 'history|happened|who moved|who changed|who added|when did|last time',
@@ -65,6 +66,7 @@ const TOPICS: Readonly<Record<string, Topic>> = {
   documents: {
     tools: ['find_documents'],
     words: {
+      da: 'kvittering|manual|faktura|dokument|papir|pdf|vejledning|brugsanvisning',
       ar: 'إيصال|وصل|فاتورة|دليل|كتيب|مستند|وثيقة|ورق',
       de: 'beleg|quittung|rechnung|anleitung|handbuch|dokument',
       en: 'receipt|manual|invoice|document|paperwork|pdf|instructions for',
@@ -80,6 +82,7 @@ const TOPICS: Readonly<Record<string, Topic>> = {
   places: {
     tools: ['create_place', 'update_place', 'turn_into_boxes', 'attach_link'],
     words: {
+      da: 'placering|rum$|værelse|soveværelse|badeværelse|køkken|gang$|altan|loft$|loftet|kælder|hylde|hylder|skuffe|skab|zone|opret|foto|billede|scan|link|vedhæft|omdøb|kasse|rækkefølge|flyt op|flyt ned|drej|på siden|rejs den|møbel|møbler|reol|garderobe|mål$',
       ar: 'غرفة|مطبخ|حمام|ممر|شرفة|بلكونة|رف|درج|خزانة|دولاب|مكان|أنشئ|صورة|رابط|تسمية|صندوق|صناديق|ترتيب|دوّر ال|اقلب|على جنبه|على جنبها|على الجنب|أثاث|مكتبة',
       de: 'raum|zimmer|schlafzimmer|badezimmer|wohnzimmer|arbeitszimmer|kinderzimmer|küche|flur|dachboden|keller|regal|schublade|schrank|anlegen|erstell|foto|bild|umbenenn|in kisten|in eine kiste|reihenfolge|drehen|umdreh|auf die seite|auf der seite|möbel|bücherregal',
       en: 'place|room|bedroom|bathroom|kitchen|hallway|balcony|attic|basement|shelf|shelves|drawer|cupboard|cabinet|zone|create|photo|picture|scan|link|attach|rename|into a box|into boxes|custom order|move up|move down|rotate|on its side|stand it up|furniture|bookcase|bookshelf|wardrobe|dimensions',
@@ -93,6 +96,7 @@ const TOPICS: Readonly<Record<string, Topic>> = {
   schedules: {
     tools: ['upcoming', 'complete_schedule', 'snooze_schedule'],
     words: {
+      da: 'forfalden|forfald|planlæg|påmind|vedligehold|kommende|snart|udløb|næste|udført|udsæt|senere|opgave|denne uge|denne måned',
       ar: 'موعد|مستحق|صيانة|تذكير|قريبا|تنتهي|ينتهي|القادم|خلصت|أجل|تأجيل|مهمة',
       de: 'fällig|termin|erinner|wartung|bald|abgelaufen|läuft ab|nächst|erledigt|verschieb|aufgabe',
       en: 'due|overdue|schedul|remind|maintenance|upcoming|soon|expir|next|done|snooze|postpone|put off|later|task|this week|this month',
@@ -106,6 +110,7 @@ const TOPICS: Readonly<Record<string, Topic>> = {
   lending: {
     tools: ['lend_thing', 'return_thing', 'borrow_thing', 'upcoming'],
     words: {
+      da: 'lån|lånt|udlån|aflever|gav|giv tilbage|fik tilbage|kom tilbage|er tilbage|hvem har|overdrag|udlever',
       ar: 'أعار|أعرت|استعار|استلف|سلف|إعارة|رجع|أرجع|مع مين|عند مين|عند من|اقترض|سلمت|تسليم',
       de: 'verleih|verlieh|geliehen|ausgeliehen|ausleih|leih|zurück|übergeb|übergab',
       en: 'lend|lent|loan|borrow|return|gave|give back|got back|came back|is back|brought back|back from|who has|hand over|handed|hand-over|handover',
@@ -119,6 +124,7 @@ const TOPICS: Readonly<Record<string, Topic>> = {
   warranties: {
     tools: ['add_warranty', 'open_claim', 'update_claim', 'find_documents', 'upcoming'],
     words: {
+      da: 'garanti|reklamation|reparer|reparation|ødelagt|defekt|rma',
       ar: 'ضمان|كفالة|مطالبة|إصلاح|تصليح|عطل|مكسور|بايظ',
       de: 'gewährleistung|reklamation|reparatur|kaputt|defekt',
       en: 'warrant|guarantee|claim|repair|broken|rma',
@@ -132,6 +138,7 @@ const TOPICS: Readonly<Record<string, Topic>> = {
   vehicles: {
     tools: ['log_service', 'log_reading', 'log_fuel', 'upcoming'],
     words: {
+      da: 'bil$|bilen|biler|køretøj|cykel|motorcykel|service|olie|dæk|kilometer|km$|brændstof|benzin|diesel|tank|aflæs|måler|timer|elektricitet',
       ar: 'سيارة|عربية|موتوسيكل|صيانة|زيت|كاوتش|إطار|عداد|كيلو|بنزين|وقود|سولار|فول|تفويل|قراءة|كهرباء',
       de: 'auto|fahrzeug|wagen|inspektion|ölwechsel|reifen|kilometer|tacho|benzin|zähler|getankt',
       en: 'car|cars|vehicle|bike|motorbike|servic|oil|tyre|tire|mileage|odometer|km|miles|fuel|petrol|gas|diesel|refuel|filled up|fill up|fill-up|tank|reading|meter|hours|electricity',
@@ -146,6 +153,7 @@ const TOPICS: Readonly<Record<string, Topic>> = {
   tags: {
     tools: ['list_tags', 'tag_things'],
     words: {
+      da: 'mærkat|mærke|tag$|tags$|tagget|etiket',
       ar: 'وسم|وسوم|موسوم|تاغ',
       de: 'schlagwort|tag|tags|getaggt',
       en: 'tag|tags|tagged|untag',
@@ -159,6 +167,7 @@ const TOPICS: Readonly<Record<string, Topic>> = {
   stock: {
     tools: ['adjust_stock', 'upcoming'],
     words: {
+      da: 'beholdning|lager|brugt op|løb tør|løber tør|tilbage|resterende|genopfyld|forbrugsvarer|fyld op|antal|mængde',
       ar: 'مخزون|متبقي|باقي|نفد|نفذ|خلص|استهلك|كمية',
       de: 'vorrat|bestand|aufgebraucht|übrig|verbrauch|nachfüll|leer',
       en: 'stock|used up|use up|ran out|run out|running out|left|remaining|refill|restock|consumable|supply|supplies|top up',
@@ -204,7 +213,7 @@ const atStart = (w: string) =>
 const PATTERNS: readonly [Topic, RegExp, RegExp][] = Object.values(TOPICS).map((topic) => {
   const list = (langs: Lang[], fold: (s: string) => string, source = escapeRe) =>
     langs.flatMap((l) => topic.words[l].split('|')).map((w) => source(fold(w)));
-  const re = `(?<![\\p{L}\\p{N}])(?:${list(['de', 'en', 'es', 'fr', 'it', 'uk'], normalise, atStart).join('|')})|${list(['ar'], normalise).join('|')}`;
+  const re = `(?<![\\p{L}\\p{N}])(?:${list(['da', 'de', 'en', 'es', 'fr', 'it', 'uk'], normalise, atStart).join('|')})|${list(['ar'], normalise).join('|')}`;
   const vi = `(?<![\\p{L}\\p{N}])(?:${list(['vi'], normaliseVi).join('|')})(?![\\p{L}\\p{N}])`;
   return [topic, new RegExp(re, 'u'), new RegExp(vi, 'u')];
 });

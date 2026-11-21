@@ -762,11 +762,11 @@ const FILE_STEM: Record<RunRow['kind'], string> = {
   move: 'contents-sheets',
 };
 
-/** A download name: `kept-inventory-<date>.pdf`, `kept-insurance-<date>.pdf`,
- * `kept-vehicle-history-<date>.pdf` or `kept-condition-report-<date>.pdf`, ASCII (the header also
+/** A download name: `tingfinder-inventory-<date>.pdf`, `tingfinder-insurance-<date>.pdf`,
+ * `tingfinder-vehicle-history-<date>.pdf` or `tingfinder-condition-report-<date>.pdf`, ASCII (the header also
  * carries it). */
 function filenameOf(kind: RunRow['kind'], createdAt: Date): string {
-  return `kept-${FILE_STEM[kind]}-${createdAt.toISOString().slice(0, 10)}.pdf`;
+  return `tingfinder-${FILE_STEM[kind]}-${createdAt.toISOString().slice(0, 10)}.pdf`;
 }
 
 export async function reportRunView(

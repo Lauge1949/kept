@@ -47,14 +47,10 @@ export const TAPE_CUT =
 const K_MARK = 'translate(21.4 48) scale(0.042 -0.042)';
 
 /** The lockup's width in mark units (the mark is 64): KEPT at the mark's K size and baseline. */
-export const LOCKUP_W = 191;
+export const LOCKUP_W = 320;
 /** KEPT: the mark's K scale (0.042) and baseline (48), 0.12 em tracking, from x=74. */
-const WORDMARK = ['K', 'E', 'P', 'T']
-  .map(
-    (g, i) =>
-      `<path d="${GLYPHS[g]}" transform="translate(${+(74 + i * 30.2).toFixed(1)} 48) scale(0.042 -0.042)"/>`,
-  )
-  .join('');
+const WORDMARK =
+  '<text x="76" y="46" font-family="IBM Plex Mono, monospace" font-size="42" font-weight="600" letter-spacing="1">TINGFINDER</text>';
 
 /** The mark's art in its 64-unit square. `hole` fills the hole instead of cutting it. */
 function markArt(hole) {
@@ -69,7 +65,7 @@ function markArt(hole) {
  * itself; `inset` shrinks the artwork towards the centre (the maskable safe zone).
  */
 export function markSvg({ hole, bleed = false, inset = 0, size = 64 } = {}) {
-  const head = `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 64 64"><title>Kept</title>`;
+  const head = `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 64 64"><title>Tingfinder</title>`;
   if (!bleed) return `${head}${markArt(hole)}</svg>`;
   // Full bleed: the whole square is tape; the hole and K keep the mark's places, scaled by inset.
   const scale = 1 - inset * 2;
@@ -84,7 +80,7 @@ export function markSvg({ hole, bleed = false, inset = 0, size = 64 } = {}) {
 export function lockupSvg({ ink, height = 64 } = {}) {
   const width = +((height * LOCKUP_W) / 64).toFixed(1);
   return [
-    `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${LOCKUP_W} 64" role="img" aria-label="Kept"><title>Kept</title>`,
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${LOCKUP_W} 64" role="img" aria-label="Tingfinder"><title>Tingfinder</title>`,
     markArt(),
     `<g fill="${ink}">${WORDMARK}</g>`,
     '</svg>',

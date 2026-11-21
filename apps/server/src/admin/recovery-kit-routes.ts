@@ -97,7 +97,12 @@ export async function recoveryKitRoutes(app: KeptApp, deps: InventoryDeps): Prom
           after: { format },
           requestId: req.id,
         });
+        const { rows: profiles } = await client.query<{ locale: string | null }>(
+          'SELECT locale FROM public.user_profiles WHERE user_id = $1',
+          [scope.userId],
+        );
         const input: RecoveryKitInput = {
+          locale: profiles[0]?.locale ?? 'en',
           generatedAt: new Date(),
           publicUrl: env.KEPT_PUBLIC_URL,
           version: KEPT_VERSION,

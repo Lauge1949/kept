@@ -21,11 +21,11 @@ msgstr ", "
 #: src/components/ops/status-tiles.tsx
 #: src/routes/_app/admin.backups.tsx
 msgid "Home Assistant backs up Kept"
-msgstr "Home Assistant backs up Kept"
+msgstr "Home Assistant backs up Tingfinder"
 
 #: src/routes/_app/admin.backups.tsx
 msgid "Home Assistant backs up Kept: the database, photos and files, and Kept's keys. Take or schedule backups in Home Assistant → {place}."
-msgstr "Home Assistant backs up Kept: the database, photos and files, and Kept's keys. Take or schedule backups in Home Assistant → {place}."
+msgstr "Home Assistant backs up Tingfinder: the database, photos and files, and Tingfinder's keys. Take or schedule backups in Home Assistant → {place}."
 
 #: src/components/ops/home-assistant-backups.tsx
 msgid "Settings → System → Backups"
@@ -33,7 +33,7 @@ msgstr "Settings → System → Backups"
 
 #: src/components/ops/backup-target-form.tsx
 msgid "Home Assistant backs up Kept here: take or schedule backups in Home Assistant."
-msgstr "Home Assistant backs up Kept here: take or schedule backups in Home Assistant."
+msgstr "Home Assistant backs up Tingfinder here: take or schedule backups in Home Assistant."
 
 #: src/components/ops/status-tiles.tsx
 msgid "Take or schedule them in Home Assistant → {place}."
@@ -53,7 +53,7 @@ msgstr "Renamed to {trimmed}"
 
 #: src/components/home/checklist.tsx
 msgid "Set these where Kept's other settings live (the .env file with Docker Compose; with the Helm chart, the URL in the secret named by smtp.existingSecret and the sender in smtp.from), then restart Kept:"
-msgstr "Set these where Kept's other settings live (the .env file with Docker Compose; with the Helm chart, the URL in the secret named by smtp.existingSecret and the sender in smtp.from), then restart Kept:"
+msgstr "Set these where Tingfinder's other settings live (the .env file with Docker Compose; with the Helm chart, the URL in the secret named by smtp.existingSecret and the sender in smtp.from), then restart Tingfinder:"
 
 #: src/components/home/checklist.tsx
 msgid "Set up email"
@@ -65,11 +65,11 @@ msgstr "the request was more than the plan allows in one minute"
 
 #: src/components/home/checklist.tsx
 msgid "the sender, for example <0>Kept <kept@example.org></0>"
-msgstr "the sender, for example <0>Kept <kept@example.org></0>"
+msgstr "the sender, for example <0>Tingfinder <kept@example.org></0>"
 
 #: src/components/home/checklist.tsx
 msgid "Without it, Kept sends no sign-in links, password resets, email invites or reminders."
-msgstr "Without it, Kept sends no sign-in links, password resets, email invites or reminders."
+msgstr "Without it, Tingfinder sends no sign-in links, password resets, email invites or reminders."
 
 #: src/components/home/checklist.tsx
 msgid "your mail server, for example <0>smtps://user:password@smtp.example.org:465</0>"
@@ -843,7 +843,7 @@ msgstr "A computer: the camera icon in the address bar, then Allow."
 
 #: src/components/registries/registry-page.tsx
 msgid "A contact, without a Kept account"
-msgstr "A contact, without a Kept account"
+msgstr "A contact, without a Tingfinder account"
 
 #: src/components/things/action-menu.tsx
 msgid "A copy without the serial or purchase."
@@ -867,7 +867,7 @@ msgstr "A field group"
 
 #: src/components/scan/manual-code.tsx
 msgid "A Kept code is 6 letters and digits, like 7KQ‑4MZ."
-msgstr "A Kept code is 6 letters and digits, like 7KQ‑4MZ."
+msgstr "A Tingfinder code is 6 letters and digits, like 7KQ‑4MZ."
 
 #: src/components/registries/field-sheet.tsx
 msgid "A key is a lower-case word in English letters, digits and _, starting with a letter."
@@ -1279,7 +1279,7 @@ msgstr "AI"
 
 #: src/routes/setup.tsx
 msgid "AI and barcode lookup can be connected later, from Settings. Kept works without them."
-msgstr "AI and barcode lookup can be connected later, from Settings. Kept works without them."
+msgstr "AI and barcode lookup can be connected later, from Settings. Tingfinder works without them."
 
 #: src/lib/labels.ts
 msgid "AI assistant"
@@ -1375,7 +1375,7 @@ msgstr "Already claimed"
 
 #: src/components/inbox/duplicate-review.tsx
 msgid "Already in Kept"
-msgstr "Already in Kept"
+msgstr "Already in Tingfinder"
 
 #: src/components/history/labels.ts
 #: src/components/things/overview.tsx
@@ -1789,7 +1789,7 @@ msgstr "Camera"
 
 #: src/components/capture/file-fallback.tsx
 msgid "Camera access is off for Kept."
-msgstr "Camera access is off for Kept."
+msgstr "Camera access is off for Tingfinder."
 
 #: src/components/capture/capture-screen.tsx
 msgid "Camera view"
@@ -3125,7 +3125,7 @@ msgstr "Every addition, move and edit in the locations you belong to shows here,
 
 #: src/routes/gallery.tsx
 msgid "Every control Kept's screens are built from, on React Aria. Switch the theme and the language above: everything here should mirror cleanly."
-msgstr "Every control Kept's screens are built from, on React Aria. Switch the theme and the language above: everything here should mirror cleanly."
+msgstr "Every control Tingfinder's screens are built from, on React Aria. Switch the theme and the language above: everything here should mirror cleanly."
 
 #: src/routes/_app/admin.users.tsx
 msgid "Every device {who} is signed in on is signed out. They get an email about it."
@@ -3583,7 +3583,7 @@ msgstr "Go to Home"
 
 #: src/routes/invite.tsx
 msgid "Go to Kept"
-msgstr "Go to Kept"
+msgstr "Go to Tingfinder"
 
 #: src/routes/auth/email-change.tsx
 msgid "Go to Settings"
@@ -3622,7 +3622,7 @@ msgstr "Hallway"
 #: src/components/registries/registry-list.tsx
 #: src/components/registries/registry-page.tsx
 msgid "Has a Kept account"
-msgstr "Has a Kept account"
+msgstr "Has a Tingfinder account"
 
 #: src/components/registries/labels.ts
 msgid "Has a reading that grows, like kilometres or hours."
@@ -3746,7 +3746,7 @@ msgstr "How many to take off"
 
 #: src/routes/setup.tsx
 msgid "How should this Kept work?"
-msgstr "How should this Kept work?"
+msgstr "How should this Tingfinder work?"
 
 #: src/components/capture/file-fallback.tsx
 msgid "How to allow it"
@@ -3824,7 +3824,7 @@ msgstr "In a sentence: the drill <0/> is on the tool wall."
 
 #: src/components/home/install-sheet.tsx
 msgid "In Chrome or Edge, click the install icon at the end of the address bar, or open the menu and choose <0>Install Kept</0>."
-msgstr "In Chrome or Edge, click the install icon at the end of the address bar, or open the menu and choose <0>Install Kept</0>."
+msgstr "In Chrome or Edge, click the install icon at the end of the address bar, or open the menu and choose <0>Install Tingfinder</0>."
 
 #: src/components/home/install-sheet.tsx
 msgid "In Safari on a Mac, choose <0>File › Add to Dock</0>."
@@ -3874,11 +3874,11 @@ msgstr "Insights"
 
 #: src/components/home/install-sheet.tsx
 msgid "Install Kept"
-msgstr "Install Kept"
+msgstr "Install Tingfinder"
 
 #: src/components/home/install-sheet.tsx
 msgid "Install Kept on your phone"
-msgstr "Install Kept on your phone"
+msgstr "Install Tingfinder on your phone"
 
 #: src/components/home/checklist.tsx
 msgid "Install on your phone"
@@ -3963,7 +3963,7 @@ msgstr "iPhone, iPad"
 
 #: src/components/capture/file-fallback.tsx
 msgid "iPhone: Settings › Safari › Camera › Allow, then reopen Kept."
-msgstr "iPhone: Settings › Safari › Camera › Allow, then reopen Kept."
+msgstr "iPhone: Settings › Safari › Camera › Allow, then reopen Tingfinder."
 
 #: src/components/filters/panel.tsx
 msgid "is any of"
@@ -4132,7 +4132,7 @@ msgstr "Join {name}"
 
 #: src/routes/_app/settings.location.$id.invite.tsx
 msgid "Join {place} on Kept"
-msgstr "Join {place} on Kept"
+msgstr "Join {place} on Tingfinder"
 
 #: src/routes/_app/admin.users.tsx
 msgid "joined {joined}"
@@ -4144,7 +4144,7 @@ msgstr "Joined {joinedName}"
 
 #: src/routes/_app/index.tsx
 msgid "Joining someone's Kept?"
-msgstr "Joining someone's Kept?"
+msgstr "Joining someone's Tingfinder?"
 
 #: src/components/search/palette.tsx
 msgid "Jump to"
@@ -4225,92 +4225,92 @@ msgstr "Keep your backup codes"
 #: src/components/history/labels.ts
 #: src/components/history/timeline.tsx
 msgid "Kept"
-msgstr "Kept"
+msgstr "Tingfinder"
 
 #: src/components/registries/field-sheet.tsx
 msgid "Kept apart and encrypted, and revealed only per its policy. Only you, the account owner, can make a field secret, and only now."
-msgstr "Kept apart and encrypted, and revealed only per its policy. Only you, the account owner, can make a field secret, and only now."
+msgstr "Tingfinder apart and encrypted, and revealed only per its policy. Only you, the account owner, can make a field secret, and only now."
 
 #: src/components/inbox/duplicate-review.tsx
 msgid "Kept both"
-msgstr "Kept both"
+msgstr "Tingfinder both"
 
 #: src/components/scan/scanner-view.tsx
 msgid "Kept can't scan here"
-msgstr "Kept can't scan here"
+msgstr "Tingfinder can't scan here"
 
 #: src/components/scan/scan-screen.tsx
 msgid "Kept can't tell what this is from here."
-msgstr "Kept can't tell what this is from here."
+msgstr "Tingfinder can't tell what this is from here."
 
 #: src/components/capture/file-fallback.tsx
 msgid "Kept can't use the camera"
-msgstr "Kept can't use the camera"
+msgstr "Tingfinder can't use the camera"
 
 #: src/routes/_app/settings.two-factor.tsx
 msgid "Kept emails you a sign-in link; opening it confirms the address. Opening it also removes this account's password, passkeys and other sessions, so nobody who set them up before you keeps a way in. Two-factor needs a password, so afterwards set a new one with “Forgot your password?” on the sign-in page, then come back here."
-msgstr "Kept emails you a sign-in link; opening it confirms the address. Opening it also removes this account's password, passkeys and other sessions, so nobody who set them up before you keeps a way in. Two-factor needs a password, so afterwards set a new one with “Forgot your password?” on the sign-in page, then come back here."
+msgstr "Tingfinder emails you a sign-in link; opening it confirms the address. Opening it also removes this account's password, passkeys and other sessions, so nobody who set them up before you keeps a way in. Two-factor needs a password, so afterwards set a new one with “Forgot your password?” on the sign-in page, then come back here."
 
 #: src/components/things/overview.tsx
 msgid "Kept from an earlier type. They're not lost; re-type back to use them again."
-msgstr "Kept from an earlier type. They're not lost; re-type back to use them again."
+msgstr "Tingfinder from an earlier type. They're not lost; re-type back to use them again."
 
 #: src/components/capture/recognised.tsx
 msgid "Kept label in view"
-msgstr "Kept label in view"
+msgstr "Tingfinder label in view"
 
 #: src/routes/_app/admin.tsx
 msgid "Kept limits admin actions over HTTP. Put Kept on HTTPS before you rely on them."
-msgstr "Kept limits admin actions over HTTP. Put Kept on HTTPS before you rely on them."
+msgstr "Tingfinder limits admin actions over HTTP. Put Tingfinder on HTTPS before you rely on them."
 
 #: src/components/reports/print-sheet.tsx
 msgid "Kept makes at most five reports an hour. Try again later."
-msgstr "Kept makes at most five reports an hour. Try again later."
+msgstr "Tingfinder makes at most five reports an hour. Try again later."
 
 #: src/routes/_app/admin.admins.tsx
 msgid "Kept needs at least one instance admin"
-msgstr "Kept needs at least one instance admin"
+msgstr "Tingfinder needs at least one instance admin"
 
 #: src/routes/_app/admin.admins.tsx
 msgid "Kept needs at least one instance admin, so the last one can't be removed."
-msgstr "Kept needs at least one instance admin, so the last one can't be removed."
+msgstr "Tingfinder needs at least one instance admin, so the last one can't be removed."
 
 #: src/components/sync-status.tsx
 msgid "Kept on the server is older than this app; ask your admin."
-msgstr "Kept on the server is older than this app; ask your admin."
+msgstr "Tingfinder on the server is older than this app; ask your admin."
 
 #: src/routes/_app/help.tsx
 msgid "Kept opens from its own icon, full screen, and works offline."
-msgstr "Kept opens from its own icon, full screen, and works offline."
+msgstr "Tingfinder opens from its own icon, full screen, and works offline."
 
 #: src/routes/_app/admin.alerts.tsx
 msgid "Kept raises an alert here, and emails the instance admins at most once a day, when something on the server needs a person."
-msgstr "Kept raises an alert here, and emails the instance admins at most once a day, when something on the server needs a person."
+msgstr "Tingfinder raises an alert here, and emails the instance admins at most once a day, when something on the server needs a person."
 
 #: src/routes/_app/admin.status.tsx
 msgid "Kept safe"
-msgstr "Kept safe"
+msgstr "Tingfinder safe"
 
 #: src/routes/_app/admin.status.tsx
 msgid "Kept sends no email: no sign-in links, password resets, email invites or alerts. Set <0>KEPT_SMTP_URL</0> and restart Kept. Link invites and passwords work without it."
-msgstr "Kept sends no email: no sign-in links, password resets, email invites or alerts. Set <0>KEPT_SMTP_URL</0> and restart Kept. Link invites and passwords work without it."
+msgstr "Tingfinder sends no email: no sign-in links, password resets, email invites or alerts. Set <0>KEPT_SMTP_URL</0> and restart Tingfinder. Link invites and passwords work without it."
 
 #: src/components/scan/barcode-sheet.tsx
 msgid "Kept stores the barcode with it."
-msgstr "Kept stores the barcode with it."
+msgstr "Tingfinder stores the barcode with it."
 
 #: src/components/capture/share-arrival.tsx
 msgid "Kept takes photos and PDFs. Share those, or use Gallery."
-msgstr "Kept takes photos and PDFs. Share those, or use Gallery."
+msgstr "Tingfinder takes photos and PDFs. Share those, or use Gallery."
 
 #: src/components/inbox/reading-review.tsx
 #: src/components/things/meters-section.tsx
 msgid "Kept the reading"
-msgstr "Kept the reading"
+msgstr "Tingfinder the reading"
 
 #: src/components/capture/share-arrival.tsx
 msgid "Kept wasn't ready to receive files on this device yet. It is now: go back to the other app and share again."
-msgstr "Kept wasn't ready to receive files on this device yet. It is now: go back to the other app and share again."
+msgstr "Tingfinder wasn't ready to receive files on this device yet. It is now: go back to the other app and share again."
 
 #: src/components/registries/field-sheet.tsx
 msgid "Key"
@@ -4679,7 +4679,7 @@ msgstr "Location"
 
 #: src/components/capture/place-chip.tsx
 msgid "Location access is off for Kept in this browser's settings."
-msgstr "Location access is off for Kept in this browser's settings."
+msgstr "Location access is off for Tingfinder in this browser's settings."
 
 #: src/components/history/labels.ts
 msgid "Location created"
@@ -5389,7 +5389,7 @@ msgstr "Next photo"
 
 #: src/routes/_app/settings.two-factor.tsx
 msgid "Next time you sign in, Kept asks for a code from your app."
-msgstr "Next time you sign in, Kept asks for a code from your app."
+msgstr "Next time you sign in, Tingfinder asks for a code from your app."
 
 #: src/components/history/timeline.tsx
 msgid "no"
@@ -5403,7 +5403,7 @@ msgstr "No"
 
 #: src/routes/signin/index.tsx
 msgid "No account yet? Ask someone who uses this Kept to invite you. The invite link creates your account."
-msgstr "No account yet? Ask someone who uses this Kept to invite you. The invite link creates your account."
+msgstr "No account yet? Ask someone who uses this Tingfinder to invite you. The invite link creates your account."
 
 #: src/routes/_app/activity.tsx
 msgid "No activity matches"
@@ -5535,7 +5535,7 @@ msgstr "Not a duplicate · keep both"
 
 #: src/components/scan/outcome-sheet.tsx
 msgid "Not a Kept label"
-msgstr "Not a Kept label"
+msgstr "Not a Tingfinder label"
 
 #: src/routes/_app/admin.status.tsx
 msgid "Not answering"
@@ -5563,7 +5563,7 @@ msgstr "Not here"
 
 #: src/components/scan/outcome-sheet.tsx
 msgid "Not in your Kept"
-msgstr "Not in your Kept"
+msgstr "Not in your Tingfinder"
 
 #: src/components/registries/type-editor.tsx
 msgid "Not inside another type"
@@ -5582,7 +5582,7 @@ msgstr "Not on this phone"
 
 #: src/components/capture/recognised.tsx
 msgid "Not on this phone. Kept checks it when you open it online."
-msgstr "Not on this phone. Kept checks it when you open it online."
+msgstr "Not on this phone. Tingfinder checks it when you open it online."
 
 #: src/components/things/purchase-section.tsx
 msgid "Not recorded"
@@ -5689,7 +5689,7 @@ msgstr "Nothing on this phone matches ‘<0>{q}</0>’"
 
 #: src/components/capture/capture-screen.tsx
 msgid "Nothing on this phone yet. Open Kept once while online to bring your places."
-msgstr "Nothing on this phone yet. Open Kept once while online to bring your places."
+msgstr "Nothing on this phone yet. Open Tingfinder once while online to bring your places."
 
 #: src/components/things/overview.tsx
 msgid "Nothing recorded yet."
@@ -5799,11 +5799,11 @@ msgstr "On Home until every step is done."
 
 #: src/components/capture/summary.tsx
 msgid "On iPhone, Kept uploads only while it's open. Keep it open when you're back in signal."
-msgstr "On iPhone, Kept uploads only while it's open. Keep it open when you're back in signal."
+msgstr "On iPhone, Tingfinder uploads only while it's open. Keep it open when you're back in signal."
 
 #: src/components/home/install-sheet.tsx
 msgid "On iPhone, notifications only reach Kept once it's on your Home Screen. Until then, reminders can come by email."
-msgstr "On iPhone, notifications only reach Kept once it's on your Home Screen. Until then, reminders can come by email."
+msgstr "On iPhone, notifications only reach Tingfinder once it's on your Home Screen. Until then, reminders can come by email."
 
 #: src/components/home/checklist.tsx
 msgid "On iPhone, reminders only reach the installed app."
@@ -5847,7 +5847,7 @@ msgstr "On. Signing in asks for a code from your authenticator app."
 
 #: src/routes/_app/help.tsx
 msgid "Once Kept is installed it's in the Share sheet. Share photos or PDFs to it from any app, and they open in Capture."
-msgstr "Once Kept is installed it's in the Share sheet. Share photos or PDFs to it from any app, and they open in Capture."
+msgstr "Once Tingfinder is installed it's in the Share sheet. Share photos or PDFs to it from any app, and they open in Capture."
 
 #: src/routes/_app/p.$id.tsx
 msgid "One at a time with the move picker, or use Select below to move several at once."
@@ -5906,11 +5906,11 @@ msgstr "Only me"
 
 #: src/components/sync-status.tsx
 msgid "Only part of your Kept is on this phone."
-msgstr "Only part of your Kept is on this phone."
+msgstr "Only part of your Tingfinder is on this phone."
 
 #: src/routes/_app/admin.status.tsx
 msgid "Only say yes once the two keys from kept admin recovery-kit are stored away from this server. Kept can't check."
-msgstr "Only say yes once the two keys from kept admin recovery-kit are stored away from this server. Kept can't check."
+msgstr "Only say yes once the two keys from kept admin recovery-kit are stored away from this server. Tingfinder can't check."
 
 #: src/components/registries/registry-list.tsx
 msgid "Only something nothing uses can be deleted. Otherwise, merge it into another."
@@ -5997,15 +5997,15 @@ msgstr "Open it"
 
 #: src/routes/auth/email-change.tsx
 msgid "Open Kept"
-msgstr "Open Kept"
+msgstr "Open Tingfinder"
 
 #: src/components/home/install-sheet.tsx
 msgid "Open Kept from its new icon."
-msgstr "Open Kept from its new icon."
+msgstr "Open Tingfinder from its new icon."
 
 #: src/components/capture/share-arrival.tsx
 msgid "Open Kept once, then share again"
-msgstr "Open Kept once, then share again"
+msgstr "Open Tingfinder once, then share again"
 
 #: src/components/scan/claim-sheet.tsx
 msgid "Open that box"
@@ -6053,7 +6053,7 @@ msgstr "Opening the camera"
 
 #: src/components/scan/barcode-sheet.tsx
 msgid "Opening this phone's copy of your Kept…"
-msgstr "Opening this phone's copy of your Kept…"
+msgstr "Opening this phone's copy of your Tingfinder…"
 
 #: src/components/scan/barcode-sheet.tsx
 msgid "Optional: without one it waits in the Inbox to be named."
@@ -6065,7 +6065,7 @@ msgstr "or"
 
 #: src/components/home/checklist.tsx
 msgid "Or reach Kept through Tailscale and turn on HTTPS for your tailnet; the address ends in <0>.ts.net</0>."
-msgstr "Or reach Kept through Tailscale and turn on HTTPS for your tailnet; the address ends in <0>.ts.net</0>."
+msgstr "Or reach Tingfinder through Tailscale and turn on HTTPS for your tailnet; the address ends in <0>.ts.net</0>."
 
 #: src/components/boxcheck/box-check-screen.tsx
 msgid "Or search"
@@ -6087,11 +6087,11 @@ msgstr "Other"
 
 #: src/components/home/checklist.tsx
 msgid "Over plain HTTP, phones block the camera, installing Kept, push notifications and location."
-msgstr "Over plain HTTP, phones block the camera, installing Kept, push notifications and location."
+msgstr "Over plain HTTP, phones block the camera, installing Tingfinder, push notifications and location."
 
 #: src/components/home/install-sheet.tsx
 msgid "Over plain HTTP, phones won't install Kept. Put Kept on HTTPS first."
-msgstr "Over plain HTTP, phones won't install Kept. Put Kept on HTTPS first."
+msgstr "Over plain HTTP, phones won't install Tingfinder. Put Tingfinder on HTTPS first."
 
 #: src/lib/labels.ts
 msgid "Owner"
@@ -6326,11 +6326,11 @@ msgstr "Places · <0>{placeCount}</0>"
 
 #: src/components/hints/hint-copy.ts
 msgid "Point at a Kept label"
-msgstr "Point at a Kept label"
+msgstr "Point at a Tingfinder label"
 
 #: src/components/scan/scan-screen.tsx
 msgid "Point at a Kept label, or a product's barcode."
-msgstr "Point at a Kept label, or a product's barcode."
+msgstr "Point at a Tingfinder label, or a product's barcode."
 
 #: src/components/scan/scan-screen.tsx
 msgid "Point at the label of the place or box they go in."
@@ -6484,7 +6484,7 @@ msgstr "Put it inside another place in {locationName}"
 
 #: src/components/home/checklist.tsx
 msgid "Put Kept on HTTPS"
-msgstr "Put Kept on HTTPS"
+msgstr "Put Tingfinder on HTTPS"
 
 #: src/components/tray/tray.tsx
 msgid "Put them back"
@@ -7450,7 +7450,7 @@ msgstr "Set up"
 
 #: src/routes/setup.tsx
 msgid "Set up this Kept"
-msgstr "Set up this Kept"
+msgstr "Set up this Tingfinder"
 
 #: src/routes/auth/reset.tsx
 msgid "Setting it signs you out on every device."
@@ -7479,7 +7479,7 @@ msgstr "Share a link or a QR code. Choose what they can do and for how long."
 
 #: src/components/capture/share-arrival.tsx
 msgid "Share the files into Kept again."
-msgstr "Share the files into Kept again."
+msgstr "Share the files into Tingfinder again."
 
 #: src/routes/_app/settings.location.$id.invite.tsx
 msgid "Share…"
@@ -7495,7 +7495,7 @@ msgstr "Shared files"
 
 #: src/components/capture/shared-sheet.tsx
 msgid "Shared into Kept"
-msgstr "Shared into Kept"
+msgstr "Shared into Tingfinder"
 
 #: src/components/filters/views.tsx
 msgid "Shared with {name}"
@@ -7583,7 +7583,7 @@ msgstr "Sign in as someone else"
 #: src/routes/auth/confirm.tsx
 #: src/routes/signin/index.tsx
 msgid "Sign in to Kept"
-msgstr "Sign in to Kept"
+msgstr "Sign in to Tingfinder"
 
 #: src/routes/signin/code.tsx
 msgid "Sign in with a one-time code"
@@ -7797,7 +7797,7 @@ msgstr "Start"
 
 #: src/components/home/checklist.tsx
 msgid "Start Kept's Compose file with the <0>https</0> profile. It adds a reverse proxy that gets a certificate for your domain."
-msgstr "Start Kept's Compose file with the <0>https</0> profile. It adds a reverse proxy that gets a certificate for your domain."
+msgstr "Start Tingfinder's Compose file with the <0>https</0> profile. It adds a reverse proxy that gets a certificate for your domain."
 
 #: src/components/filters/registry.tsx
 msgid "State"
@@ -7810,7 +7810,7 @@ msgstr "Status"
 
 #: src/components/sign-out.tsx
 msgid "Stay signed in and open Kept with a connection to finish syncing first."
-msgstr "Stay signed in and open Kept with a connection to finish syncing first."
+msgstr "Stay signed in and open Tingfinder with a connection to finish syncing first."
 
 #: src/components/auth-frame.tsx
 msgid "Step {step} of {steps}"
@@ -7988,7 +7988,7 @@ msgstr "Taken"
 
 #: src/components/home/install-sheet.tsx
 msgid "Tap <0>Add</0>, then open Kept from its new icon."
-msgstr "Tap <0>Add</0>, then open Kept from its new icon."
+msgstr "Tap <0>Add</0>, then open Tingfinder from its new icon."
 
 #: src/components/home/install-sheet.tsx
 msgid "Tap <0>Install app</0>, or <1>Add to Home screen</1>."
@@ -8061,7 +8061,7 @@ msgstr "That key is already a field of this type, one it inherits from, or one b
 
 #: src/components/boxcheck/box-check-screen.tsx
 msgid "That label isn't on a thing in your Kept."
-msgstr "That label isn't on a thing in your Kept."
+msgstr "That label isn't on a thing in your Tingfinder."
 
 #: src/components/registries/registry-edit-sheet.tsx
 msgid "That name is already in this list. Merge the two instead."
@@ -8127,7 +8127,7 @@ msgstr "The assistant may read it"
 
 #: src/components/capture/file-fallback.tsx
 msgid "The camera needs a secure (HTTPS) address, and this page doesn't have one. Your admin can put Kept on HTTPS."
-msgstr "The camera needs a secure (HTTPS) address, and this page doesn't have one. Your admin can put Kept on HTTPS."
+msgstr "The camera needs a secure (HTTPS) address, and this page doesn't have one. Your admin can put Tingfinder on HTTPS."
 
 #: src/routes/setup.tsx
 msgid "The code is 6 letters and digits, like K7Q-2M9."
@@ -8196,7 +8196,7 @@ msgstr "The old meter's last reading ({unit})"
 #. placeholder {0}: th.name
 #: src/components/inbox/duplicate-review.tsx
 msgid "The one already in Kept, <0>{0}</0>"
-msgstr "The one already in Kept, <0>{0}</0>"
+msgstr "The one already in Tingfinder, <0>{0}</0>"
 
 #: src/components/things/photos.tsx
 msgid "The original is kept. This format can't be previewed yet."
@@ -8278,7 +8278,7 @@ msgstr "Theme"
 
 #: src/components/home/checklist.tsx
 msgid "Then set KEPT_PUBLIC_URL to the https address and restart Kept."
-msgstr "Then set KEPT_PUBLIC_URL to the https address and restart Kept."
+msgstr "Then set KEPT_PUBLIC_URL to the https address and restart Tingfinder."
 
 #. placeholder {0}: fmt.num(thing.quantity)
 #: src/components/things/split-sheet.tsx
@@ -8385,7 +8385,7 @@ msgstr "This account runs the server: users, sign-up and backups. It can't see i
 
 #: src/components/not-found.tsx
 msgid "This address doesn't lead to a page in Kept. The link may be old."
-msgstr "This address doesn't lead to a page in Kept. The link may be old."
+msgstr "This address doesn't lead to a page in Tingfinder. The link may be old."
 
 #: src/components/capture/summary.tsx
 msgid "This batch"
@@ -8405,7 +8405,7 @@ msgstr "The scanner didn't start."
 
 #: src/components/sync-status.tsx
 msgid "This browser may clear Kept's offline copy after weeks unused. Open Kept to sync soon."
-msgstr "This browser may clear Kept's offline copy after weeks unused. Open Kept to sync soon."
+msgstr "This browser may clear Tingfinder's offline copy after weeks unused. Open Tingfinder to sync soon."
 
 #: src/components/page.tsx
 msgid "This changed since you opened it. Reload and try again."
@@ -8413,7 +8413,7 @@ msgstr "This changed since you opened it. Reload and try again."
 
 #: src/components/scan/outcome-sheet.tsx
 msgid "This code isn't one of Kept's labels. It says:"
-msgstr "This code isn't one of Kept's labels. It says:"
+msgstr "This code isn't one of Tingfinder's labels. It says:"
 
 #: src/routes/_app/settings.index.tsx
 msgid "This device"
@@ -8421,7 +8421,7 @@ msgstr "This device"
 
 #: src/components/capture/file-fallback.tsx
 msgid "This device has no camera Kept can use."
-msgstr "This device has no camera Kept can use."
+msgstr "This device has no camera Tingfinder can use."
 
 #: src/routes/_app/settings.index.tsx
 msgid "This device stays signed in. The others need your password or passkey again."
@@ -8461,7 +8461,7 @@ msgstr "This isn't here any more, or you can't see it."
 
 #: src/routes/setup.tsx
 msgid "This Kept is already set up. Sign in instead."
-msgstr "This Kept is already set up. Sign in instead."
+msgstr "This Tingfinder is already set up. Sign in instead."
 
 #: src/components/scan/claim-sheet.tsx
 msgid "This label isn't on anything yet. Use it for:"
@@ -8514,7 +8514,7 @@ msgstr "This phone format can't be previewed yet. The original is kept."
 
 #: src/components/sync-status.tsx
 msgid "This phone is out of space for Kept. Free some space to keep capturing offline."
-msgstr "This phone is out of space for Kept. Free some space to keep capturing offline."
+msgstr "This phone is out of space for Tingfinder. Free some space to keep capturing offline."
 
 #: src/components/capture/capture-screen.tsx
 msgid "This phone may be out of space."
@@ -8526,7 +8526,7 @@ msgstr "This sign-in timed out. Start again from the sign-in page."
 
 #: src/components/home/install-sheet.tsx
 msgid "This step ticks itself the first time you open Kept from its icon."
-msgstr "This step ticks itself the first time you open Kept from its icon."
+msgstr "This step ticks itself the first time you open Tingfinder from its icon."
 
 #: src/components/things/links.tsx
 msgid "This thing is…"
@@ -8959,7 +8959,7 @@ msgstr "Up to {0}"
 
 #: src/components/sync-status.tsx
 msgid "Update Kept to finish syncing."
-msgstr "Update Kept to finish syncing."
+msgstr "Update Tingfinder to finish syncing."
 
 #: src/components/pull-to-refresh.tsx
 msgid "Updated"
@@ -9036,7 +9036,7 @@ msgstr "Used up by"
 
 #: src/components/display-prefs.tsx
 msgid "Used when Kept is in Arabic, for amounts, dates and counts. Short IDs, codes and serials always stay 0–9."
-msgstr "Used when Kept is in Arabic, for amounts, dates and counts. Short IDs, codes and serials always stay 0–9."
+msgstr "Used when Tingfinder is in Arabic, for amounts, dates and counts. Short IDs, codes and serials always stay 0–9."
 
 #: src/routes/_app/settings.location.$id.members.tsx
 #: src/routes/signin/code.tsx
@@ -9294,7 +9294,7 @@ msgstr "When AI fills in a thing here, it adds search words in each of these lan
 
 #: src/routes/setup.tsx
 msgid "When Kept started for the first time, it printed a one-time setup code in the server's logs. Entering it shows you're the person who installed this server. The code stops working once it's used."
-msgstr "When Kept started for the first time, it printed a one-time setup code in the server's logs. Entering it shows you're the person who installed this server. The code stops working once it's used."
+msgstr "When Tingfinder started for the first time, it printed a one-time setup code in the server's logs. Entering it shows you're the person who installed this server. The code stops working once it's used."
 
 #: src/routes/_app/p.$id.tsx
 msgid "When two places are really the same one"
@@ -9746,7 +9746,7 @@ msgstr "{0}% used"
 
 #: src/components/ai/usage-totals.tsx
 msgid "{held, plural, one {# held back by Kept} other {# held back by Kept}}"
-msgstr "{held, plural, one {# held back by Kept} other {# held back by Kept}}"
+msgstr "{held, plural, one {# held back by Tingfinder} other {# held back by Tingfinder}}"
 
 #. placeholder {0}: fmt.day(`${terms.checked}T12:00:00Z`)
 #: src/components/ai/data-use-note.tsx
@@ -9876,7 +9876,7 @@ msgstr "add a price to see cost"
 
 #: src/components/ai/what-uses-ai.tsx
 msgid "Add a price to see cost. Until then Kept counts tokens only."
-msgstr "Add a price to see cost. Until then Kept counts tokens only."
+msgstr "Add a price to see cost. Until then Tingfinder counts tokens only."
 
 #: src/components/ai/advanced.tsx
 msgid "Admin settings"
@@ -10261,7 +10261,7 @@ msgstr "Images"
 
 #: src/components/ai/recommended.tsx
 msgid "In Kept's test on {date}, it read receipts, labels and nameplates correctly for the least money of any model measured:"
-msgstr "In Kept's test on {date}, it read receipts, labels and nameplates correctly for the least money of any model measured:"
+msgstr "In Tingfinder's test on {date}, it read receipts, labels and nameplates correctly for the least money of any model measured:"
 
 #. placeholder {0}: money(r.inputPerMtok, price.currency)
 #. placeholder {1}: money(r.outputPerMtok, price.currency)
@@ -10292,25 +10292,25 @@ msgstr "Keep paused"
 #: src/components/ai/call-list.tsx
 #: src/components/ai/usage-charts.tsx
 msgid "Kept (background)"
-msgstr "Kept (background)"
+msgstr "Tingfinder (background)"
 
 #: src/components/ai/paste-key.tsx
 msgid "Kept can't tell which provider this key is for. Choose it under Advanced."
-msgstr "Kept can't tell which provider this key is for. Choose it under Advanced."
+msgstr "Tingfinder can't tell which provider this key is for. Choose it under Advanced."
 
 #. placeholder {0}: n(call.tokens.estimate)
 #: src/components/ai/call-detail.tsx
 msgid "Kept estimated {0} before sending."
-msgstr "Kept estimated {0} before sending."
+msgstr "Tingfinder estimated {0} before sending."
 
 #. placeholder {0}: kindName(kind)
 #: src/components/ai/advanced.tsx
 msgid "Kept fills in {0}'s address."
-msgstr "Kept fills in {0}'s address."
+msgstr "Tingfinder fills in {0}'s address."
 
 #: src/components/ai/paste-key.tsx
 msgid "Kept reads the provider from the key. It sends the key to the server once and never shows it again."
-msgstr "Kept reads the provider from the key. It sends the key to the server once and never shows it again."
+msgstr "Tingfinder reads the provider from the key. It sends the key to the server once and never shows it again."
 
 #: src/components/ai/paste-key.tsx
 msgid "Key saved"
@@ -10372,7 +10372,7 @@ msgstr "Low (the default)"
 #. placeholder {1}: REFERENCE_FIGURES.model
 #: src/components/ai/what-uses-ai.tsx
 msgid "Measured by Kept on {0} with Groq · <0>{1}</0>"
-msgstr "Measured by Kept on {0} with Groq · <0>{1}</0>"
+msgstr "Measured by Tingfinder on {0} with Groq · <0>{1}</0>"
 
 #: src/components/ai/advanced.tsx
 msgid "Medium"
@@ -10489,7 +10489,7 @@ msgstr "Not sent"
 
 #: src/components/ai/call-detail.tsx
 msgid "Not sent: Kept held it back, so nothing was used."
-msgstr "Not sent: Kept held it back, so nothing was used."
+msgstr "Not sent: Tingfinder held it back, so nothing was used."
 
 #: src/components/ai/key-scope.tsx
 msgid "Not set: name things by hand"
@@ -10521,7 +10521,7 @@ msgstr "Only a copy of the photo with location and camera data removed, never th
 
 #: src/components/ai/call-detail.tsx
 msgid "Only a copy with the location and camera data removed. Kept never keeps it."
-msgstr "Only a copy with the location and camera data removed. Kept never keeps it."
+msgstr "Only a copy with the location and camera data removed. Tingfinder never keeps it."
 
 #: src/components/ai/prices.tsx
 msgid "Only where the provider bills images apart from tokens."
@@ -10738,7 +10738,7 @@ msgstr "Run Test to check photos"
 
 #: src/components/ai/advanced.tsx
 msgid "Save a key first: Kept then loads the provider's models to choose from."
-msgstr "Save a key first: Kept then loads the provider's models to choose from."
+msgstr "Save a key first: Tingfinder then loads the provider's models to choose from."
 
 #: src/components/ai/paste-key.tsx
 msgid "Save and test"
@@ -10870,7 +10870,7 @@ msgstr "That currency isn't turned on. An instance admin can add it."
 
 #: src/components/ai/recommended.tsx
 msgid "That was a test with made-up photos; Kept's evaluation with real photos checks it again. Groq has no embeddings model, so semantic search needs another provider or stays keyword only. On the key tier Kept measured, Groq reads {low}–{high} photos a minute; Kept paces to it, so a {photos}-photo session is named over {fromMin}–{toMin} minutes while you carry on."
-msgstr "That was a test with made-up photos; Kept's evaluation with real photos checks it again. Groq has no embeddings model, so semantic search needs another provider or stays keyword only. On the key tier Kept measured, Groq reads {low}–{high} photos a minute; Kept paces to it, so a {photos}-photo session is named over {fromMin}–{toMin} minutes while you carry on."
+msgstr "That was a test with made-up photos; Tingfinder's evaluation with real photos checks it again. Groq has no embeddings model, so semantic search needs another provider or stays keyword only. On the key tier Tingfinder measured, Groq reads {low}–{high} photos a minute; Tingfinder paces to it, so a {photos}-photo session is named over {fromMin}–{toMin} minutes while you carry on."
 
 #: src/components/history/undo.ts
 msgid "That was already undone"
@@ -10894,20 +10894,20 @@ msgstr "the answer was cut off"
 
 #: src/components/ai/labels.ts
 msgid "the answer wasn't in the shape Kept asked for"
-msgstr "the answer wasn't in the shape Kept asked for"
+msgstr "the answer wasn't in the shape Tingfinder asked for"
 
 #. placeholder {0}: RECOMMENDED.model
 #: src/components/ai/recommended.tsx
 msgid "The cheapest reliable result in Kept's test: about USD {perReceipt} a receipt, with <0>{0}</0>. On the key tier Kept measured, Groq reads {low}–{high} photos a minute; Kept paces to it."
-msgstr "The cheapest reliable result in Kept's test: about USD {perReceipt} a receipt, with <0>{0}</0>. On the key tier Kept measured, Groq reads {low}–{high} photos a minute; Kept paces to it."
+msgstr "The cheapest reliable result in Tingfinder's test: about USD {perReceipt} a receipt, with <0>{0}</0>. On the key tier Tingfinder measured, Groq reads {low}–{high} photos a minute; Tingfinder paces to it."
 
 #: src/components/ai/paste-key.tsx
 msgid "The first AI key is a secret Kept must be able to recover. Save the recovery kit on the status page, then paste the key again."
-msgstr "The first AI key is a secret Kept must be able to recover. Save the recovery kit on the status page, then paste the key again."
+msgstr "The first AI key is a secret Tingfinder must be able to recover. Save the recovery kit on the status page, then paste the key again."
 
 #: src/components/ai/prices.tsx
 msgid "The listing has no prices Kept can use."
-msgstr "The listing has no prices Kept can use."
+msgstr "The listing has no prices Tingfinder can use."
 
 #: src/components/ai/labels.ts
 msgid "the monthly cap was reached"
@@ -10923,7 +10923,7 @@ msgstr "The person who runs this server needs to save the recovery kit before th
 
 #: src/components/ai/labels.ts
 msgid "the provider asked Kept to slow down"
-msgstr "the provider asked Kept to slow down"
+msgstr "the provider asked Tingfinder to slow down"
 
 #: src/components/ai/labels.ts
 msgid "the provider couldn't be reached"
@@ -11101,7 +11101,7 @@ msgstr "What it belongs to opens, with what's inside. A worn label, or no camera
 
 #: src/components/ai/what-uses-ai.tsx
 msgid "What uses AI in Kept"
-msgstr "What uses AI in Kept"
+msgstr "What uses AI in Tingfinder"
 
 #: src/components/ai/call-detail.tsx
 msgid "Where and who"
@@ -11382,7 +11382,7 @@ msgstr "Importing…"
 
 #: src/components/import/choices-step.tsx
 msgid "In any of Kept's languages. Off, the type is kept in the notes."
-msgstr "In any of Kept's languages. Off, the type is kept in the notes."
+msgstr "In any of Tingfinder's languages. Off, the type is kept in the notes."
 
 #: src/components/import/progress-step.tsx
 msgid "It hasn't moved for a while. What it already imported stays."
@@ -11462,11 +11462,11 @@ msgstr "No type has this name; kept in the notes."
 
 #: src/components/import/labels.ts
 msgid "Not a condition Kept knows; kept in the notes."
-msgstr "Not a condition Kept knows; kept in the notes."
+msgstr "Not a condition Tingfinder knows; kept in the notes."
 
 #: src/components/import/labels.ts
 msgid "Not a currency turned on in Kept; the price is kept in the notes."
-msgstr "Not a currency turned on in Kept; the price is kept in the notes."
+msgstr "Not a currency turned on in Tingfinder; the price is kept in the notes."
 
 #: src/components/import/labels.ts
 msgid "Not a date written as {format}; kept in the notes."
@@ -11802,7 +11802,7 @@ msgstr "Things already started from it keep their details."
 
 #: src/routes/_print/labels.$batchId.tsx
 msgid "Kept labels"
-msgstr "Kept labels"
+msgstr "Tingfinder labels"
 
 #: src/routes/_print/labels.$batchId.tsx
 msgid "Saved the label images"
@@ -11826,7 +11826,7 @@ msgstr "Share as images"
 
 #: src/routes/_app/help.tsx
 msgid "Share into Kept"
-msgstr "Share into Kept"
+msgstr "Share into Tingfinder"
 
 #: src/components/home/checklist.tsx
 #: src/routes/_print/labels.$batchId.tsx
@@ -11978,11 +11978,11 @@ msgstr "{count, plural, one {Print # label} other {Print # labels}}"
 
 #: src/components/labels/batch-builder.tsx
 msgid "Opens the print dialog at {stockTitle}, scale 100%. Afterwards Kept asks \"Printed OK?\" and records the print date."
-msgstr "Opens the print dialog at {stockTitle}, scale 100%. Afterwards Kept asks \"Printed OK?\" and records the print date."
+msgstr "Opens the print dialog at {stockTitle}, scale 100%. Afterwards Tingfinder asks \"Printed OK?\" and records the print date."
 
 #: src/components/labels/batch-builder.tsx
 msgid "Opens the print dialog: choose your label printer and this label size. Afterwards Kept asks \"Printed OK?\" and records the print date."
-msgstr "Opens the print dialog: choose your label printer and this label size. Afterwards Kept asks \"Printed OK?\" and records the print date."
+msgstr "Opens the print dialog: choose your label printer and this label size. Afterwards Tingfinder asks \"Printed OK?\" and records the print date."
 
 #: src/components/labels/batch-builder.tsx
 msgid "Label preview"
@@ -12219,15 +12219,15 @@ msgstr "Former addresses"
 
 #: src/routes/_app/admin.settings.tsx
 msgid "Look up products Kept doesn't know by their barcode"
-msgstr "Look up products Kept doesn't know by their barcode"
+msgstr "Look up products Tingfinder doesn't know by their barcode"
 
 #: src/routes/_app/admin.settings.tsx
 msgid "None. Kept answers only at its own address."
-msgstr "None. Kept answers only at its own address."
+msgstr "None. Tingfinder answers only at its own address."
 
 #: src/routes/_app/admin.settings.tsx
 msgid "Off. A scanned product barcode finds only what Kept already holds."
-msgstr "Off. A scanned product barcode finds only what Kept already holds."
+msgstr "Off. A scanned product barcode finds only what Tingfinder already holds."
 
 #: src/routes/_app/admin.settings.tsx
 msgid "Old host name"
@@ -12235,7 +12235,7 @@ msgstr "Old host name"
 
 #: src/routes/_app/admin.settings.tsx
 msgid "On. A scanned product barcode Kept doesn't know is looked up in Open Food Facts, Open Products Facts and Open Beauty Facts. Only the barcode is sent."
-msgstr "On. A scanned product barcode Kept doesn't know is looked up in Open Food Facts, Open Products Facts and Open Beauty Facts. Only the barcode is sent."
+msgstr "On. A scanned product barcode Tingfinder doesn't know is looked up in Open Food Facts, Open Products Facts and Open Beauty Facts. Only the barcode is sent."
 
 #: src/routes/_app/admin.settings.tsx
 msgid "Only the name, like kept.home.example."
@@ -12259,11 +12259,11 @@ msgstr "That name is already listed."
 
 #: src/routes/_app/admin.settings.tsx
 msgid "The databases ask each app for a contact. Kept sends this email with each lookup, and nothing else about you."
-msgstr "The databases ask each app for a contact. Kept sends this email with each lookup, and nothing else about you."
+msgstr "The databases ask each app for a contact. Tingfinder sends this email with each lookup, and nothing else about you."
 
 #: src/routes/_app/admin.settings.tsx
 msgid "When Kept moves to a new address, list the old names here and point them at this server. A label printed under an old address still opens: the request is sent to this one."
-msgstr "When Kept moves to a new address, list the old names here and point them at this server. A label printed under an old address still opens: the request is sent to this one."
+msgstr "When Tingfinder moves to a new address, list the old names here and point them at this server. A label printed under an old address still opens: the request is sent to this one."
 
 #: src/components/places/contents-list.tsx
 msgid "{n, plural, one {Picked up # thing} other {Picked up # things}}"
@@ -12456,7 +12456,7 @@ msgstr "In plain words, for whoever types the code."
 
 #: src/components/codes/code-settings.tsx
 msgid "Kept can't read this pattern. Check its brackets."
-msgstr "Kept can't read this pattern. Check its brackets."
+msgstr "Tingfinder can't read this pattern. Check its brackets."
 
 #: src/components/codes/code-settings.tsx
 msgid "Message when a code doesn't match"
@@ -12578,7 +12578,7 @@ msgstr "Expiring"
 
 #: src/routes/_app/settings.me.notifications.tsx
 msgid "How Kept reaches you"
-msgstr "How Kept reaches you"
+msgstr "How Tingfinder reaches you"
 
 #: src/routes/_app/incidents.$id.tsx
 msgid "Incident"
@@ -12639,7 +12639,7 @@ msgstr "Share it to save it to Files or send it on."
 
 #: src/components/ai/call-list.tsx
 msgid "This browser can't save files here. Open Kept in Safari to export it."
-msgstr "This browser can't save files here. Open Kept in Safari to export it."
+msgstr "This browser can't save files here. Open Tingfinder in Safari to export it."
 
 #: src/components/things/original-file.ts
 msgid "This file can't be shared from the installed app"
@@ -12647,7 +12647,7 @@ msgstr "This file can't be shared from the installed app"
 
 #: src/components/things/original-file.ts
 msgid "Open Kept in Safari to download it."
-msgstr "Open Kept in Safari to download it."
+msgstr "Open Tingfinder in Safari to download it."
 
 #: src/components/things/original-file.ts
 msgid "Couldn't get the file ready. Try again."
@@ -12663,7 +12663,7 @@ msgstr "Couldn't share the file. Try again."
 
 #: src/components/page.tsx
 msgid "Kept can't reach its database right now. Try again in a minute."
-msgstr "Kept can't reach its database right now. Try again in a minute."
+msgstr "Tingfinder can't reach its database right now. Try again in a minute."
 
 #. placeholder {0}: -n
 #: src/components/schedules/labels.tsx
@@ -12750,7 +12750,7 @@ msgstr "Add a line"
 
 #: src/routes/_app/schedules.tsx
 msgid "Add a service or a check that comes round, like the boiler every year or the car every 10,000 km, and Kept reminds you before it's due."
-msgstr "Add a service or a check that comes round, like the boiler every year or the car every 10,000 km, and Kept reminds you before it's due."
+msgstr "Add a service or a check that comes round, like the boiler every year or the car every 10,000 km, and Tingfinder reminds you before it's due."
 
 #: src/components/schedules/complete-sheet.tsx
 msgid "Add line items or an invoice"
@@ -13187,7 +13187,7 @@ msgstr "Search schedules"
 
 #: src/components/lending/loan-row.tsx
 msgid "Send it however you like. Kept never sends it."
-msgstr "Send it however you like. Kept never sends it."
+msgstr "Send it however you like. Tingfinder never sends it."
 
 #: src/components/services/log-service-sheet.tsx
 msgid "Service logged"
@@ -13672,7 +13672,7 @@ msgstr "A claim needs the day it was opened."
 
 #: src/components/lending/person-picker.tsx
 msgid "A new person: added to your people when you save. Kept never contacts them."
-msgstr "A new person: added to your people when you save. Kept never contacts them."
+msgstr "A new person: added to your people when you save. Tingfinder never contacts them."
 
 #: src/components/warranties/warranty-sheet.tsx
 msgid "A phone number, an email or a web page."
@@ -13680,7 +13680,7 @@ msgstr "A phone number, an email or a web page."
 
 #: src/components/things/schedules-section.tsx
 msgid "A service or a check that comes round: Kept reminds you before it's due."
-msgstr "A service or a check that comes round: Kept reminds you before it's due."
+msgstr "A service or a check that comes round: Tingfinder reminds you before it's due."
 
 #: src/components/warranties/warranty-sheet.tsx
 msgid "A term"
@@ -13994,18 +13994,18 @@ msgstr "It's in repair: lend it once it's back."
 
 #: src/components/lending/person-picker.tsx
 msgid "Kept never contacts them."
-msgstr "Kept never contacts them."
+msgstr "Tingfinder never contacts them."
 
 #. placeholder {0}: loan.person.name
 #: src/components/lending/thing-loans.tsx
 msgid "Kept never messages {0}; the reminder text is yours to send."
-msgstr "Kept never messages {0}; the reminder text is yours to send."
+msgstr "Tingfinder never messages {0}; the reminder text is yours to send."
 
 #. placeholder {0}: fmt.day(loan.dueOn)
 #. placeholder {1}: loan.person.name
 #: src/components/lending/thing-loans.tsx
 msgid "Kept reminds you on {0}. It never messages {1}; the reminder text is yours to send."
-msgstr "Kept reminds you on {0}. It never messages {1}; the reminder text is yours to send."
+msgstr "Tingfinder reminds you on {0}. It never messages {1}; the reminder text is yours to send."
 
 #: src/components/lending/lend-sheet.tsx
 #: src/components/lending/thing-loans.tsx
@@ -14164,15 +14164,15 @@ msgstr "Opened {0}"
 
 #: src/components/warranties/warranty-sheet.tsx
 msgid "Optional. Kept reminds you before this day."
-msgstr "Optional. Kept reminds you before this day."
+msgstr "Optional. Tingfinder reminds you before this day."
 
 #: src/components/lending/borrow-sheet.tsx
 msgid "Optional. Kept reminds you when it's due back."
-msgstr "Optional. Kept reminds you when it's due back."
+msgstr "Optional. Tingfinder reminds you when it's due back."
 
 #: src/components/lending/lend-sheet.tsx
 msgid "Optional. Kept reminds you, never them, when it's overdue."
-msgstr "Optional. Kept reminds you, never them, when it's overdue."
+msgstr "Optional. Tingfinder reminds you, never them, when it's overdue."
 
 #: src/components/claims/claim-sheet.tsx
 msgid "Optional. Shown as \"Warranty saved you\" when the repair cost nothing."
@@ -14307,11 +14307,11 @@ msgstr "Update the claim"
 
 #: src/components/lending/thing-loans.tsx
 msgid "uses Kept"
-msgstr "uses Kept"
+msgstr "uses Tingfinder"
 
 #: src/components/lending/person-picker.tsx
 msgid "Uses Kept"
-msgstr "Uses Kept"
+msgstr "Uses Tingfinder"
 
 #: src/components/things/header.tsx
 msgid "Usually in"
@@ -14385,7 +14385,7 @@ msgstr "What's wrong"
 
 #: src/components/claims/claims-section.tsx
 msgid "When it breaks, open a claim: Kept fills in the warranty that covers longest and remembers where it went for repair."
-msgstr "When it breaks, open a claim: Kept fills in the warranty that covers longest and remembers where it went for repair."
+msgstr "When it breaks, open a claim: Tingfinder fills in the warranty that covers longest and remembers where it went for repair."
 
 #: src/components/lending/return-sheet.tsx
 msgid "Where it goes"
@@ -14479,7 +14479,7 @@ msgstr "{MAX_CALENDAR_FEEDS, plural, one {# link is the most. Revoke one to make
 
 #: src/components/notifications/settings/channels.tsx
 msgid "{MAX_WEBHOOK_CHANNELS, plural, one {You have # webhook, the most Kept allows.} other {You have # webhooks, the most Kept allows.}}"
-msgstr "{MAX_WEBHOOK_CHANNELS, plural, one {You have # webhook, the most Kept allows.} other {You have # webhooks, the most Kept allows.}}"
+msgstr "{MAX_WEBHOOK_CHANNELS, plural, one {You have # webhook, the most Tingfinder allows.} other {You have # webhooks, the most Tingfinder allows.}}"
 
 #: src/components/notifications/centre.tsx
 msgid "{unreadText} unread"
@@ -14523,7 +14523,7 @@ msgstr "AI used 80% of this month's cap"
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Allow notifications for Kept in this browser's settings, then try again."
-msgstr "Allow notifications for Kept in this browser's settings, then try again."
+msgstr "Allow notifications for Tingfinder in this browser's settings, then try again."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Browser"
@@ -14647,7 +14647,7 @@ msgstr "Enter the full address, starting with https://"
 
 #: src/components/notifications/settings/notification-settings.tsx
 msgid "Everything lands in the notification centre. These reach you outside Kept as well."
-msgstr "Everything lands in the notification centre. These reach you outside Kept as well."
+msgstr "Everything lands in the notification centre. These reach you outside Tingfinder as well."
 
 #: src/routes/_app/admin.alerts.tsx
 #: src/routes/_app/admin.status.tsx
@@ -14660,7 +14660,7 @@ msgstr "Failing since {since}"
 
 #: src/components/notifications/settings/channels.tsx
 msgid "For your own automations: Kept posts a signed message when something is due, with ids and dates only, never names."
-msgstr "For your own automations: Kept posts a signed message when something is due, with ids and dates only, never names."
+msgstr "For your own automations: Tingfinder posts a signed message when something is due, with ids and dates only, never names."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "How to install"
@@ -14668,7 +14668,7 @@ msgstr "How to install"
 
 #: src/components/notifications/settings/kinds.tsx
 msgid "In Kept"
-msgstr "In Kept"
+msgstr "In Tingfinder"
 
 #: src/components/notifications/settings/channels.tsx
 msgid "It answered {code}."
@@ -14686,23 +14686,23 @@ msgstr "It's no longer there."
 #: src/routes/_app/admin.alerts.tsx
 #: src/routes/_app/admin.status.tsx
 msgid "Kept last checked for due reminders {lastOk}. Until it checks again, nobody gets new reminders."
-msgstr "Kept last checked for due reminders {lastOk}. Until it checks again, nobody gets new reminders."
+msgstr "Tingfinder last checked for due reminders {lastOk}. Until it checks again, nobody gets new reminders."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Kept sends at most 5 tests an hour, across all your channels and devices. Try again later."
-msgstr "Kept sends at most 5 tests an hour, across all your channels and devices. Try again later."
+msgstr "Tingfinder sends at most 5 tests an hour, across all your channels and devices. Try again later."
 
 #: src/components/notifications/settings/calendar.tsx
 msgid "Kept shows it only this once. Anyone with it can read the titles and dates."
-msgstr "Kept shows it only this once. Anyone with it can read the titles and dates."
+msgstr "Tingfinder shows it only this once. Anyone with it can read the titles and dates."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Kept shows it only this once. Your receiver checks each message's Kept-Signature header with it."
-msgstr "Kept shows it only this once. Your receiver checks each message's Kept-Signature header with it."
+msgstr "Tingfinder shows it only this once. Your receiver checks each message's Tingfinder-Signature header with it."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Kept stops posting to it. Its secret can't be used again."
-msgstr "Kept stops posting to it. Its secret can't be used again."
+msgstr "Tingfinder stops posting to it. Its secret can't be used again."
 
 #: src/components/notifications/settings/calendar.tsx
 msgid "Last fetched {fetched}"
@@ -14718,7 +14718,7 @@ msgstr "Link made {made}"
 
 #: src/components/notifications/settings/calendar.tsx
 msgid "Locations that require two-factor are left out of the feed. Google Calendar fetches the link from Google's servers, so it works there only when Kept can be reached from the internet."
-msgstr "Locations that require two-factor are left out of the feed. Google Calendar fetches the link from Google's servers, so it works there only when Kept can be reached from the internet."
+msgstr "Locations that require two-factor are left out of the feed. Google Calendar fetches the link from Google's servers, so it works there only when Tingfinder can be reached from the internet."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Mail isn't configured on this server, so no email goes out yet."
@@ -14775,7 +14775,7 @@ msgstr "Notifications are blocked"
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Notifications are blocked for Kept in this browser's settings. Allow them there, then come back."
-msgstr "Notifications are blocked for Kept in this browser's settings. Allow them there, then come back."
+msgstr "Notifications are blocked for Tingfinder in this browser's settings. Allow them there, then come back."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Notifications are on for this device"
@@ -14783,7 +14783,7 @@ msgstr "Notifications are on for this device"
 
 #: src/components/notifications/settings/channels.tsx
 msgid "On iPhone and iPad, notifications work only from the installed app. Add Kept to your Home Screen, open it from there and turn them on. Until then, email reaches you."
-msgstr "On iPhone and iPad, notifications work only from the installed app. Add Kept to your Home Screen, open it from there and turn them on. Until then, email reaches you."
+msgstr "On iPhone and iPad, notifications work only from the installed app. Add Tingfinder to your Home Screen, open it from there and turn them on. Until then, email reaches you."
 
 #: src/components/notifications/settings/notification-settings.tsx
 msgid "Once a month: what AI did for you and what it used."
@@ -14840,7 +14840,7 @@ msgstr "Reminders have stopped going out"
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Reminders pop up here even when Kept is closed. Your browser asks first."
-msgstr "Reminders pop up here even when Kept is closed. Your browser asks first."
+msgstr "Reminders pop up here even when Tingfinder is closed. Your browser asks first."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Remove {name}"
@@ -14904,7 +14904,7 @@ msgstr "Test sent"
 
 #: src/components/notifications/settings/channels.tsx
 msgid "That device stops receiving push from Kept. Turn it on again from the device itself."
-msgstr "That device stops receiving push from Kept. Turn it on again from the device itself."
+msgstr "That device stops receiving push from Tingfinder. Turn it on again from the device itself."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "The mail server didn't take it. Try again later."
@@ -14916,7 +14916,7 @@ msgstr "The test didn't arrive"
 
 #: src/components/notifications/settings/channels.tsx
 msgid "This browser can't receive notifications from Kept. Email still reaches you."
-msgstr "This browser can't receive notifications from Kept. Email still reaches you."
+msgstr "This browser can't receive notifications from Tingfinder. Email still reaches you."
 
 #: src/components/notifications/settings/notification-settings.tsx
 msgid "Times are in <0>{zone}</0>, your time zone."
@@ -14981,11 +14981,11 @@ msgstr "What's coming up arrives together, once a day."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Where Kept posts. Only its host is shown after this."
-msgstr "Where Kept posts. Only its host is shown after this."
+msgstr "Where Tingfinder posts. Only its host is shown after this."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Your account has no email address, so Kept tells you here, in the app."
-msgstr "Your account has no email address, so Kept tells you here, in the app."
+msgstr "Your account has no email address, so Tingfinder tells you here, in the app."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Your account has no email address."
@@ -15180,7 +15180,7 @@ msgstr "Claims under {name}"
 
 #: src/components/reports/claim-pack.tsx
 msgid "Copy it now: Kept shows it only this once."
-msgstr "Copy it now: Kept shows it only this once."
+msgstr "Copy it now: Tingfinder shows it only this once."
 
 #: src/components/reports/claim-pack.tsx
 msgid "Couldn't check on the claim pack"
@@ -15300,15 +15300,15 @@ msgstr "Keep the notes under {NOTES_MAX} characters."
 
 #: src/components/reports/insurance-report.tsx
 msgid "Kept converts only with a rate you entered, never an estimate. Add one dated on or before the report's day, or make the report without a converted total."
-msgstr "Kept converts only with a rate you entered, never an estimate. Add one dated on or before the report's day, or make the report without a converted total."
+msgstr "Tingfinder converts only with a rate you entered, never an estimate. Add one dated on or before the report's day, or make the report without a converted total."
 
 #: src/components/money/exchange-rates.tsx
 msgid "Kept converts totals only with a rate you entered here, for that pair or its inverse. It never estimates one, and never goes through a third currency: without a rate, totals stay per currency."
-msgstr "Kept converts totals only with a rate you entered here, for that pair or its inverse. It never estimates one, and never goes through a third currency: without a rate, totals stay per currency."
+msgstr "Tingfinder converts totals only with a rate you entered here, for that pair or its inverse. It never estimates one, and never goes through a third currency: without a rate, totals stay per currency."
 
 #: src/components/reports/claim-pack.tsx
 msgid "Kept until {keptUntil}."
-msgstr "Kept until {keptUntil}."
+msgstr "Tingfinder until {keptUntil}."
 
 #: src/components/incidents/incidents-screen.tsx
 msgid "Kind or reference"
@@ -15505,7 +15505,7 @@ msgstr "The things stay as they are; only the incident and its references go. Yo
 
 #: src/components/reports/claim-pack.tsx
 msgid "This browser can't save files here. Open Kept in Safari to download it."
-msgstr "This browser can't save files here. Open Kept in Safari to download it."
+msgstr "This browser can't save files here. Open Tingfinder in Safari to download it."
 
 #: src/components/reports/claim-pack.tsx
 msgid "This claim pack has expired"
@@ -15814,7 +15814,7 @@ msgstr "Past {at}"
 
 #: src/components/filters/list-export.household.tsx
 msgid "Kept exports at most five lists an hour. Try again later."
-msgstr "Kept exports at most five lists an hour. Try again later."
+msgstr "Tingfinder exports at most five lists an hour. Try again later."
 
 #: src/components/filters/list-export.household.tsx
 msgid "Export or print this list"
@@ -15862,7 +15862,7 @@ msgstr "Homebox"
 
 #: src/components/filters/registry.tsx
 msgid "Kept export"
-msgstr "Kept export"
+msgstr "Tingfinder export"
 
 #: src/components/filters/registry.tsx
 msgid "LubeLogger CSV"
@@ -16327,7 +16327,7 @@ msgstr "{typed} {unit} is lower than {before} {unit} on {on}. Readings can't go 
 
 #: src/components/readings/log-reading-sheet.tsx
 msgid "A new meter starts again from 0. Kept adds what the old one had reached, so the history keeps going up."
-msgstr "A new meter starts again from 0. Kept adds what the old one had reached, so the history keeps going up."
+msgstr "A new meter starts again from 0. Tingfinder adds what the old one had reached, so the history keeps going up."
 
 #: src/components/things/create-sheet.tsx
 msgid "Add the first reading"
@@ -16423,23 +16423,23 @@ msgstr "Its invoice and what was read from it go too. This can't be undone."
 
 #: src/components/services/log-service-sheet.tsx
 msgid "Kept as a draft on its Services tab until you save it."
-msgstr "Kept as a draft on its Services tab until you save it."
+msgstr "Tingfinder as a draft on its Services tab until you save it."
 
 #: src/components/readings/log-reading-sheet.tsx
 msgid "Kept as proof"
-msgstr "Kept as proof"
+msgstr "Tingfinder as proof"
 
 #: src/components/readings/log-reading-sheet.tsx
 msgid "Kept checks it against your other readings when it syncs; if it doesn't fit, it waits in your Inbox."
-msgstr "Kept checks it against your other readings when it syncs; if it doesn't fit, it waits in your Inbox."
+msgstr "Tingfinder checks it against your other readings when it syncs; if it doesn't fit, it waits in your Inbox."
 
 #: src/components/services/invoice-suggestions.tsx
 msgid "Kept couldn't read the invoice. Type the lines."
-msgstr "Kept couldn't read the invoice. Type the lines."
+msgstr "Tingfinder couldn't read the invoice. Type the lines."
 
 #: src/components/things/create-sheet.tsx
 msgid "Kept tracks <0>{0}</0> from this reading on: its estimates and the services due by distance start here. You can add it later from its page."
-msgstr "Kept tracks <0>{0}</0> from this reading on: its estimates and the services due by distance start here. You can add it later from its page."
+msgstr "Tingfinder tracks <0>{0}</0> from this reading on: its estimates and the services due by distance start here. You can add it later from its page."
 
 #: src/components/capture/capture-screen.tsx
 msgid "Label photos go on <0>{0}</0>"
@@ -16487,7 +16487,7 @@ msgstr "Nothing on this phone has a meter yet"
 
 #: src/components/home/quick-log.tsx
 msgid "Open Kept once while online, so this phone has your things and their meters."
-msgstr "Open Kept once while online, so this phone has your things and their meters."
+msgstr "Open Tingfinder once while online, so this phone has your things and their meters."
 
 #: src/components/readings/log-reading-sheet.tsx
 msgid "Optional. It joins the meter's proof photos."
@@ -16678,7 +16678,7 @@ msgstr "Its values show to everyone who can see the thing, and history keeps the
 
 #: src/components/registries/convert-field-sheet.household.tsx
 msgid "Secrets are values Kept must be able to recover. Save the recovery kit on the status page, then make the field secret again."
-msgstr "Secrets are values Kept must be able to recover. Save the recovery kit on the status page, then make the field secret again."
+msgstr "Secrets are values Tingfinder must be able to recover. Save the recovery kit on the status page, then make the field secret again."
 
 #: src/components/registries/convert-field-sheet.household.tsx
 msgid "The person who runs this server needs to save the recovery kit before secrets can be kept. Ask them, then make the field secret again."
@@ -16843,11 +16843,11 @@ msgstr "Set a minimum"
 
 #: src/components/consumables/stock.household.tsx
 msgid "No minimum. Set one and Kept lists it as low when fewer are left."
-msgstr "No minimum. Set one and Kept lists it as low when fewer are left."
+msgstr "No minimum. Set one and Tingfinder lists it as low when fewer are left."
 
 #: src/routes/_app/settings.export.tsx
 msgid "One file per location: everything in it, the original photos and documents, and a copy you can read without Kept. Import it into this Kept or another one."
-msgstr "One file per location: everything in it, the original photos and documents, and a copy you can read without Kept. Import it into this Kept or another one."
+msgstr "One file per location: everything in it, the original photos and documents, and a copy you can read without Tingfinder. Import it into this Tingfinder or another one."
 
 #: src/components/export/export-sheet.tsx
 #: src/routes/_app/settings.export.tsx
@@ -16862,7 +16862,7 @@ msgstr "Export my data"
 
 #: src/routes/_app/settings.export.tsx
 msgid "Each download link is made when you click Download and lasts 5 minutes; Kept checks you're still an owner or admin every time. Exports are kept 7 days."
-msgstr "Each download link is made when you click Download and lasts 5 minutes; Kept checks you're still an owner or admin every time. Exports are kept 7 days."
+msgstr "Each download link is made when you click Download and lasts 5 minutes; Tingfinder checks you're still an owner or admin every time. Exports are kept 7 days."
 
 #: src/routes/_app/settings.index.tsx
 msgid "Your data"
@@ -16878,7 +16878,7 @@ msgstr "Someone changed this import in the meantime. It has been reloaded; check
 
 #: src/components/import/archive-run.tsx
 msgid "Kept can't read this archive"
-msgstr "Kept can't read this archive"
+msgstr "Tingfinder can't read this archive"
 
 #: src/components/import/archive-run.tsx
 msgid "Nothing was imported"
@@ -16886,7 +16886,7 @@ msgstr "Nothing was imported"
 
 #: src/components/import/archive-run.tsx
 msgid "It isn't an export Kept can read. Export it again and try once more."
-msgstr "It isn't an export Kept can read. Export it again and try once more."
+msgstr "It isn't an export Tingfinder can read. Export it again and try once more."
 
 #: src/components/import/archive-run.tsx
 #: src/components/import/archive-step.tsx
@@ -17024,7 +17024,7 @@ msgstr "The Homebox export"
 
 #: src/components/import/archive-step.tsx
 msgid "The Kept export"
-msgstr "The Kept export"
+msgstr "The Tingfinder export"
 
 #: src/components/import/archive-step.tsx
 msgid "Checking the file"
@@ -17056,7 +17056,7 @@ msgstr "Restart Homebox and export again: v0.26 exports once each time it starts
 
 #: src/components/import/archive-step.tsx
 msgid "A Kept export always comes in as a new location, with its photos, documents, history and printed labels."
-msgstr "A Kept export always comes in as a new location, with its photos, documents, history and printed labels."
+msgstr "A Tingfinder export always comes in as a new location, with its photos, documents, history and printed labels."
 
 #: src/components/import/enrich-offer.tsx
 msgid "Adding search words"
@@ -17156,7 +17156,7 @@ msgstr "Homebox's export has no currency. Choosing one relabels the amounts; it 
 
 #: src/components/import/homebox-choices.tsx
 msgid "Homebox's currency, <0>{fromConnection}</0>, isn't turned on in Kept. An instance admin can turn it on in Admin → Currencies."
-msgstr "Homebox's currency, <0>{fromConnection}</0>, isn't turned on in Kept. An instance admin can turn it on in Admin → Currencies."
+msgstr "Homebox's currency, <0>{fromConnection}</0>, isn't turned on in Tingfinder. An instance admin can turn it on in Admin → Currencies."
 
 #: src/components/import/homebox-choices.tsx
 msgid "This location counts in <0>{locationCurrency}</0>; prices in another currency are kept as they are."
@@ -17212,7 +17212,7 @@ msgstr "Keep in notes"
 
 #: src/components/import/homebox-choices.tsx
 msgid "Homebox's types are matched to Kept's by name, and its custom fields are added to their types. The check shows what that does before anything is imported."
-msgstr "Homebox's types are matched to Kept's by name, and its custom fields are added to their types. The check shows what that does before anything is imported."
+msgstr "Homebox's types are matched to Tingfinder's by name, and its custom fields are added to their types. The check shows what that does before anything is imported."
 
 #: src/components/import/homebox-choices.tsx
 msgid "number"
@@ -17232,7 +17232,7 @@ msgstr "text"
 
 #: src/components/import/homebox-choices.tsx
 msgid "A Kept type"
-msgstr "A Kept type"
+msgstr "A Tingfinder type"
 
 #: src/components/import/homebox-choices.tsx
 msgid "Created"
@@ -17252,7 +17252,7 @@ msgstr "{0, plural, one {# item} other {# items}}"
 
 #: src/components/import/homebox-choices.tsx
 msgid "Kept type for {name}"
-msgstr "Kept type for {name}"
+msgstr "Tingfinder type for {name}"
 
 #: src/components/import/homebox-choices.tsx
 msgid "Create \"{name}\""
@@ -17348,7 +17348,7 @@ msgstr "Couldn't connect"
 
 #: src/components/import/kept-choices.tsx
 msgid "A Kept <0>{0}</0> export{1}{2}"
-msgstr "A Kept <0>{0}</0> export{1}{2}"
+msgstr "A Tingfinder <0>{0}</0> export{1}{2}"
 
 #: src/components/import/kept-choices.tsx
 msgid "{0, plural, one {event in the history} other {events in the history}}"
@@ -17397,7 +17397,7 @@ msgstr "Nobody is invited by the import: invite each person yourself, with their
 
 #: src/components/import/labels.ts
 msgid "Not imported: a file type Kept doesn't keep."
-msgstr "Not imported: a file type Kept doesn't keep."
+msgstr "Not imported: a file type Tingfinder doesn't keep."
 
 #: src/components/import/labels.ts
 msgid "The file isn't in the archive, so it's left out."
@@ -17405,11 +17405,11 @@ msgstr "The file isn't in the archive, so it's left out."
 
 #: src/components/import/labels.ts
 msgid "The file is larger than Kept takes, so it's left out."
-msgstr "The file is larger than Kept takes, so it's left out."
+msgstr "The file is larger than Tingfinder takes, so it's left out."
 
 #: src/components/import/labels.ts
 msgid "Not something Kept reads from an export; ignored."
-msgstr "Not something Kept reads from an export; ignored."
+msgstr "Not something Tingfinder reads from an export; ignored."
 
 #: src/components/import/labels.ts
 msgid "Archived in Homebox, left out."
@@ -17417,7 +17417,7 @@ msgstr "Archived in Homebox, left out."
 
 #: src/components/import/labels.ts
 msgid "Counted one by one in Kept; Homebox's quantity is kept in the notes."
-msgstr "Counted one by one in Kept; Homebox's quantity is kept in the notes."
+msgstr "Counted one by one in Tingfinder; Homebox's quantity is kept in the notes."
 
 #: src/components/import/labels.ts
 msgid "Quantity 0 became 1: Homebox gives 0 when none was set."
@@ -17429,19 +17429,19 @@ msgstr "Homebox keeps numbers whole, so any decimals were already lost there."
 
 #: src/components/import/labels.ts
 msgid "Kept has no icon like Homebox's; the type's own icon is used."
-msgstr "Kept has no icon like Homebox's; the type's own icon is used."
+msgstr "Tingfinder has no icon like Homebox's; the type's own icon is used."
 
 #: src/components/import/labels.ts
 msgid "A Kept template can't hold money or secrets; the rest of the template is imported."
-msgstr "A Kept template can't hold money or secrets; the rest of the template is imported."
+msgstr "A Tingfinder template can't hold money or secrets; the rest of the template is imported."
 
 #: src/components/import/labels.ts
 msgid "This currency isn't turned on in Kept; the prices are kept in the notes."
-msgstr "This currency isn't turned on in Kept; the prices are kept in the notes."
+msgstr "This currency isn't turned on in Tingfinder; the prices are kept in the notes."
 
 #: src/components/import/labels.ts
 msgid "Kept can't hold this record yet; its text is kept in the thing's notes."
-msgstr "Kept can't hold this record yet; its text is kept in the thing's notes."
+msgstr "Tingfinder can't hold this record yet; its text is kept in the thing's notes."
 
 #: src/components/import/labels.ts
 msgid "A location inside an item became a container."
@@ -17489,11 +17489,11 @@ msgstr "It's incomplete: the download or the copy stopped before the end."
 
 #: src/components/import/labels.ts
 msgid "It's from a newer version than this Kept reads. Update Kept, then import it."
-msgstr "It's from a newer version than this Kept reads. Update Kept, then import it."
+msgstr "It's from a newer version than this Tingfinder reads. Update Tingfinder, then import it."
 
 #: src/components/import/labels.ts
 msgid "It's protected with a ZIP password, which Kept can't open. Export it again without one."
-msgstr "It's protected with a ZIP password, which Kept can't open. Export it again without one."
+msgstr "It's protected with a ZIP password, which Tingfinder can't open. Export it again without one."
 
 #: src/components/import/labels.ts
 msgid "One of its data files is too large to read."
@@ -17513,11 +17513,11 @@ msgstr "Homebox v0.26 or newer: Collection settings → Export. Older than v0.26
 
 #: src/components/import/source-step.tsx
 msgid "A Kept export"
-msgstr "A Kept export"
+msgstr "A Tingfinder export"
 
 #: src/components/import/source-step.tsx
 msgid "A location exported from this Kept or another one. It comes in as a new location."
-msgstr "A location exported from this Kept or another one. It comes in as a new location."
+msgstr "A location exported from this Tingfinder or another one. It comes in as a new location."
 
 #: src/components/import/target-step.tsx
 msgid "Give the new location a name."
@@ -17537,7 +17537,7 @@ msgstr "Made in your account, with its own Unplaced area."
 
 #: src/components/import/target-step.tsx
 msgid "A Kept export always comes in as a new location."
-msgstr "A Kept export always comes in as a new location."
+msgstr "A Tingfinder export always comes in as a new location."
 
 #: src/components/import/target-step.tsx
 msgid "A location you run"
@@ -17678,7 +17678,7 @@ msgstr "Things in the Trash"
 
 #: src/components/export/export-sheet.tsx
 msgid "A copy you can read without Kept"
-msgstr "A copy you can read without Kept"
+msgstr "A copy you can read without Tingfinder"
 
 #: src/components/export/export-sheet.tsx
 msgid "with the inventory PDF"
@@ -17702,7 +17702,7 @@ msgstr "Encrypted with a passphrase you choose. The readable copy never holds th
 
 #: src/components/export/export-sheet.tsx
 msgid "Anyone with this file and the passphrase can read every secret in it. Kept can't recover a forgotten passphrase."
-msgstr "Anyone with this file and the passphrase can read every secret in it. Kept can't recover a forgotten passphrase."
+msgstr "Anyone with this file and the passphrase can read every secret in it. Tingfinder can't recover a forgotten passphrase."
 
 #: src/components/export/export-sheet.tsx
 msgid "Export <0>{name}</0>"
@@ -17750,7 +17750,7 @@ msgstr "Five exports an hour at most. Try again a little later."
 
 #: src/components/export/labels.ts
 msgid "Secrets leave Kept only once the recovery kit is saved. An instance admin saves it from the status page."
-msgstr "Secrets leave Kept only once the recovery kit is saved. An instance admin saves it from the status page."
+msgstr "Secrets leave Tingfinder only once the recovery kit is saved. An instance admin saves it from the status page."
 
 #: src/components/export/labels.ts
 msgid "Use a passphrase of at least 12 characters, the same both times."
@@ -17890,7 +17890,7 @@ msgstr "{name}, {unit}"
 
 #: src/components/vehicles/list.tsx
 msgid "A car, a motorbike or a generator: Kept keeps its odometer, what's due, fuel and running costs."
-msgstr "A car, a motorbike or a generator: Kept keeps its odometer, what's due, fuel and running costs."
+msgstr "A car, a motorbike or a generator: Tingfinder keeps its odometer, what's due, fuel and running costs."
 
 #: src/components/vehicles/readings-tab.tsx
 msgid "Accepted"
@@ -18248,7 +18248,7 @@ msgstr "{label}: {plain}"
 
 #: src/components/connections/revoke.tsx
 msgid "{name} can't reach your Kept any more"
-msgstr "{name} can't reach your Kept any more"
+msgstr "{name} can't reach your Tingfinder any more"
 
 #: src/components/connections/oauth-apps.tsx
 msgid "{scope} · <0>{where}</0> · allowed {granted} · not used yet"
@@ -18276,11 +18276,11 @@ msgstr "{scope} · <0>{where}</0> · used {used}"
 
 #: src/routes/oauth/consent.tsx
 msgid "<0>{name}</0> wants to use your Kept"
-msgstr "<0>{name}</0> wants to use your Kept"
+msgstr "<0>{name}</0> wants to use your Tingfinder"
 
 #: src/components/oidc-sign-in.tsx
 msgid "<0>{who}</0> hasn't confirmed your email address, so Kept can't use it. Confirm it there, then try again."
-msgstr "<0>{who}</0> hasn't confirmed your email address, so Kept can't use it. Confirm it there, then try again."
+msgstr "<0>{who}</0> hasn't confirmed your email address, so Tingfinder can't use it. Confirm it there, then try again."
 
 #: src/components/ai/what-uses-ai.tsx
 msgid "~{0} tokens"
@@ -18300,7 +18300,7 @@ msgstr "A reminder is due"
 
 #: src/routes/_app/help.tsx
 msgid "A Shortcut that asks for the reading and sends it to Kept with a token."
-msgstr "A Shortcut that asks for the reading and sends it to Kept with a token."
+msgstr "A Shortcut that asks for the reading and sends it to Tingfinder with a token."
 
 #: src/components/webhooks/list.tsx
 msgid "A signed message to your own server when things change here. It carries ids and the names of changed fields, never names, places or values."
@@ -18357,7 +18357,7 @@ msgstr "Add webhook"
 
 #: src/components/connections/shortcut-recipe.tsx
 msgid "Add your car to Kept with an odometer reading first; its address appears here then."
-msgstr "Add your car to Kept with an odometer reading first; its address appears here then."
+msgstr "Add your car to Tingfinder with an odometer reading first; its address appears here then."
 
 #: src/components/webhooks/list.tsx
 msgid "Added by <0>{0}</0>"
@@ -18438,7 +18438,7 @@ msgstr "Copy it now. You won't see it again; rotate it if it's lost."
 
 #: src/components/connections/token-create.tsx
 msgid "Copy it now. You won't see this again: Kept keeps only a fingerprint of it."
-msgstr "Copy it now. You won't see this again: Kept keeps only a fingerprint of it."
+msgstr "Copy it now. You won't see this again: Tingfinder keeps only a fingerprint of it."
 
 #: src/components/webhooks/edit.tsx
 msgid "Copy secret"
@@ -18535,7 +18535,7 @@ msgstr "Find things and read what's recorded. No changes, no secret fields."
 
 #: src/components/admin/oidc-status.tsx
 msgid "Fix it, then restart Kept. Everything else works meanwhile."
-msgstr "Fix it, then restart Kept. Everything else works meanwhile."
+msgstr "Fix it, then restart Tingfinder. Everything else works meanwhile."
 
 #: src/components/webhooks/words.tsx
 msgid "Gave up"
@@ -18563,7 +18563,7 @@ msgstr "Issuer"
 
 #: src/components/connections/oauth-apps.tsx
 msgid "It stops reaching your Kept at once. To use it again, connect it again from the app."
-msgstr "It stops reaching your Kept at once. To use it again, connect it again from the app."
+msgstr "It stops reaching your Tingfinder at once. To use it again, connect it again from the app."
 
 #: src/routes/invite.tsx
 msgid "Join with <0>{oidcName}</0>"
@@ -18571,27 +18571,27 @@ msgstr "Join with <0>{oidcName}</0>"
 
 #: src/components/admin/embeddings-source.tsx
 msgid "Kept downloads the model once ({size}) and runs it on this server: no key, no per-call cost. Everything is indexed again with it."
-msgstr "Kept downloads the model once ({size}) and runs it on this server: no key, no per-call cost. Everything is indexed again with it."
+msgstr "Tingfinder downloads the model once ({size}) and runs it on this server: no key, no per-call cost. Everything is indexed again with it."
 
 #: src/components/oidc-sign-in.tsx
 msgid "Kept needs an address that can receive mail for an account."
-msgstr "Kept needs an address that can receive mail for an account."
+msgstr "Tingfinder needs an address that can receive mail for an account."
 
 #: src/components/oidc-sign-in.tsx
 msgid "Kept never matches accounts by their email. If you're new here, open the invite someone sent you and join with <0>{who}</0> from there. If you already have an account, sign in another way."
-msgstr "Kept never matches accounts by their email. If you're new here, open the invite someone sent you and join with <0>{who}</0> from there. If you already have an account, sign in another way."
+msgstr "Tingfinder never matches accounts by their email. If you're new here, open the invite someone sent you and join with <0>{who}</0> from there. If you already have an account, sign in another way."
 
 #: src/components/admin/embeddings-source.tsx
 msgid "Kept runs the model on this server: no key, no per-call cost. Everything is indexed again with it."
-msgstr "Kept runs the model on this server: no key, no per-call cost. Everything is indexed again with it."
+msgstr "Tingfinder runs the model on this server: no key, no per-call cost. Everything is indexed again with it."
 
 #: src/components/webhooks/edit.tsx
 msgid "Kept signs every delivery with this secret, so your server can tell it came from Kept."
-msgstr "Kept signs every delivery with this secret, so your server can tell it came from Kept."
+msgstr "Tingfinder signs every delivery with this secret, so your server can tell it came from Tingfinder."
 
 #: src/components/webhooks/list.tsx
 msgid "Kept stops sending to it, and its deliveries are forgotten."
-msgstr "Kept stops sending to it, and its deliveries are forgotten."
+msgstr "Tingfinder stops sending to it, and its deliveries are forgotten."
 
 #: src/components/ai/key-scope.tsx
 msgid "Keyword only (semantic search is off on this server)"
@@ -18677,7 +18677,7 @@ msgstr "No changes by connections"
 
 #: src/components/oidc-sign-in.tsx
 msgid "No Kept account uses that sign-in yet"
-msgstr "No Kept account uses that sign-in yet"
+msgstr "No Tingfinder account uses that sign-in yet"
 
 #: src/components/connections/tokens.tsx
 msgid "No tokens yet"
@@ -18842,7 +18842,7 @@ msgstr "Server address"
 
 #: src/components/admin/oidc-status.tsx
 msgid "Set <0>KEPT_OIDC_ISSUER</0>, <1>KEPT_OIDC_CLIENT_ID</1> and <2>KEPT_OIDC_CLIENT_SECRET</2>, then restart Kept."
-msgstr "Set <0>KEPT_OIDC_ISSUER</0>, <1>KEPT_OIDC_CLIENT_ID</1> and <2>KEPT_OIDC_CLIENT_SECRET</2>, then restart Kept."
+msgstr "Set <0>KEPT_OIDC_ISSUER</0>, <1>KEPT_OIDC_CLIENT_ID</1> and <2>KEPT_OIDC_CLIENT_SECRET</2>, then restart Tingfinder."
 
 #: src/components/connections/shortcut-recipe.tsx
 msgid "Set Request Body to JSON with two text fields: <0>value</0>, the number you typed, and <1>takenAt</1>, the Current Date formatted as ISO 8601 with the time."
@@ -18862,7 +18862,7 @@ msgstr "Sign-in with OIDC"
 
 #: src/components/admin/oidc-status.tsx
 msgid "Signing in this way reaches only an account already linked to it, or someone invited here. Kept never joins accounts because their emails match."
-msgstr "Signing in this way reaches only an account already linked to it, or someone invited here. Kept never joins accounts because their emails match."
+msgstr "Signing in this way reaches only an account already linked to it, or someone invited here. Tingfinder never joins accounts because their emails match."
 
 #: src/components/oidc-sign-in.tsx
 msgid "Signing in with <0>{who}</0> didn't work"
@@ -18878,7 +18878,7 @@ msgstr "Start connecting again from the app."
 
 #: src/components/connections/shortcut-recipe.tsx
 msgid "Tap the Shortcut at the pump or in the car park, type the odometer, and the reading is in Kept, with undo, as if you'd logged it here."
-msgstr "Tap the Shortcut at the pump or in the car park, type the odometer, and the reading is in Kept, with undo, as if you'd logged it here."
+msgstr "Tap the Shortcut at the pump or in the car park, type the odometer, and the reading is in Tingfinder, with undo, as if you'd logged it here."
 
 #: src/routes/_app/settings.connections.tsx
 msgid "Tell your own server when things change here."
@@ -18898,7 +18898,7 @@ msgstr "That email address can't be used"
 
 #: src/routes/oauth/consent.tsx
 msgid "That's the name the app gives itself. Kept can't confirm who made it."
-msgstr "That's the name the app gives itself. Kept can't confirm who made it."
+msgstr "That's the name the app gives itself. Tingfinder can't confirm who made it."
 
 #: src/routes/oauth/consent.tsx
 msgid "The app could move what it finds in one into another, so people in one could see what came from the other. Connect it to one location unless you mean that."
@@ -18930,7 +18930,7 @@ msgstr "The old secret stopped working. Put this one on your server; every deliv
 
 #: src/components/admin/oidc-status.tsx
 msgid "The provider couldn't be reached when Kept started."
-msgstr "The provider couldn't be reached when Kept started."
+msgstr "The provider couldn't be reached when Tingfinder started."
 
 #: src/components/admin/oidc-status.tsx
 msgid "The provider says it's a different issuer from KEPT_OIDC_ISSUER."
@@ -18958,7 +18958,7 @@ msgstr "Things indexed for search"
 
 #: src/components/oidc-sign-in.tsx
 msgid "This Kept lets people in by invite. Ask someone who uses it to invite you, then join from the invite link."
-msgstr "This Kept lets people in by invite. Ask someone who uses it to invite you, then join from the invite link."
+msgstr "This Tingfinder lets people in by invite. Ask someone who uses it to invite you, then join from the invite link."
 
 #: src/routes/oauth/consent.tsx
 msgid "This request isn't valid any more"
@@ -19069,7 +19069,7 @@ msgstr "Your server didn't answer"
 
 #: src/components/webhooks/edit.tsx
 msgid "Your server's address. Kept sends a signed POST there."
-msgstr "Your server's address. Kept sends a signed POST there."
+msgstr "Your server's address. Tingfinder sends a signed POST there."
 
 #: src/routes/_app/assistant.$threadId.tsx
 msgid "Delete this thread"
@@ -19125,7 +19125,7 @@ msgstr "Ask the assistant about “{0}”"
 #: src/assistant/composer.tsx
 #: src/components/capture/name-field.tsx
 msgid "Kept can't use the microphone"
-msgstr "Kept can't use the microphone"
+msgstr "Tingfinder can't use the microphone"
 
 #: src/assistant/composer.tsx
 #: src/components/capture/name-field.tsx
@@ -19294,7 +19294,7 @@ msgstr "{count} of {total} ×"
 
 #: src/assistant/confirm-card.tsx
 msgid "Something Kept can't name"
-msgstr "Something Kept can't name"
+msgstr "Something Tingfinder can't name"
 
 #. placeholder {0}: verbs[row.verb]
 #. placeholder {1}: isolate(row.target?.name ?? '')
@@ -19363,7 +19363,7 @@ msgstr "Only ticked rows are saved"
 
 #: src/assistant/confirm-card.tsx
 msgid "Changes for you to confirm, drawn by Kept"
-msgstr "Changes for you to confirm, drawn by Kept"
+msgstr "Changes for you to confirm, drawn by Tingfinder"
 
 #: src/assistant/confirm-card.tsx
 msgid "Time left to confirm"
@@ -19430,7 +19430,7 @@ msgstr "Viewers can ask; changes need an admin"
 
 #: src/assistant/conversation.tsx
 msgid "Ask where something is or what's due, or ask for a change. Nothing changes until you confirm the card Kept shows you."
-msgstr "Ask where something is or what's due, or ask for a change. Nothing changes until you confirm the card Kept shows you."
+msgstr "Ask where something is or what's due, or ask for a change. Nothing changes until you confirm the card Tingfinder shows you."
 
 #: src/assistant/conversation.tsx
 msgid "Say or type a list, like “in the garage I have a drill, a ladder and two paint cans”, and add them all with one Confirm."
@@ -19529,7 +19529,7 @@ msgstr "Backups"
 
 #: src/routes/_app/settings.device.tsx
 msgid "Lock Kept on this device"
-msgstr "Lock Kept on this device"
+msgstr "Lock Tingfinder on this device"
 
 #: src/components/history/labels.ts
 msgid "Issued on"
@@ -19553,11 +19553,11 @@ msgstr "Starter schedules added"
 
 #: src/components/vehicles/overview.tsx
 msgid "{nudgeDays, plural, one {A fresh one keeps ~{next} honest; Kept nudges you at # day.} other {A fresh one keeps ~{next} honest; Kept nudges you at # days.}}"
-msgstr "{nudgeDays, plural, one {A fresh one keeps ~{next} honest; Kept nudges you at # day.} other {A fresh one keeps ~{next} honest; Kept nudges you at # days.}}"
+msgstr "{nudgeDays, plural, one {A fresh one keeps ~{next} honest; Tingfinder nudges you at # day.} other {A fresh one keeps ~{next} honest; Tingfinder nudges you at # days.}}"
 
 #: src/components/vehicles/overview.tsx
 msgid "{nudgeDays, plural, one {Kept nudges you at # day.} other {Kept nudges you at # days.}}"
-msgstr "{nudgeDays, plural, one {Kept nudges you at # day.} other {Kept nudges you at # days.}}"
+msgstr "{nudgeDays, plural, one {Tingfinder nudges you at # day.} other {Tingfinder nudges you at # days.}}"
 
 #: src/routes/_app/admin.alerts.tsx
 msgid "A location's webhook keeps failing"
@@ -19614,7 +19614,7 @@ msgstr "Download the recovery kit"
 
 #: src/components/ops/kit-download.tsx
 msgid "Everything needed to bring Kept back on a new server: the secret keys, the backup's location, its password and storage keys, and the restore steps."
-msgstr "Everything needed to bring Kept back on a new server: the secret keys, the backup's location, its password and storage keys, and the restore steps."
+msgstr "Everything needed to bring Tingfinder back on a new server: the secret keys, the backup's location, its password and storage keys, and the restore steps."
 
 #: src/components/ops/kit-download.tsx
 msgid "Keep it off this server"
@@ -19666,7 +19666,7 @@ msgstr "Keep the recovery kit somewhere else"
 
 #: src/routes/_app/admin.status.tsx
 msgid "Kept encrypts secret fields, AI keys and the backup password with KEPT_SECRET_KEY. If this server and its key are lost together, a backup still restores your things, but not those. Download the recovery kit (or print it with <0>kept admin recovery-kit</0>) and keep it away from this server. Kept asks for this before the first secret, AI key or backup."
-msgstr "Kept encrypts secret fields, AI keys and the backup password with KEPT_SECRET_KEY. If this server and its key are lost together, a backup still restores your things, but not those. Download the recovery kit (or print it with <0>kept admin recovery-kit</0>) and keep it away from this server. Kept asks for this before the first secret, AI key or backup."
+msgstr "Tingfinder encrypts secret fields, AI keys and the backup password with KEPT_SECRET_KEY. If this server and its key are lost together, a backup still restores your things, but not those. Download the recovery kit (or print it with <0>kept admin recovery-kit</0>) and keep it away from this server. Tingfinder asks for this before the first secret, AI key or backup."
 
 #: src/routes/_app/admin.status.tsx
 msgid "Changed since you downloaded it"
@@ -19722,7 +19722,7 @@ msgstr "App lock"
 
 #: src/components/device/app-lock-settings.tsx
 msgid "Ask for a PIN when Kept opens and after five minutes away. Keeping a location offline needs it."
-msgstr "Ask for a PIN when Kept opens and after five minutes away. Keeping a location offline needs it."
+msgstr "Ask for a PIN when Tingfinder opens and after five minutes away. Keeping a location offline needs it."
 
 #: src/components/device/app-lock-settings.tsx
 msgid "Change PIN"
@@ -19766,7 +19766,7 @@ msgstr "Face ID"
 
 #: src/components/device/app-lock-settings.tsx
 msgid "Face ID or fingerprint can unlock Kept now"
-msgstr "Face ID or fingerprint can unlock Kept now"
+msgstr "Face ID or fingerprint can unlock Tingfinder now"
 
 #: src/components/device/lock-screen.tsx
 msgid "Face ID or fingerprint didn’t work. Enter your PIN."
@@ -19806,23 +19806,23 @@ msgstr "Keeping {0} offline didn’t finish"
 
 #: src/components/device/app-lock-settings.tsx
 msgid "Kept app lock"
-msgstr "Kept app lock"
+msgstr "Tingfinder app lock"
 
 #: src/components/device/app-lock-settings.tsx
 msgid "Kept locks on this device now"
-msgstr "Kept locks on this device now"
+msgstr "Tingfinder locks on this device now"
 
 #: src/components/device/kept-extras.tsx
 msgid "Kept offline is locked behind your PIN."
-msgstr "Kept offline is locked behind your PIN."
+msgstr "Tingfinder offline is locked behind your PIN."
 
 #: src/components/device/kept-extras.tsx
 msgid "Kept on this device"
-msgstr "Kept on this device"
+msgstr "Tingfinder on this device"
 
 #: src/routes/_app/settings.index.tsx
 msgid "Lock Kept with a PIN, and keep a location available offline."
-msgstr "Lock Kept with a PIN, and keep a location available offline."
+msgstr "Lock Tingfinder with a PIN, and keep a location available offline."
 
 #: src/components/device/app-lock-settings.tsx
 msgid "Not available in this browser"
@@ -19834,7 +19834,7 @@ msgstr "Now turn on Face ID or fingerprint again"
 
 #: src/components/device/app-lock-settings.tsx
 msgid "On this phone Face ID or fingerprint opens Kept, but prices and documents kept offline still ask for the PIN."
-msgstr "On this phone Face ID or fingerprint opens Kept, but prices and documents kept offline still ask for the PIN."
+msgstr "On this phone Face ID or fingerprint opens Tingfinder, but prices and documents kept offline still ask for the PIN."
 
 #: src/components/device/lock-screen.tsx
 msgid "PIN"
@@ -19862,7 +19862,7 @@ msgstr "That is more than this device can keep offline."
 
 #: src/components/device/app-lock-settings.tsx
 msgid "The app lock needs storage this browser doesn’t give Kept."
-msgstr "The app lock needs storage this browser doesn’t give Kept."
+msgstr "The app lock needs storage this browser doesn’t give Tingfinder."
 
 #: src/components/device/app-lock-settings.tsx
 msgid "The PIN keeps out someone holding this phone. Forgot it? Sign out and sign in again."
@@ -19910,15 +19910,15 @@ msgstr "Use Face ID or fingerprint"
 
 #: src/components/device/keep-offline.tsx
 msgid "Whoever unlocks Kept on this phone sees prices and documents for this location."
-msgstr "Whoever unlocks Kept on this phone sees prices and documents for this location."
+msgstr "Whoever unlocks Tingfinder on this phone sees prices and documents for this location."
 
 #: src/components/device/keep-offline.tsx
 msgid "Whoever unlocks Kept on this phone sees prices and documents for this location. About {0} to download."
-msgstr "Whoever unlocks Kept on this phone sees prices and documents for this location. About {0} to download."
+msgstr "Whoever unlocks Tingfinder on this phone sees prices and documents for this location. About {0} to download."
 
 #: src/components/device/keep-offline.tsx
 msgid "Whoever unlocks Kept sees prices and documents for these locations. The PIN keeps out someone holding the phone, not someone who has copied the browser’s storage."
-msgstr "Whoever unlocks Kept sees prices and documents for these locations. The PIN keeps out someone holding the phone, not someone who has copied the browser’s storage."
+msgstr "Whoever unlocks Tingfinder sees prices and documents for these locations. The PIN keeps out someone holding the phone, not someone who has copied the browser’s storage."
 
 #: src/components/device/keep-offline.tsx
 msgid "Wrong PIN."
@@ -19971,7 +19971,7 @@ msgstr "Access key ID"
 
 #: src/components/ops/backup-target-form.tsx
 msgid "An absolute path as the server sees it: another disk, or a NAS mount. Not the disk Kept's data is on."
-msgstr "An absolute path as the server sees it: another disk, or a NAS mount. Not the disk Kept's data is on."
+msgstr "An absolute path as the server sees it: another disk, or a NAS mount. Not the disk Tingfinder's data is on."
 
 #: src/components/ops/backup-target-form.tsx
 msgid "An OpenSSH private key. It replaces the saved key when you save."
@@ -19983,7 +19983,7 @@ msgstr "Another run holds the repository. Try again when it finishes."
 
 #: src/components/ops/backup-target-form.tsx
 msgid "At least 12 characters. Without it nobody can read the backups, Kept included."
-msgstr "At least 12 characters. Without it nobody can read the backups, Kept included."
+msgstr "At least 12 characters. Without it nobody can read the backups, Tingfinder included."
 
 #: src/components/ops/backup-target-form.tsx
 msgid "Backup password"
@@ -20021,7 +20021,7 @@ msgstr "Backups need a password: no password, no backup."
 
 #: src/components/ops/status-tiles.tsx
 msgid "Backups should run every night. Check the runs in Backups, and that Kept's worker is running."
-msgstr "Backups should run every night. Check the runs in Backups, and that Kept's worker is running."
+msgstr "Backups should run every night. Check the runs in Backups, and that Tingfinder's worker is running."
 
 #: src/components/ops/ops-words.ts
 msgid "Before upgrade"
@@ -20037,7 +20037,7 @@ msgstr "Can't check this build"
 
 #: src/components/ops/backup-target-form.tsx
 msgid "Change the locked settings in the server's configuration (<0>{0}</0>) and restart Kept."
-msgstr "Change the locked settings in the server's configuration (<0>{0}</0>) and restart Kept."
+msgstr "Change the locked settings in the server's configuration (<0>{0}</0>) and restart Tingfinder."
 
 #: src/routes/_app/admin.settings.tsx
 msgid "Check for new versions"
@@ -20057,7 +20057,7 @@ msgstr "Checked for new versions"
 
 #: src/routes/_app/admin.backups.tsx
 msgid "Choose where backups go and a password. Kept then backs up the database, the files and a readable copy of every location every night, encrypted."
-msgstr "Choose where backups go and a password. Kept then backs up the database, the files and a readable copy of every location every night, encrypted."
+msgstr "Choose where backups go and a password. Tingfinder then backs up the database, the files and a readable copy of every location every night, encrypted."
 
 #: src/components/ops/backup-target-form.tsx
 msgid "Choose where backups go and set their password first."
@@ -20137,7 +20137,7 @@ msgstr "Every night at <0>{time}</0> UTC, keeping {daily} daily, {weekly} weekly
 
 #: src/components/ops/status-tiles.tsx
 msgid "Every week, Kept checks that every snapshot can be read."
-msgstr "Every week, Kept checks that every snapshot can be read."
+msgstr "Every week, Tingfinder checks that every snapshot can be read."
 
 #: src/components/ops/status-tiles.tsx
 msgid "File bucket versioning"
@@ -20161,7 +20161,7 @@ msgstr "GitHub shows no published release for this server's source repository. I
 
 #: src/components/ops/status-tiles.tsx
 msgid "GitHub's answer wasn't what Kept expected. Kept asks again tomorrow."
-msgstr "GitHub's answer wasn't what Kept expected. Kept asks again tomorrow."
+msgstr "GitHub's answer wasn't what Tingfinder expected. Tingfinder asks again tomorrow."
 
 #: src/components/ops/status-tiles.tsx
 msgid "GitHub's limit reached"
@@ -20177,31 +20177,31 @@ msgstr "Keep the saved one"
 
 #: src/components/ops/status-tiles.tsx
 msgid "Kept {v} is available"
-msgstr "Kept {v} is available"
+msgstr "Tingfinder {v} is available"
 
 #: src/components/ops/update-line.tsx
 msgid "Kept <0>{version}</0> is available"
-msgstr "Kept <0>{version}</0> is available"
+msgstr "Tingfinder <0>{version}</0> is available"
 
 #: src/components/ops/status-tiles.tsx
 msgid "Kept allows one release back. Upgrade again when the problem that made you roll back is fixed."
-msgstr "Kept allows one release back. Upgrade again when the problem that made you roll back is fixed."
+msgstr "Tingfinder allows one release back. Upgrade again when the problem that made you roll back is fixed."
 
 #: src/components/ops/status-tiles.tsx
 msgid "Kept checks it with each backup."
-msgstr "Kept checks it with each backup."
+msgstr "Tingfinder checks it with each backup."
 
 #: src/components/ops/status-tiles.tsx
 msgid "Kept doesn't ask for new versions. Turn it on in Admin → Sign-up."
-msgstr "Kept doesn't ask for new versions. Turn it on in Admin → Sign-up."
+msgstr "Tingfinder doesn't ask for new versions. Turn it on in Admin → Sign-up."
 
 #: src/components/ops/ops-words.ts
 msgid "Kept got no answer from the backup storage. Check the address, the credentials and the network."
-msgstr "Kept got no answer from the backup storage. Check the address, the credentials and the network."
+msgstr "Tingfinder got no answer from the backup storage. Check the address, the credentials and the network."
 
 #: src/components/ops/status-tiles.tsx
 msgid "Kept warns at {warnAt}%."
-msgstr "Kept warns at {warnAt}%."
+msgstr "Tingfinder warns at {warnAt}%."
 
 #: src/components/ops/status-tiles.tsx
 msgid "Last checked {checked}"
@@ -20283,7 +20283,7 @@ msgstr "Not known yet"
 
 #: src/components/ops/snapshots-list.tsx
 msgid "Not made by Kept"
-msgstr "Not made by Kept"
+msgstr "Not made by Tingfinder"
 
 #: src/components/ops/status-tiles.tsx
 msgid "Not measured yet"
@@ -20295,11 +20295,11 @@ msgstr "Nothing on this server is backed up. Choose where backups go (another di
 
 #: src/routes/_app/admin.settings.tsx
 msgid "Off. Kept never asks; check the releases page yourself."
-msgstr "Off. Kept never asks; check the releases page yourself."
+msgstr "Off. Tingfinder never asks; check the releases page yourself."
 
 #: src/routes/_app/admin.settings.tsx
 msgid "On. Once a day the server asks GitHub for Kept's newest release, sending nothing but the request. Admin → Status says when one is out."
-msgstr "On. Once a day the server asks GitHub for Kept's newest release, sending nothing but the request. Admin → Status says when one is out."
+msgstr "On. Once a day the server asks GitHub for Tingfinder's newest release, sending nothing but the request. Admin → Status says when one is out."
 
 #: src/components/ops/status-tiles.tsx
 msgid "Once a month, restore into a scratch database and compare: <0>{command}</0>"
@@ -20475,7 +20475,7 @@ msgstr "The backup stopped before it finished: the server restarted or ran out o
 
 #: src/components/ops/ops-words.ts
 msgid "The database dump tool doesn't match the database's version. Use Kept's own image."
-msgstr "The database dump tool doesn't match the database's version. Use Kept's own image."
+msgstr "The database dump tool doesn't match the database's version. Use Tingfinder's own image."
 
 #: src/components/ops/ops-words.ts
 msgid "The dump was much smaller than the last good one. Older snapshots were kept."
@@ -20483,7 +20483,7 @@ msgstr "The dump was much smaller than the last good one. Older snapshots were k
 
 #: src/components/ops/status-tiles.tsx
 msgid "The last check got no answer. Kept asks again tomorrow."
-msgstr "The last check got no answer. Kept asks again tomorrow."
+msgstr "The last check got no answer. Tingfinder asks again tomorrow."
 
 #: src/components/ops/ops-words.ts
 msgid "The repository is locked by another run. If none is running, {unlock} removes the lock."
@@ -20503,7 +20503,7 @@ msgstr "The server's environment sets that, so it can't be changed here."
 
 #: src/components/ops/backup-target-form.tsx
 msgid "The server's own key, as ssh-keyscan prints it without the host name. Kept connects to no other."
-msgstr "The server's own key, as ssh-keyscan prints it without the host name. Kept connects to no other."
+msgstr "The server's own key, as ssh-keyscan prints it without the host name. Tingfinder connects to no other."
 
 #: src/components/ops/ops-words.ts
 msgid "The snapshot was taken, but something needs a look. The server's log has the details."
@@ -20523,19 +20523,19 @@ msgstr "They need a decision: retry or discard."
 
 #: src/components/ops/backup-target-form.tsx
 msgid "This needs a secure (HTTPS) connection to Kept."
-msgstr "This needs a secure (HTTPS) connection to Kept."
+msgstr "This needs a secure (HTTPS) connection to Tingfinder."
 
 #: src/components/ops/update-line.tsx
 msgid "This server runs <0>{current}</0>. Upgrading is the release notes' steps; Kept never updates itself."
-msgstr "This server runs <0>{current}</0>. Upgrading is the release notes' steps; Kept never updates itself."
+msgstr "This server runs <0>{current}</0>. Upgrading is the release notes' steps; Tingfinder never updates itself."
 
 #: src/components/ops/status-tiles.tsx
 msgid "This server's source code address isn't a GitHub repository, so Kept doesn't ask."
-msgstr "This server's source code address isn't a GitHub repository, so Kept doesn't ask."
+msgstr "This server's source code address isn't a GitHub repository, so Tingfinder doesn't ask."
 
 #: src/components/ops/status-tiles.tsx
 msgid "Too many requests came from this server's address. Kept asks again tomorrow."
-msgstr "Too many requests came from this server's address. Kept asks again tomorrow."
+msgstr "Too many requests came from this server's address. Tingfinder asks again tomorrow."
 
 #: src/components/ops/status-tiles.tsx
 msgid "Up to date"
@@ -20596,7 +20596,7 @@ msgstr "Low since {day}"
 
 #: src/components/webhooks/edit.tsx
 msgid "Kept can't reach that address. Check it for typos."
-msgstr "Kept can't reach that address. Check it for typos."
+msgstr "Tingfinder can't reach that address. Check it for typos."
 
 #: src/assistant/conversation.tsx
 msgid "You have no AI of your own to answer here. Ask from a location's page, where its AI answers."
@@ -20632,7 +20632,7 @@ msgstr "Other names requested for an import"
 
 #: src/components/history/labels.ts
 msgid "Kept set up"
-msgstr "Kept set up"
+msgstr "Tingfinder set up"
 
 #: src/components/history/labels.ts
 msgid "Instance settings changed"
@@ -20847,7 +20847,7 @@ msgstr "This account was made for you by someone who runs a location. Ask them t
 
 #: src/components/delete-account.tsx
 msgid "You're the only person who runs this Kept. Make someone else an instance admin first."
-msgstr "You're the only person who runs this Kept. Make someone else an instance admin first."
+msgstr "You're the only person who runs this Tingfinder. Make someone else an instance admin first."
 
 #: src/components/delete-account.tsx
 msgid "You own these locations. Hand each one to someone else, or delete it, first."
@@ -20875,7 +20875,7 @@ msgstr "Keep my account"
 
 #: src/components/page.tsx
 msgid "Your account is going to be deleted. Keep it to use Kept again."
-msgstr "Your account is going to be deleted. Keep it to use Kept again."
+msgstr "Your account is going to be deleted. Keep it to use Tingfinder again."
 
 #: src/components/page.tsx
 msgid "Your account can't be deleted yet."
@@ -20935,7 +20935,7 @@ msgstr "Unlink"
 
 #: src/components/sign-in-methods.tsx
 msgid "Once linked, that account signs you in here. Kept never links one because the email matches."
-msgstr "Once linked, that account signs you in here. Kept never links one because the email matches."
+msgstr "Once linked, that account signs you in here. Tingfinder never links one because the email matches."
 
 #: src/components/admin/oidc-status.tsx
 msgid "Sign-in with Google"
@@ -20943,7 +20943,7 @@ msgstr "Sign-in with Google"
 
 #: src/components/admin/oidc-status.tsx
 msgid "Make an OAuth client in Google Cloud, set <0>KEPT_GOOGLE_CLIENT_ID</0> and <1>KEPT_GOOGLE_CLIENT_SECRET</1>, then restart Kept."
-msgstr "Make an OAuth client in Google Cloud, set <0>KEPT_GOOGLE_CLIENT_ID</0> and <1>KEPT_GOOGLE_CLIENT_SECRET</1>, then restart Kept."
+msgstr "Make an OAuth client in Google Cloud, set <0>KEPT_GOOGLE_CLIENT_ID</0> and <1>KEPT_GOOGLE_CLIENT_SECRET</1>, then restart Tingfinder."
 
 #: src/components/admin/oidc-status.tsx
 msgid "Redirect URI to register with Google"
@@ -20955,11 +20955,11 @@ msgstr "Google sign-in reaches only an account already linked to it, or someone 
 
 #: src/components/notifications/settings/channels.tsx
 msgid "That server is on a private network, which this Kept doesn't allow. An instance admin can allow it."
-msgstr "That server is on a private network, which this Kept doesn't allow. An instance admin can allow it."
+msgstr "That server is on a private network, which this Tingfinder doesn't allow. An instance admin can allow it."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Kept stops sending to it, and forgets its settings."
-msgstr "Kept stops sending to it, and forgets its settings."
+msgstr "Tingfinder stops sending to it, and forgets its settings."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Add ntfy"
@@ -20971,7 +20971,7 @@ msgstr "Add Telegram"
 
 #: src/components/notifications/settings/channels.tsx
 msgid "You have {MAX_RELAY_CHANNELS}, the most Kept allows."
-msgstr "You have {MAX_RELAY_CHANNELS}, the most Kept allows."
+msgstr "You have {MAX_RELAY_CHANNELS}, the most Tingfinder allows."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Reminders on your phone through ntfy.sh or your own ntfy server."
@@ -21023,7 +21023,7 @@ msgstr "Optional, to tell them apart."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Kept keeps these settings encrypted and never shows them again."
-msgstr "Kept keeps these settings encrypted and never shows them again."
+msgstr "Tingfinder keeps these settings encrypted and never shows them again."
 
 #: src/components/reports/print-sheet.tsx
 msgid "It's also on its way to your email."
@@ -21031,11 +21031,11 @@ msgstr "It's also on its way to your email."
 
 #: src/components/reports/print-sheet.tsx
 msgid "Kept emails this location's inventory every Monday morning."
-msgstr "Kept emails this location's inventory every Monday morning."
+msgstr "Tingfinder emails this location's inventory every Monday morning."
 
 #: src/components/reports/print-sheet.tsx
 msgid "Kept emails this location's inventory on the 1st of every month."
-msgstr "Kept emails this location's inventory on the 1st of every month."
+msgstr "Tingfinder emails this location's inventory on the 1st of every month."
 
 #: src/components/reports/print-sheet.tsx
 msgid "Email it to me"
@@ -21067,7 +21067,7 @@ msgstr "Skipped: you'd made five reports that hour."
 
 #: src/components/notifications/settings/scheduled-reports.tsx
 msgid "Skipped: that part of Kept is off in this location."
-msgstr "Skipped: that part of Kept is off in this location."
+msgstr "Skipped: that part of Tingfinder is off in this location."
 
 #: src/components/notifications/settings/scheduled-reports.tsx
 msgid "Skipped: you can't make this report there any more."
@@ -21079,7 +21079,7 @@ msgstr "Stop this report?"
 
 #: src/components/notifications/settings/scheduled-reports.tsx
 msgid "Kept stops emailing it. You can print it any time."
-msgstr "Kept stops emailing it. You can print it any time."
+msgstr "Tingfinder stops emailing it. You can print it any time."
 
 #: src/components/notifications/settings/scheduled-reports.tsx
 msgid "Stop"
@@ -21123,11 +21123,11 @@ msgstr "This isn't a LubeLogger export of fuel, services or odometer."
 
 #: src/components/vehicles/lubelogger-import.tsx
 msgid "Kept can't read this file. Export it from LubeLogger again as CSV."
-msgstr "Kept can't read this file. Export it from LubeLogger again as CSV."
+msgstr "Tingfinder can't read this file. Export it from LubeLogger again as CSV."
 
 #: src/components/vehicles/lubelogger-import.tsx
 msgid "Kept can't read this file."
-msgstr "Kept can't read this file."
+msgstr "Tingfinder can't read this file."
 
 #: src/components/vehicles/lubelogger-import.tsx
 msgid "Imported {0} records"
@@ -21175,7 +21175,7 @@ msgstr "Check"
 
 #: src/components/vehicles/lubelogger-import.tsx
 msgid "no date Kept can read"
-msgstr "no date Kept can read"
+msgstr "no date Tingfinder can read"
 
 #: src/components/vehicles/lubelogger-import.tsx
 msgid "no amount of fuel"
@@ -21203,7 +21203,7 @@ msgstr "a cost below zero"
 
 #: src/components/vehicles/lubelogger-import.tsx
 msgid "Kept refused it"
-msgstr "Kept refused it"
+msgstr "Tingfinder refused it"
 
 #: src/components/vehicles/lubelogger-import.tsx
 msgid "What it will do"
@@ -21247,7 +21247,7 @@ msgstr "That address is on a private network. An instance admin can allow it in 
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Kept couldn't reach that server. Check the host and port."
-msgstr "Kept couldn't reach that server. Check the host and port."
+msgstr "Tingfinder couldn't reach that server. Check the host and port."
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "The server's encryption didn't check out. Check the host and the security."
@@ -21267,7 +21267,7 @@ msgstr "The server took too long to answer."
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Kept couldn't sign in to the mailbox."
-msgstr "Kept couldn't sign in to the mailbox."
+msgstr "Tingfinder couldn't sign in to the mailbox."
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "The person who connected it no longer administers this location."
@@ -21307,7 +21307,7 @@ msgstr "Remove this mailbox?"
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Kept stops checking it. The receipts it already made stay."
-msgstr "Kept stops checking it. The receipts it already made stay."
+msgstr "Tingfinder stops checking it. The receipts it already made stay."
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Mailbox"
@@ -21315,7 +21315,7 @@ msgstr "Mailbox"
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Kept stopped checking this mailbox"
-msgstr "Kept stopped checking this mailbox"
+msgstr "Tingfinder stopped checking this mailbox"
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Save it again to turn it back on."
@@ -21335,7 +21335,7 @@ msgstr "Checked {0}"
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Not checked yet. Kept checks every 10 minutes."
-msgstr "Not checked yet. Kept checks every 10 minutes."
+msgstr "Not checked yet. Tingfinder checks every 10 minutes."
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Connected by {0}"
@@ -21359,7 +21359,7 @@ msgstr "Connect a mailbox"
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Kept checks a folder in a mailbox you already have, every 10 minutes. Each message's photos and PDFs, or its text when it has none, become a draft receipt in the Inbox. Only mail that arrives after you connect is read, and nothing in the mailbox is changed."
-msgstr "Kept checks a folder in a mailbox you already have, every 10 minutes. Each message's photos and PDFs, or its text when it has none, become a draft receipt in the Inbox. Only mail that arrives after you connect is read, and nothing in the mailbox is changed."
+msgstr "Tingfinder checks a folder in a mailbox you already have, every 10 minutes. Each message's photos and PDFs, or its text when it has none, become a draft receipt in the Inbox. Only mail that arrives after you connect is read, and nothing in the mailbox is changed."
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "IMAP server"
@@ -21403,7 +21403,7 @@ msgstr "Optional, comma-separated. A filter against noise, not a security check:
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Kept couldn't connect"
-msgstr "Kept couldn't connect"
+msgstr "Tingfinder couldn't connect"
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Recent mail"
@@ -21419,7 +21419,7 @@ msgstr "No mail read yet"
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Messages that arrive in the folder show here once Kept has read them."
-msgstr "Messages that arrive in the folder show here once Kept has read them."
+msgstr "Messages that arrive in the folder show here once Tingfinder has read them."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Add Apprise"
@@ -21459,11 +21459,11 @@ msgstr "Condition report PDF"
 
 #: src/components/condition/pdf-sheet.tsx
 msgid "Both walk-throughs room by room, the earlier one first: each room's condition, note and photos, with the time Kept received each photo."
-msgstr "Both walk-throughs room by room, the earlier one first: each room's condition, note and photos, with the time Kept received each photo."
+msgstr "Both walk-throughs room by room, the earlier one first: each room's condition, note and photos, with the time Tingfinder received each photo."
 
 #: src/components/condition/pdf-sheet.tsx
 msgid "Each room's condition, note and photos, with the time Kept received each photo."
-msgstr "Each room's condition, note and photos, with the time Kept received each photo."
+msgstr "Each room's condition, note and photos, with the time Tingfinder received each photo."
 
 #: src/components/condition/pdf-sheet.tsx
 msgid "This report isn't finished, and the PDF says so."
@@ -21623,7 +21623,7 @@ msgstr "Day of the walk-through"
 
 #: src/routes/s.$token.tsx
 msgid "Shared from Kept · read-only"
-msgstr "Shared from Kept · read-only"
+msgstr "Shared from Tingfinder · read-only"
 
 #: src/routes/s.$token.tsx
 msgid "Shared with you"
@@ -21751,7 +21751,7 @@ msgstr "Anyone with this link can open it until {until}."
 
 #: src/components/sharelinks/share-sheet.tsx
 msgid "Copy it now. Kept shows this link once; make a new one if it's lost."
-msgstr "Copy it now. Kept shows this link once; make a new one if it's lost."
+msgstr "Copy it now. Tingfinder shows this link once; make a new one if it's lost."
 
 #: src/components/sharelinks/share-sheet.tsx
 msgid "See this location's share links"
@@ -22444,7 +22444,7 @@ msgstr "Throw away these changes?"
 
 #: src/map/map-view.tsx
 msgid "The map goes back to how it was. Rooms and floors you added stay in Kept."
-msgstr "The map goes back to how it was. Rooms and floors you added stay in Kept."
+msgstr "The map goes back to how it was. Rooms and floors you added stay in Tingfinder."
 
 #: src/map/map-view.tsx
 msgid "Throw away"
@@ -22656,7 +22656,7 @@ msgstr "{what} by {how} in {where}"
 
 #: src/components/notifications/settings/kinds.tsx
 msgid "In Kept is off, so nothing is sent."
-msgstr "In Kept is off, so nothing is sent."
+msgstr "In Tingfinder is off, so nothing is sent."
 
 #: src/components/notifications/settings/kinds.tsx
 msgid "Due dates"
@@ -22688,7 +22688,7 @@ msgstr "Applies to every location, ones you add later too. Pick a location to ch
 
 #: src/components/notifications/settings/kinds.tsx
 msgid "You're a member here: Kept starts with only the loans you record."
-msgstr "You're a member here: Kept starts with only the loans you record."
+msgstr "You're a member here: Tingfinder starts with only the loans you record."
 
 #: src/components/notifications/settings/kinds.tsx
 msgid "You're a viewer here: only members joining and leaving."
@@ -22895,7 +22895,7 @@ msgstr "The camera is off in this demo"
 
 #: src/components/capture/file-fallback.tsx
 msgid "In your own Kept, Capture opens the camera here. Photos you pick stay in this tab."
-msgstr "In your own Kept, Capture opens the camera here. Photos you pick stay in this tab."
+msgstr "In your own Tingfinder, Capture opens the camera here. Photos you pick stay in this tab."
 
 #: src/components/device/app-lock-settings.tsx
 msgid "The app lock is off in this demo."
@@ -22907,7 +22907,7 @@ msgstr "Downloads are off in this demo."
 
 #: src/components/reports/progress.tsx
 msgid "Your own Kept makes the PDF here. This demo has no files."
-msgstr "Your own Kept makes the PDF here. This demo has no files."
+msgstr "Your own Tingfinder makes the PDF here. This demo has no files."
 
 #: src/assistant/conversation.tsx
 msgid "Sample answers in this demo: no AI is asked."
@@ -22939,7 +22939,7 @@ msgstr "Disconnect Paperless?"
 
 #: src/components/paperless/connection-settings.tsx
 msgid "The {links} links to its documents go too. Documents copied into Kept stay."
-msgstr "The {links} links to its documents go too. Documents copied into Kept stay."
+msgstr "The {links} links to its documents go too. Documents copied into Tingfinder stay."
 
 #: src/components/paperless/connection-settings.tsx
 msgid "Members can no longer link its documents."
@@ -22987,7 +22987,7 @@ msgstr "Connect Paperless-ngx"
 
 #: src/components/paperless/connection-settings.tsx
 msgid "Members can then link a thing or a place to its receipts, manuals and warranty cards in Paperless, without uploading them twice. Kept stores the document's number and title, not the file, unless someone copies it into Kept."
-msgstr "Members can then link a thing or a place to its receipts, manuals and warranty cards in Paperless, without uploading them twice. Kept stores the document's number and title, not the file, unless someone copies it into Kept."
+msgstr "Members can then link a thing or a place to its receipts, manuals and warranty cards in Paperless, without uploading them twice. Tingfinder stores the document's number and title, not the file, unless someone copies it into Tingfinder."
 
 #: src/components/paperless/connection-settings.tsx
 msgid "Paperless address"
@@ -23003,7 +23003,7 @@ msgstr "Plain http"
 
 #: src/components/paperless/connection-settings.tsx
 msgid "Kept accepts http only for an address on your own network, and only when an instance admin allows private addresses. The token travels unencrypted there."
-msgstr "Kept accepts http only for an address on your own network, and only when an instance admin allows private addresses. The token travels unencrypted there."
+msgstr "Tingfinder accepts http only for an address on your own network, and only when an instance admin allows private addresses. The token travels unencrypted there."
 
 #: src/components/paperless/connection-settings.tsx
 msgid "API token"
@@ -23011,7 +23011,7 @@ msgstr "API token"
 
 #: src/components/paperless/connection-settings.tsx
 msgid "In Paperless, open My Profile and press the circular arrow by the API token. Kept sees what that user sees."
-msgstr "In Paperless, open My Profile and press the circular arrow by the API token. Kept sees what that user sees."
+msgstr "In Paperless, open My Profile and press the circular arrow by the API token. Tingfinder sees what that user sees."
 
 #: src/components/paperless/documents.tsx
 msgid "From Paperless-ngx"
@@ -23027,7 +23027,7 @@ msgstr "Paperless can't be reached"
 
 #: src/components/paperless/documents.tsx
 msgid "The titles below are as Kept last saw them."
-msgstr "The titles below are as Kept last saw them."
+msgstr "The titles below are as Tingfinder last saw them."
 
 #: src/components/paperless/documents.tsx
 msgid "No Paperless documents of this kind."
@@ -23043,7 +23043,7 @@ msgstr "Paperless documents"
 
 #: src/components/paperless/documents.tsx
 msgid "Copied into Kept"
-msgstr "Copied into Kept"
+msgstr "Copied into Tingfinder"
 
 #: src/components/paperless/documents.tsx
 msgid "Couldn't copy it"
@@ -23055,7 +23055,7 @@ msgstr "Unlink this document?"
 
 #: src/components/paperless/documents.tsx
 msgid "It comes off {name}. Paperless keeps it, and the copy in Kept stays."
-msgstr "It comes off {name}. Paperless keeps it, and the copy in Kept stays."
+msgstr "It comes off {name}. Paperless keeps it, and the copy in Tingfinder stays."
 
 #: src/components/paperless/documents.tsx
 msgid "It comes off {name}. Paperless keeps it."
@@ -23071,7 +23071,7 @@ msgstr "Open in Paperless"
 
 #: src/components/paperless/documents.tsx
 msgid "Copy into Kept"
-msgstr "Copy into Kept"
+msgstr "Copy into Tingfinder"
 
 #: src/components/paperless/documents.tsx
 msgid "Unlink {0}"
@@ -23123,7 +23123,7 @@ msgstr "Use https:// for a Paperless outside your network. Over http the token w
 
 #: src/components/paperless/words.ts
 msgid "Kept couldn't reach Paperless at that address."
-msgstr "Kept couldn't reach Paperless at that address."
+msgstr "Tingfinder couldn't reach Paperless at that address."
 
 #: src/components/paperless/words.ts
 msgid "Paperless didn't answer within 10 seconds."
@@ -23143,7 +23143,7 @@ msgstr "That address doesn't answer like Paperless-ngx."
 
 #: src/components/paperless/words.ts
 msgid "Kept needs Paperless-ngx 2.16 or later."
-msgstr "Kept needs Paperless-ngx 2.16 or later."
+msgstr "Tingfinder needs Paperless-ngx 2.16 or later."
 
 #: src/components/paperless/words.ts
 msgid "Paperless no longer has this document, or the token's user can't see it."
@@ -23151,7 +23151,7 @@ msgstr "Paperless no longer has this document, or the token's user can't see it.
 
 #: src/components/paperless/words.ts
 msgid "That document is larger than Kept takes."
-msgstr "That document is larger than Kept takes."
+msgstr "That document is larger than Tingfinder takes."
 
 #: src/components/history/labels.ts
 msgid "Paperless connected"
@@ -23171,7 +23171,7 @@ msgstr "Paperless document unlinked"
 
 #: src/components/history/labels.ts
 msgid "Paperless document copied into Kept"
-msgstr "Paperless document copied into Kept"
+msgstr "Paperless document copied into Tingfinder"
 
 #: src/map/labels.ts
 msgid "Small device"
@@ -23767,7 +23767,7 @@ msgstr "Add the box"
 
 #: src/components/moving/sheets.tsx
 msgid "A page per box: its number, the room it goes to, what's inside and its code. Tape it to the box; scanning the code opens the box in Kept."
-msgstr "A page per box: its number, the room it goes to, what's inside and its code. Tape it to the box; scanning the code opens the box in Kept."
+msgstr "A page per box: its number, the room it goes to, what's inside and its code. Tape it to the box; scanning the code opens the box in Tingfinder."
 
 #: src/components/moving/sheets.tsx
 msgid "Add a box first."
@@ -24710,15 +24710,15 @@ msgstr "Capture & Inbox"
 
 #: src/components/hints/hint-copy.ts
 msgid "Check what Kept read, fix anything wrong, then tap Accept."
-msgstr "Check what Kept read, fix anything wrong, then tap Accept."
+msgstr "Check what Tingfinder read, fix anything wrong, then tap Accept."
 
 #: src/components/hints/hint-copy.ts
 msgid "Choose how reminders reach you: in Kept, by email, push or a channel."
-msgstr "Choose how reminders reach you: in Kept, by email, push or a channel."
+msgstr "Choose how reminders reach you: in Tingfinder, by email, push or a channel."
 
 #: src/components/hints/hint-copy.ts
 msgid "Choose what reaches you, and how: in Kept, by email, push or a channel."
-msgstr "Choose what reaches you, and how: in Kept, by email, push or a channel."
+msgstr "Choose what reaches you, and how: in Tingfinder, by email, push or a channel."
 
 #: src/components/sheet/sheet-view.tsx
 msgid "Discard my change"
@@ -24834,7 +24834,7 @@ msgstr "Pick what it is, then add the file to the thing it belongs to."
 
 #: src/components/hints/hint-copy.ts
 msgid "Pick where it comes from: a spreadsheet, Homebox or another Kept."
-msgstr "Pick where it comes from: a spreadsheet, Homebox or another Kept."
+msgstr "Pick where it comes from: a spreadsheet, Homebox or another Tingfinder."
 
 #: src/components/hints/hint-copy.ts
 msgid "Receipts, manuals and warranty cards from every thing and room."
@@ -24902,7 +24902,7 @@ msgstr "Tap Mark returned when it comes back."
 
 #: src/components/hints/hint-copy.ts
 msgid "Tap Scan and point the camera at a Kept label. What it's on opens."
-msgstr "Tap Scan and point the camera at a Kept label. What it's on opens."
+msgstr "Tap Scan and point the camera at a Tingfinder label. What it's on opens."
 
 #: src/components/hints/hint-copy.ts
 msgid "The file"
@@ -24994,7 +24994,7 @@ msgstr "Keep room photos after review"
 
 #: src/routes/_app/settings.location.$id.general.tsx
 msgid "When you photograph a room, Kept cuts a picture for each thing it finds. Once you close the room in the inbox, the full photos are deleted, unless this is on: then they stay on the room's page."
-msgstr "When you photograph a room, Kept cuts a picture for each thing it finds. Once you close the room in the inbox, the full photos are deleted, unless this is on: then they stay on the room's page."
+msgstr "When you photograph a room, Tingfinder cuts a picture for each thing it finds. Once you close the room in the inbox, the full photos are deleted, unless this is on: then they stay on the room's page."
 
 #: src/map/card.tsx
 msgid "Photograph this room"
@@ -25002,7 +25002,7 @@ msgstr "Photograph this room"
 
 #: src/map/map-view.tsx
 msgid "Placed by Kept from room photos: move them where they stand."
-msgstr "Placed by Kept from room photos: move them where they stand."
+msgstr "Placed by Tingfinder from room photos: move them where they stand."
 
 #: src/components/inbox/inbox-list.tsx
 #: src/components/inbox/room-review.tsx
@@ -25079,7 +25079,7 @@ msgstr "Reading photo {0} of {1}…"
 
 #: src/components/inbox/room-review.tsx
 msgid "Kept couldn't read these photos. Retry, or take them again."
-msgstr "Kept couldn't read these photos. Retry, or take them again."
+msgstr "Tingfinder couldn't read these photos. Retry, or take them again."
 
 #: src/components/inbox/room-review.tsx
 msgid "AI capture is off here, so nothing was listed. The photos wait on <0>{name}</0>."
@@ -25151,7 +25151,7 @@ msgstr "{0, plural, one {# new thing to review below} other {# new things to rev
 
 #: src/components/inbox/room-review.tsx
 msgid "{0, plural, one {# already in Kept} other {# already in Kept}}"
-msgstr "{0, plural, one {# already in Kept} other {# already in Kept}}"
+msgstr "{0, plural, one {# already in Tingfinder} other {# already in Tingfinder}}"
 
 #: src/components/inbox/room-review.tsx
 msgid "{0, plural, one {# piece of furniture to add as a place} other {# pieces of furniture to add as places}}"
@@ -25159,7 +25159,7 @@ msgstr "{0, plural, one {# piece of furniture to add as a place} other {# pieces
 
 #: src/components/history/labels.ts
 msgid "Photographed {name} for Kept to list what is in it"
-msgstr "Photographed {name} for Kept to list what is in it"
+msgstr "Photographed {name} for Tingfinder to list what is in it"
 
 #: src/components/hints/hint-copy.ts
 msgid "Thing, receipt, label, reading or room. Pick one before the photo."
@@ -25171,7 +25171,7 @@ msgstr "A whole room"
 
 #: src/components/hints/hint-copy.ts
 msgid "Up to five photos of a room. AI lists what's in them as drafts, skipping what Kept already has."
-msgstr "Up to five photos of a room. AI lists what's in them as drafts, skipping what Kept already has."
+msgstr "Up to five photos of a room. AI lists what's in them as drafts, skipping what Tingfinder already has."
 
 #: src/components/capture/capture-screen.tsx
 msgid "Five photos at most. Send these, then take the next wall."
@@ -25183,7 +25183,7 @@ msgstr "Room sent"
 
 #: src/components/capture/capture-screen.tsx
 msgid "Kept lists what is in it in your Inbox."
-msgstr "Kept lists what is in it in your Inbox."
+msgstr "Tingfinder lists what is in it in your Inbox."
 
 #: src/components/capture/room-tray.tsx
 msgid "{n, plural, one {About # photo} other {About # photos}}"
@@ -25227,7 +25227,7 @@ msgstr "Remove photo {0}"
 
 #: src/components/capture/room-tray.tsx
 msgid "In Try Kept no AI runs: every room photo gives the same sample results."
-msgstr "In Try Kept no AI runs: every room photo gives the same sample results."
+msgstr "In Try Tingfinder no AI runs: every room photo gives the same sample results."
 
 #: src/components/capture/room-tray.tsx
 msgid "Use a sample room photo"
@@ -25595,7 +25595,7 @@ msgstr "Blank labels can be claimed from Scan, one at a time."
 
 #: src/components/scan/session/summary.tsx
 msgid "Not in your Kept ({0})"
-msgstr "Not in your Kept ({0})"
+msgstr "Not in your Tingfinder ({0})"
 
 #: src/components/scan/session/summary.tsx
 msgid "Check later ({0})"
@@ -25804,7 +25804,7 @@ msgstr "Import it as a spreadsheet"
 
 #: src/components/import/mapping-step.tsx
 msgid "Kept reads its asset IDs, so old Homebox labels still scan, and its archived and sold items, warranties and insured column. A spreadsheet can't carry photos, files, maintenance or items inside items: for those, update a copy of Homebox to v0.26.1 or newer (v0.27.0 recommended) and import its export ZIP."
-msgstr "Kept reads its asset IDs, so old Homebox labels still scan, and its archived and sold items, warranties and insured column. A spreadsheet can't carry photos, files, maintenance or items inside items: for those, update a copy of Homebox to v0.26.1 or newer (v0.27.0 recommended) and import its export ZIP."
+msgstr "Tingfinder reads its asset IDs, so old Homebox labels still scan, and its archived and sold items, warranties and insured column. A spreadsheet can't carry photos, files, maintenance or items inside items: for those, update a copy of Homebox to v0.26.1 or newer (v0.27.0 recommended) and import its export ZIP."
 
 #: src/components/import/choices-step.tsx
 msgid "One with a sale still ends sold."
@@ -26040,7 +26040,7 @@ msgstr "Open the previous count ({0})"
 
 #: src/components/counts/count-page.tsx
 msgid "Counts saved before Kept 1.14 didn't record what was missing or elsewhere."
-msgstr "Counts saved before Kept 1.14 didn't record what was missing or elsewhere."
+msgstr "Counts saved before Tingfinder 1.14 didn't record what was missing or elsewhere."
 
 #: src/components/counts/count-page.tsx
 msgid "now in <0>{now}</0>"
@@ -26208,7 +26208,7 @@ msgstr "Stayed here: {0}"
 
 #: src/components/lending/lend-sheet.tsx
 msgid "Optional. Kept reminds you, never them, two days before and when it's overdue."
-msgstr "Optional. Kept reminds you, never them, two days before and when it's overdue."
+msgstr "Optional. Tingfinder reminds you, never them, two days before and when it's overdue."
 
 #: src/components/lending/lend-sheet.tsx
 msgid "What goes with it"
@@ -26511,7 +26511,7 @@ msgstr "Indigo"
 
 #: src/components/import/labels.ts
 msgid "Its tags aren't kept: in Kept only things have tags."
-msgstr "Its tags aren't kept: in Kept only things have tags."
+msgstr "Its tags aren't kept: in Tingfinder only things have tags."
 
 #: src/components/tags/colour-choice.tsx
 msgid "No colour"
@@ -26598,15 +26598,15 @@ msgstr "Keep the code as"
 
 #: src/components/scan/barcode-sheet.tsx
 msgid "Kept stores it as the serial number."
-msgstr "Kept stores it as the serial number."
+msgstr "Tingfinder stores it as the serial number."
 
 #: src/components/scan/barcode-sheet.tsx
 msgid "Kept stores it as the serial number or the barcode: you pick."
-msgstr "Kept stores it as the serial number or the barcode: you pick."
+msgstr "Tingfinder stores it as the serial number or the barcode: you pick."
 
 #: src/components/scan/barcode-sheet.tsx
 msgid "Kept stores the barcode and serial number with it."
-msgstr "Kept stores the barcode and serial number with it."
+msgstr "Tingfinder stores the barcode and serial number with it."
 
 #: src/routes/invite.tsx
 msgid "Add one in Sign-in and security"
@@ -26622,7 +26622,7 @@ msgstr "They add one in Sign-in and security"
 
 #: src/routes/_app/settings.two-factor.tsx
 msgid "Kept emails you a sign-in link; opening it confirms the address. Opening it also removes this account's password, passkeys and other sessions, so nobody who set them up before you keeps a way in. Then come back here within ten minutes."
-msgstr "Kept emails you a sign-in link; opening it confirms the address. Opening it also removes this account's password, passkeys and other sessions, so nobody who set them up before you keeps a way in. Then come back here within ten minutes."
+msgstr "Tingfinder emails you a sign-in link; opening it confirms the address. Opening it also removes this account's password, passkeys and other sessions, so nobody who set them up before you keeps a way in. Then come back here within ten minutes."
 
 #: src/routes/_app/settings.two-factor.tsx
 msgid "After this, signing in with a sign-in link or Google also asks for a 6-digit code from an authenticator app (1Password, Google Authenticator, Aegis…)."
@@ -26679,7 +26679,7 @@ msgstr "Use {NAME_MAX} characters or fewer."
 
 #: src/components/sign-in-security.household.tsx
 msgid "Your browser asks for Face ID, a fingerprint or your screen lock. The passkey is kept by this device or your password manager; Kept never sees it."
-msgstr "Your browser asks for Face ID, a fingerprint or your screen lock. The passkey is kept by this device or your password manager; Kept never sees it."
+msgstr "Your browser asks for Face ID, a fingerprint or your screen lock. The passkey is kept by this device or your password manager; Tingfinder never sees it."
 
 #: src/components/sign-in-security.household.tsx
 msgid "So you can tell your passkeys apart."
@@ -26815,7 +26815,7 @@ msgstr "Unlock with Face ID or fingerprint"
 
 #: src/components/device/app-lock-settings.tsx
 msgid "Unlocks Kept on this device only. To sign in with a passkey, add one in <0>Sign-in and security</0>."
-msgstr "Unlocks Kept on this device only. To sign in with a passkey, add one in <0>Sign-in and security</0>."
+msgstr "Unlocks Tingfinder on this device only. To sign in with a passkey, add one in <0>Sign-in and security</0>."
 
 #: src/components/history/labels.ts
 msgid "Added a passkey"
@@ -26895,7 +26895,7 @@ msgstr "Not confirmed as printed"
 
 #: src/components/labels/printed-ok.tsx
 msgid "Once these labels have printed, confirm it here, so Kept stops counting them as unprinted."
-msgstr "Once these labels have printed, confirm it here, so Kept stops counting them as unprinted."
+msgstr "Once these labels have printed, confirm it here, so Tingfinder stops counting them as unprinted."
 
 #: src/components/labels/start-cell.tsx
 msgid "Each label: QR code and short ID. The codes are made when you print."
@@ -27135,7 +27135,7 @@ msgstr "A location that came in as a box, as chosen."
 
 #: src/components/import/labels.ts
 msgid "Its description isn't kept: places in Kept have no notes."
-msgstr "Its description isn't kept: places in Kept have no notes."
+msgstr "Its description isn't kept: places in Tingfinder have no notes."
 
 #: src/components/import/repair.tsx
 msgid "{joined}, and {more} more"
@@ -27151,7 +27151,7 @@ msgstr "Repair this import"
 
 #: src/components/import/repair.tsx
 msgid "It was imported before Kept read Homebox the way it does now. Choose what to put right; one Undo takes it all back."
-msgstr "It was imported before Kept read Homebox the way it does now. Choose what to put right; one Undo takes it all back."
+msgstr "It was imported before Tingfinder read Homebox the way it does now. Choose what to put right; one Undo takes it all back."
 
 #: src/components/import/repair.tsx
 msgid "{0, plural, one {Archive the # thing that had quantity 0 in Homebox} other {Archive the # things that had quantity 0 in Homebox}}"
@@ -27226,15 +27226,15 @@ msgstr "Open {expected}"
 
 #: src/components/origin-mismatch.tsx
 msgid "This Kept is set up for <0>{expected}</0>. Open it there."
-msgstr "This Kept is set up for <0>{expected}</0>. Open it there."
+msgstr "This Tingfinder is set up for <0>{expected}</0>. Open it there."
 
 #: src/components/page.tsx
 msgid "This Kept is set up for a different address. Open it at the address you were given."
-msgstr "This Kept is set up for a different address. Open it at the address you were given."
+msgstr "This Tingfinder is set up for a different address. Open it at the address you were given."
 
 #: src/components/page.tsx
 msgid "This Kept is set up for {address}. Open it there."
-msgstr "This Kept is set up for {address}. Open it there."
+msgstr "This Tingfinder is set up for {address}. Open it there."
 
 #: src/components/import/archive-step.tsx
 msgid "In Homebox, open Collection → Tools → Backup & Restore and choose Create Backup. When the backup is listed, Download it: that .zip is the file."
@@ -27246,7 +27246,7 @@ msgstr "Homebox v0.26.1 or newer (v0.27.0 recommended): Collection → Tools →
 
 #: src/components/connections/token-create.tsx
 msgid "On a home network without HTTPS, the person who runs this Kept can make one on the server: kept admin token create."
-msgstr "On a home network without HTTPS, the person who runs this Kept can make one on the server: kept admin token create."
+msgstr "On a home network without HTTPS, the person who runs this Tingfinder can make one on the server: kept admin token create."
 
 #: src/components/import/archive-run.tsx
 msgid "Open the map"
@@ -27266,7 +27266,7 @@ msgstr "Allow private addresses in Admin → Settings"
 
 #: src/components/sign-in-security.household.tsx
 msgid "Passkeys need HTTPS. On a plain-HTTP address browsers don't offer them; put Kept on HTTPS to add one."
-msgstr "Passkeys need HTTPS. On a plain-HTTP address browsers don't offer them; put Kept on HTTPS to add one."
+msgstr "Passkeys need HTTPS. On a plain-HTTP address browsers don't offer them; put Tingfinder on HTTPS to add one."
 
 #: src/components/import/entity-report.tsx
 msgid "{0, plural, one {secret value left out of the export} other {secret values left out of the export}}"
@@ -27282,7 +27282,7 @@ msgstr "Over plain HTTP, secret values stay out of the export. Each one is marke
 
 #: src/components/import/kept-choices.tsx
 msgid "Opening them needs HTTPS. Over plain HTTP everything else is imported without them; to bring them over too, import this file at Kept’s HTTPS address."
-msgstr "Opening them needs HTTPS. Over plain HTTP everything else is imported without them; to bring them over too, import this file at Kept’s HTTPS address."
+msgstr "Opening them needs HTTPS. Over plain HTTP everything else is imported without them; to bring them over too, import this file at Tingfinder’s HTTPS address."
 
 #: src/components/places/sub-places.tsx
 msgid "{0} moved to {1} of {2}"
@@ -27510,7 +27510,7 @@ msgstr "Show the whole house"
 
 #: src/graph/graph-view.tsx
 msgid "The graph is drawn from Kept’s server. The list has everything offline."
-msgstr "The graph is drawn from Kept’s server. The list has everything offline."
+msgstr "The graph is drawn from Tingfinder’s server. The list has everything offline."
 
 #: src/graph/graph-view.tsx
 msgid "Where you are in the graph"
@@ -27734,7 +27734,7 @@ msgstr "Slide {n} of {total}"
 
 #: src/components/whats-new.tsx
 msgid "What's new in Kept"
-msgstr "What's new in Kept"
+msgstr "What's new in Tingfinder"
 
 #: src/components/whats-new.tsx
 msgid "Version <0>{version}</0>"
@@ -28138,7 +28138,7 @@ msgstr "Set a room’s size"
 
 #: src/map/floor-plan/panel.tsx
 msgid "Kept read the first 60 rooms. Add the rest by drawing."
-msgstr "Kept read the first 60 rooms. Add the rest by drawing."
+msgstr "Tingfinder read the first 60 rooms. Add the rest by drawing."
 
 #: src/map/floor-plan/panel.tsx
 msgid "Keep the plan with <0>{location}</0>"
@@ -28182,7 +28182,7 @@ msgstr "Add {room}"
 
 #: src/map/floor-plan/start-sheet.tsx
 msgid "A photo, a screenshot or a PDF of a plan. Kept reads the rooms and their sizes; you check them before anything is added."
-msgstr "A photo, a screenshot or a PDF of a plan. Kept reads the rooms and their sizes; you check them before anything is added."
+msgstr "A photo, a screenshot or a PDF of a plan. Tingfinder reads the rooms and their sizes; you check them before anything is added."
 
 #: src/map/floor-plan/start-sheet.tsx
 msgid "Use a sample floor plan"
@@ -28210,7 +28210,7 @@ msgstr "Up to ~{tokens} tokens"
 
 #: src/map/floor-plan/start-sheet.tsx
 msgid "Kept sends the plan, without its location data, to <0>{name}</0>. It is deleted when you finish, unless you keep it."
-msgstr "Kept sends the plan, without its location data, to <0>{name}</0>. It is deleted when you finish, unless you keep it."
+msgstr "Tingfinder sends the plan, without its location data, to <0>{name}</0>. It is deleted when you finish, unless you keep it."
 
 #: src/map/floor-plan/start-sheet.tsx
 msgid "Read the plan"
@@ -28253,7 +28253,7 @@ msgid "Couldn't save the label image. Try again."
 msgstr "Couldn't save the label image. Try again."
 
 msgid "Kept label"
-msgstr "Kept label"
+msgstr "Tingfinder label"
 
 msgid "Loading the label"
 msgstr "Loading the label"
@@ -28280,11 +28280,11 @@ msgstr "What the file can hold"
 
 #: src/components/import/csv-help.tsx
 msgid "The first row names the columns, in any of Kept's languages. Kept matches the names it knows, and you choose the rest in the next step. Only a name is needed."
-msgstr "The first row names the columns, in any of Kept's languages. Kept matches the names it knows, and you choose the rest in the next step. Only a name is needed."
+msgstr "The first row names the columns, in any of Tingfinder's languages. Tingfinder matches the names it knows, and you choose the rest in the next step. Only a name is needed."
 
 #: src/components/import/csv-help.tsx
 msgid "The columns Kept reads"
-msgstr "The columns Kept reads"
+msgstr "The columns Tingfinder reads"
 
 #: src/components/import/csv-help.tsx
 msgid "A field of your own types, such as Wattage"
@@ -28372,7 +28372,7 @@ msgstr "Used for <0>{personal}</0>, your private threads, and questions that spa
 
 #: src/components/delete-account.tsx
 msgid "You asked for it, with your own location and everything in it. Until then nothing else in Kept opens. Keep the account to go back to it as it was."
-msgstr "You asked for it, with your own location and everything in it. Until then nothing else in Kept opens. Keep the account to go back to it as it was."
+msgstr "You asked for it, with your own location and everything in it. Until then nothing else in Tingfinder opens. Keep the account to go back to it as it was."
 
 #: src/components/delete-account.tsx
 msgid "Your account, your own location <0>{personal}</0> and everything in it are deleted 30 days from now. Until then you can sign in and keep the account; nothing else opens."
@@ -28461,7 +28461,7 @@ msgstr "Your Personal location, profile and preferences, as one file."
 
 #: src/components/delete-account.tsx
 msgid "You asked for it, with your Personal location and everything in it. Until then nothing else in Kept opens. Keep the account to go back to it as it was."
-msgstr "You asked for it, with your Personal location and everything in it. Until then nothing else in Kept opens. Keep the account to go back to it as it was."
+msgstr "You asked for it, with your Personal location and everything in it. Until then nothing else in Tingfinder opens. Keep the account to go back to it as it was."
 
 #: src/components/import/track-step.tsx
 msgid "Also for Personal"
@@ -28826,7 +28826,7 @@ msgstr "Resize places"
 
 #: src/components/import/labels.ts
 msgid "{count, plural, one {# link keeps its Homebox title: Kept couldn't get one from Paperless.} other {# links keep their Homebox titles: Kept couldn't get them from Paperless.}}"
-msgstr "{count, plural, one {# link keeps its Homebox title: Kept couldn't get one from Paperless.} other {# links keep their Homebox titles: Kept couldn't get them from Paperless.}}"
+msgstr "{count, plural, one {# link keeps its Homebox title: Tingfinder couldn't get one from Paperless.} other {# links keep their Homebox titles: Tingfinder couldn't get them from Paperless.}}"
 
 #: src/routes/signin/index.tsx
 msgid "Passkeys work only at <0/>, because browsers tie a passkey to one address. Here, use your password or an email link."
@@ -29057,7 +29057,7 @@ msgstr "Connect Home Assistant"
 
 #: src/components/connections/token-create.tsx
 msgid "Home Assistant reads Kept as you, in the locations you pick, and gets its token by itself: there is nothing to copy. Revoke it here any time."
-msgstr "Home Assistant reads Kept as you, in the locations you pick, and gets its token by itself: there is nothing to copy. Revoke it here any time."
+msgstr "Home Assistant reads Tingfinder as you, in the locations you pick, and gets its token by itself: there is nothing to copy. Revoke it here any time."
 
 #: src/components/connections/token-create.tsx
 msgid "Home Assistant is connected"

@@ -6,7 +6,7 @@ import type { GatheredMove, MoveReportOptions } from './gather.js';
 // A move's contents sheets as template/move.typ reads them (`/data.json`; 1.x, D251). As for the
 // other reports, every string is final here, in the sheet's language and digits (D143), so the
 // template only lays them out. A box's QR code is its label's (`/l/<short ID>`): scanning the
-// sheet taped to the box opens it in Kept, where it is unpacked. The words live in
+// sheet taped to the box opens it in Tingfinder, where it is unpacked. The words live in
 // words/<locale>.ts, one table per report language (#465).
 
 export type MoveView = {
@@ -78,7 +78,7 @@ export function buildMoveView(
     move: g.name,
     route: g.toLocationName ? w.route(g.locationName, g.toLocationName) : g.locationName,
     generatedLine: w.generated(g.requesterName, when),
-    footer: ['Kept', ctx.instance, when].filter((x) => x !== '').join(sep),
+    footer: ['Tingfinder', ctx.instance, when].filter((x) => x !== '').join(sep),
     none: w.none,
     labels: { goesTo: w.goesTo, quantity: w.quantity, id: w.id, scan: w.scan },
     boxes: g.boxes.map((b) => ({

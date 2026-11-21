@@ -1,8 +1,8 @@
 /**
  * The brand (D135, "B · Label tape"). The mark is a square of amber label tape with the tape's
  * punched hole at the top start and a heavy mono K (the font's outline as a path), at every size;
- * the lockup is that mark with KEPT beside it in IBM Plex Mono SemiBold (the shipped font), also
- * as outlines. scripts/render-icons.mjs draws the favicon, app icons and README lockups from the
+ * the lockup is that mark with TINGFINDER beside it in IBM Plex Mono SemiBold (the shipped font), also
+ * in the original typeface. scripts/render-icons.mjs draws the favicon, app icons and README lockups from the
  * same geometry. The tape is the short-ID chip's material too: brand and label are one object.
  *
  * The hole is cut out of the tape, so it shows whatever the mark sits on. The tape keeps its
@@ -40,30 +40,29 @@ function MarkArt() {
   );
 }
 
-/** The lockup's width in mark units (the mark is 64). */
-const LOCKUP_W = 191;
-/** KEPT at the mark's K size and baseline, 0.12 em tracking, from x=74. */
-const WORDMARK = (['K', 'E', 'P', 'T'] as const).map((g, i) => ({
-  g,
-  x: +(74 + i * 30.2).toFixed(1),
-}));
-
-export function BrandLockup({ className, width = 96 }: { className?: string; width?: number }) {
+/** Original mark and typography, with this edition's name. */
+export function BrandLockup({ className, width = 160 }: { className?: string; width?: number }) {
   return (
     <svg
-      width={width}
-      height={+((width * 64) / LOCKUP_W).toFixed(1)}
-      viewBox={`0 0 ${LOCKUP_W} 64`}
       role="img"
-      aria-label="Kept"
+      aria-label="Tingfinder"
+      width={width}
+      height={(width * 64) / 320}
+      viewBox="0 0 320 64"
       className={cn('shrink-0 text-ink', className)}
     >
       <MarkArt />
-      <g fill="currentColor">
-        {WORDMARK.map(({ g, x }) => (
-          <path key={g} d={GLYPHS[g]} transform={`translate(${x} 48) scale(0.042 -0.042)`} />
-        ))}
-      </g>
+      <text
+        x="76"
+        y="46"
+        fill="currentColor"
+        fontFamily="IBM Plex Mono, monospace"
+        fontSize="42"
+        fontWeight="600"
+        letterSpacing="1"
+      >
+        TINGFINDER
+      </text>
     </svg>
   );
 }
@@ -86,7 +85,7 @@ export function AppMark({
       viewBox="0 0 64 64"
       className={cn('shrink-0', className)}
       role="img"
-      aria-label={label ?? 'Kept'}
+      aria-label={label ?? 'Tingfinder'}
       aria-hidden={label ? undefined : true}
     >
       <MarkArt />

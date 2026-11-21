@@ -8,7 +8,7 @@ import type { ConditionReportOptions, GatheredCondition, GatheredRoom } from './
 // the other reports, every string is final here: dates and times are formatted with Intl in the
 // report's language and digits (D143), so the template only lays them out. The words live in
 // words/<locale>.ts, one table per report language (#465). A photo's time is when
-// Kept received it, in the location's time zone; the walk-through's day is the location's.
+// Tingfinder received it, in the location's time zone; the walk-through's day is the location's.
 
 export type ConditionView = {
   lang: ReportLocale;
@@ -151,7 +151,7 @@ export function buildConditionView(
     },
     location: g.locationName,
     generatedLine: w.generated(g.requesterName, when),
-    footer: ['Kept', ctx.instance, when].filter((x) => x !== '').join(sep),
+    footer: ['Tingfinder', ctx.instance, when].filter((x) => x !== '').join(sep),
     compare,
     sides: g.sides.map((s) => ({
       title: titleOf(s),

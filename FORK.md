@@ -1,4 +1,4 @@
-# Our Kept edition
+# Tingfinder
 
 This fork builds on [Kept](https://github.com/keptinventory/kept) as a simple,
 self-hosted app for remembering where belongings are stored.
@@ -38,9 +38,11 @@ Fork and development branch prepared. The digest-pinned stable Kept
 1.14.7 server runs with its own database, storage and network, exposed
 through an authenticated HTTPS development preview. See [development setup and acceptance checks](deploy/README.md).
 The capture UI now requires a name and concrete room/container for new items,
-with individual item deletion from the session summary. A web-only image build
-keeps the existing server and migrations. The preview preserves the original
-Kept UI and requires both shared server access and a Kept account.
+with individual item deletion from the session summary. The explicit stable overlay build keeps server release 1.14.7 and its migrations.
+Danish is an official selectable language across the UI, email, notifications,
+reports, readable exports and the web recovery kit. Product names change while
+storage keys, protocol IDs, environment names and URLs remain compatible. The preview preserves the original
+UI and original amber K logo, rebranded as Tingfinder. Both shared server access and a Tingfinder account are required.
 
 The baseline acceptance flow covers item/photo creation, recorded location,
 description, search, separate-user access and Chromium mobile layouts. Physical

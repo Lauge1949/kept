@@ -77,7 +77,12 @@ export function AuthFrame({
           </aside>
         ) : null}
         <section className="grid content-start gap-5 px-4 pt-4 pb-8 md:px-8 md:pt-7">
-          <div className={cn('flex items-center justify-between gap-3', steps && 'md:hidden')}>
+          <div
+            className={cn(
+              'flex flex-wrap items-center justify-between gap-3',
+              steps && 'md:hidden',
+            )}
+          >
             <Logo />
             <LanguageToggle />
           </div>

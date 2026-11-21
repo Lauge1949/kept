@@ -32,14 +32,14 @@ const KEPT_HOURS = 24;
 
 /** The name the server gives the PDF (service.ts `filenameOf`): the run's UTC day. */
 export function reportFilename(run: Pick<ReportRun, 'createdAt'>): string {
-  return `kept-inventory-${run.createdAt.slice(0, 10)}.pdf`;
+  return `tingfinder-inventory-${run.createdAt.slice(0, 10)}.pdf`;
 }
 
-/** The name a shared PDF of another kind gets: `kept-<kind>-<day>.pdf` (the insurance report). */
+/** The name a shared PDF of another kind gets: `tingfinder-<kind>-<day>.pdf` (the insurance report). */
 export const reportFilenameOf =
   (kind: string) =>
   (run: Pick<ReportRun, 'createdAt'>): string =>
-    `kept-${kind}-${run.createdAt.slice(0, 10)}.pdf`;
+    `tingfinder-${kind}-${run.createdAt.slice(0, 10)}.pdf`;
 
 /**
  * Whether the links in hand are young enough to use, re-checked when they age out and when the
@@ -215,7 +215,7 @@ export function ReportProgress({
   const done = run?.status === 'done';
   const links = useLinksFresh(query.dataUpdatedAt, done);
   const fileUrl = done && links.fresh && !TRY ? run?.fileUrl : undefined;
-  const [shareable] = useState(() => canShareType('kept-inventory.pdf', 'application/pdf'));
+  const [shareable] = useState(() => canShareType('tingfinder-inventory.pdf', 'application/pdf'));
   const file = useReportFile(done && !TRY ? run : undefined, shareable && links.fresh, filename);
   // Aged links: read the run again for new ones (the poll does too, a minute before this).
   const { refetch, isFetching } = query;

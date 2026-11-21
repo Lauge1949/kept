@@ -49,7 +49,7 @@ export function kitRoutes(state: MockState): MockRoute[] {
           status: 200,
           headers: {
             'content-type': html ? 'text/html; charset=utf-8' : 'text/plain; charset=utf-8',
-            'content-disposition': `attachment; filename="kept-recovery-kit.${html ? 'html' : 'txt'}"`,
+            'content-disposition': `attachment; filename="tingfinder-recovery-kit.${html ? 'html' : 'txt'}"`,
             'cache-control': 'no-store',
           },
         },

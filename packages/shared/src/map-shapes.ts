@@ -219,6 +219,8 @@ const FLOOR_RACK = [
 export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
   sofa: [
     'sofa',
+
+    'sofa',
     'couch',
     'settee',
     'canapé',
@@ -233,6 +235,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'diván',
   ],
   armchair: [
+    'lænestol',
+
     'armchair',
     'arm chair',
     'recliner',
@@ -249,6 +253,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'butaca',
   ],
   coffee_table: [
+    'sofabord',
+
     'coffee table',
     'table basse',
     'couchtisch',
@@ -264,6 +270,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'mesita de centro',
   ],
   tv_stand: [
+    'tv-bord',
+
     'tv stand',
     'tv unit',
     'tv cabinet',
@@ -293,6 +301,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
   // A cube shelf's family word is shared with the one sized by its grid (#240), which has the
   // grid unit's own words.
   cube_shelf: [
+    'kub reol',
+    'kubereol',
+
     'cube shelf',
     'display shelf',
     'رف مكعبات',
@@ -304,6 +315,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'estantería modular',
   ],
   tall_plant: [
+    'høj plante',
+    'palme',
+
     'tall plant',
     'tree',
     'fig',
@@ -332,6 +346,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'palmera',
   ],
   plant: [
+    'plante',
+    'stueplante',
+
     'plant',
     'houseplant',
     'plante',
@@ -350,6 +367,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'planta de interior',
   ],
   succulent: [
+    'sukkulent',
+    'kaktus',
+
     'succulent',
     'cactus',
     'aloe',
@@ -368,6 +388,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'planta suculenta',
   ],
   dining_chair: [
+    'spisebordsstol',
+
     'chair',
     'dining chair',
     'kitchen chair',
@@ -391,6 +413,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'silla de cocina',
   ],
   drawers: [
+    'kommode',
+    'skuffemøbel',
+
     'drawers',
     'chest of drawers',
     'dresser',
@@ -409,6 +434,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'cajón',
   ],
   bedside: [
+    'natbord',
+
     'bedside table',
     'bedside',
     'nightstand',
@@ -427,6 +454,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'mesa de noche',
   ],
   metal_shelf: [
+    'metalreol',
+    'lagerreol',
+
     'shelf',
     'shelves',
     'shelving',
@@ -450,6 +480,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'rack metálico',
   ],
   tool_cart: [
+    'værktøjsvogn',
+
     'tool cart',
     'tool trolley',
     'tool chest',
@@ -465,6 +497,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'carro de herramientas',
   ],
   drill: [
+    'boremaskine',
+    'skruemaskine',
+
     'drill',
     'driver',
     'impact driver',
@@ -487,6 +522,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'taladro percutor',
   ],
   cardboard: [
+    'papkasse',
+
     'moving box',
     'carton',
     'cardboard',
@@ -507,6 +544,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'caja de mudanza',
   ],
   crate: [
+    'trækasse',
+    'plastkasse',
+
     'crate',
     'bin',
     'tub',
@@ -523,6 +563,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'caja de madera',
   ],
   basket: [
+    'kurv',
+
     'basket',
     'hamper',
     'panier',
@@ -538,6 +580,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'cesta',
   ],
   outdoor_set: [
+    'havemøbler',
+    'havesæt',
+
     'bistro set',
     'patio set',
     'garden set',
@@ -555,6 +600,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'muebles de terraza',
   ],
   monobloc: [
+    'havestol',
+    'plaststol',
+
     'plastic chair',
     'garden chair',
     'chaise en plastique',
@@ -572,6 +620,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'silla de jardín',
   ],
   planter: [
+    'plantekrukke',
+    'urtepotte',
+
     'planter',
     'flower box',
     'window box',
@@ -588,6 +639,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'macetero',
   ],
   planter_long: [
+    'plantekasse',
+
     'long planter',
     'raised bed',
     'longue jardinière',
@@ -602,6 +655,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'macetero largo',
   ],
   ac_unit: [
+    'klimaanlæg',
+    'varmepumpe',
+
     'ac',
     'a/c',
     'air con',
@@ -629,6 +685,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'aire acondicionado',
   ],
   watering_can: [
+    'vandkande',
+
     'watering can',
     'arrosoir',
     'gießkanne',
@@ -640,6 +698,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'regador',
   ],
   tv: [
+    'fjernsyn',
+    'tv',
+
     'tv',
     'television',
     'telly',
@@ -669,6 +730,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'televisor',
   ],
   bookshelf: [
+    'bogreol',
+
     'bookshelf',
     'bookcase',
     'bibliothèque',
@@ -686,6 +749,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
   ],
   /** #240: the family's word "cube shelf", then the grid unit's own. */
   cube_grid: [
+    'rumdeler',
+
     'cube shelf',
     'رف مكعبات',
     'cube storage',
@@ -714,6 +779,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
   ],
   /** #241: the bookshelf's words, shared, then a tall narrow one's own. */
   bookcase: [
+    'bogskab',
+
     'bookshelf',
     'bookcase',
     'bibliothèque',
@@ -744,6 +811,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
   ],
   /** #485: a shelving unit's words; plain "shelving" is the metal shelf's too. */
   shelving_unit: [
+    'reol',
+
     'shelving',
     'shelving unit',
     'storage shelf',
@@ -786,6 +855,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'estantería de despensa',
   ],
   lamp: [
+    'gulvlampe',
+
     'lamp',
     'floor lamp',
     'standard lamp',
@@ -807,6 +878,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'lámpara',
   ],
   counter: [
+    'køkkenbord',
+    'køkkenbordplade',
+
     'counter',
     'countertop',
     'worktop',
@@ -831,6 +905,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'mesada',
   ],
   sink: [
+    'køkkenvask',
+    'håndvask',
+
     'sink',
     'sink counter',
     'évier',
@@ -852,6 +929,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'lavaplatos',
   ],
   fridge: [
+    'køleskab',
+
     'fridge',
     'refrigerator',
     'freezer',
@@ -872,6 +951,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'frigorífico',
   ],
   coffee_machine: [
+    'kaffemaskine',
+
     'coffee machine',
     'coffee maker',
     'espresso',
@@ -898,6 +979,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'máquina de café',
   ],
   microwave: [
+    'mikroovn',
+
     'microwave',
     'oven',
     'air fryer',
@@ -922,6 +1005,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'horno de microondas',
   ],
   dining: [
+    'spisebord',
+
     'table',
     'dining table',
     'kitchen table',
@@ -941,6 +1026,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'mesa de comedor',
   ],
   bed: [
+    'seng',
+
     'bed',
     'cot',
     'crib',
@@ -955,6 +1042,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'cama',
   ],
   wardrobe: [
+    'garderobeskab',
+    'klædeskab',
+
     'wardrobe',
     'closet',
     'cupboard',
@@ -976,6 +1066,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'ropero',
   ],
   table_lamp: [
+    'bordlampe',
+
     'table lamp',
     'desk lamp',
     'bedside lamp',
@@ -995,6 +1087,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'lámpara de sobremesa',
   ],
   desk: [
+    'skrivebord',
+
     'desk',
     'bureau',
     'schreibtisch',
@@ -1006,6 +1100,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'escritorio',
   ],
   monitor: [
+    'computerskærm',
+    'skærm',
+
     'monitor',
     'screen',
     'display',
@@ -1022,6 +1119,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'pantalla',
   ],
   laptop: [
+    'bærbar computer',
+
     'laptop',
     'notebook',
     'macbook',
@@ -1042,6 +1141,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'computadora portátil',
   ],
   monitor_arm: [
+    'skærmarm',
+
     'monitor arm',
     'monitor mount',
     'desk mount',
@@ -1065,6 +1166,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'soporte para monitor',
   ],
   dual_monitor_arm: [
+    'dobbelt skærmarm',
+
     'dual monitor arm',
     'double monitor arm',
     'dual mount',
@@ -1082,6 +1185,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'soporte para dos monitores',
   ],
   pc_tower: [
+    'stationær computer',
+    'computerkabinet',
+
     'pc',
     'desktop',
     'desktop pc',
@@ -1113,6 +1219,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'torre',
   ],
   keyboard: [
+    'tastatur',
+
     'keyboard',
     'mechanical keyboard',
     'clavier',
@@ -1128,6 +1236,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'teclado mecánico',
   ],
   mouse: [
+    'computermus',
+
     'mouse',
     'computer mouse',
     'trackpad',
@@ -1142,6 +1252,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'ratón',
   ],
   webcam: [
+    'webkamera',
+
     'webcam',
     'web cam',
     'web camera',
@@ -1156,6 +1268,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'cámara web',
   ],
   camera: [
+    'kamera',
+    'fotokamera',
+
     'camera',
     'digital camera',
     'photo camera',
@@ -1192,6 +1307,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'cámara de fotos',
   ],
   speaker: [
+    'højttaler',
+    'computerhøjttaler',
+
     ...SPEAKER,
     'desk speaker',
     'bookshelf speaker',
@@ -1212,6 +1330,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'bocina',
   ],
   portable_speaker: [
+    'bærbar højttaler',
+
     ...SPEAKER,
     'portable speaker',
     'bluetooth speaker',
@@ -1243,6 +1363,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'bocina portátil',
   ],
   floor_speaker: [
+    'gulvhøjttaler',
+
     ...SPEAKER,
     'floor speaker',
     'floorstanding speaker',
@@ -1263,6 +1385,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'bocina de piso',
   ],
   boombox: [
+    'festhøjttaler',
+
     ...SPEAKER,
     'boombox',
     'boom box',
@@ -1286,6 +1410,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'mini cadena',
   ],
   smart_speaker: [
+    'smarthøjttaler',
+
     ...SPEAKER,
     'smart speaker',
     'echo',
@@ -1308,6 +1434,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'bocina inteligente',
   ],
   soundbar: [
+    'soundbar',
+
     ...SPEAKER,
     'soundbar',
     'sound bar',
@@ -1323,6 +1451,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'barra de sonido',
   ],
   headphones: [
+    'hovedtelefoner',
+
     'headphones',
     'over ear headphones',
     'on ear headphones',
@@ -1341,6 +1471,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'audífonos',
   ],
   headset: [
+    'headset med mikrofon',
+
     'headset',
     'gaming headset',
     'office headset',
@@ -1365,6 +1497,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'cascos con micrófono',
   ],
   earbuds: [
+    'øretelefoner',
+
     'earbuds',
     'earphones',
     'in ear',
@@ -1391,6 +1525,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
   ],
   router: [
     'router',
+
+    'router',
     'wifi router',
     'wi fi router',
     'modem',
@@ -1414,6 +1550,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
   ],
   printer: [
     'printer',
+
+    'printer',
     'scanner',
     'all in one printer',
     'imprimante',
@@ -1428,6 +1566,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'impresora',
   ],
   console: [
+    'spillekonsol',
+
     'console',
     'game console',
     'games console',
@@ -1451,6 +1591,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'consola',
   ],
   controller: [
+    'spilcontroller',
+
     'controller',
     'game controller',
     'gamepad',
@@ -1479,6 +1621,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'mando',
   ],
   phone: [
+    'telefon',
+    'mobiltelefon',
+
     'phone',
     'mobile phone',
     'cell phone',
@@ -1505,6 +1650,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
   ],
   tablet: [
     'tablet',
+
+    'tablet',
     'ipad',
     'galaxy tab',
     'e reader',
@@ -1521,6 +1668,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'tableta',
   ],
   power_strip: [
+    'stikdåse',
+    'fordelerdåse',
+
     'power strip',
     'extension lead',
     'extension cord',
@@ -1542,6 +1692,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'regleta',
   ],
   external_drive: [
+    'ekstern harddisk',
+
     'external drive',
     'hard drive',
     'external hard drive',
@@ -1570,6 +1722,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'disco duro',
   ],
   mini_pc: [
+    'minicomputer',
+
     'mini pc',
     'mini computer',
     'nuc',
@@ -1592,6 +1746,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'ordenador pequeño',
   ],
   nas: [
+    'netværkslager',
+
     'nas',
     'network storage',
     'network attached storage',
@@ -1612,6 +1768,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'servidor de archivos',
   ],
   sbc: [
+    'enkeltkortcomputer',
+
     'raspberry pi',
     'single board computer',
     'sbc',
@@ -1631,6 +1789,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
   ],
   // Never "switch" alone: that is as often a Nintendo Switch or a light switch.
   network_switch: [
+    'netværksswitch',
+
     'network switch',
     'ethernet switch',
     'lan switch',
@@ -1656,6 +1816,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'conmutador',
   ],
   patch_panel: [
+    'patchpanel',
+
     'patch panel',
     'patchpanel',
     'keystone panel',
@@ -1671,6 +1833,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'panel de parcheo',
   ],
   ups: [
+    'nødstrømsforsyning',
+
     'ups',
     'battery backup',
     'uninterruptible power supply',
@@ -1688,6 +1852,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'sistema de alimentación ininterrumpida',
   ],
   device: [
+    'enhed',
+    'apparat',
+
     'gadget',
     'hub',
     'smart hub',
@@ -1735,6 +1902,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'dispositivo',
   ],
   chair: [
+    'stol',
+
     'desk chair',
     'office chair',
     'gaming chair',
@@ -1752,6 +1921,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'silla de ordenador',
   ],
   cabinet: [
+    'skab',
+
     'cabinet',
     'filing cabinet',
     'file cabinet',
@@ -1770,6 +1941,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'archivador',
   ],
   box: [
+    'kasse',
+
     'box',
     'storage box',
     'boîte',
@@ -1788,6 +1961,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'caja de almacenamiento',
   ],
   rack_24u: [
+    'rackskab 24u',
+
     ...FLOOR_RACK,
     '24u',
     '24 u',
@@ -1801,6 +1976,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'rack 24u',
   ],
   rack_42u: [
+    'rackskab 42u',
+
     ...FLOOR_RACK,
     '42u',
     '42 u',
@@ -1814,6 +1991,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'rack 42u',
   ],
   washer: [
+    'vaskemaskine',
+
     'washing machine',
     'washer',
     'dryer',
@@ -1843,6 +2022,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
    * words ("water filter", "Wasserfilter", "فلتر مياه", "bình lọc nước") are left out: as often a
    * jug, a cartridge or a tap's filter, they would give those a 129 cm cabinet. */
   water_purifier: [
+    'vandrenser',
+    'vandfilter',
+
     'water purifier',
     'water filtration system',
     'water dispenser',
@@ -1873,6 +2055,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'dispensador de agua',
   ],
   workbench: [
+    'arbejdsbord',
+    'værkstedsbord',
+
     'workbench',
     'work bench',
     'établi',
@@ -1886,6 +2071,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'bancada',
   ],
   tool_wall: [
+    'værktøjstavle',
+
     'tool wall',
     'pegboard',
     'panneau à outils',
@@ -1905,6 +2092,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'panel perforado',
   ],
   wall_tv: [
+    'vægmonteret fjernsyn',
+
     'wall tv',
     'wall mounted tv',
     'tv on the wall',
@@ -1925,6 +2114,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'televisor de pared',
   ],
   wall_shelf: [
+    'væghylde',
+
     'wall shelf',
     'floating shelf',
     'shelf on the wall',
@@ -1945,6 +2136,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'estante flotante',
   ],
   wall_cabinet: [
+    'vægskab',
+
     'wall cabinet',
     'wall cupboard',
     'kitchen wall unit',
@@ -1969,6 +2162,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'armario de pared',
   ],
   rack_wall_6u: [
+    'vægrack 6u',
+
     ...WALL_RACK,
     '6u',
     '6 u',
@@ -1981,6 +2176,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'rack de pared 6u',
   ],
   rack_wall_12u: [
+    'vægrack 12u',
+
     ...WALL_RACK,
     '12u',
     '12 u',
@@ -1993,6 +2190,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'rack de pared 12u',
   ],
   picture: [
+    'billede',
+    'maleri',
+
     'picture',
     'painting',
     'picture frame',
@@ -2029,6 +2229,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'espejo',
   ],
   clock: [
+    'ur',
+    'vægur',
+
     'clock',
     'wall clock',
     'horloge',
@@ -2046,6 +2249,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'reloj de pared',
   ],
   hooks: [
+    'knager',
+    'knagerække',
+
     'hook',
     'coat hook',
     'coat rack',
@@ -2076,6 +2282,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'ganchos',
   ],
   car: [
+    'bil',
+
     'car',
     'van',
     'truck',
@@ -2099,6 +2307,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'automóvil',
   ],
   bike: [
+    'cykel',
+
     'bike',
     'bicycle',
     'ebike',
@@ -2124,6 +2334,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'bicicleta',
   ],
   water_tank: [
+    'vandtank',
+    'vandbeholder',
+
     'water tank',
     'tank',
     'cistern',
@@ -2143,6 +2356,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'tanque',
   ],
   dish: [
+    'parabol',
+
     'satellite dish',
     'dish',
     'satellite',
@@ -2162,6 +2377,8 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'antena parabólica',
   ],
   stairs: [
+    'trappe',
+
     'stairs',
     'stair',
     'staircase',
@@ -2176,6 +2393,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'escalera',
   ],
   stairwell: [
+    'trapperum',
+    'trappeskakt',
+
     'stairwell',
     'cage d escalier',
     'treppenhaus',
@@ -2187,6 +2407,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'pozo de escalera',
   ],
   zone: [
+    'område',
+    'hjørne',
+
     'area',
     'corner',
     'zone',
@@ -2201,6 +2424,9 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
     'zona',
   ],
   item: [
+    'ting',
+    'genstand',
+
     'small thing',
     'thing',
     'petit objet',
@@ -2222,11 +2448,11 @@ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
   ],
 };
 
-export const SHAPE_LANGS = ['ar', 'de', 'en', 'es', 'fr', 'it', 'uk', 'vi'] as const;
+export const SHAPE_LANGS = ['ar', 'da', 'de', 'en', 'es', 'fr', 'it', 'uk', 'vi'] as const;
 export type ShapeLang = (typeof SHAPE_LANGS)[number];
 
 /** The languages SHAPE_WORD_LANGS lists; English is what is left, the others have a script. */
-const LISTED_LANGS = ['de', 'es', 'fr', 'it', 'vi'] as const;
+const LISTED_LANGS = ['da', 'de', 'es', 'fr', 'it', 'vi'] as const;
 
 /**
  * The words in SHAPE_WORDS that are French, German, Italian, Spanish or Vietnamese rather than
@@ -2241,6 +2467,137 @@ const LISTED_LANGS = ['de', 'es', 'fr', 'it', 'vi'] as const;
  */
 export const SHAPE_WORD_LANGS: Readonly<Record<(typeof LISTED_LANGS)[number], readonly string[]>> =
   {
+    da: [
+      'sofa',
+      'lænestol',
+      'sofabord',
+      'tv-bord',
+      'kub reol',
+      'kubereol',
+      'høj plante',
+      'palme',
+      'plante',
+      'stueplante',
+      'sukkulent',
+      'kaktus',
+      'spisebordsstol',
+      'kommode',
+      'skuffemøbel',
+      'natbord',
+      'metalreol',
+      'lagerreol',
+      'værktøjsvogn',
+      'boremaskine',
+      'skruemaskine',
+      'papkasse',
+      'trækasse',
+      'plastkasse',
+      'kurv',
+      'havemøbler',
+      'havesæt',
+      'havestol',
+      'plaststol',
+      'plantekrukke',
+      'urtepotte',
+      'plantekasse',
+      'klimaanlæg',
+      'varmepumpe',
+      'vandkande',
+      'fjernsyn',
+      'tv',
+      'bogreol',
+      'rumdeler',
+      'bogskab',
+      'reol',
+      'gulvlampe',
+      'køkkenbord',
+      'køkkenbordplade',
+      'køkkenvask',
+      'håndvask',
+      'køleskab',
+      'kaffemaskine',
+      'mikroovn',
+      'spisebord',
+      'seng',
+      'garderobeskab',
+      'klædeskab',
+      'bordlampe',
+      'skrivebord',
+      'computerskærm',
+      'skærm',
+      'bærbar computer',
+      'skærmarm',
+      'dobbelt skærmarm',
+      'stationær computer',
+      'computerkabinet',
+      'tastatur',
+      'computermus',
+      'webkamera',
+      'kamera',
+      'fotokamera',
+      'højttaler',
+      'computerhøjttaler',
+      'bærbar højttaler',
+      'gulvhøjttaler',
+      'festhøjttaler',
+      'smarthøjttaler',
+      'soundbar',
+      'hovedtelefoner',
+      'headset med mikrofon',
+      'øretelefoner',
+      'router',
+      'printer',
+      'spillekonsol',
+      'spilcontroller',
+      'telefon',
+      'mobiltelefon',
+      'tablet',
+      'stikdåse',
+      'fordelerdåse',
+      'ekstern harddisk',
+      'minicomputer',
+      'netværkslager',
+      'enkeltkortcomputer',
+      'netværksswitch',
+      'patchpanel',
+      'nødstrømsforsyning',
+      'enhed',
+      'apparat',
+      'stol',
+      'skab',
+      'kasse',
+      'rackskab 24u',
+      'rackskab 42u',
+      'vaskemaskine',
+      'vandrenser',
+      'vandfilter',
+      'arbejdsbord',
+      'værkstedsbord',
+      'værktøjstavle',
+      'vægmonteret fjernsyn',
+      'væghylde',
+      'vægskab',
+      'vægrack 6u',
+      'vægrack 12u',
+      'billede',
+      'maleri',
+      'ur',
+      'vægur',
+      'knager',
+      'knagerække',
+      'bil',
+      'cykel',
+      'vandtank',
+      'vandbeholder',
+      'parabol',
+      'trappe',
+      'trapperum',
+      'trappeskakt',
+      'område',
+      'hjørne',
+      'ting',
+      'genstand',
+    ],
     de: [
       'pc lautsprecher',
       'regallautsprecher',
@@ -3837,6 +4194,7 @@ const byScript = (w: string): ShapeLang | null =>
 const foldedIn = (l: (typeof LISTED_LANGS)[number]): ReadonlySet<string> =>
   new Set(SHAPE_WORD_LANGS[l].map((w) => words(w).join(' ')));
 const FOREIGN = {
+  da: foldedIn('da'),
   de: foldedIn('de'),
   es: foldedIn('es'),
   fr: foldedIn('fr'),
@@ -3875,6 +4233,7 @@ const FOLDED_WORDS: ReadonlyMap<MapModelKey, readonly { text: string; langs: Sha
 export function shapeWordsByLang(model: MapModelKey): Record<ShapeLang, string[]> {
   const out: Record<ShapeLang, string[]> = {
     ar: [],
+    da: [],
     de: [],
     en: [],
     es: [],

@@ -15,7 +15,7 @@ import { INGRESS_ORIGIN_HEADER } from './ingress-origin.js';
 import { gateSession, type ResolvedSession, resolveSession } from './session.js';
 import { limiterKey, reserveInWindow } from './sign-in-limiter.js';
 
-// Better Auth on Fastify, and the session every Kept route sees (D176, D181).
+// Better Auth on Fastify, and the session every Tingfinder route sees (D176, D181).
 //
 // How a route says who may call it (`config.auth`):
 // - 'required' (the default, for every route that doesn't say otherwise; security review M1): a
@@ -70,7 +70,7 @@ const NOT_THIS_SITE = 'The request did not come from this site.';
 
 /**
  * 403 `origin_mismatch`: a page at another address than KEPT_PUBLIC_URL's (http://127.0.0.1:8080
- * when Kept is set up for http://kept.lan:8080, say). The body names the address Kept is set up
+ * when Tingfinder is set up for http://kept.lan:8080, say). The body names the address Tingfinder is set up
  * for (`expectedOrigin`), which every label and mail already prints, so the page can say "Open it
  * there" instead of "You don't have permission". Never KEPT_EXTRA_ADDRESSES: an address not on the
  * list learns nothing of the list.
@@ -81,12 +81,12 @@ export function originMismatch(expectedOrigin: string): AppError {
     403,
     NOT_THIS_SITE,
     { expectedOrigin },
-    `This Kept is set up for ${expectedOrigin}.`,
+    `This Tingfinder is set up for ${expectedOrigin}.`,
   );
 }
 
 /**
- * CSRF (security review I4). A write that carries a cookie must come from Kept's own pages:
+ * CSRF (security review I4). A write that carries a cookie must come from Tingfinder's own pages:
  * its `Origin` is the origin of KEPT_PUBLIC_URL, or, when the browser sent no usable Origin
  * (absent, or `null`), `Sec-Fetch-Site: same-origin`. Another Origin is 403 `origin_mismatch`
  * (with the expected one); no usable Origin is 403 `forbidden`. Both come before
@@ -105,7 +105,7 @@ export function csrfHook(publicUrl: string, extraAddresses?: readonly string[]) 
   return async function checkRequestOrigin(req: FastifyRequest) {
     if (SAFE_METHODS.has(req.method) || !req.headers.cookie) return;
     // A personal token's request ignores cookies (tokens/verify.ts): no ambient authority to
-    // abuse, and another site can't set Authorization without a CORS preflight Kept never answers.
+    // abuse, and another site can't set Authorization without a CORS preflight Tingfinder never answers.
     if (PERSONAL_BEARER.test(String(req.headers.authorization ?? ''))) return;
     assertFromThisSite(req, expectedOrigin(req, publicOrigin), alsoAccepted(req, extraAddresses));
   };
@@ -118,7 +118,7 @@ export function expectedOrigin(req: FastifyRequest, publicOrigin: string): strin
   return req.ingress ? req.ingress.origin : publicOrigin;
 }
 
-/** KEPT_EXTRA_ADDRESSES (D275), for a request on Kept's own port. An ingress request's page is
+/** KEPT_EXTRA_ADDRESSES (D275), for a request on Tingfinder's own port. An ingress request's page is
  * Home Assistant's, whatever the list says: there the one origin stays the only one. */
 export function alsoAccepted(
   req: FastifyRequest,
@@ -131,7 +131,7 @@ export function alsoAccepted(
  * csrfHook's rule for one request, cookie or not: its `Origin` is `expected`, or exactly one of
  * `extraAddresses` (else 403 `origin_mismatch`, naming `expected` only), or with no usable Origin,
  * `Sec-Fetch-Site: same-origin` (else 403 `forbidden`). First-run setup applies it too: it carries
- * no cookie, but it makes the instance admin and signs them in, so it must come from Kept's own
+ * no cookie, but it makes the instance admin and signs them in, so it must come from Tingfinder's own
  * setup page (Home Assistant's, through ingress).
  */
 export function assertFromThisSite(
@@ -311,7 +311,7 @@ export function rateLimited(reply: FastifyReply, retryAfter: number): AppError {
 /**
  * Reserves one token redemption for the request's client IP (security review M5): the
  * magic-link and email-change confirmations. A token is 32 random bytes, so this bounds load
- * and log noise rather than guessing; it is shared across replicas like every Kept limiter.
+ * and log noise rather than guessing; it is shared across replicas like every Tingfinder limiter.
  */
 export async function reserveTokenAttempt(
   authPool: pg.Pool,
@@ -359,7 +359,7 @@ async function oauthErrorOf(res: Response): Promise<unknown> {
   return body?.error ?? null;
 }
 
-/** The Better Auth mount at /api/v1/auth/*, and Kept's magic-link confirm. */
+/** The Better Auth mount at /api/v1/auth/*, and Tingfinder's magic-link confirm. */
 export async function authRoutes(app: KeptApp, opts: AuthRoutesOptions): Promise<void> {
   const { auth, trustedProxies, pools } = opts;
   const origin = new URL(opts.publicUrl).origin;
@@ -390,7 +390,7 @@ export async function authRoutes(app: KeptApp, opts: AuthRoutesOptions): Promise
           init.body = typeof req.body === 'string' ? req.body : JSON.stringify(req.body);
         }
         // A first code proven in a session whose two-factor is off turns it on: noted before,
-        // audited after (Better Auth's own route, so Kept's routes can't log it).
+        // audited after (Better Auth's own route, so Tingfinder's routes can't log it).
         let turningOn: string | null = null;
         if (url.pathname === VERIFY_TOTP && req.method === 'POST' && req.headers.cookie) {
           const found = await auth.api
@@ -400,7 +400,7 @@ export async function authRoutes(app: KeptApp, opts: AuthRoutesOptions): Promise
         }
         const res = await auth.handler(new Request(url, init));
         // Better Auth's own Origin check (a sign-in has no cookie yet, so csrfHook left it):
-        // answered as Kept's, naming the address this Kept is set up for (Home Assistant's,
+        // answered as Tingfinder's, naming the address this Tingfinder is set up for (Home Assistant's,
         // under ingress).
         if (await refusedOrigin(res)) throw originMismatch(expectedOrigin(req, origin));
         if (turningOn && res.status === 200) {
@@ -417,7 +417,7 @@ export async function authRoutes(app: KeptApp, opts: AuthRoutesOptions): Promise
           }
         }
         // Better Auth stores no JWT access token, so it can't revoke one: it answers
-        // `unsupported_token_type`, having authenticated the client. Kept's grant can be ended.
+        // `unsupported_token_type`, having authenticated the client. Tingfinder's grant can be ended.
         if (
           opts.revokeOAuthAccess &&
           url.pathname === `${AUTH_BASE_PATH}/oauth2/revoke` &&

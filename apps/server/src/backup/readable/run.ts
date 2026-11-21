@@ -316,17 +316,17 @@ export function readableCopy(deps: ReadableTreeDeps): ReadableCopy {
 }
 
 // ---------------------------------------------------------------------------------------------
-// The top index and the README: English, plain, no script; names isolated (they may be Arabic).
+// Shared multi-owner index and README: Danish and English; each location keeps its owner's language.
 
 const KIND_LABELS: Record<string, string> = {
-  personal: 'Personal',
-  home: 'Home',
-  apartment: 'Apartment',
+  personal: 'Personlig / Personal',
+  home: 'Hjem / Home',
+  apartment: 'Lejlighed / Apartment',
   garage: 'Garage',
-  storage_unit: 'Storage unit',
-  office: 'Office',
-  vacation_home: 'Vacation home',
-  custom: 'Other',
+  storage_unit: 'Depotrum / Storage unit',
+  office: 'Kontor / Office',
+  vacation_home: 'Feriebolig / Vacation home',
+  custom: 'Andet / Other',
 };
 
 const bdi = (s: string) => (s ? `<bdi>${esc(s)}</bdi>` : '');
@@ -341,35 +341,61 @@ function topIndex(entries: ReadableEntry[], at: Date): string {
           : bdi(e.name);
       const note =
         e.state === 'failed'
-          ? `Not included tonight (${esc(e.error ?? 'readable_failed')}). The database in this backup still holds it.`
+          ? `Ikke medtaget i nat (${esc(e.error ?? 'readable_failed')}). Databasen i sikkerhedskopien indeholder stadig lokationen. / Not included tonight. The database in this backup still holds it.`
           : e.state === 'deleted'
-            ? 'Being deleted: not included. The database in this backup still holds it.'
+            ? 'Under sletning: ikke medtaget. Databasen i sikkerhedskopien indeholder stadig lokationen. / Being deleted: not included. The database in this backup still holds it.'
             : e.missingFiles > 0
-              ? `${e.missingFiles} file(s) were missing from the file store.`
+              ? `${e.missingFiles} fil(er) manglede i fillageret. / ${e.missingFiles} file(s) were missing from the file store.`
               : '';
-      return `<tr><td data-label="Location">${name}</td><td data-label="Kind">${esc(
+      return `<tr><td data-label="Lokation / Location">${name}</td><td data-label="Type / Kind">${esc(
         KIND_LABELS[e.kind] ?? e.kind,
-      )}</td><td data-label="Owner">${bdi(e.owner)}</td><td data-label="Things">${n(
+      )}</td><td data-label="Ejer / Owner">${bdi(e.owner)}</td><td data-label="Ting / Things">${n(
         e.things,
-      )}</td><td data-label="Places">${n(e.places)}</td><td data-label="Note">${note}</td></tr>`;
+      )}</td><td data-label="Placeringer / Places">${n(e.places)}</td><td data-label="Bemærkning / Note">${note}</td></tr>`;
     })
     .join('\n');
-  const body = `<h1><span class="tape">Kept</span> backup: every location</h1>
-<p class="muted">Written ${esc(at.toISOString().replace('T', ' ').slice(0, 16))} UTC. Each location opens in any browser, with no network and no Kept.</p>
+  const body = `<h1><span class="tape">Tingfinder</span> sikkerhedskopi: alle lokationer <span lang="en">/ backup: every location</span></h1>
+<p class="muted">Oprettet ${esc(at.toISOString().replace('T', ' ').slice(0, 16))} UTC. Hver lokation kan åbnes i enhver browser uden netværk og uden Tingfinder.</p>
+<p class="muted" lang="en">Written ${esc(at.toISOString().replace('T', ' ').slice(0, 16))} UTC. Each location opens in any browser, with no network and no Tingfinder.</p>
 <table>
-<thead><tr><th>Location</th><th>Kind</th><th>Owner</th><th>Things</th><th>Places</th><th></th></tr></thead>
+<thead><tr><th>Lokation / Location</th><th>Type / Kind</th><th>Ejer / Owner</th><th>Ting / Things</th><th>Placeringer / Places</th><th>Bemærkning / Note</th></tr></thead>
 <tbody>
-${rows || '<tr><td colspan="6">No locations.</td></tr>'}
+${rows || '<tr><td colspan="6">Ingen lokationer. / No locations.</td></tr>'}
 </tbody>
 </table>`;
-  return page({ lang: 'en', dir: 'ltr' }, 'Kept backup', body);
+  return page({ lang: 'da', dir: 'ltr' }, 'Tingfinder sikkerhedskopi / backup', body);
 }
 
-const README = `Kept: the readable copy of every location
+const README = `Tingfinder: læsbar kopi af alle lokationer
+========================================
+
+Denne mappe er en del af en sikkerhedskopi fra Tingfinder. Du behøver kun en browser og,
+for .csv-filerne, et regneark: ingen Tingfinder, ingen database og intet netværk.
+
+  index.html            alle lokationer i sikkerhedskopien; åbn den i en browser
+  <id>/index.html       én lokation: placeringer og ting med billeder og dokumenter
+  <id>/*.csv            de samme data som regneark (ting, placeringer, køb, garantier osv.)
+  <id>/inventory.pdf    en inventarliste til udskrift, for lokationer med op til 2.000 ting
+  <id>/files/           de billeder, kvitteringer og dokumenter, som siderne linker til
+
+Hver lokation gemmes, som ejeren ser den, på ejerens valgte sprog. Hemmeligheder såsom
+koder til pengeskabe og alarmer findes aldrig i denne kopi. De findes kun i den
+krypterede databasekopi ved siden af (backup/db/), som Tingfinders gendannelsespakke åbner.
+
+Sådan hentes denne mappe fra en restic-sikkerhedskopi uden Tingfinder:
+
+  restic -r <repository> restore latest --target ./kept-backup --include /backup/readable
+
+Åbn derefter ./kept-backup/backup/readable/index.html.
+
+English version
+---------------
+
+Tingfinder: the readable copy of every location
 ==========================================
 
-This folder is part of a Kept backup. It needs nothing but a web browser and, for the .csv
-files, a spreadsheet: no Kept, no database, no network.
+This folder is part of a Tingfinder backup. It needs nothing but a web browser and, for the .csv
+files, a spreadsheet: no Tingfinder, no database, no network.
 
   index.html            every location in this backup; open it in a browser
   <id>/index.html       one location: its places and things, with photos and documents
@@ -379,9 +405,9 @@ files, a spreadsheet: no Kept, no database, no network.
 
 Each location is written as its owner sees it. Secrets (safe combinations, alarm codes and the
 like) are never in this copy; they are only in the encrypted database dump beside it
-(backup/db/), which Kept's recovery kit opens.
+(backup/db/), which Tingfinder's recovery kit opens.
 
-To get this folder out of a restic backup without Kept:
+To get this folder out of a restic backup without Tingfinder:
 
   restic -r <repository> restore latest --target ./kept-backup --include /backup/readable
 

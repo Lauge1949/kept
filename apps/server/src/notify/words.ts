@@ -235,6 +235,58 @@ const EN = words(
   },
 );
 
+const DA_DOCS: Record<string, string> = {
+  registration: 'Registreringen',
+  insurance: 'Forsikringen',
+  licence: 'Licensen',
+  inspection: 'Synet',
+  lease: 'Lejeaftalen',
+  contract: 'Kontrakten',
+};
+const DA = words(
+  'da',
+  (f, day) => (f.sourceType === 'registration' ? `senest den ${day}` : `den ${day}`),
+  (v) => `ved ${v}`,
+  {
+    schedule: {
+      any: (n, w, f) => `${f.title ?? 'Service'} på ${n} skal udføres ${w}`,
+      overdue: (n, w, f) => `${f.title ?? 'Service'} på ${n} skulle have været udført ${w}`,
+    },
+    warranty: {
+      any: (n, w, f) => `Garantien på ${n}${provider(f, (p) => ` fra ${p}`)} udløber ${w}`,
+    },
+    registration: {
+      any: (n, w, f) => `Registrér garantien på ${n}${provider(f, (p) => ` fra ${p}`)} ${w}`,
+    },
+    document: {
+      any: (n, w, f) => `${docTitle(f, DA_DOCS, 'Et dokument')} for ${n} udløber ${w}`,
+      overdue: (n, w, f) => `${docTitle(f, DA_DOCS, 'Et dokument')} for ${n} udløb ${w}`,
+    },
+    loan: { any: (n, w) => `${n} skulle afleveres tilbage ${w}` },
+    thing_expiry: { any: (n, w) => `${n} udløber ${w}`, overdue: (n, w) => `${n} udløb ${w}` },
+    stock: { any: (n, w) => `Beholdningen af ${n} blev lav ${w}` },
+    reading_stale: {
+      any: stale(
+        'da',
+        { distance: 'Kilometertælleren', hours: 'Timetælleren', custom: 'Måleren' },
+        (l) => `“${l}”`,
+        (m, n, day) => `${m} på ${n} blev sidst aflæst den ${day}`,
+        (m, n, w) => `${m} på ${n} skal aflæses ${w}`,
+      ),
+    },
+  },
+  {
+    schedule: (f) => f.title ?? 'Tid til service',
+    warranty: () => 'Garantien udløber',
+    registration: () => 'Registrér garantien',
+    document: (f) => docTitle(f, DA_DOCS, 'Dokument udløber'),
+    loan: () => 'Skal afleveres tilbage',
+    thing_expiry: () => 'Udløber',
+    reading_stale: () => 'Aflæsning nødvendig',
+    stock: () => 'Lav beholdning',
+  },
+);
+
 const AR = words(
   'ar-u-nu-latn',
   (f, day) => (f.sourceType === 'registration' ? `في موعد أقصاه ${day}` : `في ${day}`),
@@ -575,6 +627,7 @@ const ES = words(
 
 export const REMINDER_WORDS: Record<MailLocale, ReminderWords> = {
   ar: AR,
+  da: DA,
   de: DE,
   en: EN,
   es: ES,
@@ -607,6 +660,7 @@ export const REMINDER_COUNT: Record<MailLocale, (n: number) => string> = {
         return `${n} تذكير`;
     }
   },
+  da: (n) => (n === 1 ? '1 påmindelse' : `${n} påmindelser`),
   de: (n) => (n === 1 ? '1 Erinnerung' : `${n} Erinnerungen`),
   en: (n) => (n === 1 ? '1 reminder' : `${n} reminders`),
   es: (n) => (n === 1 ? '1 recordatorio' : `${n} recordatorios`),

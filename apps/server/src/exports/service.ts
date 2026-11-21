@@ -48,7 +48,7 @@ export const ExportOptionsBody = z
     readable: z.boolean(),
     pdf: z.boolean(),
     // The web's languages; the readable copy is English or Arabic (readable/labels.ts).
-    locale: z.enum(['ar', 'de', 'en', 'es', 'fr', 'it', 'uk', 'vi']),
+    locale: z.enum(['ar', 'da', 'de', 'en', 'es', 'fr', 'it', 'uk', 'vi']),
     digits: z.enum(['western', 'eastern']),
   })
   .partial()
@@ -261,7 +261,7 @@ export async function createExport(
   const { rows: profile } = await client.query<{ locale: string; digits: 'western' | 'eastern' }>(
     'SELECT locale, digits FROM public.user_profiles WHERE user_id = kept.current_user_id()',
   );
-  const locale = (['ar', 'de', 'en', 'es', 'fr', 'it', 'uk', 'vi'] as const).find(
+  const locale = (['ar', 'da', 'de', 'en', 'es', 'fr', 'it', 'uk', 'vi'] as const).find(
     (l) => l === (profile[0]?.locale ?? '').slice(0, 2),
   );
   const options: ExportOptions = optionsOf({
@@ -357,10 +357,10 @@ function viewOf(run: RunRow): ExportRunView {
   return view;
 }
 
-/** An ASCII download name: `kept-<location>-<date>.zip`, or `kept-my-data-<date>.zip`. */
+/** An ASCII download name: `tingfinder-<location>-<date>.zip`, or `tingfinder-my-data-<date>.zip`. */
 export function zipName(run: Pick<RunRow, 'kind' | 'location_name' | 'created_at'>): string {
   const day = run.created_at.toISOString().slice(0, 10);
-  if (run.kind === 'me') return `kept-my-data-${day}.zip`;
+  if (run.kind === 'me') return `tingfinder-my-data-${day}.zip`;
   const slug = (run.location_name ?? '')
     .normalize('NFKD')
     .replace(/[^\x20-\x7e]/g, '')
@@ -368,7 +368,7 @@ export function zipName(run: Pick<RunRow, 'kind' | 'location_name' | 'created_at
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
     .slice(0, 40);
-  return `kept-${slug || 'location'}-${day}.zip`;
+  return `tingfinder-${slug || 'location'}-${day}.zip`;
 }
 
 async function readRun(client: pg.ClientBase, id: string): Promise<RunRow> {

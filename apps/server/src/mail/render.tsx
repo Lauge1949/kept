@@ -16,7 +16,7 @@ import { CHROME, type Chrome, type MailLocale, type Message } from './messages.j
 
 export type RenderedMail = { subject: string; text: string; html: string };
 
-/** Kept's colours, from the web app's tokens (apps/web/src/styles/tokens.css). The tape and its
+/** Tingfinder's colours, from the web app's tokens (apps/web/src/styles/tokens.css). The tape and its
  * ink keep their colours in both themes; the rest has a dark counterpart. */
 export const BRAND = {
   amber: '#F0B03A',
@@ -40,7 +40,7 @@ export const BRAND = {
 } as const;
 
 /** Where the project lives: the one address in a mail that isn't the instance's own. */
-export const PROJECT_SITE = 'https://keptinventory.info/';
+export const PROJECT_SITE = 'https://github.com/Lauge1949/kept';
 
 const FONT =
   "-apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Noto Sans Arabic', Arial, sans-serif";
@@ -70,7 +70,7 @@ const TABLE = { role: 'presentation', cellPadding: 0, cellSpacing: 0, border: 0 
  * Always left to right, as the brand is drawn, in Arabic mail too. */
 function Lockup() {
   return (
-    <table {...TABLE} data-kept-mark="" dir="ltr" aria-label="Kept">
+    <table {...TABLE} data-kept-mark="" dir="ltr" aria-label="Tingfinder">
       <tbody>
         <tr>
           <td valign="middle" style={{ padding: 0 }}>
@@ -138,7 +138,7 @@ function Lockup() {
               color: L.ink,
             }}
           >
-            KEPT
+            TINGFINDER
           </td>
         </tr>
       </tbody>

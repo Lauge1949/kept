@@ -72,7 +72,12 @@ import { useMediaQuery } from '@/lib/media';
 import { useOnline } from '@/lib/online';
 import { directionOf, usePrefs } from '@/lib/prefs';
 import { cn } from '@/lib/utils';
-import { isReleaseVersion, releaseNotesUrl, type Slide } from '@/whats-new/highlights';
+import {
+  isReleaseVersion,
+  localizedSlide,
+  releaseNotesUrl,
+  type Slide,
+} from '@/whats-new/highlights';
 
 /** This build's release, when it has a card to show. */
 export const WHATS_NEW =
@@ -172,7 +177,7 @@ const SWIPE = 40;
 
 function Showcase({
   version,
-  slides,
+  slides: sourceSlides,
   onDone,
 }: {
   version: string;
@@ -182,6 +187,7 @@ function Showcase({
   const { t, i18n } = useLingui();
   const { locale } = usePrefs();
   const f = useFormat();
+  const slides = sourceSlides.map((slide) => localizedSlide(slide, version, locale));
   const rtl = directionOf(locale) === 'rtl';
   const still = useMediaQuery('(prefers-reduced-motion: reduce)');
   const online = useOnline();
@@ -347,7 +353,7 @@ function Showcase({
                   />
                   <div className="grid gap-1">
                     <h3
-                      lang="en"
+                      lang={locale === 'da' ? 'da' : 'en'}
                       dir="ltr"
                       className="m-0 font-semibold text-[18px] leading-snug text-ink [overflow-wrap:anywhere]"
                     >
@@ -355,7 +361,7 @@ function Showcase({
                     </h3>
                     {slide.line ? (
                       <p
-                        lang="en"
+                        lang={locale === 'da' ? 'da' : 'en'}
                         dir="ltr"
                         className="m-0 text-body text-ink-2 [overflow-wrap:anywhere]"
                       >

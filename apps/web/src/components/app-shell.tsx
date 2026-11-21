@@ -593,7 +593,7 @@ function Sidebar({ locations, counts }: { locations: LocationSummary[]; counts: 
             rail ? 'grid h-9 w-11 place-items-center rounded-lg' : 'px-1.5',
           )}
         >
-          {rail ? <AppMark size={32} label="Kept" /> : <BrandLockup />}
+          {rail ? <AppMark size={32} label="Tingfinder" /> : <BrandLockup />}
         </Link>
         {/* The guided tour's "everything else" stop on a desktop (components/hints/tour.ts). */}
         <nav aria-label={t`Main`} className="grid gap-0.5" data-tour="nav-entries">

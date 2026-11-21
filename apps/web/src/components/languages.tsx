@@ -9,6 +9,7 @@
 import { findLanguages, languageSearch } from '@kept/shared';
 import { useLingui } from '@lingui/react/macro';
 import DE from 'country-flag-icons/react/3x2/DE';
+import DK from 'country-flag-icons/react/3x2/DK';
 import EG from 'country-flag-icons/react/3x2/EG';
 import ES from 'country-flag-icons/react/3x2/ES';
 import FR from 'country-flag-icons/react/3x2/FR';
@@ -30,6 +31,7 @@ export type Language = { id: Locale; name: string; label: string };
 /** Each language's name in itself, so a reader finds theirs whatever the interface says. */
 export const LANGUAGE_NAMES: Readonly<Record<Locale, string>> = {
   ar: 'العربية',
+  da: 'Dansk',
   de: 'Deutsch',
   en: 'English',
   es: 'Español',
@@ -41,6 +43,7 @@ export const LANGUAGE_NAMES: Readonly<Record<Locale, string>> = {
 
 const FLAGS: Readonly<Record<Locale, Flag>> = {
   ar: EG,
+  da: DK,
   de: DE,
   en: GB,
   es: ES,

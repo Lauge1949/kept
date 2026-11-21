@@ -14,10 +14,11 @@ import { tokenHash } from './claim-pack.js';
 // language: a link that never existed says the same, so a guess learns nothing. The token is
 // redacted from the request log (http/logger.ts), and only its sha256 is ever stored.
 
-const LANGS = ['ar', 'de', 'en', 'es', 'fr', 'it', 'uk', 'vi'] as const;
+const LANGS = ['ar', 'da', 'de', 'en', 'es', 'fr', 'it', 'uk', 'vi'] as const;
 type Lang = (typeof LANGS)[number];
 
 const EXPIRED: Record<Lang, { title: string; body: string }> = {
+  da: { title: 'Dette link er udløbet', body: 'Bed den, der delte linket, om et nyt.' },
   ar: {
     title: 'انتهت صلاحية هذا الرابط',
     body: 'اطلب رابطًا جديدًا ممن شاركه معك.',
@@ -140,7 +141,7 @@ export async function serveClaimPack(
   return reply
     .header('content-type', 'application/zip')
     .header('content-length', found.bytes)
-    .header('content-disposition', contentDisposition('attachment', `kept-claim-${day}.zip`))
+    .header('content-disposition', contentDisposition('attachment', `tingfinder-claim-${day}.zip`))
     .header('x-content-type-options', 'nosniff')
     .header('cache-control', 'no-store')
     .header('referrer-policy', 'no-referrer')

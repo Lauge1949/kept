@@ -156,7 +156,7 @@ describe('the inventory PDF, once made', () => {
     await user.click(button);
     expect(share).toHaveBeenCalledTimes(1);
     const file = share.mock.calls[0]?.[0].files?.[0];
-    expect(file?.name).toBe('kept-inventory-2026-09-30.pdf');
+    expect(file?.name).toBe('tingfinder-inventory-2026-09-30.pdf');
     expect(file?.type).toBe('application/pdf');
     expect(click).not.toHaveBeenCalled();
   });

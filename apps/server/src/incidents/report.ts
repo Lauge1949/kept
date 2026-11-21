@@ -34,7 +34,7 @@ import { gateFor } from '../serialize/gates.js';
 //   (its latest valuation on or before that day) and labels the report. The past is not replayed.
 // - Per thing: thumbnail, name, brand, model, serial, purchase date and price, current value with
 //   its date, and the receipt count (the purchase's receipts and invoices plus any on the thing).
-//   Receipts are linked into Kept (the thing's page), not embedded: a PDF can't open a signed URL
+//   Receipts are linked into Tingfinder (the thing's page), not embedded: a PDF can't open a signed URL
 //   later.
 // - Totals per place and per location, per currency, of each thing's insured value: its current
 //   value, or its purchase price when it has no valuation (said under the totals). With a report
@@ -385,7 +385,7 @@ export type InsuranceViewThing = {
   value: string;
   valuedOn: string;
   receipts: string;
-  /** The thing's page in Kept, where its receipts are. */
+  /** The thing's page in Tingfinder, where its receipts are. */
   link: string;
 };
 
@@ -436,7 +436,7 @@ function safeTimeZone(tz: string): string {
 }
 
 export type InsuranceViewContext = {
-  /** KEPT_PUBLIC_URL without a trailing slash: the footer's host and the links into Kept. */
+  /** KEPT_PUBLIC_URL without a trailing slash: the footer's host and the links into Tingfinder. */
   publicUrl: string;
   now: Date;
   withPhoto: ReadonlySet<string>;
@@ -574,7 +574,7 @@ export function buildInsuranceView(
     ownerLine: g.ownerName ? w.owner(g.ownerName) : '',
     generatedBy: g.requesterName,
     generatedLine: w.generated(g.requesterName, when),
-    footer: ['Kept', host, when].filter((x) => x !== '').join(sep),
+    footer: ['Tingfinder', host, when].filter((x) => x !== '').join(sep),
     incident,
     totals: totals.map(([c, v]) => money(v, c)),
     convertedLabel,

@@ -1,7 +1,14 @@
+# Tingfinder
+
+Vores selvhostede app til at huske, hvor ting er, med dansk brugerflade.
+Tingfinder bygger på [Kept](https://github.com/keptinventory/kept) under AGPL-3.0.
+Se [vores udgave og udviklingsstatus](FORK.md) og [bygning og drift](deploy/README.md).
+Den oprindelige dokumentation følger nedenfor som upstream-reference.
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/assets/kept-lockup-dark.svg">
-    <img src="docs/assets/kept-lockup-light.svg" alt="Kept" width="240">
+    <img src="docs/assets/kept-lockup-light.svg" alt="Tingfinder" width="320">
   </picture>
 </p>
 

@@ -122,7 +122,7 @@ describe('GET /api/v1/things.csv', () => {
     const res = await csv(ibrahim, q);
     expect(res.statusCode, res.body).toBe(200);
     expect(res.headers['content-type']).toBe('text/csv; charset=utf-8');
-    expect(res.headers['content-disposition']).toMatch(/^attachment; filename="kept-things-/);
+    expect(res.headers['content-disposition']).toMatch(/^attachment; filename="tingfinder-things-/);
     const [header, ...rows] = parse(res.body);
     expect(header).toEqual([
       'short_id',

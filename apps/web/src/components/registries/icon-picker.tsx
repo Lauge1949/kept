@@ -16,6 +16,32 @@ import { STATIC_ICONS, TypeIcon } from '@/components/type-icon';
 import { cn } from '@/lib/utils';
 
 const LIMIT = 60;
+// Danish search words alongside Lucide's stable English icon identifiers.
+const DANISH_ICONS: Readonly<Record<string, string>> = {
+  box: 'kasse beholder',
+  boxes: 'kasser beholdere',
+  package: 'pakke',
+  drill: 'boremaskine skruemaskine',
+  wrench: 'værktøj skruenøgle',
+  hammer: 'værktøj hammer',
+  sofa: 'sofa møbel',
+  armchair: 'lænestol møbel',
+  bed: 'seng',
+  lamp: 'lampe',
+  'washing-machine': 'vaskemaskine',
+  refrigerator: 'køleskab',
+  car: 'bil køretøj',
+  bike: 'cykel',
+  camera: 'kamera',
+  smartphone: 'telefon mobiltelefon',
+  monitor: 'skærm',
+  laptop: 'bærbar computer',
+  key: 'nøgle',
+  archive: 'arkiv opbevaring',
+  warehouse: 'lager',
+  house: 'hus hjem',
+  'map-pin': 'lokation placering',
+};
 
 /** The built-in icons first (what the library uses), then every Lucide icon by name. */
 const ALL: readonly string[] = (() => {
@@ -41,7 +67,7 @@ export default function IconPicker({
     const words = q.trim().toLowerCase().split(/\s+/).filter(Boolean);
     const found = words.length
       ? ALL.filter((ref) => {
-          const w = iconWords(ref);
+          const w = `${iconWords(ref)} ${DANISH_ICONS[ref.replace(/^[a-z]+:/, '')] ?? ''}`;
           return words.every((x) => w.includes(x));
         })
       : ALL.slice(0, Object.keys(STATIC_ICONS).length);

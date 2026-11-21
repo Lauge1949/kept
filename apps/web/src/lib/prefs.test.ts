@@ -40,7 +40,9 @@ afterEach(() => {
 
 describe('languages', () => {
   it('has the languages, and knows a tag by its language', () => {
-    expect(LOCALES).toEqual(['ar', 'de', 'en', 'es', 'fr', 'it', 'uk', 'vi']);
+    expect(LOCALES).toEqual(['ar', 'da', 'de', 'en', 'es', 'fr', 'it', 'uk', 'vi']);
+    expect(isLocale('da')).toBe(true);
+    expect(localeOfTag('da-DK')).toBe('da');
     expect(isLocale('it')).toBe(true);
     expect(isLocale('vi')).toBe(true);
     expect(isLocale('uk')).toBe(true);
@@ -54,6 +56,8 @@ describe('languages', () => {
   });
 
   it('formats in the language itself; only Arabic carries a numbering system', () => {
+    expect(formatLocale('da', 'western')).toBe('da');
+    expect(new Intl.NumberFormat(formatLocale('da', 'western')).format(1234.5)).toBe('1.234,5');
     expect(formatLocale('fr', 'eastern')).toBe('fr');
     expect(formatLocale('de', 'western')).toBe('de');
     expect(formatLocale('it', 'eastern')).toBe('it');

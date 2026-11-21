@@ -44,6 +44,10 @@ export function normaliseHeader(header: string): string {
  */
 const WORDS: Record<Exclude<MappableField, `custom.${string}` | 'ignore'>, string[]> = {
   name: [
+    'navn',
+    'titel',
+    'ting',
+    'produktnavn',
     'name',
     'item',
     'item name',
@@ -85,6 +89,8 @@ const WORDS: Record<Exclude<MappableField, `custom.${string}` | 'ignore'>, strin
     'mặt hàng',
   ],
   quantity: [
+    'antal',
+    'mængde',
     'quantity',
     'qty',
     'count',
@@ -108,6 +114,8 @@ const WORDS: Record<Exclude<MappableField, `custom.${string}` | 'ignore'>, strin
     'sl',
   ],
   brand: [
+    'mærke',
+    'producent',
     'brand',
     'make',
     'maker',
@@ -133,6 +141,7 @@ const WORDS: Record<Exclude<MappableField, `custom.${string}` | 'ignore'>, strin
     'nhà sản xuất',
   ],
   model: [
+    'modelnummer',
     'model',
     'model number',
     'موديل',
@@ -149,6 +158,7 @@ const WORDS: Record<Exclude<MappableField, `custom.${string}` | 'ignore'>, strin
     'mô hình',
   ],
   serial: [
+    'serienummer',
     'serial',
     'serial number',
     'serial no',
@@ -173,6 +183,7 @@ const WORDS: Record<Exclude<MappableField, `custom.${string}` | 'ignore'>, strin
     'số serial',
   ],
   barcode: [
+    'stregkode',
     'barcode',
     'ean',
     'upc',
@@ -189,8 +200,21 @@ const WORDS: Record<Exclude<MappableField, `custom.${string}` | 'ignore'>, strin
     'штрих код',
     'mã vạch',
   ],
-  colour: ['colour', 'color', 'لون', 'couleur', 'farbe', 'colore', 'колір', 'màu sắc', 'màu'],
+  colour: [
+    'farve',
+    'colour',
+    'color',
+    'لون',
+    'couleur',
+    'farbe',
+    'colore',
+    'колір',
+    'màu sắc',
+    'màu',
+  ],
   condition: [
+    'stand',
+    'tilstand',
     'condition',
     'state',
     'حالة',
@@ -205,6 +229,9 @@ const WORDS: Record<Exclude<MappableField, `custom.${string}` | 'ignore'>, strin
     'trạng thái',
   ],
   notes: [
+    'beskrivelse',
+    'bemærkninger',
+    'noter',
     'notes',
     'note',
     'description',

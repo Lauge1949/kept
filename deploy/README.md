@@ -135,3 +135,23 @@ HTTPS perimeter separately and uses only the existing synthetic account for the
 inner capture/create/delete flow; it never consumes an invitation. Its report
 and screenshots stay in `KEPT_SMOKE_STATE`. Synced deletion waits for dependent
 photo uploads to finish; no pending photos are discarded after a failed delete.
+
+### Tingfinder and Danish
+
+`deploy/build-tingfinder.sh tingfinder:20261121` archives the same pinned 1.14.7
+source and applies the explicit overlay plus task-only stable patches. It compiles
+the stable server without running migrations, retains existing runtime assets, and
+copies the renamed report templates. It runs capture/preferences tests, TypeScript
+checks, Danish mail/report/assistant checks, shared shape tests, the full catalogue
+check and the production web build offline. The original icon geometry is retained.
+
+The product is Tingfinder; Danish (`da`, including browser tags such as `da-DK`)
+is selectable alongside all existing languages. Technical Kept identifiers remain
+compatible. The existing preview URL is unchanged. Build after committing so the
+image revision and source link identify the actual fork commit.
+
+`deploy/tingfinder-smoke.mjs` checks Danish startup, language switching, installation
+metadata, account locale persistence and 320–1440 px layouts using the same private
+synthetic fixture and loopback browser transport. Run `deploy/capture-smoke.mjs`
+afterwards for capture/create/delete and the real public unauthenticated perimeter.
+Neither script claims physical iPhone, Android or WebKit coverage.

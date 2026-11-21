@@ -50,7 +50,7 @@ describe('the recovery kit content', () => {
   it('holds the address, the version, the keys and "No backup configured"', () => {
     const text = renderRecoveryKitText(base);
     expect(text).toContain('Instance: https://kept.example');
-    expect(text).toContain('Kept: 1.0.0 (revision 3f9ed1d)');
+    expect(text).toContain('Tingfinder: 1.0.0 (revision 3f9ed1d)');
     expect(text).toContain('Made: 2026-10-06T09:30:00.000Z');
     expect(text).toContain(`KEPT_SECRET_KEY=${'S'.repeat(43)}`);
     expect(text).toContain(`KEPT_AUTH_SECRET=${'A'.repeat(43)}`);
@@ -109,7 +109,7 @@ describe('the recovery kit content', () => {
 
   it('quotes for a shell and names the file by its day', () => {
     expect(shellQuote("a'b")).toBe(`'a'\\''b'`);
-    expect(recoveryKitFilename(base.generatedAt, 'text')).toBe('kept-recovery-kit-2026-10-06.txt');
-    expect(recoveryKitFilename(base.generatedAt, 'html')).toBe('kept-recovery-kit-2026-10-06.html');
+    expect(recoveryKitFilename(base.generatedAt, 'text')).toBe('tingfinder-recovery-kit-2026-10-06.txt');
+    expect(recoveryKitFilename(base.generatedAt, 'html')).toBe('tingfinder-recovery-kit-2026-10-06.html');
   });
 });

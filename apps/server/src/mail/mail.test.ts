@@ -393,7 +393,7 @@ describe('the message table', () => {
         for (const [i, p] of m.paragraphs.entries()) expect(p, label).not.toBe(en.paragraphs[i]);
         if (en.action) expect(m.action?.label, label).not.toBe(en.action.label);
         // The product name is never translated.
-        if (en.subject.includes('Kept')) expect(m.subject, label).toContain('Kept');
+        if (en.subject.includes('Tingfinder')) expect(m.subject, label).toContain('Tingfinder');
       }
     }
   });
@@ -410,7 +410,7 @@ describe('the message table', () => {
     ) as MailBody;
     expect(messageFor(scan, 'en', ctx).action?.url).toBe(`${PUBLIC_URL}/admin/jobs`);
     expect(messageFor(scan, 'en', ctx).paragraphs[0]).toContain('2031-01-02');
-    expect(messageFor(scan, 'ar', ctx).subject).toBe('Kept: توقّف إرسال التذكيرات');
+    expect(messageFor(scan, 'ar', ctx).subject).toBe('Tingfinder: توقّف إرسال التذكيرات');
     expect(messageFor({ kind: 'sign-up-existing', to: 'a@x.test' }, 'en', ctx).action?.url).toBe(
       `${PUBLIC_URL}/signin`,
     );
@@ -421,9 +421,9 @@ describe('the backup-code notice (#419)', () => {
   it('says when, on what, how many codes are left, and what to do', () => {
     const m = messageFor(backupCodeUsed(), 'en', ctx);
     expect(m).toEqual({
-      subject: 'A backup code was used to sign in to your Kept account',
+      subject: 'A backup code was used to sign in to your Tingfinder account',
       paragraphs: [
-        'A backup code was used to sign in to your Kept account on 15 January 2031 at 16:05 EET, from Safari on iPhone.',
+        'A backup code was used to sign in to your Tingfinder account on 15 January 2031 at 16:05 EET, from Safari on iPhone.',
         'You have 9 backup codes left.',
         'If you used it because your authenticator app is gone, set two-factor up again with a new app in Settings → Sign-in and security → Set up again. That gives you new backup codes too.',
       ],
@@ -441,7 +441,7 @@ describe('the backup-code notice (#419)', () => {
       messageFor(backupCodeUsed({ browser: null, os: null, timeZone: 'Not/A_Zone' }), 'en', ctx)
         .paragraphs[0],
     ).toBe(
-      'A backup code was used to sign in to your Kept account on 15 January 2031 at 14:05 UTC.',
+      'A backup code was used to sign in to your Tingfinder account on 15 January 2031 at 14:05 UTC.',
     );
     expect(messageFor(backupCodeUsed({ os: null }), 'en', ctx).paragraphs[0]).toContain(
       'from Safari.',
@@ -633,11 +633,11 @@ describe('AI cap notices and alerts', () => {
   it('says how much of which cap, the pause date, and links to AI settings', () => {
     const [warning, reached] = caps as MailBody[];
     const w = messageFor(warning as MailBody, 'en', ctx);
-    expect(w.subject).toBe('Kept: 80% of Home’s AI cap used this month');
+    expect(w.subject).toBe('Tingfinder: 80% of Home’s AI cap used this month');
     expect(w.paragraphs[0]).toContain('USD 4.0039 of USD 5');
     expect(w.action?.url).toBe(`${PUBLIC_URL}/settings/ai`);
     const r = messageFor(reached as MailBody, 'en', ctx);
-    expect(r.subject).toBe('Kept: AI paused until 2031-02-01');
+    expect(r.subject).toBe('Tingfinder: AI paused until 2031-02-01');
     expect(r.paragraphs[0]).toContain('1,000,400 of 1,000,000 tokens');
     expect(r.action?.label).toBe('Resume now');
     expect(messageFor(reached as MailBody, 'ar', ctx).paragraphs[0]).toContain('1,000,400');
@@ -833,7 +833,7 @@ describe('createMailer', () => {
   });
 
   it('defaults the From to no-reply at the public host', () => {
-    expect(defaultFrom('https://kept.example.org/')).toBe('Kept <no-reply@kept.example.org>');
+    expect(defaultFrom('https://kept.example.org/')).toBe('Tingfinder <no-reply@kept.example.org>');
   });
 });
 
@@ -847,7 +847,7 @@ describe('over SMTP, to Mailpit', () => {
     await db.reset();
     smtp = smtpMailer({
       url: MAILPIT_SMTP_URL,
-      from: 'Kept <kept@kept.test>',
+      from: 'Tingfinder <kept@kept.test>',
       publicUrl: PUBLIC_URL,
       localeOf: profileLocaleLookup(db.pools.system),
     });
@@ -860,8 +860,8 @@ describe('over SMTP, to Mailpit', () => {
     const url = `${PUBLIC_URL}/auth/confirm#token=abc`;
     await smtp.send({ kind: 'magic-link', to, url });
     const [msg] = await mailpitWait(to);
-    expect(msg?.Subject).toBe('Your Kept sign-in link');
-    expect(msg?.From).toEqual({ Name: 'Kept', Address: 'kept@kept.test' });
+    expect(msg?.Subject).toBe('Your Tingfinder sign-in link');
+    expect(msg?.From).toEqual({ Name: 'Tingfinder', Address: 'kept@kept.test' });
     expect(msg?.Text).toContain(url);
     expect(msg?.HTML).toContain(`href="${url}"`);
   });
@@ -880,9 +880,9 @@ describe('over SMTP, to Mailpit', () => {
     await smtp.send({ kind: 'security-notice', to, event: 'password-changed' });
     await smtp.send({ kind: 'security-notice', to, event: 'password-changed', locale: 'en' });
     const [ar, en] = await mailpitWait(to, 2);
-    expect(ar?.Subject).toBe('تغيّرت كلمة مرورك على Kept');
+    expect(ar?.Subject).toBe('تغيّرت كلمة مرورك على Tingfinder');
     expect(ar?.HTML).toContain('dir="rtl"');
-    expect(en?.Subject).toBe('Your Kept password was changed');
+    expect(en?.Subject).toBe('Your Tingfinder password was changed');
   });
 
   it("mails the owner of a location about a new member, in the owner's language", async () => {

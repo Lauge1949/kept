@@ -144,5 +144,10 @@ export async function buildFeed(
       url: new URL(link, publicUrl).toString(),
     };
   });
-  return writeCalendar({ prodId: '-//Kept//Calendar feed//EN', name: 'Kept', stamp: now, events });
+  return writeCalendar({
+    prodId: '-//Kept//Calendar feed//EN',
+    name: 'Tingfinder',
+    stamp: now,
+    events,
+  });
 }

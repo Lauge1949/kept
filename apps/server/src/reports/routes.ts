@@ -214,7 +214,7 @@ export async function reportRoutes(app: KeptApp, deps: InventoryDeps): Promise<v
         .type('text/csv; charset=utf-8')
         .header(
           'content-disposition',
-          `attachment; filename="kept-insurance-${new Date().toISOString().slice(0, 10)}.csv"`,
+          `attachment; filename="tingfinder-insurance-${new Date().toISOString().slice(0, 10)}.csv"`,
         )
         .header('cache-control', 'no-store');
       return csv;

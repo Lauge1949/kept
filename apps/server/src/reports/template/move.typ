@@ -18,7 +18,7 @@
 #let sfx = (w) => if w == 600 { " SmBld" } else if w == 500 { " Medm" } else { "" }
 #let W(w) = sans.map(f => f + sfx(w))
 
-#set document(title: d.title + " — " + d.move, author: "Kept")
+#set document(title: d.title + " — " + d.move, author: "Tingfinder")
 #set text(font: sans, size: 10pt, fill: c.ink, lang: d.lang, dir: if isrtl { rtl } else { ltr }, hyphenate: false)
 #set par(leading: 0.6em)
 #set page(paper: "a4", margin: (top: 16mm, x: 16mm, bottom: 16mm), fill: c.paper,

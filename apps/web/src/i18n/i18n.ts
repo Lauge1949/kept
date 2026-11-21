@@ -16,6 +16,7 @@ import {
 
 const loaders: Record<Locale, () => Promise<{ messages: Messages }>> = {
   ar: () => import('../locales/ar/messages.po'),
+  da: () => import('../locales/da/messages.po'),
   de: () => import('../locales/de/messages.po'),
   en: () => import('../locales/en/messages.po'),
   es: () => import('../locales/es/messages.po'),

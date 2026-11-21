@@ -4,7 +4,7 @@
  */
 import { BUILTIN_TYPES, builtinType } from './builtin-types.js';
 
-export type BuiltinNameLocale = 'ar' | 'de' | 'en' | 'es' | 'fr' | 'it' | 'uk' | 'vi';
+export type BuiltinNameLocale = 'ar' | 'da' | 'de' | 'en' | 'es' | 'fr' | 'it' | 'uk' | 'vi';
 type More = {
   readonly de: string;
   readonly es: string;
@@ -521,6 +521,7 @@ export function builtinTypeName(key: string, locale: BuiltinNameLocale): string 
   const names = builtinType(key)?.names;
   if (!names) return undefined;
   if (locale === 'en' || locale === 'ar') return names[locale];
+  if (locale === 'da') return DANISH_NAMES[key];
   return BUILTIN_TYPE_NAMES_MORE[key]?.[locale] ?? names.en;
 }
 
@@ -529,5 +530,78 @@ export function builtinFieldName(key: string, locale: BuiltinNameLocale): string
   const names = FIELD_NAMES.get(key);
   if (!names) return undefined;
   if (locale === 'en' || locale === 'ar') return names[locale];
+  if (locale === 'da') return DANISH_NAMES[key];
   return BUILTIN_FIELD_NAMES_MORE[key]?.[locale] ?? names.en;
 }
+
+/** Danish names for every built-in type and field. User-defined names stay as entered. */
+export const DANISH_NAMES: Readonly<Record<string, string>> = {
+  device: 'Enhed',
+  furniture: 'Møbel',
+  appliance: 'Husholdningsapparat',
+  large_appliance: 'Hvidevare',
+  small_appliance: 'Lille husholdningsapparat',
+  electronics: 'Elektronik',
+  phone: 'Telefon',
+  tablet: 'Tablet',
+  computer: 'Computer',
+  tv_display: 'TV / skærm',
+  network_device: 'Netværksenhed',
+  camera: 'Kamera',
+  console: 'Spillekonsol',
+  cable: 'Kabel',
+  charger: 'Oplader / strømforsyning',
+  tool: 'Værktøj',
+  power_tool: 'Elværktøj',
+  box_bin: 'Kasse / beholder',
+  safe: 'Pengeskab',
+  vehicle: 'Køretøj',
+  car: 'Bil',
+  motorbike: 'Motorcykel',
+  bicycle: 'Cykel',
+  generator: 'Generator',
+  safety_equipment: 'Sikkerhedsudstyr',
+  fire_extinguisher: 'Brandslukker',
+  first_aid_kit: 'Førstehjælpskasse',
+  smoke_detector: 'Røgalarm',
+  child_car_seat: 'Autostol',
+  valuables: 'Værdigenstand',
+  collectible: 'Samlerobjekt',
+  consumables: 'Forbrugsvare',
+  batteries: 'Batterier',
+  filters: 'Filtre',
+  os: 'Operativsystem',
+  os_version: 'OS-version',
+  firmware: 'Firmware',
+  mac_address: 'MAC-adresse',
+  linked_account: 'Tilknyttet konto eller login',
+  material: 'Materiale',
+  dimensions: 'Mål',
+  imei: 'IMEI',
+  imei_2: 'Andet IMEI',
+  storage: 'Lagerplads',
+  cpu: 'Processor',
+  ram: 'RAM',
+  licence_key: 'Licensnøgle',
+  screen_size: 'Skærmstørrelse',
+  wifi_password: 'Wi-Fi-adgangskode',
+  connector_a: 'Stik A',
+  connector_b: 'Stik B',
+  length: 'Længde',
+  wattage: 'Effekt i watt',
+  connector: 'Stik',
+  voltage: 'Spænding',
+  battery_platform: 'Batteriplatform',
+  combination: 'Kodekombination',
+  vin: 'Stelnummer (VIN)',
+  plate: 'Nummerplade',
+  frame_number: 'Stelnummer',
+  appraisal_value: 'Vurderingsværdi',
+  appraisal_date: 'Vurderingsdato',
+  edition: 'Udgave',
+  condition_grade: 'Stand',
+  provenance_notes: 'Noter om oprindelse',
+  size: 'Størrelse',
+  chemistry: 'Batterikemi',
+  fits: 'Passer til',
+};

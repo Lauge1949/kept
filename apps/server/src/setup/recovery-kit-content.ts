@@ -1,12 +1,13 @@
 import type { BackupTargetKind, RecoveryKitFormat } from '@kept/shared';
 import type { KeyMaterial } from '../config/env.js';
+import { translateKit } from './recovery-kit-da.js';
 
 // The recovery kit's content (D66, D165, D182): everything a burned server
 // needs to come back from its backup, as plain text (UTF-8, under 200 lines) or a print-styled
 // HTML page made from the same lines (no script, no remote resource). Built in memory for the one
 // response or the one file that asks for it; never logged, never stored, never in an error.
 //
-// It holds: the instance's address, Kept's version and revision, when it was made; the secret key,
+// It holds: the instance's address, Tingfinder's version and revision, when it was made; the secret key,
 // its version and every retired key; the auth secret; the backup's restic repository, its
 // password and its storage credentials (S3 keys, or the SFTP key and the pinned host key), or
 // that none is configured; and the restore steps, with the commands to read the inventory with
@@ -60,6 +61,8 @@ export type KitBackupHalf =
   | { state: 'configured'; backup: KitBackup };
 
 export type RecoveryKitInput = {
+  /** Web profile language; CLI calls without a language keep the English operator text. */
+  locale?: string;
   generatedAt: Date;
   publicUrl: string | null;
   version: string;
@@ -72,24 +75,33 @@ export type RecoveryKitInput = {
 export const shellQuote = (value: string): string => `'${value.split("'").join("'\\''")}'`;
 
 /** One kit line per entry; a block (a key file) keeps its own lines. */
-function backupLines(half: KitBackupHalf): string[] {
+function backupLines(half: KitBackupHalf, da = false): string[] {
   if (half.state === 'none') {
     return [
-      'No backup configured.',
-      'Nothing is copied off this server. Set a backup up in Admin → Backups, then download',
-      'this kit again: it will hold the repository, its password and its credentials.',
+      translateKit('No backup configured.', da),
+      translateKit(
+        'Nothing is copied off this server. Set a backup up in Admin → Backups, then download',
+        da,
+      ),
+      translateKit(
+        'this kit again: it will hold the repository, its password and its credentials.',
+        da,
+      ),
     ];
   }
   if (half.state === 'unavailable') {
     return [
-      `Not included: ${half.reason}`,
-      'Download the kit again from Admin → Status, or run kept admin recovery-kit with the',
-      "database owner's login (KEPT_OWNER_DATABASE_URL), to include it.",
+      `${translateKit('Not included', da)}: ${translateKit(half.reason, da)}`,
+      translateKit(
+        'Download the kit again from Admin → Status, or run kept admin recovery-kit with the',
+        da,
+      ),
+      translateKit("database owner's login (KEPT_OWNER_DATABASE_URL), to include it.", da),
     ];
   }
   const b = half.backup;
   const lines = [
-    `Target: ${b.description}${b.lockedByEnvironment ? " (set by the server's environment)" : ''}`,
+    `${translateKit('Target', da)}: ${b.description}${b.lockedByEnvironment ? translateKit(" (set by the server's environment)", da) : ''}`,
     `RESTIC_REPOSITORY=${b.repository}`,
     `RESTIC_PASSWORD=${b.password}`,
     ...b.environment.map(([name, value]) => `${name}=${value}`),
@@ -97,10 +109,10 @@ function backupLines(half: KitBackupHalf): string[] {
   if (b.sftp) {
     lines.push(
       '',
-      'The SFTP private key (save it as kept-backup-key, readable by you only):',
+      translateKit('The SFTP private key (save it as kept-backup-key, readable by you only):', da),
       ...b.sftp.privateKey.trimEnd().split(/\r?\n/),
       '',
-      "The SFTP server's pinned host key (save this line as kept-known-hosts):",
+      translateKit("The SFTP server's pinned host key (save this line as kept-known-hosts):", da),
       b.sftp.knownHostsLine,
     );
   }
@@ -108,16 +120,25 @@ function backupLines(half: KitBackupHalf): string[] {
 }
 
 /** The commands from "Read your inventory with restic alone", with this backup filled in. */
-function resticAloneLines(half: KitBackupHalf): string[] {
+function resticAloneLines(half: KitBackupHalf, da = false): string[] {
   const steps = [
-    'Read your inventory with restic alone (any computer with restic, no Kept, no network for',
-    'a directory copied onto it):',
+    translateKit(
+      'Read your inventory with restic alone (any computer with restic, no Tingfinder, no network for',
+      da,
+    ),
+    translateKit('a directory copied onto it):', da),
   ];
   if (half.state !== 'configured') {
     return [
       ...steps,
-      '  With a backup configured, this kit lists the commands with the repository filled in;',
-      '  see "Read your inventory with restic alone" in Kept\'s documentation.',
+      translateKit(
+        '  With a backup configured, this kit lists the commands with the repository filled in;',
+        da,
+      ),
+      translateKit(
+        '  see "Read your inventory with restic alone" in Tingfinder\'s documentation.',
+        da,
+      ),
     ];
   }
   const b = half.backup;
@@ -136,59 +157,92 @@ function resticAloneLines(half: KitBackupHalf): string[] {
     ...exports.map((line) => `  ${line}`),
     ...(b.sftp ? ['  chmod 600 kept-backup-key'] : []),
     `  restic${sftp} snapshots`,
-    '  (take the newest snapshot tagged nightly or manual; pre_upgrade ones hold no readable copy)',
+    translateKit(
+      '  (take the newest snapshot tagged nightly or manual; pre_upgrade ones hold no readable copy)',
+      da,
+    ),
     `  restic${sftp} restore <snapshot ID> --target ./kept-readable --include /backup/readable`,
-    '  Then open kept-readable/backup/readable/index.html in a browser.',
+    translateKit('  Then open kept-readable/backup/readable/index.html in a browser.', da),
   ];
 }
 
-function restoreLines(half: KitBackupHalf): string[] {
+function restoreLines(half: KitBackupHalf, da = false): string[] {
   return [
-    'To bring Kept back on a new server ("Restore and the drill" in Kept\'s documentation):',
-    '  1. Install Kept as the install guide says, but before its first start set',
-    '     KEPT_SECRET_KEY and KEPT_AUTH_SECRET (and the version and retired keys, when listed)',
-    '     to the values above. Without them, secret values and AI keys stay unreadable.',
+    translateKit(
+      'To bring Tingfinder back on a new server ("Restore and the drill" in Tingfinder\'s documentation):',
+      da,
+    ),
+    translateKit(
+      '  1. Install Tingfinder as the install guide says, but before its first start set',
+      da,
+    ),
+    translateKit(
+      '     KEPT_SECRET_KEY and KEPT_AUTH_SECRET (and the version and retired keys, when listed)',
+      da,
+    ),
+    translateKit(
+      '     to the values above. Without them, secret values and AI keys stay unreadable.',
+      da,
+    ),
     half.state === 'configured'
-      ? '  2. Set the backup target and its password to the values above.'
-      : '  2. Set the backup target and its password to the ones your backups were made with.',
-    '  3. Create an empty database and run kept admin restore <snapshot> into it; it checks',
-    '     every table by its data digest. Then swap it in as the guide says.',
+      ? translateKit('  2. Set the backup target and its password to the values above.', da)
+      : translateKit(
+          '  2. Set the backup target and its password to the ones your backups were made with.',
+          da,
+        ),
+    translateKit(
+      '  3. Create an empty database and run kept admin restore <snapshot> into it; it checks',
+      da,
+    ),
+    translateKit('     every table by its data digest. Then swap it in as the guide says.', da),
   ];
 }
 
 /** The kit's lines, the text and the HTML page alike. */
 export function recoveryKitLines(kit: RecoveryKitInput): string[] {
+  const da = kit.locale?.split(/[-_]/)[0]?.toLowerCase() === 'da';
   const k = kit.keys;
   const showVersion = k.secretKeyVersion !== 1 || k.retired !== undefined;
   return [
-    'KEPT RECOVERY KIT',
+    translateKit('TINGFINDER RECOVERY KIT', da),
     '',
-    'Keep this somewhere other than this server: a password manager, or printed. Anyone with it',
-    'can read your backups and every secret value in them; without it, a restore brings back',
-    'everything except secret values and AI keys.',
+    translateKit(
+      'Keep this somewhere other than this server: a password manager, or printed. Anyone with it',
+      da,
+    ),
+    translateKit(
+      'can read your backups and every secret value in them; without it, a restore brings back',
+      da,
+    ),
+    translateKit('everything except secret values and AI keys.', da),
     '',
-    `Instance: ${kit.publicUrl ?? '(no public address set)'}`,
-    `Kept: ${kit.version}${kit.revision ? ` (revision ${kit.revision})` : ''}`,
-    `Made: ${kit.generatedAt.toISOString()}`,
+    `${translateKit('Instance', da)}: ${kit.publicUrl ?? translateKit('(no public address set)', da)}`,
+    `Tingfinder: ${kit.version}${kit.revision ? ` (revision ${kit.revision})` : ''}`,
+    `${translateKit('Made', da)}: ${kit.generatedAt.toISOString()}`,
     '',
-    '== Keys ==',
-    `Read from: ${k.source === 'environment' ? "the server's environment" : k.source}`,
+    translateKit('== Keys ==', da),
+    `${translateKit('Read from', da)}: ${k.source === 'environment' ? translateKit("the server's environment", da) : k.source}`,
     `KEPT_SECRET_KEY=${k.secretKey}`,
     `KEPT_AUTH_SECRET=${k.authSecret}`,
     ...(showVersion ? [`KEPT_SECRET_KEY_VERSION=${k.secretKeyVersion}`] : []),
     ...(k.retired ? [`KEPT_SECRET_KEYS_RETIRED=${k.retired}`] : []),
-    ...(k.retired ? ['(Retired keys open backups made before a rotation: keep them.)'] : []),
+    ...(k.retired
+      ? [translateKit('(Retired keys open backups made before a rotation: keep them.)', da)]
+      : []),
     '',
-    '== Backup ==',
-    ...backupLines(kit.backup),
+    translateKit('== Backup ==', da),
+    ...backupLines(kit.backup, da),
     '',
-    '== Restore ==',
-    ...restoreLines(kit.backup),
+    translateKit('== Restore ==', da),
+    ...restoreLines(kit.backup, da),
     '',
-    ...resticAloneLines(kit.backup),
+    ...resticAloneLines(kit.backup, da),
     '',
-    'A new kit is needed after the backup settings change or the key is rotated; Admin → Status',
-    'says when.',
+    translateKit(
+      'A new kit is needed after the backup settings change or the key is rotated; Admin → Status',
+      da,
+    ),
+    translateKit('says when.', da),
   ];
 }
 
@@ -205,14 +259,15 @@ const escapeHtml = (value: string) =>
 /** The printable page: the same lines, monospaced, in a self-contained document. */
 export function renderRecoveryKitHtml(kit: RecoveryKitInput): string {
   const body = escapeHtml(recoveryKitLines(kit).join('\n'));
+  const da = kit.locale?.split(/[-_]/)[0]?.toLowerCase() === 'da';
   return [
     '<!doctype html>',
-    '<html lang="en" dir="ltr">',
+    `<html lang="${da ? 'da' : 'en'}" dir="ltr">`,
     '<head>',
     '<meta charset="utf-8">',
     '<meta name="viewport" content="width=device-width, initial-scale=1">',
     '<meta name="robots" content="noindex">',
-    '<title>Kept recovery kit</title>',
+    da ? '<title>Tingfinder gendannelsespakke</title>' : '<title>Tingfinder recovery kit</title>',
     '<style>',
     'body{margin:2rem;color:#111;background:#fff;font:12px/1.5 ui-monospace,Menlo,Consolas,monospace}',
     'pre{white-space:pre-wrap;overflow-wrap:anywhere;margin:0}',
@@ -237,7 +292,7 @@ export const RECOVERY_KIT_CONTENT_TYPE: Record<RecoveryKitFormat, string> = {
   html: 'text/html; charset=utf-8',
 };
 
-/** `kept-recovery-kit-2026-10-06.txt`. */
+/** `tingfinder-recovery-kit-2026-10-06.txt`. */
 export function recoveryKitFilename(at: Date, format: RecoveryKitFormat): string {
-  return `kept-recovery-kit-${at.toISOString().slice(0, 10)}.${format === 'html' ? 'html' : 'txt'}`;
+  return `tingfinder-recovery-kit-${at.toISOString().slice(0, 10)}.${format === 'html' ? 'html' : 'txt'}`;
 }

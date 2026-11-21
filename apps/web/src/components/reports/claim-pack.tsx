@@ -63,7 +63,7 @@ async function fetchZip(url: string, day: string): Promise<File> {
       res.status === 410 ? 'link_expired' : 'internal',
       res.statusText,
     );
-  return new File([await res.blob()], `kept-claim-${day}.zip`, { type: 'application/zip' });
+  return new File([await res.blob()], `tingfinder-claim-${day}.zip`, { type: 'application/zip' });
 }
 
 export function ClaimPackScreen({ search }: { search: ReportSearch }) {

@@ -13,6 +13,8 @@ afterEach(() => {
 
 describe('the language a page starts in (#474)', () => {
   it('follows the browser, and stores nothing', async () => {
+    vi.stubGlobal('navigator', { language: 'da-DK' });
+    expect(await startLocale()).toBe('da');
     vi.stubGlobal('navigator', { language: 'de-DE' });
     expect(await startLocale()).toBe('de');
     expect(localStorage.getItem(LOCALE_KEY)).toBeNull();

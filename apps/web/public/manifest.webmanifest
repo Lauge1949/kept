@@ -1,8 +1,8 @@
 {
   "id": "/",
-  "name": "Kept",
-  "short_name": "Kept",
-  "description": "Everything you own, where it is, and what it needs.",
+  "name": "Tingfinder",
+  "short_name": "Tingfinder",
+  "description": "Husk, hvor dine ting er.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

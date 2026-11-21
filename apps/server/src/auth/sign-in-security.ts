@@ -58,7 +58,7 @@ import { claimTotpStep, TotpBusyError, totpStep, totpUri } from './totp.js';
 // with a password, a confirmation from POST …/passkeys/confirm too (security.ts). Better Auth's
 // own management routes are off over HTTP (auth.ts SIGN_IN_MANAGEMENT_PATHS); the two-factor
 // ones are called through `auth.api`, so its hooks still sign out the other sessions and mail the
-// owner (auth/security.ts). Removing a passkey and unlinking are Kept's own SQL, in one
+// owner (auth/security.ts). Removing a passkey and unlinking are Tingfinder's own SQL, in one
 // transaction under the account's row lock (inAccountLock), doing the same.
 //
 // Two refusals are the server's, whatever the screen shows:
@@ -70,7 +70,7 @@ import { claimTotpStep, TotpBusyError, totpStep, totpUri } from './totp.js';
 //   another change holds it); unlinking the last way in is refused the same way;
 // - two-factor a location asks for: it can't be turned off while one of the person's locations
 //   requires it and no passkey can stand in for it (409 `two_factor_required`), and the last
-//   passkey can't go while such a location's two-factor rests on it. Every passkey Kept adds
+//   passkey can't go while such a location's two-factor rests on it. Every passkey Tingfinder adds
 //   verified its user (auth.ts), so any passkey can.
 //
 // "Set up again" never goes through Better Auth's /two-factor/enable, which refuses an account
@@ -87,7 +87,7 @@ const LOCK_NOT_AVAILABLE = '55P03';
 /** Starts of "Set up again" per person per hour. */
 export const SET_UP_AGAIN_PER_HOUR = 10;
 
-const ISSUER = 'Kept';
+const ISSUER = 'Tingfinder';
 const BACKUP_CODES = 10;
 
 const Password = z.string().max(128).optional();

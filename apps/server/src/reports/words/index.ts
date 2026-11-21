@@ -1,5 +1,6 @@
 import type { ReportLocale } from '../locale.js';
 import { AR } from './ar.js';
+import { DA } from './da.js';
 import { DE } from './de.js';
 import { EN } from './en.js';
 import { ES } from './es.js';
@@ -15,6 +16,7 @@ export type * from './types.js';
  * error, so a PDF can't ship untranslated. */
 export const PDF_WORDS: Readonly<Record<ReportLocale, PdfWords>> = {
   ar: AR,
+  da: DA,
   de: DE,
   en: EN,
   es: ES,

@@ -97,7 +97,7 @@ describe('the list CSV', () => {
       ['importRunId', TYPE_A],
     ]);
     expect(calls[0]?.init?.credentials).toBe('include');
-    expect(file.name).toMatch(/^kept-things-\d{4}-\d{2}-\d{2}\.csv$/);
+    expect(file.name).toMatch(/^tingfinder-things-\d{4}-\d{2}-\d{2}\.csv$/);
   });
 
   it('reads the list’s ids page by page, stopping one past the limit', async () => {

@@ -4,13 +4,13 @@
 // isolated with FSI…PDI so it reads correctly inside a right-to-left sentence (lib/bidi.ts's rule
 // on the web).
 
-export type WordsLocale = 'ar' | 'de' | 'en' | 'es' | 'fr' | 'it' | 'uk' | 'vi';
+export type WordsLocale = 'ar' | 'da' | 'de' | 'en' | 'es' | 'fr' | 'it' | 'uk' | 'vi';
 
 const FSI = '⁨';
 const PDI = '⁩';
 const iso = (s: string) => `${FSI}${s}${PDI}`;
 
-const LOCALES: readonly WordsLocale[] = ['ar', 'de', 'en', 'es', 'fr', 'it', 'uk', 'vi'];
+const LOCALES: readonly WordsLocale[] = ['ar', 'da', 'de', 'en', 'es', 'fr', 'it', 'uk', 'vi'];
 
 export function wordsLocale(locale: string): WordsLocale {
   const base = locale.slice(0, 2).toLowerCase();
@@ -18,6 +18,7 @@ export function wordsLocale(locale: string): WordsLocale {
 }
 
 const VIEWER: Record<WordsLocale, (location: string) => string> = {
+  da: (l) => `Læsere kan ikke ændre noget her. Spørg en administrator for ${iso(l)}.`,
   ar: (l) => `لا يمكن للمشاهدين إجراء تغييرات هنا. اطلب ذلك من أحد مسؤولي ${iso(l)}.`,
   de: (l) => `Betrachter können hier nichts ändern. Frag eine Admin-Person von ${iso(l)}.`,
   en: (l) => `Viewers can't make changes here. Ask an admin of ${iso(l)}.`,
@@ -32,6 +33,7 @@ const VIEWER: Record<WordsLocale, (location: string) => string> = {
 };
 
 const NO_CHANGES: Record<WordsLocale, string> = {
+  da: 'Du kan ikke ændre noget her.',
   ar: 'لا يمكنك إجراء تغييرات هنا.',
   de: 'Du kannst hier nichts ändern.',
   en: "You can't make changes here.",
@@ -43,6 +45,7 @@ const NO_CHANGES: Record<WordsLocale, string> = {
 };
 
 const NO_ANSWER: Record<WordsLocale, string> = {
+  da: 'Jeg kunne ikke færdiggøre svaret. Spørg igen, eventuelt mere præcist.',
   ar: 'لم أتمكن من إكمال هذه الإجابة. اسأل مرة أخرى، وربما بشكل أدق.',
   de: 'Ich konnte die Antwort nicht abschließen. Frag noch einmal, vielleicht genauer.',
   en: "I couldn't finish that answer. Ask again, perhaps more narrowly.",

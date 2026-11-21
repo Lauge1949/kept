@@ -475,7 +475,7 @@ async function insurance(as: Person, body: object): Promise<{ id: string; pdf: B
   expect(run.status, JSON.stringify(run)).toBe('done');
   const res = await t.app.inject({ method: 'GET', url: run.fileUrl as string });
   expect(res.statusCode).toBe(200);
-  expect(String(res.headers['content-disposition'])).toMatch(/filename="kept-insurance-/);
+  expect(String(res.headers['content-disposition'])).toMatch(/filename="tingfinder-insurance-/);
   return { id, pdf: res.rawPayload };
 }
 
@@ -818,7 +818,7 @@ describe('claim packs', () => {
     expect(res.headers['referrer-policy']).toBe('no-referrer');
     expect(res.headers['x-robots-tag']).toBe('noindex');
     expect(String(res.headers['content-disposition'])).toMatch(
-      /^attachment; filename="kept-claim-\d{4}-\d{2}-\d{2}\.zip"/,
+      /^attachment; filename="tingfinder-claim-\d{4}-\d{2}-\d{2}\.zip"/,
     );
     expect(Number(res.headers['content-length'])).toBe(pack.bytes);
     const entries = unzipStored(res.rawPayload);

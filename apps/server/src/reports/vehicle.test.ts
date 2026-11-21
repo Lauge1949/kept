@@ -84,7 +84,7 @@ async function report(as: Person, body: object, name: string): Promise<string> {
   const res = await t.app.inject({ method: 'GET', url: run.fileUrl as string });
   expect(res.statusCode).toBe(200);
   expect(String(res.headers['content-disposition'])).toMatch(
-    /^attachment; filename="kept-vehicle-history-\d{4}-\d{2}-\d{2}\.pdf"/,
+    /^attachment; filename="tingfinder-vehicle-history-\d{4}-\d{2}-\d{2}\.pdf"/,
   );
   const pdf = res.rawPayload;
   expect(pdf.subarray(0, 5).toString()).toBe('%PDF-');

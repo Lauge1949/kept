@@ -1,0 +1,831 @@
+--- a/packages/shared/src/map-shapes.ts
++++ b/packages/shared/src/map-shapes.ts
+@@ -217,6 +217,7 @@
+ export const SHAPE_WORDS: Readonly<Record<MapModelKey, readonly string[]>> = {
+   sofa: [
+     'sofa',
++    'sofa',
+     'couch',
+     'settee',
+     'canapé',
+@@ -231,6 +232,7 @@
+     'diván',
+   ],
+   armchair: [
++    'lænestol',
+     'armchair',
+     'arm chair',
+     'recliner',
+@@ -247,6 +249,7 @@
+     'butaca',
+   ],
+   coffee_table: [
++    'sofabord',
+     'coffee table',
+     'table basse',
+     'couchtisch',
+@@ -262,6 +265,7 @@
+     'mesita de centro',
+   ],
+   tv_stand: [
++    'tv-bord',
+     'tv stand',
+     'tv unit',
+     'tv cabinet',
+@@ -291,6 +295,8 @@
+   // A cube shelf's family word is shared with the one sized by its grid (#240), which has the
+   // grid unit's own words.
+   cube_shelf: [
++    'kub reol',
++    'kubereol',
+     'cube shelf',
+     'display shelf',
+     'رف مكعبات',
+@@ -302,6 +308,8 @@
+     'estantería modular',
+   ],
+   tall_plant: [
++    'høj plante',
++    'palme',
+     'tall plant',
+     'tree',
+     'fig',
+@@ -330,6 +338,8 @@
+     'palmera',
+   ],
+   plant: [
++    'plante',
++    'stueplante',
+     'plant',
+     'houseplant',
+     'plante',
+@@ -348,6 +358,8 @@
+     'planta de interior',
+   ],
+   succulent: [
++    'sukkulent',
++    'kaktus',
+     'succulent',
+     'cactus',
+     'aloe',
+@@ -366,6 +378,7 @@
+     'planta suculenta',
+   ],
+   dining_chair: [
++    'spisebordsstol',
+     'chair',
+     'dining chair',
+     'kitchen chair',
+@@ -389,6 +402,8 @@
+     'silla de cocina',
+   ],
+   drawers: [
++    'kommode',
++    'skuffemøbel',
+     'drawers',
+     'chest of drawers',
+     'dresser',
+@@ -407,6 +422,7 @@
+     'cajón',
+   ],
+   bedside: [
++    'natbord',
+     'bedside table',
+     'bedside',
+     'nightstand',
+@@ -425,6 +441,8 @@
+     'mesa de noche',
+   ],
+   metal_shelf: [
++    'metalreol',
++    'lagerreol',
+     'shelf',
+     'shelves',
+     'shelving',
+@@ -448,6 +466,7 @@
+     'rack metálico',
+   ],
+   tool_cart: [
++    'værktøjsvogn',
+     'tool cart',
+     'tool trolley',
+     'tool chest',
+@@ -463,6 +482,8 @@
+     'carro de herramientas',
+   ],
+   drill: [
++    'boremaskine',
++    'skruemaskine',
+     'drill',
+     'driver',
+     'impact driver',
+@@ -485,6 +506,7 @@
+     'taladro percutor',
+   ],
+   cardboard: [
++    'papkasse',
+     'moving box',
+     'carton',
+     'cardboard',
+@@ -505,6 +527,8 @@
+     'caja de mudanza',
+   ],
+   crate: [
++    'trækasse',
++    'plastkasse',
+     'crate',
+     'bin',
+     'tub',
+@@ -521,6 +545,7 @@
+     'caja de madera',
+   ],
+   basket: [
++    'kurv',
+     'basket',
+     'hamper',
+     'panier',
+@@ -536,6 +561,8 @@
+     'cesta',
+   ],
+   outdoor_set: [
++    'havemøbler',
++    'havesæt',
+     'bistro set',
+     'patio set',
+     'garden set',
+@@ -553,6 +580,8 @@
+     'muebles de terraza',
+   ],
+   monobloc: [
++    'havestol',
++    'plaststol',
+     'plastic chair',
+     'garden chair',
+     'chaise en plastique',
+@@ -570,6 +599,8 @@
+     'silla de jardín',
+   ],
+   planter: [
++    'plantekrukke',
++    'urtepotte',
+     'planter',
+     'flower box',
+     'window box',
+@@ -586,6 +617,7 @@
+     'macetero',
+   ],
+   planter_long: [
++    'plantekasse',
+     'long planter',
+     'raised bed',
+     'longue jardinière',
+@@ -600,6 +632,8 @@
+     'macetero largo',
+   ],
+   ac_unit: [
++    'klimaanlæg',
++    'varmepumpe',
+     'ac',
+     'a/c',
+     'air con',
+@@ -627,6 +661,7 @@
+     'aire acondicionado',
+   ],
+   watering_can: [
++    'vandkande',
+     'watering can',
+     'arrosoir',
+     'gießkanne',
+@@ -638,6 +673,8 @@
+     'regador',
+   ],
+   tv: [
++    'fjernsyn',
++    'tv',
+     'tv',
+     'television',
+     'telly',
+@@ -667,6 +704,7 @@
+     'televisor',
+   ],
+   bookshelf: [
++    'bogreol',
+     'bookshelf',
+     'bookcase',
+     'bibliothèque',
+@@ -684,6 +722,7 @@
+   ],
+   /** #240: the family's word "cube shelf", then the grid unit's own. */
+   cube_grid: [
++    'rumdeler',
+     'cube shelf',
+     'رف مكعبات',
+     'cube storage',
+@@ -712,6 +751,7 @@
+   ],
+   /** #241: the bookshelf's words, shared, then a tall narrow one's own. */
+   bookcase: [
++    'bogskab',
+     'bookshelf',
+     'bookcase',
+     'bibliothèque',
+@@ -741,6 +781,7 @@
+     'estantería grande',
+   ],
+   lamp: [
++    'gulvlampe',
+     'lamp',
+     'floor lamp',
+     'standard lamp',
+@@ -762,6 +803,8 @@
+     'lámpara',
+   ],
+   counter: [
++    'køkkenbord',
++    'køkkenbordplade',
+     'counter',
+     'countertop',
+     'worktop',
+@@ -786,6 +829,8 @@
+     'mesada',
+   ],
+   sink: [
++    'køkkenvask',
++    'håndvask',
+     'sink',
+     'sink counter',
+     'évier',
+@@ -807,6 +852,7 @@
+     'lavaplatos',
+   ],
+   fridge: [
++    'køleskab',
+     'fridge',
+     'refrigerator',
+     'freezer',
+@@ -827,6 +873,7 @@
+     'frigorífico',
+   ],
+   coffee_machine: [
++    'kaffemaskine',
+     'coffee machine',
+     'coffee maker',
+     'espresso',
+@@ -853,6 +900,7 @@
+     'máquina de café',
+   ],
+   microwave: [
++    'mikroovn',
+     'microwave',
+     'oven',
+     'air fryer',
+@@ -877,6 +925,7 @@
+     'horno de microondas',
+   ],
+   dining: [
++    'spisebord',
+     'table',
+     'dining table',
+     'kitchen table',
+@@ -896,6 +945,7 @@
+     'mesa de comedor',
+   ],
+   bed: [
++    'seng',
+     'bed',
+     'cot',
+     'crib',
+@@ -910,6 +960,8 @@
+     'cama',
+   ],
+   wardrobe: [
++    'garderobeskab',
++    'klædeskab',
+     'wardrobe',
+     'closet',
+     'cupboard',
+@@ -931,6 +983,7 @@
+     'ropero',
+   ],
+   table_lamp: [
++    'bordlampe',
+     'table lamp',
+     'desk lamp',
+     'bedside lamp',
+@@ -950,6 +1003,7 @@
+     'lámpara de sobremesa',
+   ],
+   desk: [
++    'skrivebord',
+     'desk',
+     'bureau',
+     'schreibtisch',
+@@ -961,6 +1015,8 @@
+     'escritorio',
+   ],
+   monitor: [
++    'computerskærm',
++    'skærm',
+     'monitor',
+     'screen',
+     'display',
+@@ -977,6 +1033,7 @@
+     'pantalla',
+   ],
+   laptop: [
++    'bærbar computer',
+     'laptop',
+     'notebook',
+     'macbook',
+@@ -997,6 +1054,7 @@
+     'computadora portátil',
+   ],
+   monitor_arm: [
++    'skærmarm',
+     'monitor arm',
+     'monitor mount',
+     'desk mount',
+@@ -1020,6 +1078,7 @@
+     'soporte para monitor',
+   ],
+   dual_monitor_arm: [
++    'dobbelt skærmarm',
+     'dual monitor arm',
+     'double monitor arm',
+     'dual mount',
+@@ -1037,6 +1096,8 @@
+     'soporte para dos monitores',
+   ],
+   pc_tower: [
++    'stationær computer',
++    'computerkabinet',
+     'pc',
+     'desktop',
+     'desktop pc',
+@@ -1068,6 +1129,7 @@
+     'torre',
+   ],
+   keyboard: [
++    'tastatur',
+     'keyboard',
+     'mechanical keyboard',
+     'clavier',
+@@ -1083,6 +1145,7 @@
+     'teclado mecánico',
+   ],
+   mouse: [
++    'computermus',
+     'mouse',
+     'computer mouse',
+     'trackpad',
+@@ -1097,6 +1160,7 @@
+     'ratón',
+   ],
+   webcam: [
++    'webkamera',
+     'webcam',
+     'web cam',
+     'web camera',
+@@ -1111,6 +1175,8 @@
+     'cámara web',
+   ],
+   camera: [
++    'kamera',
++    'fotokamera',
+     'camera',
+     'digital camera',
+     'photo camera',
+@@ -1147,6 +1213,8 @@
+     'cámara de fotos',
+   ],
+   speaker: [
++    'højttaler',
++    'computerhøjttaler',
+     ...SPEAKER,
+     'desk speaker',
+     'bookshelf speaker',
+@@ -1167,6 +1235,7 @@
+     'bocina',
+   ],
+   portable_speaker: [
++    'bærbar højttaler',
+     ...SPEAKER,
+     'portable speaker',
+     'bluetooth speaker',
+@@ -1198,6 +1267,7 @@
+     'bocina portátil',
+   ],
+   floor_speaker: [
++    'gulvhøjttaler',
+     ...SPEAKER,
+     'floor speaker',
+     'floorstanding speaker',
+@@ -1218,6 +1288,7 @@
+     'bocina de piso',
+   ],
+   boombox: [
++    'festhøjttaler',
+     ...SPEAKER,
+     'boombox',
+     'boom box',
+@@ -1241,6 +1312,7 @@
+     'mini cadena',
+   ],
+   smart_speaker: [
++    'smarthøjttaler',
+     ...SPEAKER,
+     'smart speaker',
+     'echo',
+@@ -1263,6 +1335,7 @@
+     'bocina inteligente',
+   ],
+   soundbar: [
++    'soundbar',
+     ...SPEAKER,
+     'soundbar',
+     'sound bar',
+@@ -1278,6 +1351,7 @@
+     'barra de sonido',
+   ],
+   headphones: [
++    'hovedtelefoner',
+     'headphones',
+     'over ear headphones',
+     'on ear headphones',
+@@ -1296,6 +1370,7 @@
+     'audífonos',
+   ],
+   headset: [
++    'headset med mikrofon',
+     'headset',
+     'gaming headset',
+     'office headset',
+@@ -1320,6 +1395,7 @@
+     'cascos con micrófono',
+   ],
+   earbuds: [
++    'øretelefoner',
+     'earbuds',
+     'earphones',
+     'in ear',
+@@ -1346,6 +1422,7 @@
+   ],
+   router: [
+     'router',
++    'router',
+     'wifi router',
+     'wi fi router',
+     'modem',
+@@ -1369,6 +1446,7 @@
+   ],
+   printer: [
+     'printer',
++    'printer',
+     'scanner',
+     'all in one printer',
+     'imprimante',
+@@ -1383,6 +1461,7 @@
+     'impresora',
+   ],
+   console: [
++    'spillekonsol',
+     'console',
+     'game console',
+     'games console',
+@@ -1406,6 +1485,7 @@
+     'consola',
+   ],
+   controller: [
++    'spilcontroller',
+     'controller',
+     'game controller',
+     'gamepad',
+@@ -1434,6 +1514,8 @@
+     'mando',
+   ],
+   phone: [
++    'telefon',
++    'mobiltelefon',
+     'phone',
+     'mobile phone',
+     'cell phone',
+@@ -1460,6 +1542,7 @@
+   ],
+   tablet: [
+     'tablet',
++    'tablet',
+     'ipad',
+     'galaxy tab',
+     'e reader',
+@@ -1476,6 +1559,8 @@
+     'tableta',
+   ],
+   power_strip: [
++    'stikdåse',
++    'fordelerdåse',
+     'power strip',
+     'extension lead',
+     'extension cord',
+@@ -1497,6 +1582,7 @@
+     'regleta',
+   ],
+   external_drive: [
++    'ekstern harddisk',
+     'external drive',
+     'hard drive',
+     'external hard drive',
+@@ -1525,6 +1611,7 @@
+     'disco duro',
+   ],
+   mini_pc: [
++    'minicomputer',
+     'mini pc',
+     'mini computer',
+     'nuc',
+@@ -1547,6 +1634,7 @@
+     'ordenador pequeño',
+   ],
+   nas: [
++    'netværkslager',
+     'nas',
+     'network storage',
+     'network attached storage',
+@@ -1567,6 +1655,7 @@
+     'servidor de archivos',
+   ],
+   sbc: [
++    'enkeltkortcomputer',
+     'raspberry pi',
+     'single board computer',
+     'sbc',
+@@ -1586,6 +1675,7 @@
+   ],
+   // Never "switch" alone: that is as often a Nintendo Switch or a light switch.
+   network_switch: [
++    'netværksswitch',
+     'network switch',
+     'ethernet switch',
+     'lan switch',
+@@ -1611,6 +1701,7 @@
+     'conmutador',
+   ],
+   patch_panel: [
++    'patchpanel',
+     'patch panel',
+     'patchpanel',
+     'keystone panel',
+@@ -1626,6 +1717,7 @@
+     'panel de parcheo',
+   ],
+   ups: [
++    'nødstrømsforsyning',
+     'ups',
+     'battery backup',
+     'uninterruptible power supply',
+@@ -1643,6 +1735,8 @@
+     'sistema de alimentación ininterrumpida',
+   ],
+   device: [
++    'enhed',
++    'apparat',
+     'gadget',
+     'hub',
+     'smart hub',
+@@ -1690,6 +1784,7 @@
+     'dispositivo',
+   ],
+   chair: [
++    'stol',
+     'desk chair',
+     'office chair',
+     'gaming chair',
+@@ -1707,6 +1802,7 @@
+     'silla de ordenador',
+   ],
+   cabinet: [
++    'skab',
+     'cabinet',
+     'filing cabinet',
+     'file cabinet',
+@@ -1725,6 +1821,7 @@
+     'archivador',
+   ],
+   box: [
++    'kasse',
+     'box',
+     'storage box',
+     'boîte',
+@@ -1743,6 +1840,7 @@
+     'caja de almacenamiento',
+   ],
+   rack_24u: [
++    'rackskab 24u',
+     ...FLOOR_RACK,
+     '24u',
+     '24 u',
+@@ -1756,6 +1854,7 @@
+     'rack 24u',
+   ],
+   rack_42u: [
++    'rackskab 42u',
+     ...FLOOR_RACK,
+     '42u',
+     '42 u',
+@@ -1769,6 +1868,7 @@
+     'rack 42u',
+   ],
+   washer: [
++    'vaskemaskine',
+     'washing machine',
+     'washer',
+     'dryer',
+@@ -1795,6 +1895,8 @@
+     'lavarropas',
+   ],
+   workbench: [
++    'arbejdsbord',
++    'værkstedsbord',
+     'workbench',
+     'work bench',
+     'établi',
+@@ -1808,6 +1910,7 @@
+     'bancada',
+   ],
+   tool_wall: [
++    'værktøjstavle',
+     'tool wall',
+     'pegboard',
+     'panneau à outils',
+@@ -1827,6 +1930,7 @@
+     'panel perforado',
+   ],
+   wall_tv: [
++    'vægmonteret fjernsyn',
+     'wall tv',
+     'wall mounted tv',
+     'tv on the wall',
+@@ -1847,6 +1951,7 @@
+     'televisor de pared',
+   ],
+   wall_shelf: [
++    'væghylde',
+     'wall shelf',
+     'floating shelf',
+     'shelf on the wall',
+@@ -1867,6 +1972,7 @@
+     'estante flotante',
+   ],
+   wall_cabinet: [
++    'vægskab',
+     'wall cabinet',
+     'wall cupboard',
+     'kitchen wall unit',
+@@ -1891,6 +1997,7 @@
+     'armario de pared',
+   ],
+   rack_wall_6u: [
++    'vægrack 6u',
+     ...WALL_RACK,
+     '6u',
+     '6 u',
+@@ -1903,6 +2010,7 @@
+     'rack de pared 6u',
+   ],
+   rack_wall_12u: [
++    'vægrack 12u',
+     ...WALL_RACK,
+     '12u',
+     '12 u',
+@@ -1915,6 +2023,8 @@
+     'rack de pared 12u',
+   ],
+   picture: [
++    'billede',
++    'maleri',
+     'picture',
+     'painting',
+     'picture frame',
+@@ -1951,6 +2061,8 @@
+     'espejo',
+   ],
+   clock: [
++    'ur',
++    'vægur',
+     'clock',
+     'wall clock',
+     'horloge',
+@@ -1968,6 +2080,8 @@
+     'reloj de pared',
+   ],
+   hooks: [
++    'knager',
++    'knagerække',
+     'hook',
+     'coat hook',
+     'coat rack',
+@@ -1998,6 +2112,7 @@
+     'ganchos',
+   ],
+   car: [
++    'bil',
+     'car',
+     'van',
+     'truck',
+@@ -2021,6 +2136,7 @@
+     'automóvil',
+   ],
+   bike: [
++    'cykel',
+     'bike',
+     'bicycle',
+     'ebike',
+@@ -2046,6 +2162,8 @@
+     'bicicleta',
+   ],
+   water_tank: [
++    'vandtank',
++    'vandbeholder',
+     'water tank',
+     'tank',
+     'cistern',
+@@ -2065,6 +2183,7 @@
+     'tanque',
+   ],
+   dish: [
++    'parabol',
+     'satellite dish',
+     'dish',
+     'satellite',
+@@ -2084,6 +2203,7 @@
+     'antena parabólica',
+   ],
+   stairs: [
++    'trappe',
+     'stairs',
+     'stair',
+     'staircase',
+@@ -2098,6 +2218,8 @@
+     'escalera',
+   ],
+   stairwell: [
++    'trapperum',
++    'trappeskakt',
+     'stairwell',
+     'cage d escalier',
+     'treppenhaus',
+@@ -2109,6 +2231,8 @@
+     'pozo de escalera',
+   ],
+   zone: [
++    'område',
++    'hjørne',
+     'area',
+     'corner',
+     'zone',
+@@ -2123,6 +2247,8 @@
+     'zona',
+   ],
+   item: [
++    'ting',
++    'genstand',
+     'small thing',
+     'thing',
+     'petit objet',
+@@ -2144,11 +2270,11 @@
+   ],
+ };
+ 
+-export const SHAPE_LANGS = ['ar', 'de', 'en', 'es', 'fr', 'it', 'uk', 'vi'] as const;
++export const SHAPE_LANGS = ['ar', 'da', 'de', 'en', 'es', 'fr', 'it', 'uk', 'vi'] as const;
+ export type ShapeLang = (typeof SHAPE_LANGS)[number];
+ 
+ /** The languages SHAPE_WORD_LANGS lists; English is what is left, the others have a script. */
+-const LISTED_LANGS = ['de', 'es', 'fr', 'it', 'vi'] as const;
++const LISTED_LANGS = ['da', 'de', 'es', 'fr', 'it', 'vi'] as const;
+ 
+ /**
+  * The words in SHAPE_WORDS that are French, German, Italian, Spanish or Vietnamese rather than
+@@ -2163,6 +2289,7 @@
+  */
+ export const SHAPE_WORD_LANGS: Readonly<Record<(typeof LISTED_LANGS)[number], readonly string[]>> =
+   {
++    da: ["sofa", "lænestol", "sofabord", "tv-bord", "kub reol", "kubereol", "høj plante", "palme", "plante", "stueplante", "sukkulent", "kaktus", "spisebordsstol", "kommode", "skuffemøbel", "natbord", "metalreol", "lagerreol", "værktøjsvogn", "boremaskine", "skruemaskine", "papkasse", "trækasse", "plastkasse", "kurv", "havemøbler", "havesæt", "havestol", "plaststol", "plantekrukke", "urtepotte", "plantekasse", "klimaanlæg", "varmepumpe", "vandkande", "fjernsyn", "tv", "bogreol", "rumdeler", "bogskab", "gulvlampe", "køkkenbord", "køkkenbordplade", "køkkenvask", "håndvask", "køleskab", "kaffemaskine", "mikroovn", "spisebord", "seng", "garderobeskab", "klædeskab", "bordlampe", "skrivebord", "computerskærm", "skærm", "bærbar computer", "skærmarm", "dobbelt skærmarm", "stationær computer", "computerkabinet", "tastatur", "computermus", "webkamera", "kamera", "fotokamera", "højttaler", "computerhøjttaler", "bærbar højttaler", "gulvhøjttaler", "festhøjttaler", "smarthøjttaler", "soundbar", "hovedtelefoner", "headset med mikrofon", "øretelefoner", "router", "printer", "spillekonsol", "spilcontroller", "telefon", "mobiltelefon", "tablet", "stikdåse", "fordelerdåse", "ekstern harddisk", "minicomputer", "netværkslager", "enkeltkortcomputer", "netværksswitch", "patchpanel", "nødstrømsforsyning", "enhed", "apparat", "stol", "skab", "kasse", "rackskab 24u", "rackskab 42u", "vaskemaskine", "arbejdsbord", "værkstedsbord", "værktøjstavle", "vægmonteret fjernsyn", "væghylde", "vægskab", "vægrack 6u", "vægrack 12u", "billede", "maleri", "ur", "vægur", "knager", "knagerække", "bil", "cykel", "vandtank", "vandbeholder", "parabol", "trappe", "trapperum", "trappeskakt", "område", "hjørne", "ting", "genstand"],
+     de: [
+       'pc lautsprecher',
+       'regallautsprecher',
+@@ -3644,6 +3771,7 @@
+ const foldedIn = (l: (typeof LISTED_LANGS)[number]): ReadonlySet<string> =>
+   new Set(SHAPE_WORD_LANGS[l].map((w) => words(w).join(' ')));
+ const FOREIGN = {
++  da: foldedIn('da'),
+   de: foldedIn('de'),
+   es: foldedIn('es'),
+   fr: foldedIn('fr'),
+@@ -3682,6 +3810,7 @@
+ export function shapeWordsByLang(model: MapModelKey): Record<ShapeLang, string[]> {
+   const out: Record<ShapeLang, string[]> = {
+     ar: [],
++    da: [],
+     de: [],
+     en: [],
+     es: [],

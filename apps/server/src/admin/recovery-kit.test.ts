@@ -103,7 +103,7 @@ describe('POST /api/v1/admin/recovery-kit/download', () => {
     expect(res.headers['cache-control']).toBe('no-store');
     expect(res.headers['content-type']).toBe('text/plain; charset=utf-8');
     expect(res.headers['content-disposition']).toMatch(
-      /^attachment; filename="kept-recovery-kit-\d{4}-\d{2}-\d{2}\.txt"$/,
+      /^attachment; filename="tingfinder-recovery-kit-\d{4}-\d{2}-\d{2}\.txt"$/,
     );
     const kit = res.body;
     expect(kit).toContain(`KEPT_SECRET_KEY=${SECRET_KEY}`);

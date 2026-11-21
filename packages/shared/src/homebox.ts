@@ -71,6 +71,13 @@ export function homeboxTypeName(name: string): string {
  * "скринька" (a casket or a letterbox, #474).
  */
 export const BOX_WORDS: readonly string[] = Object.freeze([
+  // Danish
+  'kasse',
+  'kasser',
+  'beholder',
+  'beholdere',
+  'kurv',
+  'kurve',
   // English
   'box',
   'boxes',

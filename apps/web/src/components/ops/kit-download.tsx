@@ -23,12 +23,12 @@ import { ReauthSheet } from './reauth-sheet';
  * an `<a download>` after the click returns), no longer. */
 export const KIT_URL_LIFETIME_MS = 1000;
 
-/** `kept-recovery-kit-2026-10-06.txt`, as the server names it, in the browser's own day. */
+/** `tingfinder-recovery-kit-2026-10-06.txt`, as the server names it, in the browser's own day. */
 export function kitFilename(format: RecoveryKitFormat, now = new Date()): string {
   const day = [now.getFullYear(), now.getMonth() + 1, now.getDate()]
     .map((n) => String(n).padStart(2, '0'))
     .join('-');
-  return `kept-recovery-kit-${day}.${format === 'html' ? 'html' : 'txt'}`;
+  return `tingfinder-recovery-kit-${day}.${format === 'html' ? 'html' : 'txt'}`;
 }
 
 /** Saves `blob` as `filename`, then revokes its URL: nothing of the kit stays on the page. */

@@ -116,7 +116,7 @@ export async function scanSessionRoutes(app: KeptApp, deps: InventoryDeps): Prom
       );
       reply
         .type('text/csv; charset=utf-8')
-        .header('content-disposition', `attachment; filename="kept-count-${req.params.id}.csv"`)
+        .header('content-disposition', `attachment; filename="tingfinder-count-${req.params.id}.csv"`)
         .header('cache-control', 'no-store');
       return `﻿${csv}`;
     },

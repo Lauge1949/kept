@@ -133,7 +133,7 @@ msgstr "{0, plural, one {# виклик ШІ} few {# виклики ШІ} many {
 #. placeholder {0}: room.already.length
 #: src/components/inbox/room-review.tsx
 msgid "{0, plural, one {# already in Kept} other {# already in Kept}}"
-msgstr "{0, plural, one {# уже в Kept} few {# уже в Kept} many {# уже в Kept} other {# уже в Kept}}"
+msgstr "{0, plural, one {# уже в Tingfinder} few {# уже в Tingfinder} many {# уже в Tingfinder} other {# уже в Tingfinder}}"
 
 #. placeholder {0}: packed.length
 #: src/components/moving/move-screen.tsx
@@ -570,7 +570,7 @@ msgstr "{0, plural, one {елемент або локація} few {елемен
 #. placeholder {0}: queued.length
 #: src/components/capture/capture-screen.tsx
 msgid "{0, plural, one {Kept # file} other {Kept # files}}"
-msgstr "{0, plural, one {Kept зберіг # файл} few {Kept зберіг # файли} many {Kept зберіг # файлів} other {Kept зберіг # файли}}"
+msgstr "{0, plural, one {Tingfinder зберіг # файл} few {Tingfinder зберіг # файли} many {Tingfinder зберіг # файлів} other {Tingfinder зберіг # файли}}"
 
 #. placeholder {0}: s.codesAdopted
 #: src/components/import/entity-report.tsx
@@ -1245,7 +1245,7 @@ msgstr "{captured, plural, one {# додано} few {# додано} many {# д�
 
 #: src/offline/provider.tsx
 msgid "{captures} and {photos} were taken on this phone by someone who has signed out. They can't go to your account, so they will be deleted."
-msgstr "{captures} і {photos} зроблено на цьому телефоні людиною, яка вийшла з облікового запису. Вони не можуть потрапити до вашого облікового запису, тому Kept їх видалить."
+msgstr "{captures} і {photos} зроблено на цьому телефоні людиною, яка вийшла з облікового запису. Вони не можуть потрапити до вашого облікового запису, тому Tingfinder їх видалить."
 
 #: src/components/labels/stock-picker.tsx
 msgid "{cell} roll"
@@ -1594,7 +1594,7 @@ msgstr "Група {group} · від {shared}"
 
 #: src/components/ai/usage-totals.tsx
 msgid "{held, plural, one {# held back by Kept} other {# held back by Kept}}"
-msgstr "{held, plural, one {# утримано Kept} few {# утримано Kept} many {# утримано Kept} other {# утримано Kept}}"
+msgstr "{held, plural, one {# утримано Tingfinder} few {# утримано Tingfinder} many {# утримано Tingfinder} other {# утримано Tingfinder}}"
 
 #: src/components/notifications/settings/kinds.tsx
 msgid "{how} ({n})"
@@ -1716,7 +1716,7 @@ msgstr "{MAX_CALENDAR_FEEDS, plural, one {# посилання — це макс
 
 #: src/components/notifications/settings/channels.tsx
 msgid "{MAX_WEBHOOK_CHANNELS, plural, one {You have # webhook, the most Kept allows.} other {You have # webhooks, the most Kept allows.}}"
-msgstr "{MAX_WEBHOOK_CHANNELS, plural, one {У вас # вебхук — це максимум, який дозволяє Kept.} few {У вас # вебхуки — це максимум, який дозволяє Kept.} many {У вас # вебхуків — це максимум, який дозволяє Kept.} other {У вас # вебхуки — це максимум, який дозволяє Kept.}}"
+msgstr "{MAX_WEBHOOK_CHANNELS, plural, one {У вас # вебхук — це максимум, який дозволяє Tingfinder.} few {У вас # вебхуки — це максимум, який дозволяє Tingfinder.} many {У вас # вебхуків — це максимум, який дозволяє Tingfinder.} other {У вас # вебхуки — це максимум, який дозволяє Tingfinder.}}"
 
 #: src/routes/_app/admin.settings.tsx
 msgid "{max, plural, one {At most # name. Remove one to add another.} other {At most # names. Remove one to add another.}}"
@@ -1945,7 +1945,7 @@ msgstr "{name} вимагає двофакторну автентифікаці�
 
 #: src/components/connections/revoke.tsx
 msgid "{name} can't reach your Kept any more"
-msgstr "{name} більше не може підключитися до вашого Kept"
+msgstr "{name} більше не може підключитися до вашого Tingfinder"
 
 #: src/components/moving/box-screen.tsx
 msgid "{name} goes to {where}"
@@ -2041,11 +2041,11 @@ msgstr "Умови {name}, перевірено {0}"
 
 #: src/components/vehicles/overview.tsx
 msgid "{nudgeDays, plural, one {A fresh one keeps ~{next} honest; Kept nudges you at # day.} other {A fresh one keeps ~{next} honest; Kept nudges you at # days.}}"
-msgstr "{nudgeDays, plural, one {Новий тримає ~{next} в тонусі; Kept нагадає вам за # день.} few {Новий тримає ~{next} у тонусі; Kept нагадає вам за # дні.} many {Новий тримає ~{next} у тонусі; Kept нагадає вам за # днів.} other {Новий тримає ~{next} у тонусі; Kept нагадає вам за # дні.}}"
+msgstr "{nudgeDays, plural, one {Новий тримає ~{next} в тонусі; Tingfinder нагадає вам за # день.} few {Новий тримає ~{next} у тонусі; Tingfinder нагадає вам за # дні.} many {Новий тримає ~{next} у тонусі; Tingfinder нагадає вам за # днів.} other {Новий тримає ~{next} у тонусі; Tingfinder нагадає вам за # дні.}}"
 
 #: src/components/vehicles/overview.tsx
 msgid "{nudgeDays, plural, one {Kept nudges you at # day.} other {Kept nudges you at # days.}}"
-msgstr "{nudgeDays, plural, one {Kept нагадає вам за # день.} few {Kept нагадає вам за # дні.} many {Kept нагадає вам за # днів.} other {Kept нагадає вам за # дні.}}"
+msgstr "{nudgeDays, plural, one {Tingfinder нагадає вам за # день.} few {Tingfinder нагадає вам за # дні.} many {Tingfinder нагадає вам за # днів.} other {Tingfinder нагадає вам за # дні.}}"
 
 #: src/components/inbox/room-review.tsx
 msgid "{objects, plural, one {Photo {photo}: # thing} other {Photo {photo}: # things}}"
@@ -2601,7 +2601,7 @@ msgstr "<0>{name}</0> залишається відновлюваним прот
 
 #: src/routes/oauth/consent.tsx
 msgid "<0>{name}</0> wants to use your Kept"
-msgstr "<0>{name}</0> хоче використовувати ваш Kept"
+msgstr "<0>{name}</0> хоче використовувати ваш Tingfinder"
 
 #: src/components/import/target-step.tsx
 msgid "<0>{names}</0>. Things already there stay; importing the same export again adds only what's new."
@@ -2689,7 +2689,7 @@ msgstr "<0>{who}</0> використав {0} із {1} токенів цього
 
 #: src/components/oidc-sign-in.tsx
 msgid "<0>{who}</0> hasn't confirmed your email address, so Kept can't use it. Confirm it there, then try again."
-msgstr "<0>{who}</0> ще не підтвердив вашу адресу електронної пошти, тому Kept не може її використовувати. Підтвердіть її там, а потім спробуйте ще раз."
+msgstr "<0>{who}</0> ще не підтвердив вашу адресу електронної пошти, тому Tingfinder не може її використовувати. Підтвердіть її там, а потім спробуйте ще раз."
 
 #: src/components/scan/legacy-picker.tsx
 msgid "<0>Asset {legacy}</0> is on more than one thing you brought from Homebox. Pick the one in your hands."
@@ -2806,7 +2806,7 @@ msgstr "досягнуто обмеження або бюджету"
 
 #: src/components/vehicles/list.tsx
 msgid "A car, a motorbike or a generator: Kept keeps its odometer, what's due, fuel and running costs."
-msgstr "Авто, мотоцикл або генератор: Kept зберігає його одометр, строки, паливо та поточні витрати."
+msgstr "Авто, мотоцикл або генератор: Tingfinder зберігає його одометр, строки, паливо та поточні витрати."
 
 #: src/components/inbox/inbox-list.tsx
 #: src/components/inbox/sync-drop-item.tsx
@@ -2847,7 +2847,7 @@ msgstr "Комп’ютер: піктограма камери в адресно
 
 #: src/components/registries/registry-page.tsx
 msgid "A contact, without a Kept account"
-msgstr "Контакт без облікового запису Kept"
+msgstr "Контакт без облікового запису Tingfinder"
 
 #: src/components/export/export-first.tsx
 msgid "A copy of everything in <0>{name}</0>, its files and a readable copy, before it goes."
@@ -2859,7 +2859,7 @@ msgstr "Копія без серійного номера й покупки."
 
 #: src/components/export/export-sheet.tsx
 msgid "A copy you can read without Kept"
-msgstr "Копія, яку можна читати без Kept"
+msgstr "Копія, яку можна читати без Tingfinder"
 
 #: src/components/vehicles/lubelogger-import.tsx
 msgid "a cost below zero"
@@ -2964,31 +2964,31 @@ msgstr "Homebox старша за v0.26 створює електронну та
 #. placeholder {2}: f.day(kept.exportedAt)
 #: src/components/import/kept-choices.tsx
 msgid "A Kept <0>{0}</0> export{1}{2}"
-msgstr "Експорт Kept <0>{0}</0>{1}{2}"
+msgstr "Експорт Tingfinder <0>{0}</0>{1}{2}"
 
 #: src/components/scan/manual-code.tsx
 msgid "A Kept code is 6 letters and digits, like 7KQ‑4MZ."
-msgstr "Код Kept складається з 6 літер і цифр, наприклад 7KQ‑4MZ."
+msgstr "Код Tingfinder складається з 6 літер і цифр, наприклад 7KQ‑4MZ."
 
 #: src/components/import/source-step.tsx
 msgid "A Kept export"
-msgstr "Експорт Kept"
+msgstr "Експорт Tingfinder"
 
 #: src/components/import/archive-step.tsx
 msgid "A Kept export always comes in as a new location, with its photos, documents, history and printed labels."
-msgstr "Експорт Kept завжди імпортується як нова локація, зі своїми фото, документами, історією та надрукованими етикетками."
+msgstr "Експорт Tingfinder завжди імпортується як нова локація, зі своїми фото, документами, історією та надрукованими етикетками."
 
 #: src/components/import/target-step.tsx
 msgid "A Kept export always comes in as a new location."
-msgstr "Експорт Kept завжди імпортується як нова локація."
+msgstr "Експорт Tingfinder завжди імпортується як нова локація."
 
 #: src/components/import/labels.ts
 msgid "A Kept template can't hold money or secrets; the rest of the template is imported."
-msgstr "Шаблон Kept не може містити гроші чи секрети; решта шаблону імпортується."
+msgstr "Шаблон Tingfinder не може містити гроші чи секрети; решта шаблону імпортується."
 
 #: src/components/import/homebox-choices.tsx
 msgid "A Kept type"
-msgstr "Тип Kept"
+msgstr "Тип Tingfinder"
 
 #: src/components/registries/field-sheet.tsx
 msgid "A key is a lower-case word in English letters, digits and _, starting with a letter."
@@ -3025,7 +3025,7 @@ msgstr "Локації завжди потрібен власник. Сперш�
 
 #: src/components/import/source-step.tsx
 msgid "A location exported from this Kept or another one. It comes in as a new location."
-msgstr "Локація, експортована з цього Kept або з іншого. Вона імпортується як нова локація."
+msgstr "Локація, експортована з цього Tingfinder або з іншого. Вона імпортується як нова локація."
 
 #: src/components/import/labels.ts
 msgid "A location inside an item became a box."
@@ -3112,11 +3112,11 @@ msgstr "Нова локація"
 
 #: src/components/readings/log-reading-sheet.tsx
 msgid "A new meter starts again from 0. Kept adds what the old one had reached, so the history keeps going up."
-msgstr "Новий лічильник починається з 0. Kept додає те, до чого дійшов старий, тож історія продовжує зростати."
+msgstr "Новий лічильник починається з 0. Tingfinder додає те, до чого дійшов старий, тож історія продовжує зростати."
 
 #: src/components/lending/person-picker.tsx
 msgid "A new person: added to your people when you save. Kept never contacts them."
-msgstr "Нова особа: додасться до ваших людей, коли ви збережете. Kept ніколи не зв’язується з ними."
+msgstr "Нова особа: додасться до ваших людей, коли ви збережете. Tingfinder ніколи не зв’язується з ними."
 
 #: src/components/inbox/receipt-review.tsx
 msgid "A new shop instead"
@@ -3164,7 +3164,7 @@ msgstr "Число, наприклад 5800.00."
 
 #: src/components/moving/contents-sheets.tsx
 msgid "A page per box: its number, the room it goes to, what's inside and its code. Tape it to the box; scanning the code opens the box in Kept."
-msgstr "Сторінка на коробку: її номер, кімната, до якої вона іде, що всередині та її код. Приклейте її до коробки; сканування коду відкриває коробку в Kept."
+msgstr "Сторінка на коробку: її номер, кімната, до якої вона іде, що всередині та її код. Приклейте її до коробки; сканування коду відкриває коробку в Tingfinder."
 
 #: src/components/reports/insurance-report.tsx
 msgid "A PDF for your insurer: each thing with its photo, brand, model, serial, purchase date and price, current value and receipts, with totals per room and per currency."
@@ -3202,7 +3202,7 @@ msgstr "Номер телефону, електронна пошта або ве
 
 #: src/map/floor-plan/start-sheet.tsx
 msgid "A photo, a screenshot or a PDF of a plan. Kept reads the rooms and their sizes; you check them before anything is added."
-msgstr "Фото, знімок екрана або PDF плану. Kept читає кімнати та їхні розміри; ви перевіряєте їх, перш ніж щось буде додано."
+msgstr "Фото, знімок екрана або PDF плану. Tingfinder читає кімнати та їхні розміри; ви перевіряєте їх, перш ніж щось буде додано."
 
 #: src/components/history/labels.ts
 msgid "a place"
@@ -3346,7 +3346,7 @@ msgstr "Сервер, який ви запускаєте самі, зберіг�
 
 #: src/components/things/schedules-section.tsx
 msgid "A service or a check that comes round: Kept reminds you before it's due."
-msgstr "Сервісне обслуговування або перевірка, що настає: Kept нагадає вам до строку."
+msgstr "Сервісне обслуговування або перевірка, що настає: Tingfinder нагадає вам до строку."
 
 #: src/components/scan/session/session-screen.tsx
 msgid "A session is open on this phone."
@@ -3358,7 +3358,7 @@ msgstr "Короткий код для надрукованої етикетки
 
 #: src/routes/_app/help.tsx
 msgid "A Shortcut that asks for the reading and sends it to Kept with a token."
-msgstr "Швидка команда, яка питає показник і надсилає його до Kept із токеном."
+msgstr "Швидка команда, яка питає показник і надсилає його до Tingfinder із токеном."
 
 #: src/components/webhooks/list.tsx
 msgid "A signed message to your own server when things change here. It carries ids and the names of changed fields, never names, places or values."
@@ -3813,7 +3813,7 @@ msgstr "додайте ціну, щоб бачити вартість"
 
 #: src/components/ai/what-uses-ai.tsx
 msgid "Add a price to see cost. Until then Kept counts tokens only."
-msgstr "Додайте ціну, щоб бачити вартість. Поки що Kept рахує лише токени."
+msgstr "Додайте ціну, щоб бачити вартість. Поки що Tingfinder рахує лише токени."
 
 #: src/components/money/exchange-rates.tsx
 msgid "Add a rate"
@@ -3830,7 +3830,7 @@ msgstr "Додати кімнату або місце до {hereName}"
 
 #: src/routes/_app/schedules.tsx
 msgid "Add a service or a check that comes round, like the boiler every year or the car every 10,000 km, and Kept reminds you before it's due."
-msgstr "Додайте сервісне обслуговування або перевірку, що періодично повторюється, як-от котел щороку чи авто кожні 10,000 км, і Kept нагадає вам перед строком."
+msgstr "Додайте сервісне обслуговування або перевірку, що періодично повторюється, як-от котел щороку чи авто кожні 10,000 км, і Tingfinder нагадає вам перед строком."
 
 #: src/components/registries/labels.ts
 msgid "Add a shop or service"
@@ -4069,7 +4069,7 @@ msgstr "Додайте вміст, щоб знаходити його, не ві
 
 #: src/components/connections/shortcut-recipe.tsx
 msgid "Add your car to Kept with an odometer reading first; its address appears here then."
-msgstr "Спершу додайте своє авто до Kept із показником одометра; тоді тут з’явиться його адреса."
+msgstr "Спершу додайте своє авто до Tingfinder із показником одометра; тоді тут з’явиться його адреса."
 
 #: src/components/home/recent-activity.tsx
 #: src/components/inbox/room-review.tsx
@@ -4277,7 +4277,7 @@ msgstr "ШІ · {provider} · {tokens} токенів"
 
 #: src/routes/setup.tsx
 msgid "AI and barcode lookup can be connected later, from Settings. Kept works without them."
-msgstr "ШІ та пошук за штрихкодом можна підключити пізніше в налаштуваннях. Kept працює й без них."
+msgstr "ШІ та пошук за штрихкодом можна підключити пізніше в налаштуваннях. Tingfinder працює й без них."
 
 #: src/lib/labels.ts
 msgid "AI assistant"
@@ -4544,7 +4544,7 @@ msgstr "Дозвольте його в налаштуваннях браузер
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Allow notifications for Kept in this browser's settings, then try again."
-msgstr "Дозвольте сповіщення для Kept у налаштуваннях цього браузера, тоді спробуйте ще раз."
+msgstr "Дозвольте сповіщення для Tingfinder у налаштуваннях цього браузера, тоді спробуйте ще раз."
 
 #: src/routes/_app/admin.settings.tsx
 msgid "Allow private addresses"
@@ -4565,7 +4565,7 @@ msgstr "Уже імпортовано попереднім імпортом, т�
 #: src/components/inbox/duplicate-review.tsx
 #: src/components/inbox/room-review.tsx
 msgid "Already in Kept"
-msgstr "Уже в Kept"
+msgstr "Уже в Tingfinder"
 
 #: src/map/floor-plan/panel.tsx
 msgid "Already on the map."
@@ -4637,7 +4637,7 @@ msgstr "Сума грошей не враховує {names}: там для ва�
 
 #: src/components/ops/backup-target-form.tsx
 msgid "An absolute path as the server sees it: another disk, or a NAS mount. Not the disk Kept's data is on."
-msgstr "Абсолютний шлях, як його бачить сервер: інший диск або мережеве сховище. Не диск, на якому містяться дані Kept."
+msgstr "Абсолютний шлях, як його бачить сервер: інший диск або мережеве сховище. Не диск, на якому містяться дані Tingfinder."
 
 #: src/components/ai/cap-bars.tsx
 msgid "An account on this server's key"
@@ -4789,7 +4789,7 @@ msgstr "Той, хто має посилання, бачить те, що цей
 
 #: src/components/export/export-sheet.tsx
 msgid "Anyone with this file and the passphrase can read every secret in it. Kept can't recover a forgotten passphrase."
-msgstr "Будь-хто з цим файлом і парольною фразою може прочитати кожен секрет у ньому. Kept не може відновити забуту парольну фразу."
+msgstr "Будь-хто з цим файлом і парольною фразою може прочитати кожен секрет у ньому. Tingfinder не може відновити забуту парольну фразу."
 
 #: src/components/sharelinks/share-sheet.tsx
 msgid "Anyone with this link can open it until {until}."
@@ -4995,7 +4995,7 @@ msgstr "Попросіть власника або адміністратора 
 
 #: src/components/device/app-lock-settings.tsx
 msgid "Ask for a PIN when Kept opens and after five minutes away. Keeping a location offline needs it."
-msgstr "Запитуйте PIN, коли Kept відкривається, і після п’яти хвилин відсутності. Для зберігання локації офлайн це потрібно."
+msgstr "Запитуйте PIN, коли Tingfinder відкривається, і після п’яти хвилин відсутності. Для зберігання локації офлайн це потрібно."
 
 #: src/components/search/palette.tsx
 msgid "Ask the assistant"
@@ -5020,7 +5020,7 @@ msgstr "Запитайте, де щось є або що має строк, аб
 
 #: src/assistant/conversation.tsx
 msgid "Ask where something is or what's due, or ask for a change. Nothing changes until you confirm the card Kept shows you."
-msgstr "Запитайте, де щось є чи що спливло, або попросіть про зміну. Нічого не зміниться, доки ви не підтвердите картку, яку покаже Kept."
+msgstr "Запитайте, де щось є чи що спливло, або попросіть про зміну. Нічого не зміниться, доки ви не підтвердите картку, яку покаже Tingfinder."
 
 #: src/components/things/secrets.tsx
 msgid "Ask your instance admin to download the recovery kit first."
@@ -5103,7 +5103,7 @@ msgstr "Щонайменше 12 символів."
 
 #: src/components/ops/backup-target-form.tsx
 msgid "At least 12 characters. Without it nobody can read the backups, Kept included."
-msgstr "Щонайменше 12 символів. Без нього ніхто не зможе прочитати резервні копії, зокрема і Kept."
+msgstr "Щонайменше 12 символів. Без нього ніхто не зможе прочитати резервні копії, зокрема і Tingfinder."
 
 #: src/routes/auth/reset.tsx
 #: src/routes/invite.tsx
@@ -5342,7 +5342,7 @@ msgstr "Резервній копії потрібен пароль: без па
 
 #: src/components/ops/status-tiles.tsx
 msgid "Backups should run every night. Check the runs in Backups, and that Kept's worker is running."
-msgstr "Резервні копії мають виконуватися щовечора. Перевірте запуски в розділі «Резервні копії» та чи працює worker Kept."
+msgstr "Резервні копії мають виконуватися щовечора. Перевірте запуски в розділі «Резервні копії» та чи працює worker Tingfinder."
 
 #: src/lib/labels.ts
 #: src/map/floor-plan/panel.tsx
@@ -5527,7 +5527,7 @@ msgstr "Токен бота"
 
 #: src/components/condition/pdf-sheet.tsx
 msgid "Both walk-throughs room by room, the earlier one first: each room's condition, note and photos, with the time Kept received each photo."
-msgstr "Обидва обходи кімната за кімнатою, спершу раніший: стан кожної кімнати, нотатка та фото з часом отримання кожного фото Kept."
+msgstr "Обидва обходи кімната за кімнатою, спершу раніший: стан кожної кімнати, нотатка та фото з часом отримання кожного фото Tingfinder."
 
 #: src/assistant/confirm-card.tsx
 #: src/components/device/kept-extras.tsx
@@ -5959,7 +5959,7 @@ msgstr "Камера"
 #: src/components/scan/scanner-view.tsx
 #: src/components/scan/session/camera.tsx
 msgid "Camera access is off for Kept."
-msgstr "Доступ до камери для Kept вимкнено."
+msgstr "Доступ до камери для Tingfinder вимкнено."
 
 #: src/components/capture/capture-screen.tsx
 #: src/components/scan/scanner-view.tsx
@@ -6313,7 +6313,7 @@ msgstr "Змінити ліміт"
 #. placeholder {0}: lockedVars.join(', ')
 #: src/components/ops/backup-target-form.tsx
 msgid "Change the locked settings in the server's configuration (<0>{0}</0>) and restart Kept."
-msgstr "Змініть заблоковані налаштування в конфігурації сервера (<0>{0}</0>) і перезапустіть Kept."
+msgstr "Змініть заблоковані налаштування в конфігурації сервера (<0>{0}</0>) і перезапустіть Tingfinder."
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Change the mailbox"
@@ -6483,7 +6483,7 @@ msgstr "Зміни"
 
 #: src/assistant/confirm-card.tsx
 msgid "Changes for you to confirm, drawn by Kept"
-msgstr "Зміни для підтвердження, підготовлені Kept"
+msgstr "Зміни для підтвердження, підготовлені Tingfinder"
 
 #: src/components/history/timeline.tsx
 msgid "Changes to this place show here, newest first."
@@ -6600,7 +6600,7 @@ msgstr "Перевірте це."
 
 #: src/components/hints/hint-copy.ts
 msgid "Check what Kept read, fix anything wrong, then tap Accept."
-msgstr "Перевірте, що прочитав Kept, виправте помилки, тоді торкніться «Прийняти»."
+msgstr "Перевірте, що прочитав Tingfinder, виправте помилки, тоді торкніться «Прийняти»."
 
 #: src/routes/signin/index.tsx
 msgid "Check your email"
@@ -6766,7 +6766,7 @@ msgstr "Виберіть відділення поруч, щоб об’єдна
 
 #: src/components/hints/hint-copy.ts
 msgid "Choose how reminders reach you: in Kept, by email, push or a channel."
-msgstr "Виберіть, як вам надходитимуть нагадування: у Kept, електронною поштою, push або через канал."
+msgstr "Виберіть, як вам надходитимуть нагадування: у Tingfinder, електронною поштою, push або через канал."
 
 #: src/components/import/homebox-choices.tsx
 msgid "Choose none"
@@ -6868,7 +6868,7 @@ msgstr "Виберіть, для чого це."
 
 #: src/components/hints/hint-copy.ts
 msgid "Choose what reaches you, and how: in Kept, by email, push or a channel."
-msgstr "Виберіть, що вам надходитиме і як: у Kept, електронною поштою, push або через канал."
+msgstr "Виберіть, що вам надходитиме і як: у Tingfinder, електронною поштою, push або через канал."
 
 #: src/components/capture/reading-target.tsx
 msgid "Choose what was read"
@@ -6876,7 +6876,7 @@ msgstr "Виберіть, що вимірювали"
 
 #: src/routes/_app/admin.backups.tsx
 msgid "Choose where backups go and a password. Kept then backs up the database, the files and a readable copy of every location every night, encrypted."
-msgstr "Оберіть, куди зберігати резервні копії, і пароль. Тоді Kept щовечора, зашифрувавши, зберігатиме базу даних, файли та зручну для читання копію кожної локації."
+msgstr "Оберіть, куди зберігати резервні копії, і пароль. Тоді Tingfinder щовечора, зашифрувавши, зберігатиме базу даних, файли та зручну для читання копію кожної локації."
 
 #: src/components/ops/backup-target-form.tsx
 msgid "Choose where backups go and set their password first."
@@ -7588,7 +7588,7 @@ msgstr "Скопійовано · записано в журнал"
 
 #: src/components/paperless/documents.tsx
 msgid "Copied into Kept"
-msgstr "Скопійовано в Kept"
+msgstr "Скопійовано в Tingfinder"
 
 #: src/components/admin/oidc-status.tsx
 #: src/components/connections/client-configs.tsx
@@ -7631,15 +7631,15 @@ msgstr "Скопіювати заголовок"
 
 #: src/components/paperless/documents.tsx
 msgid "Copy into Kept"
-msgstr "Скопіювати в Kept"
+msgstr "Скопіювати в Tingfinder"
 
 #: src/components/reports/claim-pack.tsx
 msgid "Copy it now: Kept shows it only this once."
-msgstr "Скопіюйте зараз: Kept показує його лише один раз."
+msgstr "Скопіюйте зараз: Tingfinder показує його лише один раз."
 
 #: src/components/sharelinks/share-sheet.tsx
 msgid "Copy it now. Kept shows this link once; make a new one if it's lost."
-msgstr "Скопіюйте його зараз. Kept показує це посилання лише один раз; якщо воно загубиться, створіть нове."
+msgstr "Скопіюйте його зараз. Tingfinder показує це посилання лише один раз; якщо воно загубиться, створіть нове."
 
 #: src/components/webhooks/edit.tsx
 msgid "Copy it now. You won't see it again; rotate it if it's lost."
@@ -7647,7 +7647,7 @@ msgstr "Скопіюйте його зараз. Ви більше його не 
 
 #: src/components/connections/token-create.tsx
 msgid "Copy it now. You won't see this again: Kept keeps only a fingerprint of it."
-msgstr "Скопіюйте його зараз. Ви більше цього не побачите: Kept зберігає лише його відбиток."
+msgstr "Скопіюйте його зараз. Ви більше цього не побачите: Tingfinder зберігає лише його відбиток."
 
 #: src/components/totp-setup.tsx
 msgid "Copy key"
@@ -8270,7 +8270,7 @@ msgstr "Відлік від показника"
 
 #: src/components/import/labels.ts
 msgid "Counted one by one in Kept; Homebox's quantity is kept in the notes."
-msgstr "У Kept рахується по одному; кількість Homebox зберігається в нотатках."
+msgstr "У Tingfinder рахується по одному; кількість Homebox зберігається в нотатках."
 
 #. placeholder {0}: targetName(fixed)
 #: src/components/scan/session/session-screen.tsx
@@ -8299,7 +8299,7 @@ msgstr "«Підрахунки» перелічують кожен підрах�
 
 #: src/components/counts/count-page.tsx
 msgid "Counts saved before Kept 1.14 didn't record what was missing or elsewhere."
-msgstr "Підрахунки, збережені до Kept 1.14, не фіксували, чого бракувало або що було десь-інде."
+msgstr "Підрахунки, збережені до Tingfinder 1.14, не фіксували, чого бракувало або що було десь-інде."
 
 #: src/components/insights/insights-screen.tsx
 msgid "Cover ended"
@@ -9589,7 +9589,7 @@ msgstr "Кожне додане фото з’явиться тут зі сво�
 
 #: src/routes/_app/settings.export.tsx
 msgid "Each download link is made when you click Download and lasts 5 minutes; Kept checks you're still an owner or admin every time. Exports are kept 7 days."
-msgstr "Кожне посилання для завантаження створюється, коли ви натискаєте «Завантажити», і діє 5 хвилин; щоразу Kept перевіряє, що ви досі власник або адміністратор. Експорти зберігаються 7 днів."
+msgstr "Кожне посилання для завантаження створюється, коли ви натискаєте «Завантажити», і діє 5 хвилин; щоразу Tingfinder перевіряє, що ви досі власник або адміністратор. Експорти зберігаються 7 днів."
 
 #: src/components/export/export-list.tsx
 msgid "Each export is kept here for seven days after it's ready."
@@ -9673,7 +9673,7 @@ msgstr "Кожне фото кімнати"
 
 #: src/components/condition/pdf-sheet.tsx
 msgid "Each room's condition, note and photos, with the time Kept received each photo."
-msgstr "Стан кожної кімнати, нотатка та фото з часом отримання кожного фото Kept."
+msgstr "Стан кожної кімнати, нотатка та фото з часом отримання кожного фото Tingfinder."
 
 #: src/components/insights/insights-screen.tsx
 msgid "Each thing in use at its latest valuation. Things without one count, but add nothing."
@@ -10229,7 +10229,7 @@ msgstr "Кожен код тут збігається з правилом"
 
 #: src/routes/gallery.tsx
 msgid "Every control Kept's screens are built from, on React Aria. Switch the theme and the language above: everything here should mirror cleanly."
-msgstr "Усі елементи керування, з яких складаються екрани Kept, працюють на React Aria. Перемкніть тему й мову вище: усе тут має відображатися бездоганно."
+msgstr "Усі елементи керування, з яких складаються екрани Tingfinder, працюють на React Aria. Перемкніть тему й мову вище: усе тут має відображатися бездоганно."
 
 #: src/components/hints/hint-copy.ts
 msgid "Every count is kept"
@@ -10333,7 +10333,7 @@ msgstr "Щотижня"
 
 #: src/components/ops/status-tiles.tsx
 msgid "Every week, Kept checks that every snapshot can be read."
-msgstr "Щотижня Kept перевіряє, що кожен знімок можна прочитати."
+msgstr "Щотижня Tingfinder перевіряє, що кожен знімок можна прочитати."
 
 #: src/routes/_app/settings.location.$id.members.tsx
 msgid "Everyone here has already set one up."
@@ -10404,7 +10404,7 @@ msgstr "Коли ви знову будете онлайн, пошук охоп�
 
 #: src/components/notifications/settings/notification-settings.tsx
 msgid "Everything lands in the notification centre. These reach you outside Kept as well."
-msgstr "Усе потрапляє в центр сповіщень. Це досягає вас і поза Kept."
+msgstr "Усе потрапляє в центр сповіщень. Це досягає вас і поза Tingfinder."
 
 #: src/components/hints/hint-copy.ts
 msgid "Everything lent out or borrowed: who has it and when it's due back."
@@ -10420,7 +10420,7 @@ msgstr "Усе зіставляється як є: ніщо не потребу�
 
 #: src/components/ops/kit-download.tsx
 msgid "Everything needed to bring Kept back on a new server: the secret keys, the backup's location, its password and storage keys, and the restore steps."
-msgstr "Усе потрібне, щоб повернути Kept на новому сервері: секретні ключі, розташування резервної копії, її пароль і ключі сховища, а також кроки відновлення."
+msgstr "Усе потрібне, щоб повернути Tingfinder на новому сервері: секретні ключі, розташування резервної копії, її пароль і ключі сховища, а також кроки відновлення."
 
 #: src/map/put-on.tsx
 msgid "Everything small in {roomName} is on something already."
@@ -10627,7 +10627,7 @@ msgstr "Face ID"
 
 #: src/components/device/app-lock-settings.tsx
 msgid "Face ID or fingerprint can unlock Kept now"
-msgstr "Відтепер Face ID або відбиток пальця може розблокувати Kept"
+msgstr "Відтепер Face ID або відбиток пальця може розблокувати Tingfinder"
 
 #: src/components/device/lock-screen.tsx
 msgid "Face ID or fingerprint didn’t work. Enter your PIN."
@@ -11051,7 +11051,7 @@ msgstr "Щонайбільше п’ять фото. Надішліть ці, т
 
 #: src/components/admin/oidc-status.tsx
 msgid "Fix it, then restart Kept. Everything else works meanwhile."
-msgstr "Виправте це, а потім перезапустіть Kept. Решта працює тим часом."
+msgstr "Виправте це, а потім перезапустіть Tingfinder. Решта працює тим часом."
 
 #: src/components/inbox/reading-review.tsx
 msgid "Fix the reading"
@@ -11206,7 +11206,7 @@ msgstr "Для полиці або дверей; повторний друк м�
 
 #: src/components/notifications/settings/channels.tsx
 msgid "For your own automations: Kept posts a signed message when something is due, with ids and dates only, never names."
-msgstr "Для ваших автоматизацій: Kept надсилає підписане повідомлення, коли щось наближається за строком, лише з ID і датами, ніколи з назвами."
+msgstr "Для ваших автоматизацій: Tingfinder надсилає підписане повідомлення, коли щось наближається за строком, лише з ID і датами, ніколи з назвами."
 
 #: src/components/notifications/settings/kinds.tsx
 msgid "For your whole account: set it under All locations."
@@ -11641,7 +11641,7 @@ msgstr "GitHub не показує опублікованого релізу д�
 
 #: src/components/ops/status-tiles.tsx
 msgid "GitHub's answer wasn't what Kept expected. Kept asks again tomorrow."
-msgstr "Відповідь GitHub була не такою, як очікував Kept. Kept запитає знову завтра."
+msgstr "Відповідь GitHub була не такою, як очікував Tingfinder. Tingfinder запитає знову завтра."
 
 #: src/components/ops/status-tiles.tsx
 msgid "GitHub's limit reached"
@@ -11778,7 +11778,7 @@ msgstr "Перейти на головну"
 
 #: src/routes/invite.tsx
 msgid "Go to Kept"
-msgstr "Перейти до Kept"
+msgstr "Перейти до Tingfinder"
 
 #: src/routes/auth/email-change.tsx
 msgid "Go to Settings"
@@ -11920,7 +11920,7 @@ msgstr "Сталося"
 #: src/components/registries/registry-list.tsx
 #: src/components/registries/registry-page.tsx
 msgid "Has a Kept account"
-msgstr "Має обліковий запис Kept"
+msgstr "Має обліковий запис Tingfinder"
 
 #: src/components/registries/labels.ts
 msgid "Has a reading that grows, like kilometres or hours."
@@ -12080,15 +12080,15 @@ msgstr "Home Assistant"
 #: src/components/ops/status-tiles.tsx
 #: src/routes/_app/admin.backups.tsx
 msgid "Home Assistant backs up Kept"
-msgstr "Home Assistant створює резервні копії Kept"
+msgstr "Home Assistant створює резервні копії Tingfinder"
 
 #: src/components/ops/backup-target-form.tsx
 msgid "Home Assistant backs up Kept here: take or schedule backups in Home Assistant."
-msgstr "Тут Home Assistant створює резервні копії Kept: створюйте їх або плануйте в Home Assistant."
+msgstr "Тут Home Assistant створює резервні копії Tingfinder: створюйте їх або плануйте в Home Assistant."
 
 #: src/routes/_app/admin.backups.tsx
 msgid "Home Assistant backs up Kept: the database, photos and files, and Kept's keys. Take or schedule backups in Home Assistant → {place}."
-msgstr "Home Assistant створює резервні копії Kept: базу даних, фото й файли, а також ключі Kept. Створюйте резервні копії або плануйте їх у Home Assistant → {place}."
+msgstr "Home Assistant створює резервні копії Tingfinder: базу даних, фото й файли, а також ключі Tingfinder. Створюйте резервні копії або плануйте їх у Home Assistant → {place}."
 
 #: src/components/filters/registry.tsx
 msgid "Homebox"
@@ -12120,7 +12120,7 @@ msgstr "Homebox v0.26.1 або новіша (рекомендовано v0.27.0)
 
 #: src/components/import/homebox-choices.tsx
 msgid "Homebox's currency, <0>{fromConnection}</0>, isn't turned on in Kept. An instance admin can turn it on in Admin → Currencies."
-msgstr "Валюта Homebox, <0>{fromConnection}</0>, не ввімкнена в Kept. Адміністратор сервера може ввімкнути її в розділі «Адміністратор → Валюти»."
+msgstr "Валюта Homebox, <0>{fromConnection}</0>, не ввімкнена в Tingfinder. Адміністратор сервера може ввімкнути її в розділі «Адміністратор → Валюти»."
 
 #: src/components/import/homebox-choices.tsx
 msgid "Homebox's export has no currency. Choosing one relabels the amounts; it doesn't convert them."
@@ -12128,7 +12128,7 @@ msgstr "Експорт Homebox не має валюти. Вибір однієї
 
 #: src/components/import/homebox-choices.tsx
 msgid "Homebox's types are matched to Kept's by name, and its custom fields are added to their types. The check shows what that does before anything is imported."
-msgstr "Типи Homebox зіставляються з типами Kept за назвою, а його власні поля додаються до їхніх типів. Перевірка показує, що це робить, до того, як буде імпортовано."
+msgstr "Типи Homebox зіставляються з типами Tingfinder за назвою, а його власні поля додаються до їхніх типів. Перевірка показує, що це робить, до того, як буде імпортовано."
 
 #: src/map/labels.ts
 msgid "Hooks"
@@ -12176,7 +12176,7 @@ msgstr "Як це пройшло"
 
 #: src/components/notifications/settings/notification-settings.tsx
 msgid "How Kept reaches you"
-msgstr "Як Kept до вас звертається"
+msgstr "Як Tingfinder до вас звертається"
 
 #: src/components/warranties/warranty-sheet.tsx
 msgid "How long"
@@ -12215,7 +12215,7 @@ msgstr "Скільки одна одиниця коштує в іншій."
 
 #: src/routes/setup.tsx
 msgid "How should this Kept work?"
-msgstr "Як має працювати цей Kept?"
+msgstr "Як має працювати цей Tingfinder?"
 
 #: src/components/things/purchase-sheet.tsx
 msgid "How the receipt names it."
@@ -12463,11 +12463,11 @@ msgstr "В іншій локації ({0})"
 
 #: src/components/import/choices-step.tsx
 msgid "In any of Kept's languages. Off, the type is kept in the notes."
-msgstr "Будь-якою з мов Kept. Якщо вимкнено, тип зберігається в нотатках."
+msgstr "Будь-якою з мов Tingfinder. Якщо вимкнено, тип зберігається в нотатках."
 
 #: src/components/home/install-sheet.tsx
 msgid "In Chrome or Edge, click the install icon at the end of the address bar, or open the menu and choose <0>Install Kept</0>."
-msgstr "У Chrome або Edge натисніть піктограму встановлення в кінці адресного рядка або відкрийте меню й виберіть <0>Встановити Kept</0>."
+msgstr "У Chrome або Edge натисніть піктограму встановлення в кінці адресного рядка або відкрийте меню й виберіть <0>Встановити Tingfinder</0>."
 
 #: src/components/import/archive-step.tsx
 msgid "In Homebox, open Collection → Tools → Backup & Restore and choose Create Backup. When the backup is listed, Download it: that .zip is the file."
@@ -12475,15 +12475,15 @@ msgstr "У Homebox відкрийте Collection → Tools → Backup & Restore 
 
 #: src/components/notifications/settings/kinds.tsx
 msgid "In Kept"
-msgstr "У Kept"
+msgstr "У Tingfinder"
 
 #: src/components/notifications/settings/kinds.tsx
 msgid "In Kept is off, so nothing is sent."
-msgstr "У Kept «Вхід» вимкнено, тому нічого не надсилається."
+msgstr "У Tingfinder «Вхід» вимкнено, тому нічого не надсилається."
 
 #: src/components/ai/recommended.tsx
 msgid "In Kept's test on {date}, it read receipts, labels and nameplates correctly for the least money of any model measured:"
-msgstr "У тесті Kept {date} він правильно прочитав чеки, етикетки та таблички з назвами за найменші кошти серед усіх виміряних моделей:"
+msgstr "У тесті Tingfinder {date} він правильно прочитав чеки, етикетки та таблички з назвами за найменші кошти серед усіх виміряних моделей:"
 
 #: src/components/vehicles/lubelogger-import.tsx
 msgid "In LubeLogger, export this vehicle's fuel, service or odometer records as CSV, then choose the file here. One file at a time; importing the same one again adds nothing."
@@ -12491,7 +12491,7 @@ msgstr "У LubeLogger експортуйте записи палива, серв
 
 #: src/components/paperless/connection-settings.tsx
 msgid "In Paperless, open My Profile and press the circular arrow by the API token. Kept sees what that user sees."
-msgstr "У Paperless відкрийте «Мій профіль» і натисніть круглу стрілку біля API-токена. Kept бачить те, що бачить цей користувач."
+msgstr "У Paperless відкрийте «Мій профіль» і натисніть круглу стрілку біля API-токена. Tingfinder бачить те, що бачить цей користувач."
 
 #: src/components/codes/code-settings.tsx
 msgid "In plain words, for whoever types the code."
@@ -12556,7 +12556,7 @@ msgstr "У дорозі"
 
 #: src/components/capture/room-tray.tsx
 msgid "In Try Kept no AI runs: every room photo gives the same sample results."
-msgstr "У режимі спроби Kept ШІ не працює: кожне фото кімнати дає однакові зразкові результати."
+msgstr "У режимі спроби Tingfinder ШІ не працює: кожне фото кімнати дає однакові зразкові результати."
 
 #: src/components/history/labels.ts
 #: src/components/import/choices-step.tsx
@@ -12567,7 +12567,7 @@ msgstr "Використовується"
 
 #: src/components/capture/file-fallback.tsx
 msgid "In your own Kept, Capture opens the camera here. Photos you pick stay in this tab."
-msgstr "У вашому власному Kept «Додавання» відкриває тут камеру. Вибрані фото залишаються в цій вкладці."
+msgstr "У вашому власному Tingfinder «Додавання» відкриває тут камеру. Вибрані фото залишаються в цій вкладці."
 
 #: src/routes/_app/lending.tsx
 msgid "In: borrowed"
@@ -12733,11 +12733,11 @@ msgstr "Посібник зі встановлення"
 #: src/components/home/install-sheet.tsx
 #: src/try/banner.tsx
 msgid "Install Kept"
-msgstr "Встановити Kept"
+msgstr "Встановити Tingfinder"
 
 #: src/components/home/install-sheet.tsx
 msgid "Install Kept on your phone"
-msgstr "Встановити Kept на телефон"
+msgstr "Встановити Tingfinder на телефон"
 
 #: src/routes/_app/index.tsx
 msgid "install on your phone"
@@ -12902,7 +12902,7 @@ msgstr "iPhone, iPad"
 
 #: src/components/capture/file-fallback.tsx
 msgid "iPhone: Settings › Safari › Camera › Allow, then reopen Kept."
-msgstr "iPhone: Налаштування › Safari › Камера › Дозволити, потім відкрийте Kept знову."
+msgstr "iPhone: Налаштування › Safari › Камера › Дозволити, потім відкрийте Tingfinder знову."
 
 #: src/components/filters/panel.tsx
 msgid "is any of"
@@ -12964,7 +12964,7 @@ msgstr "Його буде знято з {0}. Сам файл залишитьс�
 
 #: src/components/paperless/documents.tsx
 msgid "It comes off {name}. Paperless keeps it, and the copy in Kept stays."
-msgstr "Він від’єднається від {name}. Paperless його зберігає, а копія в Kept залишається."
+msgstr "Він від’єднається від {name}. Paperless його зберігає, а копія в Tingfinder залишається."
 
 #: src/components/paperless/documents.tsx
 msgid "It comes off {name}. Paperless keeps it."
@@ -13075,7 +13075,7 @@ msgstr "Його буде видалено з історії лічильник�
 
 #: src/components/import/archive-run.tsx
 msgid "It isn't an export Kept can read. Export it again and try once more."
-msgstr "Це не експорт, який може прочитати Kept. Експортуйте його ще раз і спробуйте знову."
+msgstr "Це не експорт, який може прочитати Tingfinder. Експортуйте його ще раз і спробуйте знову."
 
 #: src/components/places/offline-pages.tsx
 msgid "It isn't in this phone's copy. It opens when you're back online."
@@ -13148,7 +13148,7 @@ msgstr "Воно зупиняється після того, над чим пр�
 
 #: src/components/connections/oauth-apps.tsx
 msgid "It stops reaching your Kept at once. To use it again, connect it again from the app."
-msgstr "Воно одразу перестає підключатися до вашого Kept. Щоб використати його знову, підключіть його знову із застосунку."
+msgstr "Воно одразу перестає підключатися до вашого Tingfinder. Щоб використати його знову, підключіть його знову із застосунку."
 
 #: src/components/sign-in-security.household.tsx
 msgid "It stops signing you in, and every other device is signed out. The passkey itself stays on the device until you delete it there."
@@ -13164,7 +13164,7 @@ msgstr "Він обертається повільно, доки ви його �
 
 #: src/components/import/repair.tsx
 msgid "It was imported before Kept read Homebox the way it does now. Choose what to put right; one Undo takes it all back."
-msgstr "Його імпортовано, перш ніж Kept почав читати Homebox так, як читає зараз. Оберіть, що виправити; одне «Скасувати» поверне все назад."
+msgstr "Його імпортовано, перш ніж Tingfinder почав читати Homebox так, як читає зараз. Оберіть, що виправити; одне «Скасувати» поверне все назад."
 
 #: src/components/reports/progress.tsx
 msgid "It was kept for {hours} hours and has been removed. Make it again."
@@ -13208,7 +13208,7 @@ msgstr "Воно порожнє. Ви можете відновити його �
 
 #: src/components/import/labels.ts
 msgid "It's from a newer version than this Kept reads. Update Kept, then import it."
-msgstr "Воно з новішої версії, ніж читає цей Kept. Оновіть Kept, потім імпортуйте його."
+msgstr "Воно з новішої версії, ніж читає цей Tingfinder. Оновіть Tingfinder, потім імпортуйте його."
 
 #: src/components/lending/thing-loans.tsx
 msgid "It's in repair: lend it once it's back."
@@ -13245,7 +13245,7 @@ msgstr "Вона в очікуванні, доки не синхронізуєт
 
 #: src/components/import/labels.ts
 msgid "It's protected with a ZIP password, which Kept can't open. Export it again without one."
-msgstr "Воно захищене ZIP-паролем, який Kept не може відкрити. Експортуйте його знову без нього."
+msgstr "Воно захищене ZIP-паролем, який Tingfinder не може відкрити. Експортуйте його знову без нього."
 
 #: src/components/readings/log-reading-sheet.tsx
 msgid "It's right"
@@ -13269,7 +13269,7 @@ msgstr "Його дата, магазин, ціна та чеки зникают
 
 #: src/components/import/labels.ts
 msgid "Its description isn't kept: places in Kept have no notes."
-msgstr "Його опис не зберігається: місця в Kept не мають приміток."
+msgstr "Його опис не зберігається: місця в Tingfinder не мають приміток."
 
 #: src/components/export/export-sheet.tsx
 msgid "Its digits"
@@ -13336,7 +13336,7 @@ msgstr "Його розділи"
 
 #: src/components/import/labels.ts
 msgid "Its tags aren't kept: in Kept only things have tags."
-msgstr "Його теги не зберігаються: у Kept теги мають лише речі."
+msgstr "Його теги не зберігаються: у Tingfinder теги мають лише речі."
 
 #: src/components/registries/type-editor.tsx
 msgid "Its things move to the type you choose and take its fields; values the other type doesn't have are archived, not lost. Then <0>{name}</0> is gone."
@@ -13368,7 +13368,7 @@ msgstr "Приєднатися до {name}"
 
 #: src/routes/_app/settings.location.$id.invite.tsx
 msgid "Join {place} on Kept"
-msgstr "Приєднайтеся до {place} у Kept"
+msgstr "Приєднайтеся до {place} у Tingfinder"
 
 #: src/routes/invite.tsx
 msgid "Join with <0>{oidcName}</0>"
@@ -13388,7 +13388,7 @@ msgstr "Приєднано до {joinedName}"
 
 #: src/routes/_app/index.tsx
 msgid "Joining someone's Kept?"
-msgstr "Приєднуєтеся до чийогось Kept?"
+msgstr "Приєднуєтеся до чийогось Tingfinder?"
 
 #: src/components/search/palette.tsx
 msgid "Jump to"
@@ -13581,7 +13581,7 @@ msgstr "Зберігання {0} офлайн не завершилося"
 #: src/components/history/labels.ts
 #: src/components/history/timeline.tsx
 msgid "Kept"
-msgstr "Kept"
+msgstr "Tingfinder"
 
 #: src/components/ai/ai-history-row.tsx
 #: src/components/ai/call-detail.tsx
@@ -13589,23 +13589,23 @@ msgstr "Kept"
 #: src/components/ai/call-list.tsx
 #: src/components/ai/usage-charts.tsx
 msgid "Kept (background)"
-msgstr "Kept (фонова)"
+msgstr "Tingfinder (фонова)"
 
 #: src/components/ops/status-tiles.tsx
 msgid "Kept {v} is available"
-msgstr "Доступна версія Kept {v}"
+msgstr "Доступна версія Tingfinder {v}"
 
 #: src/components/ops/update-line.tsx
 msgid "Kept <0>{version}</0> is available"
-msgstr "Доступна версія Kept <0>{version}</0>"
+msgstr "Доступна версія Tingfinder <0>{version}</0>"
 
 #: src/components/paperless/connection-settings.tsx
 msgid "Kept accepts http only for an address on your own network, and only when an instance admin allows private addresses. The token travels unencrypted there."
-msgstr "Kept приймає http лише для адреси у вашій власній мережі й лише коли адміністратор сервера дозволяє приватні адреси. Токен там передається без шифрування."
+msgstr "Tingfinder приймає http лише для адреси у вашій власній мережі й лише коли адміністратор сервера дозволяє приватні адреси. Токен там передається без шифрування."
 
 #: src/components/ops/status-tiles.tsx
 msgid "Kept allows one release back. Upgrade again when the problem that made you roll back is fixed."
-msgstr "Kept дозволяє один реліз назад. Оновіть знову, коли виправите проблему, через яку ви відкотилися."
+msgstr "Tingfinder дозволяє один реліз назад. Оновіть знову, коли виправите проблему, через яку ви відкотилися."
 
 #: src/components/registries/field-sheet.tsx
 msgid "Kept apart and encrypted, and revealed only per its policy. Only you, the account owner, can make a field secret, and only now."
@@ -13613,7 +13613,7 @@ msgstr "Зберігається окремо й зашифровано, роз�
 
 #: src/components/device/app-lock-settings.tsx
 msgid "Kept app lock"
-msgstr "Блокування застосунку Kept"
+msgstr "Блокування застосунку Tingfinder"
 
 #: src/components/services/log-service-sheet.tsx
 msgid "Kept as a draft on its Services tab until you save it."
@@ -13629,139 +13629,139 @@ msgstr "Збережено обидва"
 
 #: src/components/import/labels.ts
 msgid "Kept can't hold this record yet; its text is kept in the thing's notes."
-msgstr "Kept ще не може зберігати цей запис; його текст зберігається в нотатках речі."
+msgstr "Tingfinder ще не може зберігати цей запис; його текст зберігається в нотатках речі."
 
 #: src/components/page.tsx
 msgid "Kept can't reach its database right now. Try again in a minute."
-msgstr "Kept зараз не може досягти своєї бази даних. Спробуйте ще раз за хвилину."
+msgstr "Tingfinder зараз не може досягти своєї бази даних. Спробуйте ще раз за хвилину."
 
 #: src/components/webhooks/edit.tsx
 msgid "Kept can't reach that address. Check it for typos."
-msgstr "Kept не може дістатися до цієї адреси. Перевірте її на друкарські помилки."
+msgstr "Tingfinder не може дістатися до цієї адреси. Перевірте її на друкарські помилки."
 
 #: src/components/import/archive-run.tsx
 msgid "Kept can't read this archive"
-msgstr "Kept не може прочитати цей архів"
+msgstr "Tingfinder не може прочитати цей архів"
 
 #: src/components/vehicles/lubelogger-import.tsx
 msgid "Kept can't read this file."
-msgstr "Kept не може прочитати цей файл."
+msgstr "Tingfinder не може прочитати цей файл."
 
 #: src/components/vehicles/lubelogger-import.tsx
 msgid "Kept can't read this file. Export it from LubeLogger again as CSV."
-msgstr "Kept не може прочитати цей файл. Експортуйте його з LubeLogger ще раз як CSV."
+msgstr "Tingfinder не може прочитати цей файл. Експортуйте його з LubeLogger ще раз як CSV."
 
 #: src/components/codes/code-settings.tsx
 msgid "Kept can't read this pattern. Check its brackets."
-msgstr "Kept не може прочитати цей шаблон. Перевірте його дужки."
+msgstr "Tingfinder не може прочитати цей шаблон. Перевірте його дужки."
 
 #: src/components/scan/scanner-view.tsx
 msgid "Kept can't scan here"
-msgstr "Kept не може сканувати тут"
+msgstr "Tingfinder не може сканувати тут"
 
 #: src/components/scan/scan-screen.tsx
 msgid "Kept can't tell what this is from here."
-msgstr "Kept не може визначити, що це, звідси."
+msgstr "Tingfinder не може визначити, що це, звідси."
 
 #: src/components/ai/paste-key.tsx
 msgid "Kept can't tell which provider this key is for. Choose it under Advanced."
-msgstr "Kept не може визначити, для якого провайдера цей ключ. Виберіть його в розділі «Додатково»."
+msgstr "Tingfinder не може визначити, для якого провайдера цей ключ. Виберіть його в розділі «Додатково»."
 
 #: src/components/capture/file-fallback.tsx
 msgid "Kept can't use the camera"
-msgstr "Kept не може використовувати камеру"
+msgstr "Tingfinder не може використовувати камеру"
 
 #: src/assistant/composer.tsx
 #: src/components/capture/name-field.tsx
 msgid "Kept can't use the microphone"
-msgstr "Kept не може використати мікрофон"
+msgstr "Tingfinder не може використати мікрофон"
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Kept checks a folder in a mailbox you already have, every 10 minutes. Each message's photos and PDFs, or its text when it has none, become a draft receipt in the Inbox. Only mail that arrives after you connect is read, and nothing in the mailbox is changed."
-msgstr "Kept перевіряє теку у вашій наявній поштовій скриньці кожні 10 хвилин. Фото та PDF-файли кожного повідомлення, або його текст, якщо їх немає, стають чернеткою чека у «Вхідних». Читається лише пошта, що надійшла після підключення, і нічого в поштовій скриньці не змінюється."
+msgstr "Tingfinder перевіряє теку у вашій наявній поштовій скриньці кожні 10 хвилин. Фото та PDF-файли кожного повідомлення, або його текст, якщо їх немає, стають чернеткою чека у «Вхідних». Читається лише пошта, що надійшла після підключення, і нічого в поштовій скриньці не змінюється."
 
 #: src/components/readings/log-reading-sheet.tsx
 msgid "Kept checks it against your other readings when it syncs; if it doesn't fit, it waits in your Inbox."
-msgstr "Kept звіряє його з іншими показниками під час синхронізації; якщо він не сходиться, він чекає у вашій Вхідній скриньці."
+msgstr "Tingfinder звіряє його з іншими показниками під час синхронізації; якщо він не сходиться, він чекає у вашій Вхідній скриньці."
 
 #: src/components/ops/status-tiles.tsx
 msgid "Kept checks it with each backup."
-msgstr "Kept перевіряє його під час кожної резервної копії."
+msgstr "Tingfinder перевіряє його під час кожної резервної копії."
 
 #: src/components/reports/insurance-report.tsx
 msgid "Kept converts only with a rate you entered, never an estimate. Add one dated on or before the report's day, or make the report without a converted total."
-msgstr "Kept конвертує лише за курсом, який ви ввели, ніколи за оцінкою. Додайте курс, датований на день звіту або раніше, або зробіть звіт без конвертованого підсумку."
+msgstr "Tingfinder конвертує лише за курсом, який ви ввели, ніколи за оцінкою. Додайте курс, датований на день звіту або раніше, або зробіть звіт без конвертованого підсумку."
 
 #: src/components/money/exchange-rates.tsx
 msgid "Kept converts totals only with a rate you entered here, for that pair or its inverse. It never estimates one, and never goes through a third currency: without a rate, totals stay per currency."
-msgstr "Kept конвертує підсумки лише за курсом, який ви ввели тут, для цієї пари або її оберненої. Він ніколи не оцінює його й ніколи не проходить через третю валюту: без курсу підсумки залишаються за валютами."
+msgstr "Tingfinder конвертує підсумки лише за курсом, який ви ввели тут, для цієї пари або її оберненої. Він ніколи не оцінює його й ніколи не проходить через третю валюту: без курсу підсумки залишаються за валютами."
 
 #: src/components/mailin/mailbox-settings.tsx
 #: src/components/paperless/connection-settings.tsx
 msgid "Kept couldn't connect"
-msgstr "Kept не зміг підключитися"
+msgstr "Tingfinder не зміг підключитися"
 
 #: src/components/paperless/words.ts
 msgid "Kept couldn't reach Paperless at that address."
-msgstr "Kept не зміг досягти Paperless за цією адресою."
+msgstr "Tingfinder не зміг досягти Paperless за цією адресою."
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Kept couldn't reach that server. Check the host and port."
-msgstr "Kept не зміг дістатися до цього сервера. Перевірте хост і порт."
+msgstr "Tingfinder не зміг дістатися до цього сервера. Перевірте хост і порт."
 
 #: src/components/services/invoice-suggestions.tsx
 msgid "Kept couldn't read the invoice. Type the lines."
-msgstr "Kept не зміг зчитати рахунок. Введіть рядки вручну."
+msgstr "Tingfinder не зміг зчитати рахунок. Введіть рядки вручну."
 
 #: src/components/inbox/room-review.tsx
 msgid "Kept couldn't read these photos. Retry, or take them again."
-msgstr "Kept не вдалося прочитати ці фото. Спробуйте ще раз або сфотографуйте їх знову."
+msgstr "Tingfinder не вдалося прочитати ці фото. Спробуйте ще раз або сфотографуйте їх знову."
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Kept couldn't sign in to the mailbox."
-msgstr "Kept не зміг увійти в поштову скриньку."
+msgstr "Tingfinder не зміг увійти в поштову скриньку."
 
 #: src/components/ops/status-tiles.tsx
 msgid "Kept doesn't ask for new versions. Turn it on in Admin → Sign-up."
-msgstr "Kept не питає про нові версії. Увімкніть це в розділі «Адміністратор → Реєстрація»."
+msgstr "Tingfinder не питає про нові версії. Увімкніть це в розділі «Адміністратор → Реєстрація»."
 
 #: src/components/admin/embeddings-source.tsx
 msgid "Kept downloads the model once ({size}) and runs it on this server: no key, no per-call cost. Everything is indexed again with it."
-msgstr "Kept завантажує модель один раз ({size}) і запускає її на цьому сервері: без ключа, без плати за виклик. З нею все індексується заново."
+msgstr "Tingfinder завантажує модель один раз ({size}) і запускає її на цьому сервері: без ключа, без плати за виклик. З нею все індексується заново."
 
 #: src/components/reports/print-sheet.tsx
 msgid "Kept emails this location's inventory every Monday morning."
-msgstr "Kept надсилає перелік цієї локації електронною поштою щопонеділка вранці."
+msgstr "Tingfinder надсилає перелік цієї локації електронною поштою щопонеділка вранці."
 
 #: src/components/reports/print-sheet.tsx
 msgid "Kept emails this location's inventory on the 1st of every month."
-msgstr "Kept надсилає перелік цієї локації електронною поштою 1-го числа кожного місяця."
+msgstr "Tingfinder надсилає перелік цієї локації електронною поштою 1-го числа кожного місяця."
 
 #: src/routes/_app/settings.two-factor.tsx
 msgid "Kept emails you a sign-in link; opening it confirms the address. Opening it also removes this account's password, passkeys and other sessions, so nobody who set them up before you keeps a way in. Then come back here within ten minutes."
-msgstr "Kept надсилає вам посилання для входу; відкриття його підтверджує адресу. Відкриття також видаляє пароль цього облікового запису, ключі доступу та інші сеанси, тож ніхто з тих, хто налаштував їх до вас, не збереже шляху входу. Потім поверніться сюди протягом десяти хвилин."
+msgstr "Tingfinder надсилає вам посилання для входу; відкриття його підтверджує адресу. Відкриття також видаляє пароль цього облікового запису, ключі доступу та інші сеанси, тож ніхто з тих, хто налаштував їх до вас, не збереже шляху входу. Потім поверніться сюди протягом десяти хвилин."
 
 #: src/routes/_app/admin.status.tsx
 msgid "Kept encrypts secret fields, AI keys and the backup password with KEPT_SECRET_KEY. If this server and its key are lost together, a backup still restores your things, but not those. Download the recovery kit (or print it with <0>kept admin recovery-kit</0>) and keep it away from this server. Kept asks for this before the first secret, AI key or backup."
-msgstr "Kept шифрує секретні поля, ключі ШІ та пароль резервної копії за допомогою KEPT_SECRET_KEY. Якщо цей сервер і його ключ загубляться разом, резервна копія все одно відновить ваші речі, але не їх. Завантажте набір для відновлення (або роздрукуйте його командою <0>kept admin recovery-kit</0>) і зберігайте його подалі від цього сервера. Kept питає про це перед першим секретом, ключем ШІ чи резервною копією."
+msgstr "Tingfinder шифрує секретні поля, ключі ШІ та пароль резервної копії за допомогою KEPT_SECRET_KEY. Якщо цей сервер і його ключ загубляться разом, резервна копія все одно відновить ваші речі, але не їх. Завантажте набір для відновлення (або роздрукуйте його командою <0>kept admin recovery-kit</0>) і зберігайте його подалі від цього сервера. Tingfinder питає про це перед першим секретом, ключем ШІ чи резервною копією."
 
 #. placeholder {0}: n(call.tokens.estimate)
 #: src/components/ai/call-detail.tsx
 msgid "Kept estimated {0} before sending."
-msgstr "Kept оцінив {0} до надсилання."
+msgstr "Tingfinder оцінив {0} до надсилання."
 
 #: src/components/filters/registry.tsx
 msgid "Kept export"
-msgstr "Експорт Kept"
+msgstr "Експорт Tingfinder"
 
 #: src/components/filters/list-export.household.tsx
 msgid "Kept exports at most five lists an hour. Try again later."
-msgstr "Kept експортує щонайбільше п’ять списків на годину. Спробуйте ще раз пізніше."
+msgstr "Tingfinder експортує щонайбільше п’ять списків на годину. Спробуйте ще раз пізніше."
 
 #. placeholder {0}: kindName(kind)
 #: src/components/ai/advanced.tsx
 msgid "Kept fills in {0}'s address."
-msgstr "Kept заповнює адресу {0}."
+msgstr "Tingfinder заповнює адресу {0}."
 
 #: src/components/things/overview.tsx
 msgid "Kept from an earlier type. They're not lost; re-type back to use them again."
@@ -13769,44 +13769,44 @@ msgstr "Збережено з попереднього типу. Вони не �
 
 #: src/components/ops/ops-words.ts
 msgid "Kept got no answer from the backup storage. Check the address, the credentials and the network."
-msgstr "Kept не отримав відповіді від сховища резервних копій. Перевірте адресу, облікові дані та мережу."
+msgstr "Tingfinder не отримав відповіді від сховища резервних копій. Перевірте адресу, облікові дані та мережу."
 
 #: src/components/import/labels.ts
 msgid "Kept has no icon like Homebox's; the type's own icon is used."
-msgstr "У Kept немає такої піктограми, як у Homebox; використовується власна піктограма типу."
+msgstr "У Tingfinder немає такої піктограми, як у Homebox; використовується власна піктограма типу."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Kept keeps these settings encrypted and never shows them again."
-msgstr "Kept зберігає ці налаштування зашифрованими й більше ніколи їх не показує."
+msgstr "Tingfinder зберігає ці налаштування зашифрованими й більше ніколи їх не показує."
 
 #: src/components/things/label-preview.tsx
 msgid "Kept label"
-msgstr "Етикетка Kept"
+msgstr "Етикетка Tingfinder"
 
 #: src/components/capture/recognised.tsx
 msgid "Kept label in view"
-msgstr "Етикетка Kept у полі зору"
+msgstr "Етикетка Tingfinder у полі зору"
 
 #: src/routes/_print/labels.$batchId.tsx
 msgid "Kept labels"
-msgstr "Етикетки Kept"
+msgstr "Етикетки Tingfinder"
 
 #: src/routes/_app/admin.alerts.tsx
 #: src/routes/_app/admin.status.tsx
 msgid "Kept last checked for due reminders {lastOk}. Until it checks again, nobody gets new reminders."
-msgstr "Kept востаннє перевіряв нагадування за строком {lastOk}. Поки він не перевірить знову, ніхто не отримуватиме нових нагадувань."
+msgstr "Tingfinder востаннє перевіряв нагадування за строком {lastOk}. Поки він не перевірить знову, ніхто не отримуватиме нових нагадувань."
 
 #: src/routes/_app/admin.tsx
 msgid "Kept limits admin actions over HTTP. Put Kept on HTTPS before you rely on them."
-msgstr "Kept обмежує дії адміністратора через HTTP. Перш ніж покладатися на них, переведіть Kept на HTTPS."
+msgstr "Tingfinder обмежує дії адміністратора через HTTP. Перш ніж покладатися на них, переведіть Tingfinder на HTTPS."
 
 #: src/components/capture/capture-screen.tsx
 msgid "Kept lists what is in it in your Inbox."
-msgstr "Kept перелічує, що в ній, у ваших вхідних."
+msgstr "Tingfinder перелічує, що в ній, у ваших вхідних."
 
 #: src/components/device/app-lock-settings.tsx
 msgid "Kept locks on this device now"
-msgstr "Відтепер Kept блокується на цьому пристрої"
+msgstr "Відтепер Tingfinder блокується на цьому пристрої"
 
 #: src/components/condition/pdf-sheet.tsx
 #: src/components/filters/list-export.household.tsx
@@ -13815,83 +13815,83 @@ msgstr "Відтепер Kept блокується на цьому пристр�
 #: src/components/reports/print-sheet.tsx
 #: src/components/vehicles/history-report-sheet.tsx
 msgid "Kept makes at most five reports an hour. Try again later."
-msgstr "Kept створює щонайбільше п’ять звітів на годину. Спробуйте пізніше."
+msgstr "Tingfinder створює щонайбільше п’ять звітів на годину. Спробуйте пізніше."
 
 #: src/components/oidc-sign-in.tsx
 msgid "Kept needs an address that can receive mail for an account."
-msgstr "Kept потрібна адреса, яка може отримувати пошту для облікового запису."
+msgstr "Tingfinder потрібна адреса, яка може отримувати пошту для облікового запису."
 
 #: src/routes/_app/admin.admins.tsx
 msgid "Kept needs at least one instance admin"
-msgstr "Kept потребує щонайменше одного адміністратора сервера"
+msgstr "Tingfinder потребує щонайменше одного адміністратора сервера"
 
 #: src/routes/_app/admin.admins.tsx
 msgid "Kept needs at least one instance admin, so the last one can't be removed."
-msgstr "Kept потребує щонайменше одного адміністратора сервера, тому останнього не можна видалити."
+msgstr "Tingfinder потребує щонайменше одного адміністратора сервера, тому останнього не можна видалити."
 
 #: src/components/paperless/words.ts
 msgid "Kept needs Paperless-ngx 2.16 or later."
-msgstr "Kept потребує Paperless-ngx 2.16 або новіший."
+msgstr "Tingfinder потребує Paperless-ngx 2.16 або новіший."
 
 #: src/components/lending/person-picker.tsx
 msgid "Kept never contacts them."
-msgstr "Kept ніколи не зв’язується з ними."
+msgstr "Tingfinder ніколи не зв’язується з ними."
 
 #: src/components/oidc-sign-in.tsx
 msgid "Kept never matches accounts by their email. If you're new here, open the invite someone sent you and join with <0>{who}</0> from there. If you already have an account, sign in another way."
-msgstr "Kept ніколи не зіставляє облікові записи за електронною поштою. Якщо ви тут уперше, відкрийте запрошення, яке вам надіслали, і приєднайтеся за допомогою <0>{who}</0> звідти. Якщо у вас уже є обліковий запис, увійдіть іншим способом."
+msgstr "Tingfinder ніколи не зіставляє облікові записи за електронною поштою. Якщо ви тут уперше, відкрийте запрошення, яке вам надіслали, і приєднайтеся за допомогою <0>{who}</0> звідти. Якщо у вас уже є обліковий запис, увійдіть іншим способом."
 
 #. placeholder {0}: bdi(person)
 #: src/components/lending/thing-loans.tsx
 msgid "Kept never messages {0}; the reminder text is yours to send."
-msgstr "Kept ніколи не пише {0}; текст нагадування — ваш, надішліть його самі."
+msgstr "Tingfinder ніколи не пише {0}; текст нагадування — ваш, надішліть його самі."
 
 #: src/components/device/keep-offline.tsx
 #: src/components/device/kept-extras.tsx
 msgid "Kept offline is locked behind your PIN."
-msgstr "Офлайн-копія Kept захищена вашим PIN."
+msgstr "Офлайн-копія Tingfinder захищена вашим PIN."
 
 #: src/components/sync-status.tsx
 msgid "Kept on the server is older than this app; ask your admin."
-msgstr "Версія Kept на сервері старіша за цей застосунок; зверніться до адміністратора."
+msgstr "Версія Tingfinder на сервері старіша за цей застосунок; зверніться до адміністратора."
 
 #: src/components/device/kept-extras.tsx
 msgid "Kept on this device"
-msgstr "Kept на цьому пристрої"
+msgstr "Tingfinder на цьому пристрої"
 
 #: src/routes/_app/help.tsx
 msgid "Kept opens from its own icon, full screen, and works offline."
-msgstr "Kept відкривається з власної іконки на весь екран і працює офлайн."
+msgstr "Tingfinder відкривається з власної іконки на весь екран і працює офлайн."
 
 #: src/routes/_app/admin.alerts.tsx
 msgid "Kept raises an alert here, and emails the instance admins at most once a day, when something on the server needs a person."
-msgstr "Kept показує тут попередження й надсилає адміністраторам сервера лист щонайбільше раз на день, коли щось на сервері потребує людини."
+msgstr "Tingfinder показує тут попередження й надсилає адміністраторам сервера лист щонайбільше раз на день, коли щось на сервері потребує людини."
 
 #: src/map/floor-plan/panel.tsx
 msgid "Kept read the first 60 rooms. Add the rest by drawing."
-msgstr "Kept прочитав перші 60 кімнат. Решту додайте малюванням."
+msgstr "Tingfinder прочитав перші 60 кімнат. Решту додайте малюванням."
 
 #: src/components/import/mapping-step.tsx
 msgid "Kept reads its asset IDs, so old Homebox labels still scan, and its archived and sold items, warranties and insured column. A spreadsheet can't carry photos, files, maintenance or items inside items: for those, update a copy of Homebox to v0.26.1 or newer (v0.27.0 recommended) and import its export ZIP."
-msgstr "Kept читає його ID активів, тому старі етикетки Homebox усе ще скануються, а також архівовані та продані позиції, гарантії та колонку страхування. Електронна таблиця не може нести фото, файли, обслуговування чи позиції всередині позицій: для цього оновіть копію Homebox до v0.26.1 або новішої версії (рекомендовано v0.27.0) та імпортуйте її ZIP-експорт."
+msgstr "Tingfinder читає його ID активів, тому старі етикетки Homebox усе ще скануються, а також архівовані та продані позиції, гарантії та колонку страхування. Електронна таблиця не може нести фото, файли, обслуговування чи позиції всередині позицій: для цього оновіть копію Homebox до v0.26.1 або новішої версії (рекомендовано v0.27.0) та імпортуйте її ZIP-експорт."
 
 #: src/components/ai/paste-key.tsx
 msgid "Kept reads the provider from the key. It sends the key to the server once and never shows it again."
-msgstr "Kept визначає провайдера за ключем. Він надсилає ключ на сервер один раз і більше ніколи його не показує."
+msgstr "Tingfinder визначає провайдера за ключем. Він надсилає ключ на сервер один раз і більше ніколи його не показує."
 
 #: src/components/vehicles/lubelogger-import.tsx
 msgid "Kept refused it"
-msgstr "Kept його відхилив"
+msgstr "Tingfinder його відхилив"
 
 #. placeholder {0}: fmt.day(loan.dueOn)
 #. placeholder {1}: bdi(person)
 #: src/components/lending/thing-loans.tsx
 msgid "Kept reminds you on {0}. It never messages {1}; the reminder text is yours to send."
-msgstr "Kept нагадує вам {0}. Воно ніколи не пише {1}; текст нагадування — ваш, надішліть його самі."
+msgstr "Tingfinder нагадує вам {0}. Воно ніколи не пише {1}; текст нагадування — ваш, надішліть його самі."
 
 #: src/components/admin/embeddings-source.tsx
 msgid "Kept runs the model on this server: no key, no per-call cost. Everything is indexed again with it."
-msgstr "Kept запускає модель на цьому сервері: без ключа, без плати за виклик. З нею все індексується заново."
+msgstr "Tingfinder запускає модель на цьому сервері: без ключа, без плати за виклик. З нею все індексується заново."
 
 #: src/routes/_app/admin.status.tsx
 msgid "Kept safe"
@@ -13899,75 +13899,75 @@ msgstr "У безпеці"
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Kept sends at most 5 tests an hour, across all your channels and devices. Try again later."
-msgstr "Kept надсилає щонайбільше 5 тестів на годину, у всі ваші канали та пристрої. Спробуйте пізніше."
+msgstr "Tingfinder надсилає щонайбільше 5 тестів на годину, у всі ваші канали та пристрої. Спробуйте пізніше."
 
 #: src/routes/_app/admin.status.tsx
 msgid "Kept sends no email: no sign-in links, password resets, email invites or alerts. Set <0>KEPT_SMTP_URL</0> and restart Kept. Link invites and passwords work without it."
-msgstr "Kept не надсилає електронних листів: ні посилань для входу, ні скидань пароля, ні запрошень електронною поштою, ні попереджень. Задайте <0>KEPT_SMTP_URL</0> і перезапустіть Kept. Запрошення за посиланням і паролі працюють і без цього."
+msgstr "Tingfinder не надсилає електронних листів: ні посилань для входу, ні скидань пароля, ні запрошень електронною поштою, ні попереджень. Задайте <0>KEPT_SMTP_URL</0> і перезапустіть Tingfinder. Запрошення за посиланням і паролі працюють і без цього."
 
 #: src/map/floor-plan/start-sheet.tsx
 msgid "Kept sends the plan, without its location data, to <0>{name}</0>. It is deleted when you finish, unless you keep it."
-msgstr "Kept надсилає план, без даних про його локацію, до <0>{name}</0>. Його буде видалено після завершення, якщо ви його не збережете."
+msgstr "Tingfinder надсилає план, без даних про його локацію, до <0>{name}</0>. Його буде видалено після завершення, якщо ви його не збережете."
 
 #: src/components/history/labels.ts
 msgid "Kept set up"
-msgstr "Kept налаштовано"
+msgstr "Tingfinder налаштовано"
 
 #: src/components/notifications/settings/calendar.tsx
 msgid "Kept shows it only this once. Anyone with it can read the titles and dates."
-msgstr "Kept показує його лише один раз. Кожен, хто його має, може читати назви й дати."
+msgstr "Tingfinder показує його лише один раз. Кожен, хто його має, може читати назви й дати."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Kept shows it only this once. Your receiver checks each message's Kept-Signature header with it."
-msgstr "Kept показує його лише один раз. Ваш отримувач перевіряє з ним заголовок Kept-Signature кожного повідомлення."
+msgstr "Tingfinder показує його лише один раз. Ваш отримувач перевіряє з ним заголовок Tingfinder-Signature кожного повідомлення."
 
 #: src/components/webhooks/edit.tsx
 msgid "Kept signs every delivery with this secret, so your server can tell it came from Kept."
-msgstr "Kept підписує кожну доставку цим секретом, щоб ваш сервер міг зрозуміти, що її надіслав Kept."
+msgstr "Tingfinder підписує кожну доставку цим секретом, щоб ваш сервер міг зрозуміти, що її надіслав Tingfinder."
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Kept stopped checking this mailbox"
-msgstr "Kept припинив перевіряти цю поштову скриньку"
+msgstr "Tingfinder припинив перевіряти цю поштову скриньку"
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Kept stops checking it. The receipts it already made stay."
-msgstr "Kept припинить перевіряти її. Чеки, які вона вже зробила, залишаться."
+msgstr "Tingfinder припинить перевіряти її. Чеки, які вона вже зробила, залишаться."
 
 #: src/components/notifications/settings/scheduled-reports.tsx
 msgid "Kept stops emailing it. You can print it any time."
-msgstr "Kept припинить надсилати його електронною поштою. Ви можете роздрукувати його будь-коли."
+msgstr "Tingfinder припинить надсилати його електронною поштою. Ви можете роздрукувати його будь-коли."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Kept stops posting to it. Its secret can't be used again."
-msgstr "Kept перестане надсилати в нього. Його секрет більше не можна використати."
+msgstr "Tingfinder перестане надсилати в нього. Його секрет більше не можна використати."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Kept stops sending to it, and forgets its settings."
-msgstr "Kept припинить надсилати туди й забуде його налаштування."
+msgstr "Tingfinder припинить надсилати туди й забуде його налаштування."
 
 #: src/components/webhooks/list.tsx
 msgid "Kept stops sending to it, and its deliveries are forgotten."
-msgstr "Kept перестає надсилати на нього, а його доставки зникають."
+msgstr "Tingfinder перестає надсилати на нього, а його доставки зникають."
 
 #: src/components/scan/barcode-sheet.tsx
 msgid "Kept stores it as the serial number or the barcode: you pick."
-msgstr "Kept зберігає його як серійний номер або штрихкод: обираєте ви."
+msgstr "Tingfinder зберігає його як серійний номер або штрихкод: обираєте ви."
 
 #: src/components/scan/barcode-sheet.tsx
 msgid "Kept stores it as the serial number."
-msgstr "Kept зберігає його як серійний номер."
+msgstr "Tingfinder зберігає його як серійний номер."
 
 #: src/components/scan/barcode-sheet.tsx
 msgid "Kept stores the barcode and serial number with it."
-msgstr "Kept зберігає штрихкод і серійний номер разом із ним."
+msgstr "Tingfinder зберігає штрихкод і серійний номер разом із ним."
 
 #: src/components/scan/barcode-sheet.tsx
 msgid "Kept stores the barcode with it."
-msgstr "Kept зберігає штрихкод разом із ним."
+msgstr "Tingfinder зберігає штрихкод разом із ним."
 
 #: src/components/capture/share-arrival.tsx
 msgid "Kept takes photos and PDFs. Share those, or use Gallery."
-msgstr "Kept приймає фото та PDF. Поділіться ними або скористайтеся «Галереєю»."
+msgstr "Tingfinder приймає фото та PDF. Поділіться ними або скористайтеся «Галереєю»."
 
 #: src/components/inbox/reading-review.tsx
 #: src/components/things/meters-section.tsx
@@ -13977,11 +13977,11 @@ msgstr "Показник збережено"
 #. placeholder {0}: first.name
 #: src/components/things/create-sheet.tsx
 msgid "Kept tracks <0>{0}</0> from this reading on: its estimates and the services due by distance start here. You can add it later from its page."
-msgstr "Kept відстежує <0>{0}</0> від цього показника: його розрахунки та обслуговування за відстанню починаються тут. Ви можете додати його пізніше з його сторінки."
+msgstr "Tingfinder відстежує <0>{0}</0> від цього показника: його розрахунки та обслуговування за відстанню починаються тут. Ви можете додати його пізніше з його сторінки."
 
 #: src/components/import/homebox-choices.tsx
 msgid "Kept type for {name}"
-msgstr "Тип Kept для {name}"
+msgstr "Тип Tingfinder для {name}"
 
 #: src/components/reports/claim-pack.tsx
 msgid "Kept until {keptUntil}."
@@ -13989,11 +13989,11 @@ msgstr "Зберігається до {keptUntil}."
 
 #: src/components/ops/status-tiles.tsx
 msgid "Kept warns at {warnAt}%."
-msgstr "Kept попереджає за {warnAt}%."
+msgstr "Tingfinder попереджає за {warnAt}%."
 
 #: src/components/capture/share-arrival.tsx
 msgid "Kept wasn't ready to receive files on this device yet. It is now: go back to the other app and share again."
-msgstr "Kept ще не був готовий приймати файли на цьому пристрої. Тепер готовий: поверніться в інший застосунок і поділіться ще раз."
+msgstr "Tingfinder ще не був готовий приймати файли на цьому пристрої. Тепер готовий: поверніться в інший застосунок і поділіться ще раз."
 
 #: src/components/registries/field-sheet.tsx
 msgid "Key"
@@ -15137,7 +15137,7 @@ msgstr "Локація"
 
 #: src/components/capture/place-chip.tsx
 msgid "Location access is off for Kept in this browser's settings."
-msgstr "Доступ до геолокації для Kept вимкнено в налаштуваннях цього браузера."
+msgstr "Доступ до геолокації для Tingfinder вимкнено в налаштуваннях цього браузера."
 
 #: src/components/history/labels.ts
 msgid "Location created"
@@ -15182,15 +15182,15 @@ msgstr "Локації, схожі на коробки"
 
 #: src/components/notifications/settings/calendar.tsx
 msgid "Locations that require two-factor are left out of the feed. Google Calendar fetches the link from Google's servers, so it works there only when Kept can be reached from the internet."
-msgstr "Локації, що вимагають двофакторної автентифікації, не потрапляють у стрічку. Google Calendar отримує посилання з серверів Google, тому там воно працює лише тоді, коли Kept доступний з інтернету."
+msgstr "Локації, що вимагають двофакторної автентифікації, не потрапляють у стрічку. Google Calendar отримує посилання з серверів Google, тому там воно працює лише тоді, коли Tingfinder доступний з інтернету."
 
 #: src/components/device/app-lock-settings.tsx
 msgid "Lock Kept on this device"
-msgstr "Блокувати Kept на цьому пристрої"
+msgstr "Блокувати Tingfinder на цьому пристрої"
 
 #: src/routes/_app/settings.index.tsx
 msgid "Lock Kept with a PIN, and keep a location available offline."
-msgstr "Блокуйте Kept за допомогою PIN і зберігайте локацію доступною офлайн."
+msgstr "Блокуйте Tingfinder за допомогою PIN і зберігайте локацію доступною офлайн."
 
 #: src/components/ops/ops-words.ts
 msgid "Locked"
@@ -15306,7 +15306,7 @@ msgstr "Подивитися з нижчого"
 
 #: src/routes/_app/admin.settings.tsx
 msgid "Look up products Kept doesn't know by their barcode"
-msgstr "Шукайте за штрихкодом продукти, які Kept не знає"
+msgstr "Шукайте за штрихкодом продукти, які Tingfinder не знає"
 
 #: src/assistant/answer.tsx
 msgid "Looked in {where}"
@@ -15580,7 +15580,7 @@ msgstr "Зробити адміністратором"
 
 #: src/components/admin/oidc-status.tsx
 msgid "Make an OAuth client in Google Cloud, set <0>KEPT_GOOGLE_CLIENT_ID</0> and <1>KEPT_GOOGLE_CLIENT_SECRET</1>, then restart Kept."
-msgstr "Створіть OAuth-клієнт у Google Cloud, задайте <0>KEPT_GOOGLE_CLIENT_ID</0> і <1>KEPT_GOOGLE_CLIENT_SECRET</1>, потім перезапустіть Kept."
+msgstr "Створіть OAuth-клієнт у Google Cloud, задайте <0>KEPT_GOOGLE_CLIENT_ID</0> і <1>KEPT_GOOGLE_CLIENT_SECRET</1>, потім перезапустіть Tingfinder."
 
 #: src/components/reports/insurance-report.tsx
 msgid "Make another"
@@ -15912,7 +15912,7 @@ msgstr "Я"
 #. placeholder {1}: REFERENCE_FIGURES.model
 #: src/components/ai/what-uses-ai.tsx
 msgid "Measured by Kept on {0} with Groq · <0>{1}</0>"
-msgstr "Виміряно Kept {0} із Groq · <0>{1}</0>"
+msgstr "Виміряно Tingfinder {0} із Groq · <0>{1}</0>"
 
 #: src/components/ai/advanced.tsx
 #: src/components/places/contents-list.tsx
@@ -15970,7 +15970,7 @@ msgstr "Учасники зможуть відкривати {name} знову �
 
 #: src/components/paperless/connection-settings.tsx
 msgid "Members can then link a thing or a place to its receipts, manuals and warranty cards in Paperless, without uploading them twice. Kept stores the document's number and title, not the file, unless someone copies it into Kept."
-msgstr "Тоді учасники зможуть прив’язувати річ або місце до його чеків, інструкцій і гарантійних талонів у Paperless, не завантажуючи їх двічі. Kept зберігає номер і назву документа, а не файл, якщо хтось не скопіює його в Kept."
+msgstr "Тоді учасники зможуть прив’язувати річ або місце до його чеків, інструкцій і гарантійних талонів у Paperless, не завантажуючи їх двічі. Tingfinder зберігає номер і назву документа, а не файл, якщо хтось не скопіює його в Tingfinder."
 
 #: src/components/notifications/settings/kinds.tsx
 msgid "Members joining and leaving"
@@ -16096,7 +16096,7 @@ msgstr "Повідомлення, коли код не збігається"
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Messages that arrive in the folder show here once Kept has read them."
-msgstr "Повідомлення, що надходять у теку, з’являються тут після того, як Kept їх прочитає."
+msgstr "Повідомлення, що надходять у теку, з’являються тут після того, як Tingfinder їх прочитає."
 
 #: src/map/labels.ts
 msgid "Metal shelf"
@@ -17119,7 +17119,7 @@ msgstr "Наступне фото"
 
 #: src/routes/_app/settings.two-factor.tsx
 msgid "Next time you sign in, Kept asks for a code from your app."
-msgstr "Наступного разу під час входу Kept попросить код із вашого застосунку."
+msgstr "Наступного разу під час входу Tingfinder попросить код із вашого застосунку."
 
 #: src/components/hints/hint-copy.ts
 msgid "Next: {chapter}"
@@ -17146,7 +17146,7 @@ msgstr "Ні"
 
 #: src/routes/signin/index.tsx
 msgid "No account yet? Ask someone who uses this Kept to invite you. The invite link creates your account."
-msgstr "Ще немає облікового запису? Попросіть когось, хто користується цим Kept, запросити вас. Посилання із запрошенням створить ваш обліковий запис."
+msgstr "Ще немає облікового запису? Попросіть когось, хто користується цим Tingfinder, запросити вас. Посилання із запрошенням створить ваш обліковий запис."
 
 #: src/routes/_app/activity.tsx
 msgid "No activity matches"
@@ -17253,7 +17253,7 @@ msgstr "Немає валют"
 
 #: src/components/vehicles/lubelogger-import.tsx
 msgid "no date Kept can read"
-msgstr "немає дати, яку Kept міг би прочитати"
+msgstr "немає дати, яку Tingfinder міг би прочитати"
 
 #: src/components/warranties/warranty-sheet.tsx
 msgid "No default term on this brand or type."
@@ -17357,7 +17357,7 @@ msgstr "Інцидентів немає"
 
 #: src/components/oidc-sign-in.tsx
 msgid "No Kept account uses that sign-in yet"
-msgstr "Жоден обліковий запис Kept ще не використовує цей вхід"
+msgstr "Жоден обліковий запис Tingfinder ще не використовує цей вхід"
 
 #. placeholder {0}: n(sum.noLabel.length)
 #: src/components/scan/session/summary.tsx
@@ -17443,7 +17443,7 @@ msgstr "У цьому транспортному засобі немає ліч�
 
 #: src/components/consumables/stock.household.tsx
 msgid "No minimum. Set one and Kept lists it as low when fewer are left."
-msgstr "Мінімуму немає. Задайте його, і Kept позначатиме річ як «мало», коли її залишиться менше."
+msgstr "Мінімуму немає. Задайте його, і Tingfinder позначатиме річ як «мало», коли її залишиться менше."
 
 #: src/components/ai/model-picker.tsx
 msgid "No model list"
@@ -17799,7 +17799,7 @@ msgstr "Ще немає. Додайте код, який уже використ
 
 #: src/routes/_app/admin.settings.tsx
 msgid "None. Kept answers only at its own address."
-msgstr "Немає. Kept відповідає лише за власною адресою."
+msgstr "Немає. Tingfinder відповідає лише за власною адресою."
 
 #: src/components/moving/box-screen.tsx
 #: src/components/moving/unpack-answer.tsx
@@ -17808,11 +17808,11 @@ msgstr "Це не коробка цього переїзду"
 
 #: src/components/import/labels.ts
 msgid "Not a condition Kept knows; kept in the notes."
-msgstr "Не стан, який знає Kept; збережено в нотатках."
+msgstr "Не стан, який знає Tingfinder; збережено в нотатках."
 
 #: src/components/import/labels.ts
 msgid "Not a currency turned on in Kept; the price is kept in the notes."
-msgstr "Не валюта, увімкнена в Kept; ціну збережено в нотатках."
+msgstr "Не валюта, увімкнена в Tingfinder; ціну збережено в нотатках."
 
 #: src/components/import/labels.ts
 msgid "Not a date written as {format}; kept in the notes."
@@ -17828,7 +17828,7 @@ msgstr "Не поле типу цього рядка; збережено в но
 
 #: src/components/scan/outcome-sheet.tsx
 msgid "Not a Kept label"
-msgstr "Не етикетка Kept"
+msgstr "Не етикетка Tingfinder"
 
 #: src/components/kits/kit-section.tsx
 msgid "Not a kit"
@@ -17885,7 +17885,7 @@ msgstr "Ще не перевірено"
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Not checked yet. Kept checks every 10 minutes."
-msgstr "Ще не перевірено. Kept перевіряє кожні 10 хвилин."
+msgstr "Ще не перевірено. Tingfinder перевіряє кожні 10 хвилин."
 
 #: src/components/vehicles/costs-tab.tsx
 msgid "not compared with full months"
@@ -17960,7 +17960,7 @@ msgstr "Не тут"
 
 #: src/components/import/labels.ts
 msgid "Not imported: a file type Kept doesn't keep."
-msgstr "Не імпортовано: тип файлу, який Kept не зберігає."
+msgstr "Не імпортовано: тип файлу, який Tingfinder не зберігає."
 
 #: src/components/documents/document-sheets.tsx
 #: src/components/fuel/log-fuel-sheet.tsx
@@ -17976,12 +17976,12 @@ msgstr "Не в цьому звіті."
 #: src/components/scan/outcome-sheet.tsx
 #: src/components/scan/session/session-screen.tsx
 msgid "Not in your Kept"
-msgstr "Немає у вашому Kept"
+msgstr "Немає у вашому Tingfinder"
 
 #. placeholder {0}: n(sum.notInYourKept.length)
 #: src/components/scan/session/summary.tsx
 msgid "Not in your Kept ({0})"
-msgstr "Не у вашому Kept ({0})"
+msgstr "Не у вашому Tingfinder ({0})"
 
 #: src/components/registries/type-editor.tsx
 msgid "Not inside another type"
@@ -18001,7 +18001,7 @@ msgstr "Не прив’язано"
 
 #: src/components/ops/snapshots-list.tsx
 msgid "Not made by Kept"
-msgstr "Створено не Kept"
+msgstr "Створено не Tingfinder"
 
 #: src/components/scan/session/session-screen.tsx
 msgid "Not matched: {text}"
@@ -18033,7 +18033,7 @@ msgstr "Немає на цьому телефоні"
 
 #: src/components/capture/recognised.tsx
 msgid "Not on this phone. Kept checks it when you open it online."
-msgstr "Немає на цьому телефоні. Kept перевірить це, коли ви відкриєте його онлайн."
+msgstr "Немає на цьому телефоні. Tingfinder перевірить це, коли ви відкриєте його онлайн."
 
 #: src/routes/_app/labels.tsx
 msgid "Not printed"
@@ -18087,7 +18087,7 @@ msgstr "Цим способом не надсилається"
 
 #: src/components/ai/call-detail.tsx
 msgid "Not sent: Kept held it back, so nothing was used."
-msgstr "Не надіслано: Kept його утримав, тож нічого не використано."
+msgstr "Не надіслано: Tingfinder його утримав, тож нічого не використано."
 
 #: src/assistant/confirm-card.tsx
 msgid "not set"
@@ -18114,7 +18114,7 @@ msgstr "Тут не показується спостерігачам"
 
 #: src/components/import/labels.ts
 msgid "Not something Kept reads from an export; ignored."
-msgstr "Це не те, що Kept читає з експорту; пропущено."
+msgstr "Це не те, що Tingfinder читає з експорту; пропущено."
 
 #: src/components/filters/registry.tsx
 #: src/components/history/labels.ts
@@ -18346,7 +18346,7 @@ msgstr "На цьому телефоні немає збігів для «<0>{q}
 
 #: src/components/capture/capture-screen.tsx
 msgid "Nothing on this phone yet. Open Kept once while online to bring your places."
-msgstr "На цьому телефоні ще нічого немає. Відкрийте Kept один раз онлайн, щоб завантажити свої місця."
+msgstr "На цьому телефоні ще нічого немає. Відкрийте Tingfinder один раз онлайн, щоб завантажити свої місця."
 
 #: src/components/ops/status-tiles.tsx
 msgid "Nothing on this server is backed up. Choose where backups go (another disk, an S3 bucket or an SFTP server) and a password in Backups."
@@ -18453,7 +18453,7 @@ msgstr "Сповіщення заблоковані"
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Notifications are blocked for Kept in this browser's settings. Allow them there, then come back."
-msgstr "Сповіщення для Kept заблоковані в налаштуваннях цього браузера. Дозвольте їх там, тоді поверніться."
+msgstr "Сповіщення для Tingfinder заблоковані в налаштуваннях цього браузера. Дозвольте їх там, тоді поверніться."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Notifications are on for this device"
@@ -18582,7 +18582,7 @@ msgstr "Вимкнено: людина, яка його створила, біл
 
 #: src/routes/_app/admin.settings.tsx
 msgid "Off. A scanned product barcode finds only what Kept already holds."
-msgstr "Вимкнено. Штрихкод відсканованого продукту знаходить лише те, що Kept уже зберігає."
+msgstr "Вимкнено. Штрихкод відсканованого продукту знаходить лише те, що Tingfinder уже зберігає."
 
 #: src/routes/_app/admin.settings.tsx
 msgid "Off. An AI provider's address must be on the public internet."
@@ -18590,7 +18590,7 @@ msgstr "Вимкнено. Адреса ШІ-провайдера має бути
 
 #: src/routes/_app/admin.settings.tsx
 msgid "Off. Kept never asks; check the releases page yourself."
-msgstr "Вимкнено. Kept ніколи не питає; перевіряйте сторінку релізів самі."
+msgstr "Вимкнено. Tingfinder ніколи не питає; перевіряйте сторінку релізів самі."
 
 #: src/routes/_app/admin.settings.tsx
 msgid "Off. One photo, one thing."
@@ -18701,7 +18701,7 @@ msgstr "на {host}"
 
 #: src/components/connections/token-create.tsx
 msgid "On a home network without HTTPS, the person who runs this Kept can make one on the server: kept admin token create."
-msgstr "У домашній мережі без HTTPS людина, яка запускає цей Kept, може створити його на сервері: kept admin token create."
+msgstr "У домашній мережі без HTTPS людина, яка запускає цей Tingfinder, може створити його на сервері: kept admin token create."
 
 #: src/components/setup-code-help.tsx
 msgid "On a NAS or an app store, search its logs page for <0>KEPT SETUP CODE</0>."
@@ -18717,15 +18717,15 @@ msgstr "На головній, доки не виконано всі кроки.
 
 #: src/components/notifications/settings/channels.tsx
 msgid "On iPhone and iPad, notifications work only from the installed app. Add Kept to your Home Screen, open it from there and turn them on. Until then, email reaches you."
-msgstr "На iPhone та iPad сповіщення працюють лише зі встановленого застосунку. Додайте Kept на головний екран, відкрийте його звідти та ввімкніть сповіщення. До того часу вас знайде електронна пошта."
+msgstr "На iPhone та iPad сповіщення працюють лише зі встановленого застосунку. Додайте Tingfinder на головний екран, відкрийте його звідти та ввімкніть сповіщення. До того часу вас знайде електронна пошта."
 
 #: src/components/capture/summary.tsx
 msgid "On iPhone, Kept uploads only while it's open. Keep it open when you're back in signal."
-msgstr "На iPhone Kept завантажує файли, лише коли відкритий. Тримайте його відкритим, коли з’явиться сигнал."
+msgstr "На iPhone Tingfinder завантажує файли, лише коли відкритий. Тримайте його відкритим, коли з’явиться сигнал."
 
 #: src/components/home/install-sheet.tsx
 msgid "On iPhone, notifications only reach Kept once it's on your Home Screen. Until then, reminders can come by email."
-msgstr "На iPhone сповіщення надходять у Kept, лише коли його додано на головний екран. До того нагадування можуть приходити електронною поштою."
+msgstr "На iPhone сповіщення надходять у Tingfinder, лише коли його додано на головний екран. До того нагадування можуть приходити електронною поштою."
 
 #: src/components/home/checklist.tsx
 msgid "On iPhone, reminders only reach the installed app."
@@ -18797,7 +18797,7 @@ msgstr "На цьому телефоні · очікує синхронізац�
 
 #: src/components/device/app-lock-settings.tsx
 msgid "On this phone Face ID or fingerprint opens Kept, but prices and documents kept offline still ask for the PIN."
-msgstr "На цьому телефоні Face ID або відбиток пальця відкриває Kept, але ціни та документи, збережені офлайн, усе одно запитують PIN."
+msgstr "На цьому телефоні Face ID або відбиток пальця відкриває Tingfinder, але ціни та документи, збережені офлайн, усе одно запитують PIN."
 
 #: src/components/moving/box-screen.tsx
 #: src/components/moving/box-write.tsx
@@ -18816,7 +18816,7 @@ msgstr "Увімкнено: локація використовує це"
 
 #: src/routes/_app/admin.settings.tsx
 msgid "On. A scanned product barcode Kept doesn't know is looked up in Open Food Facts, Open Products Facts and Open Beauty Facts. Only the barcode is sent."
-msgstr "Увімкнено. Штрихкод відсканованого продукту, який Kept не знає, шукається в Open Food Facts, Open Products Facts та Open Beauty Facts. Надсилається лише штрихкод."
+msgstr "Увімкнено. Штрихкод відсканованого продукту, який Tingfinder не знає, шукається в Open Food Facts, Open Products Facts та Open Beauty Facts. Надсилається лише штрихкод."
 
 #: src/routes/_app/admin.settings.tsx
 msgid "On. An OpenAI-compatible AI provider can be on this server's own network, like a model you run at home."
@@ -18828,7 +18828,7 @@ msgstr "Увімкнено. Кожна річ, яку ШІ знаходить н
 
 #: src/routes/_app/admin.settings.tsx
 msgid "On. Once a day the server asks GitHub for Kept's newest release, sending nothing but the request. Admin → Status says when one is out."
-msgstr "Увімкнено. Щодня сервер питає GitHub про найновіший реліз Kept, надсилаючи лише сам запит. Розділ «Адміністратор → Стан» показує, коли вийшов новий."
+msgstr "Увімкнено. Щодня сервер питає GitHub про найновіший реліз Tingfinder, надсилаючи лише сам запит. Розділ «Адміністратор → Стан» показує, коли вийшов новий."
 
 #: src/routes/_app/settings.location.$id.members.tsx
 msgid "On. Only the owner changes this."
@@ -18852,15 +18852,15 @@ msgstr "Раз на місяць: що ШІ зробив для вас і що �
 
 #: src/routes/_app/help.tsx
 msgid "Once Kept is installed it's in the Share sheet. Share photos or PDFs to it from any app, and they open in Capture."
-msgstr "Щойно Kept встановлено, він з’являється в меню «Поділитися». Поділіться з ним фото або PDF з будь-якого застосунку, і вони відкриються в «Захопленні»."
+msgstr "Щойно Tingfinder встановлено, він з’являється в меню «Поділитися». Поділіться з ним фото або PDF з будь-якого застосунку, і вони відкриються в «Захопленні»."
 
 #: src/components/sign-in-methods.tsx
 msgid "Once linked, that account signs you in here. Kept never links one because the email matches."
-msgstr "Після прив’язування цей обліковий запис дає вам вхід сюди. Kept ніколи не прив’язує його лише тому, що електронна пошта збігається."
+msgstr "Після прив’язування цей обліковий запис дає вам вхід сюди. Tingfinder ніколи не прив’язує його лише тому, що електронна пошта збігається."
 
 #: src/components/labels/printed-ok.tsx
 msgid "Once these labels have printed, confirm it here, so Kept stops counting them as unprinted."
-msgstr "Щойно ці етикетки надрукуються, підтвердьте це тут, щоб Kept перестав зараховувати їх як ненадруковані."
+msgstr "Щойно ці етикетки надрукуються, підтвердьте це тут, щоб Tingfinder перестав зараховувати їх як ненадруковані."
 
 #: src/components/schedules/labels.tsx
 msgid "Once, on {day}"
@@ -18893,7 +18893,7 @@ msgstr "На один менше"
 
 #: src/routes/_app/settings.export.tsx
 msgid "One file per location: everything in it, the original photos and documents, and a copy you can read without Kept. Import it into this Kept or another one."
-msgstr "Один файл на локацію: усе в ній, оригінальні фото й документи та копія, яку можна читати без Kept. Імпортуйте його в цей Kept або в інший."
+msgstr "Один файл на локацію: усе в ній, оригінальні фото й документи та копія, яку можна читати без Tingfinder. Імпортуйте його в цей Tingfinder або в інший."
 
 #: src/components/import/inspect-step.tsx
 msgid "One Homebox collection"
@@ -18985,7 +18985,7 @@ msgstr "Лише копія фото з вилученими даними про
 
 #: src/components/ai/call-detail.tsx
 msgid "Only a copy with the location and camera data removed. Kept never keeps it."
-msgstr "Лише копія з вилученими даними про розташування й камеру. Kept її ніколи не зберігає."
+msgstr "Лише копія з вилученими даними про розташування й камеру. Tingfinder її ніколи не зберігає."
 
 #: src/components/registries/type-editor.tsx
 msgid "Only a type nothing uses can be deleted. To move its things to another type, merge it instead."
@@ -19038,11 +19038,11 @@ msgstr "Імпортувати в цю локацію можуть лише її
 
 #: src/components/sync-status.tsx
 msgid "Only part of your Kept is on this phone."
-msgstr "На цьому телефоні є лише частина вашого Kept."
+msgstr "На цьому телефоні є лише частина вашого Tingfinder."
 
 #: src/routes/_app/admin.status.tsx
 msgid "Only say yes once the two keys from kept admin recovery-kit are stored away from this server. Kept can't check."
-msgstr "Погоджуйтеся, лише коли два ключі з kept admin recovery-kit збережено поза цим сервером. Kept не може це перевірити."
+msgstr "Погоджуйтеся, лише коли два ключі з kept admin recovery-kit збережено поза цим сервером. Tingfinder не може це перевірити."
 
 #: src/components/registries/registry-list.tsx
 #: src/components/tags/tag-page.tsx
@@ -19228,23 +19228,23 @@ msgstr "Відкрити знову"
 
 #: src/routes/auth/email-change.tsx
 msgid "Open Kept"
-msgstr "Відкрити Kept"
+msgstr "Відкрити Tingfinder"
 
 #: src/components/home/install-sheet.tsx
 msgid "Open Kept from its new icon."
-msgstr "Відкрийте Kept з нової іконки."
+msgstr "Відкрийте Tingfinder з нової іконки."
 
 #: src/components/things/original-file.ts
 msgid "Open Kept in Safari to download it."
-msgstr "Відкрийте Kept у Safari, щоб завантажити його."
+msgstr "Відкрийте Tingfinder у Safari, щоб завантажити його."
 
 #: src/components/home/quick-log.tsx
 msgid "Open Kept once while online, so this phone has your things and their meters."
-msgstr "Відкрийте Kept раз, поки є з’єднання, щоб на цьому телефоні з’явилися ваші речі та їхні лічильники."
+msgstr "Відкрийте Tingfinder раз, поки є з’єднання, щоб на цьому телефоні з’явилися ваші речі та їхні лічильники."
 
 #: src/components/capture/share-arrival.tsx
 msgid "Open Kept once, then share again"
-msgstr "Відкрийте Kept один раз, потім поділіться ще раз"
+msgstr "Відкрийте Tingfinder один раз, потім поділіться ще раз"
 
 #: src/components/agenda/agenda-row.tsx
 msgid "Open Lending"
@@ -19412,11 +19412,11 @@ msgstr "Відкриваємо сеанс"
 
 #: src/components/import/kept-choices.tsx
 msgid "Opening them needs HTTPS. Over plain HTTP everything else is imported without them; to bring them over too, import this file at Kept’s HTTPS address."
-msgstr "Відкриття їх потребує HTTPS. Через звичайний HTTP усе інше імпортується без них; щоб перенести й їх, імпортуйте цей файл на HTTPS-адресі Kept."
+msgstr "Відкриття їх потребує HTTPS. Через звичайний HTTP усе інше імпортується без них; щоб перенести й їх, імпортуйте цей файл на HTTPS-адресі Tingfinder."
 
 #: src/components/scan/barcode-sheet.tsx
 msgid "Opening this phone's copy of your Kept…"
-msgstr "Відкриваємо копію вашого Kept на цьому телефоні…"
+msgstr "Відкриваємо копію вашого Tingfinder на цьому телефоні…"
 
 #: src/components/ai/data-use-note.tsx
 msgid "OpenRouter says it logs only the time, the model and token counts, not prompts or responses unless you opt in, and sends requests to providers that log or train on them only if you allow it in its privacy settings."
@@ -19424,11 +19424,11 @@ msgstr "OpenRouter каже, що зберігає журнали лише пр�
 
 #: src/components/labels/batch-builder.tsx
 msgid "Opens the print dialog at {stockTitle}, scale 100%. Afterwards Kept asks \"Printed OK?\" and records the print date."
-msgstr "Відкриває діалог друку на {stockTitle} з масштабом 100%. Потім Kept питає «Надруковано OK?» і записує дату друку."
+msgstr "Відкриває діалог друку на {stockTitle} з масштабом 100%. Потім Tingfinder питає «Надруковано OK?» і записує дату друку."
 
 #: src/components/labels/batch-builder.tsx
 msgid "Opens the print dialog: choose your label printer and this label size. Afterwards Kept asks \"Printed OK?\" and records the print date."
-msgstr "Відкриває діалог друку: виберіть свій принтер для етикеток і цей розмір етикетки. Потім Kept питає «Надруковано OK?» і записує дату друку."
+msgstr "Відкриває діалог друку: виберіть свій принтер для етикеток і цей розмір етикетки. Потім Tingfinder питає «Надруковано OK?» і записує дату друку."
 
 #: src/components/mailin/mailbox-settings.tsx
 msgid "Optional, comma-separated. A filter against noise, not a security check: a From address can be forged."
@@ -19482,15 +19482,15 @@ msgstr "Необов’язково. Строк був {dueAt}."
 
 #: src/components/warranties/warranty-sheet.tsx
 msgid "Optional. Kept reminds you before this day."
-msgstr "Необов’язково. Kept нагадає вам перед цим днем."
+msgstr "Необов’язково. Tingfinder нагадає вам перед цим днем."
 
 #: src/components/lending/borrow-sheet.tsx
 msgid "Optional. Kept reminds you when it's due back."
-msgstr "Необов’язково. Kept нагадає вам, коли настане строк повернення."
+msgstr "Необов’язково. Tingfinder нагадає вам, коли настане строк повернення."
 
 #: src/components/lending/lend-sheet.tsx
 msgid "Optional. Kept reminds you, never them, two days before and when it's overdue."
-msgstr "Необов’язково. Kept нагадує вам, не їм, за два дні та коли термін минув."
+msgstr "Необов’язково. Tingfinder нагадує вам, не їм, за два дні та коли термін минув."
 
 #: src/components/fuel/log-fuel-sheet.tsx
 #: src/components/services/vendor-field.tsx
@@ -19515,7 +19515,7 @@ msgstr "або"
 
 #: src/components/home/checklist.tsx
 msgid "Or reach Kept through Tailscale and turn on HTTPS for your tailnet; the address ends in <0>.ts.net</0>."
-msgstr "Або підключіться до Kept через Tailscale і ввімкніть HTTPS для своєї tailnet; адреса закінчується на <0>.ts.net</0>."
+msgstr "Або підключіться до Tingfinder через Tailscale і ввімкніть HTTPS для своєї tailnet; адреса закінчується на <0>.ts.net</0>."
 
 #: src/components/vehicles/list.tsx
 msgid "or read its registration card in LABEL mode"
@@ -19630,11 +19630,11 @@ msgstr "Понад бюджет"
 
 #: src/components/home/checklist.tsx
 msgid "Over plain HTTP, phones block the camera, installing Kept, push notifications and location."
-msgstr "Через звичайний HTTP телефони блокують камеру, встановлення Kept, push-сповіщення та геолокацію."
+msgstr "Через звичайний HTTP телефони блокують камеру, встановлення Tingfinder, push-сповіщення та геолокацію."
 
 #: src/components/home/install-sheet.tsx
 msgid "Over plain HTTP, phones won't install Kept. Put Kept on HTTPS first."
-msgstr "Через звичайний HTTP телефони не встановлять Kept. Спершу переведіть Kept на HTTPS."
+msgstr "Через звичайний HTTP телефони не встановлять Tingfinder. Спершу переведіть Tingfinder на HTTPS."
 
 #: src/components/export/export-sheet.tsx
 msgid "Over plain HTTP, secret values stay out of the export. Each one is marked as left out, and the rest imports as usual."
@@ -19799,7 +19799,7 @@ msgstr "Документ Paperless змінено"
 
 #: src/components/history/labels.ts
 msgid "Paperless document copied into Kept"
-msgstr "Документ Paperless скопійовано в Kept"
+msgstr "Документ Paperless скопійовано в Tingfinder"
 
 #: src/components/history/labels.ts
 msgid "Paperless document linked"
@@ -19929,7 +19929,7 @@ msgstr "Ключі доступу"
 
 #: src/components/sign-in-security.household.tsx
 msgid "Passkeys need HTTPS. On a plain-HTTP address browsers don't offer them; put Kept on HTTPS to add one."
-msgstr "Ключі доступу потребують HTTPS. У браузерах на звичайній HTTP-адресі вони не пропонуються; переведіть Kept на HTTPS, щоб додати ключ."
+msgstr "Ключі доступу потребують HTTPS. У браузерах на звичайній HTTP-адресі вони не пропонуються; переведіть Tingfinder на HTTPS, щоб додати ключ."
 
 #: src/components/export/passphrase-field.tsx
 #: src/components/import/kept-choices.tsx
@@ -20187,7 +20187,7 @@ msgstr "Сфотографувати цю кімнату"
 
 #: src/components/history/labels.ts
 msgid "Photographed {name} for Kept to list what is in it"
-msgstr "Сфотографовано {name}, щоб Kept перелічив, що в ньому"
+msgstr "Сфотографовано {name}, щоб Tingfinder перелічив, що в ньому"
 
 #: src/components/places/contents-list.tsx
 msgid "photos"
@@ -20372,7 +20372,7 @@ msgstr "Виберіть, що додаєте"
 
 #: src/components/hints/hint-copy.ts
 msgid "Pick where it comes from: a spreadsheet, Homebox or another Kept."
-msgstr "Виберіть джерело: електронна таблиця, Homebox або інший Kept."
+msgstr "Виберіть джерело: електронна таблиця, Homebox або інший Tingfinder."
 
 #. placeholder {0}: thing.name ?? ''
 #: src/components/things/action-menu.tsx
@@ -20460,7 +20460,7 @@ msgstr "Місце: згори донизу, розділене символом
 
 #: src/map/map-view.tsx
 msgid "Placed by Kept from room photos: move them where they stand."
-msgstr "Розміщено Kept з фото кімнати: перемістіть їх туди, де вони стоять."
+msgstr "Розміщено Tingfinder з фото кімнати: перемістіть їх туди, де вони стоять."
 
 #: src/assistant/confirm-card.tsx
 #: src/components/capture/place-chip.tsx
@@ -20553,11 +20553,11 @@ msgstr "Наведіть на етикетку коробки або код на
 
 #: src/components/hints/hint-copy.ts
 msgid "Point at a Kept label"
-msgstr "Наведіть на етикетку Kept"
+msgstr "Наведіть на етикетку Tingfinder"
 
 #: src/components/scan/scan-screen.tsx
 msgid "Point at a Kept label, or a product's barcode."
-msgstr "Наведіть на етикетку Kept або штрихкод товару."
+msgstr "Наведіть на етикетку Tingfinder або штрихкод товару."
 
 #: src/components/scan/scan-screen.tsx
 msgid "Point at the label of the place or box they go in."
@@ -21052,7 +21052,7 @@ msgstr "Покласти його в інше місце в {locationName}"
 
 #: src/components/home/checklist.tsx
 msgid "Put Kept on HTTPS"
-msgstr "Переведіть Kept на HTTPS"
+msgstr "Переведіть Tingfinder на HTTPS"
 
 #: src/map/card.tsx
 msgid "Put on the map"
@@ -21766,7 +21766,7 @@ msgstr "Нагадування на телефон через ntfy.sh або в�
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Reminders pop up here even when Kept is closed. Your browser asks first."
-msgstr "Нагадування спливатимуть тут, навіть коли Kept закрито. Ваш браузер спершу запитає дозвіл."
+msgstr "Нагадування спливатимуть тут, навіть коли Tingfinder закрито. Ваш браузер спершу запитає дозвіл."
 
 #: src/components/notifications/centre.tsx
 msgid "Reminders that are due, loans that are overdue, and news about your locations, with the next step one tap away."
@@ -22814,7 +22814,7 @@ msgstr "Зберегти"
 
 #: src/components/ai/advanced.tsx
 msgid "Save a key first: Kept then loads the provider's models to choose from."
-msgstr "Спершу збережіть ключ: тоді Kept завантажить моделі провайдера, щоб ви могли вибрати."
+msgstr "Спершу збережіть ключ: тоді Tingfinder завантажить моделі провайдера, щоб ви могли вибрати."
 
 #: src/components/hints/hint-copy.ts
 msgid "Save a search with its filters, and open it again in one tap."
@@ -23581,11 +23581,11 @@ msgstr "Секрет:"
 
 #: src/components/registries/convert-field-sheet.household.tsx
 msgid "Secrets are values Kept must be able to recover. Save the recovery kit on the status page, then make the field secret again."
-msgstr "Секрети — це значення, які Kept має вміти відновлювати. Збережіть набір для відновлення на сторінці стану, потім знову зробіть поле секретним."
+msgstr "Секрети — це значення, які Tingfinder має вміти відновлювати. Збережіть набір для відновлення на сторінці стану, потім знову зробіть поле секретним."
 
 #: src/components/export/labels.ts
 msgid "Secrets leave Kept only once the recovery kit is saved. An instance admin saves it from the status page."
-msgstr "Секрети залишають Kept лише після того, як збережено набір для відновлення. Адміністратор сервера зберігає його зі сторінки стану."
+msgstr "Секрети залишають Tingfinder лише після того, як збережено набір для відновлення. Адміністратор сервера зберігає його зі сторінки стану."
 
 #: src/components/link-tabs.tsx
 #: src/components/things/thing-screen.tsx
@@ -23770,7 +23770,7 @@ msgstr "Надіслати ще раз"
 #: src/components/lending/loan-text.tsx
 #: src/components/notifications/notification-row.tsx
 msgid "Send it however you like. Kept never sends it."
-msgstr "Надішліть його як вам зручно. Kept його ніколи не надсилає."
+msgstr "Надішліть його як вам зручно. Tingfinder його ніколи не надсилає."
 
 #: src/components/webhooks/edit.tsx
 msgid "Send to"
@@ -23914,7 +23914,7 @@ msgstr "Задати {0} токенів на місяць"
 
 #: src/components/admin/oidc-status.tsx
 msgid "Set <0>KEPT_OIDC_ISSUER</0>, <1>KEPT_OIDC_CLIENT_ID</1> and <2>KEPT_OIDC_CLIENT_SECRET</2>, then restart Kept."
-msgstr "Встановіть <0>KEPT_OIDC_ISSUER</0>, <1>KEPT_OIDC_CLIENT_ID</1> та <2>KEPT_OIDC_CLIENT_SECRET</2>, а потім перезапустіть Kept."
+msgstr "Встановіть <0>KEPT_OIDC_ISSUER</0>, <1>KEPT_OIDC_CLIENT_ID</1> та <2>KEPT_OIDC_CLIENT_SECRET</2>, а потім перезапустіть Tingfinder."
 
 #: src/components/places/contents-list.tsx
 #: src/components/sheet/sheet-view.tsx
@@ -24014,7 +24014,7 @@ msgstr "Задати тип для {names}"
 
 #: src/components/home/checklist.tsx
 msgid "Set these where Kept's other settings live (the .env file with Docker Compose; with the Helm chart, the URL in the secret named by smtp.existingSecret and the sender in smtp.from), then restart Kept:"
-msgstr "Задайте ці параметри там, де зберігаються інші налаштування Kept (файл .env для Docker Compose; у Helm-чарті — URL у секреті, вказаному в smtp.existingSecret, і відправник у smtp.from), потім перезапустіть Kept:"
+msgstr "Задайте ці параметри там, де зберігаються інші налаштування Tingfinder (файл .env для Docker Compose; у Helm-чарті — URL у секреті, вказаному в smtp.existingSecret, і відправник у smtp.from), потім перезапустіть Tingfinder:"
 
 #: src/components/inbox/suggested-field.tsx
 msgid "Set this on the thing's page. Here it can only be left out."
@@ -24061,7 +24061,7 @@ msgstr "Налаштовано поштову скриньку"
 
 #: src/routes/setup.tsx
 msgid "Set up this Kept"
-msgstr "Налаштувати цей Kept"
+msgstr "Налаштувати цей Tingfinder"
 
 #: src/components/two-factor-hidden.tsx
 msgid "Set up two-factor"
@@ -24170,7 +24170,7 @@ msgstr "Поділитися як зображення"
 
 #: src/routes/_app/help.tsx
 msgid "Share into Kept"
-msgstr "Поділитися в Kept"
+msgstr "Поділитися в Tingfinder"
 
 #: src/components/ai/call-list.tsx
 #: src/components/filters/list-export.household.tsx
@@ -24199,7 +24199,7 @@ msgstr "Посилання для спільного доступу"
 
 #: src/components/capture/share-arrival.tsx
 msgid "Share the files into Kept again."
-msgstr "Поділіться файлами з Kept ще раз."
+msgstr "Поділіться файлами з Tingfinder ще раз."
 
 #: src/components/reports/claim-pack.tsx
 msgid "Share the ZIP"
@@ -24238,11 +24238,11 @@ msgstr "Спільні файли"
 
 #: src/routes/s.$token.tsx
 msgid "Shared from Kept · read-only"
-msgstr "Поділився Kept · лише для читання"
+msgstr "Поділився Tingfinder · лише для читання"
 
 #: src/components/capture/shared-sheet.tsx
 msgid "Shared into Kept"
-msgstr "Передано в Kept"
+msgstr "Передано в Tingfinder"
 
 #: src/components/filters/views.tsx
 msgid "Shared with {name}"
@@ -24453,7 +24453,7 @@ msgstr "Увійдіть один раз за посиланням, надісл
 #: src/routes/auth/confirm.tsx
 #: src/routes/signin/index.tsx
 msgid "Sign in to Kept"
-msgstr "Увійти в Kept"
+msgstr "Увійти в Tingfinder"
 
 #: src/components/import/inspect-step.tsx
 msgid "Sign in with"
@@ -24579,7 +24579,7 @@ msgstr "Вхід перестане запитувати код, ваші рез
 
 #: src/components/admin/oidc-status.tsx
 msgid "Signing in this way reaches only an account already linked to it, or someone invited here. Kept never joins accounts because their emails match."
-msgstr "Такий вхід веде лише до облікового запису, уже пов’язаного з ним, або до когось, кого сюди запросили. Kept ніколи не об’єднує облікові записи через те, що їхні електронні адреси збігаються."
+msgstr "Такий вхід веде лише до облікового запису, уже пов’язаного з ним, або до когось, кого сюди запросили. Tingfinder ніколи не об’єднує облікові записи через те, що їхні електронні адреси збігаються."
 
 #: src/components/oidc-sign-in.tsx
 msgid "Signing in with <0>{who}</0> didn't work"
@@ -24676,7 +24676,7 @@ msgstr "Пропущено"
 
 #: src/components/notifications/settings/scheduled-reports.tsx
 msgid "Skipped: that part of Kept is off in this location."
-msgstr "Пропущено: ця частина Kept вимкнена в цій локації."
+msgstr "Пропущено: ця частина Tingfinder вимкнена в цій локації."
 
 #: src/components/notifications/settings/scheduled-reports.tsx
 msgid "Skipped: you can't make this report there any more."
@@ -24880,7 +24880,7 @@ msgstr "щось"
 
 #: src/assistant/confirm-card.tsx
 msgid "Something Kept can't name"
-msgstr "Щось, чого Kept не може назвати"
+msgstr "Щось, чого Tingfinder не може назвати"
 
 #: src/routes/_app/help.tsx
 msgid "Something not working?"
@@ -25062,7 +25062,7 @@ msgstr "Почніть зі звичних чотирьох: заміна оли
 
 #: src/components/home/checklist.tsx
 msgid "Start Kept's Compose file with the <0>https</0> profile. It adds a reverse proxy that gets a certificate for your domain."
-msgstr "Запустіть файл Compose для Kept із профілем <0>https</0>. Він додає зворотний прокси, який отримує сертифікат для вашого домену."
+msgstr "Запустіть файл Compose для Tingfinder із профілем <0>https</0>. Він додає зворотний прокси, який отримує сертифікат для вашого домену."
 
 #: src/components/capture/capture-screen.tsx
 msgid "Start the camera"
@@ -25162,7 +25162,7 @@ msgstr "Залишитися"
 
 #: src/components/sign-out.tsx
 msgid "Stay signed in and open Kept with a connection to finish syncing first."
-msgstr "Залишайтеся в системі й відкрийте Kept із підключенням, щоб спершу завершити синхронізацію."
+msgstr "Залишайтеся в системі й відкрийте Tingfinder із підключенням, щоб спершу завершити синхронізацію."
 
 #. placeholder {0}: stayed.map((x) => isolate(x.name ?? '')).join(', ')
 #: src/components/lending/lend-sheet.tsx
@@ -25644,7 +25644,7 @@ msgstr "Висока колонка"
 
 #: src/components/home/install-sheet.tsx
 msgid "Tap <0>Add</0>, then open Kept from its new icon."
-msgstr "Торкніться <0>Додати</0>, потім відкрийте Kept з нової іконки."
+msgstr "Торкніться <0>Додати</0>, потім відкрийте Tingfinder з нової іконки."
 
 #: src/components/home/install-sheet.tsx
 msgid "Tap <0>Install app</0>, or <1>Add to Home screen</1>."
@@ -25668,7 +25668,7 @@ msgstr "Торкніться «Позначити поверненим», кол
 
 #: src/components/hints/hint-copy.ts
 msgid "Tap Scan and point the camera at a Kept label. What it's on opens."
-msgstr "Торкніться «Сканувати» та наведіть камеру на етикетку Kept. Відкриється те, на чому вона."
+msgstr "Торкніться «Сканувати» та наведіть камеру на етикетку Tingfinder. Відкриється те, на чому вона."
 
 #: src/components/hints/hint-copy.ts
 msgid "Tap Scan on Home and point the camera at a label: what it belongs to opens, with what's inside. A label keeps its code for good, so a lost one reprints the same."
@@ -25680,7 +25680,7 @@ msgstr "Торкніться «Сканувати», а потім «Почат�
 
 #: src/components/connections/shortcut-recipe.tsx
 msgid "Tap the Shortcut at the pump or in the car park, type the odometer, and the reading is in Kept, with undo, as if you'd logged it here."
-msgstr "Торкніться швидкої команди на заправці чи на стоянці, введіть одометр — і показник опиниться в Kept, з можливістю скасування, наче ви записали його тут."
+msgstr "Торкніться швидкої команди на заправці чи на стоянці, введіть одометр — і показник опиниться в Tingfinder, з можливістю скасування, наче ви записали його тут."
 
 #: src/components/capture/place-chip.tsx
 msgid "Tap to change"
@@ -25850,7 +25850,7 @@ msgstr "Цю валюту не ввімкнено. Її може додати а
 
 #: src/components/notifications/settings/channels.tsx
 msgid "That device stops receiving push from Kept. Turn it on again from the device itself."
-msgstr "Цей пристрій перестане отримувати push від Kept. Увімкніть його знову на самому пристрої."
+msgstr "Цей пристрій перестане отримувати push від Tingfinder. Увімкніть його знову на самому пристрої."
 
 #: src/components/export/delete-location-sheet.tsx
 #: src/components/export/export-sheet.tsx
@@ -25871,7 +25871,7 @@ msgstr "Це не спрацювало. Спробуйте ще раз."
 
 #: src/components/paperless/words.ts
 msgid "That document is larger than Kept takes."
-msgstr "Цей документ більший, ніж може прийняти Kept."
+msgstr "Цей документ більший, ніж може прийняти Tingfinder."
 
 #: src/components/registries/contact-card.tsx
 msgid "That doesn't look like an email address."
@@ -25907,7 +25907,7 @@ msgstr "Цей ключ уже є полем цього типу, типу, з �
 
 #: src/components/boxcheck/box-check-screen.tsx
 msgid "That label isn't on a thing in your Kept."
-msgstr "Цієї етикетки немає на жодній речі у вашому Kept."
+msgstr "Цієї етикетки немає на жодній речі у вашому Tingfinder."
 
 #: src/components/registries/registry-edit-sheet.tsx
 msgid "That name is already in this list. Merge the two instead."
@@ -25938,7 +25938,7 @@ msgstr "Цей пароль неправильний."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "That server is on a private network, which this Kept doesn't allow. An instance admin can allow it."
-msgstr "Цей сервер у приватній мережі, яку цей Kept не дозволяє. Адміністратор сервера може дозволити її."
+msgstr "Цей сервер у приватній мережі, яку цей Tingfinder не дозволяє. Адміністратор сервера може дозволити її."
 
 #: src/components/page.tsx
 #: src/routes/setup.tsx
@@ -25955,7 +25955,7 @@ msgstr "Це ім’я користувача й код не збігаютьс�
 
 #: src/components/ai/recommended.tsx
 msgid "That was a test with made-up photos; Kept's evaluation with real photos checks it again. Groq has no embeddings model, so semantic search needs another provider or stays keyword only. On the key tier Kept measured, Groq reads {low}–{high} photos a minute; Kept paces to it, so a {photos}-photo session is named over {fromMin}–{toMin} minutes while you carry on."
-msgstr "Це був тест із вигаданими фото; оцінка Kept із реальними фото перевіряє це ще раз. У Groq немає моделі ембедингів, тож семантичний пошук потребує іншого провайдера або лишається лише за ключовими словами. На тому рівні ключа, який виміряв Kept, Groq читає {low}–{high} фото за хвилину; Kept підлаштовується під нього, тож сеанс із {photos} фото отримує назви впродовж {fromMin}–{toMin} хвилин, поки ви працюєте далі."
+msgstr "Це був тест із вигаданими фото; оцінка Tingfinder із реальними фото перевіряє це ще раз. У Groq немає моделі ембедингів, тож семантичний пошук потребує іншого провайдера або лишається лише за ключовими словами. На тому рівні ключа, який виміряв Tingfinder, Groq читає {low}–{high} фото за хвилину; Tingfinder підлаштовується під нього, тож сеанс із {photos} фото отримує назви впродовж {fromMin}–{toMin} хвилин, поки ви працюєте далі."
 
 #: src/components/history/undo.ts
 msgid "That was already undone"
@@ -25995,7 +25995,7 @@ msgstr "Це той код"
 
 #: src/routes/oauth/consent.tsx
 msgid "That's the name the app gives itself. Kept can't confirm who made it."
-msgstr "Це назва, яку застосунок дає собі. Kept не може підтвердити, хто його створив."
+msgstr "Це назва, яку застосунок дає собі. Tingfinder не може підтвердити, хто його створив."
 
 #: src/components/page.tsx
 msgid "That's turned off in this location."
@@ -26007,7 +26007,7 @@ msgstr "Це ваш єдиний спосіб увійти. Спочатку д�
 
 #: src/components/paperless/connection-settings.tsx
 msgid "The {links} links to its documents go too. Documents copied into Kept stay."
-msgstr "Посилання {links} на його документи теж зникнуть. Документи, скопійовані в Kept, залишаться."
+msgstr "Посилання {links} на його документи теж зникнуть. Документи, скопійовані в Tingfinder, залишаться."
 
 #: src/components/scan/manual-code.tsx
 msgid "The 6 characters printed under the QR code."
@@ -26035,7 +26035,7 @@ msgstr "відповідь обірвано"
 
 #: src/components/ai/labels.ts
 msgid "the answer wasn't in the shape Kept asked for"
-msgstr "відповідь не відповідала формі, яку просив Kept"
+msgstr "відповідь не відповідала формі, яку просив Tingfinder"
 
 #: src/routes/oauth/consent.tsx
 msgid "The app could move what it finds in one into another, so people in one could see what came from the other. Connect it to one location unless you mean that."
@@ -26047,7 +26047,7 @@ msgstr "Блокування застосунку вимкнене в цій д�
 
 #: src/components/device/app-lock-settings.tsx
 msgid "The app lock needs storage this browser doesn’t give Kept."
-msgstr "Для блокування застосунку потрібне сховище, якого цей браузер не дає Kept."
+msgstr "Для блокування застосунку потрібне сховище, якого цей браузер не дає Tingfinder."
 
 #: src/routes/oauth/consent.tsx
 msgid "The app reads all of them together, and could repeat what it reads in one to someone who uses another. Connect it to one location unless you mean that."
@@ -26125,12 +26125,12 @@ msgstr "Камера недоступна"
 #: src/components/capture/file-fallback.tsx
 #: src/components/scan/scanner-view.tsx
 msgid "The camera needs a secure (HTTPS) address, and this page doesn't have one. Your admin can put Kept on HTTPS."
-msgstr "Камері потрібна захищена (HTTPS) адреса, а ця сторінка її не має. Ваш адміністратор може перевести Kept на HTTPS."
+msgstr "Камері потрібна захищена (HTTPS) адреса, а ця сторінка її не має. Ваш адміністратор може перевести Tingfinder на HTTPS."
 
 #. placeholder {0}: RECOMMENDED.model
 #: src/components/ai/recommended.tsx
 msgid "The cheapest reliable result in Kept's test: about USD {perReceipt} a receipt, with <0>{0}</0>. On the key tier Kept measured, Groq reads {low}–{high} photos a minute; Kept paces to it."
-msgstr "Найдешевший надійний результат у тесті Kept: близько USD {perReceipt} за чек, із <0>{0}</0>. На тому рівні ключа, який виміряв Kept, Groq читає {low}–{high} фото за хвилину; Kept підлаштовується під нього."
+msgstr "Найдешевший надійний результат у тесті Tingfinder: близько USD {perReceipt} за чек, із <0>{0}</0>. На тому рівні ключа, який виміряв Tingfinder, Groq читає {low}–{high} фото за хвилину; Tingfinder підлаштовується під нього."
 
 #: src/components/import/stepper.tsx
 msgid "The check reads every row the way the import will, and changes nothing. It shows what would be added, what would be kept as text, and what would be skipped."
@@ -26158,7 +26158,7 @@ msgstr "Код друкується один раз, під час першог�
 
 #: src/components/import/csv-help.tsx
 msgid "The columns Kept reads"
-msgstr "Стовпці, які читає Kept"
+msgstr "Стовпці, які читає Tingfinder"
 
 #: src/components/inbox/inbox-list.tsx
 msgid "The current item"
@@ -26186,11 +26186,11 @@ msgstr "Демп бази даних не вдався. Деталі — у жу
 
 #: src/components/ops/ops-words.ts
 msgid "The database dump tool doesn't match the database's version. Use Kept's own image."
-msgstr "Інструмент демпу бази даних не збігається з версією бази даних. Використовуйте власний образ Kept."
+msgstr "Інструмент демпу бази даних не збігається з версією бази даних. Використовуйте власний образ Tingfinder."
 
 #: src/routes/_app/admin.settings.tsx
 msgid "The databases ask each app for a contact. Kept sends this email with each lookup, and nothing else about you."
-msgstr "Бази даних запитують у кожного застосунку контакт. Kept надсилає цю електронну пошту з кожним запитом пошуку й більше нічого про вас."
+msgstr "Бази даних запитують у кожного застосунку контакт. Tingfinder надсилає цю електронну пошту з кожним запитом пошуку й більше нічого про вас."
 
 #: src/components/import/labels.ts
 msgid "The date is in the future; kept in the notes."
@@ -26242,7 +26242,7 @@ msgstr "У файлі немає рядків."
 
 #: src/components/import/labels.ts
 msgid "The file is larger than Kept takes, so it's left out."
-msgstr "Файл більший, ніж приймає Kept, тому його не перенесено."
+msgstr "Файл більший, ніж приймає Tingfinder, тому його не перенесено."
 
 #: src/components/things/original-file.ts
 msgid "The file is still on its way. Try again in a moment."
@@ -26254,11 +26254,11 @@ msgstr "Файл не в архіві, тому його не перенесен
 
 #: src/components/ai/paste-key.tsx
 msgid "The first AI key is a secret Kept must be able to recover. Save the recovery kit on the status page, then paste the key again."
-msgstr "Перший ШІ-ключ — це секрет, який Kept має вміти відновити. Збережіть набір для відновлення на сторінці стану, а потім вставте ключ ще раз."
+msgstr "Перший ШІ-ключ — це секрет, який Tingfinder має вміти відновити. Збережіть набір для відновлення на сторінці стану, а потім вставте ключ ще раз."
 
 #: src/components/import/csv-help.tsx
 msgid "The first row names the columns, in any of Kept's languages. Kept matches the names it knows, and you choose the rest in the next step. Only a name is needed."
-msgstr "Перший рядок називає стовпці будь-якою мовою Kept. Kept зіставляє назви, які знає, а решту ви обираєте на наступному кроці. Потрібна лише назва."
+msgstr "Перший рядок називає стовпці будь-якою мовою Tingfinder. Tingfinder зіставляє назви, які знає, а решту ви обираєте на наступному кроці. Потрібна лише назва."
 
 #: src/components/capture/room-grid.tsx
 msgid "The first things in <0>{home}</0> go where you choose. You can change it any time from the place at the top."
@@ -26274,7 +26274,7 @@ msgstr "Повні фото видаляються. Чернетки та їхн
 
 #: src/graph/graph-view.tsx
 msgid "The graph is drawn from Kept’s server. The list has everything offline."
-msgstr "Граф малюється з сервера Kept. Список має все офлайн."
+msgstr "Граф малюється з сервера Tingfinder. Список має все офлайн."
 
 #. placeholder {0}: collection.name
 #: src/components/import/inspect-step.tsx
@@ -26312,7 +26312,7 @@ msgstr "У рахунку показано $. Це долари США чи ка
 
 #: src/components/import/archive-step.tsx
 msgid "The Kept export"
-msgstr "Експорт Kept"
+msgstr "Експорт Tingfinder"
 
 #: src/components/registries/field-sheet.tsx
 msgid "The key and kind stay as they are. Changing a kind comes with a preview, later."
@@ -26333,7 +26333,7 @@ msgstr "Остання перевірка не вдалася"
 
 #: src/components/ops/status-tiles.tsx
 msgid "The last check got no answer. Kept asks again tomorrow."
-msgstr "Остання перевірка не отримала відповіді. Kept запитає знову завтра."
+msgstr "Остання перевірка не отримала відповіді. Tingfinder запитає знову завтра."
 
 #: src/routes/_app/admin.alerts.tsx
 msgid "The latest backup looks too small"
@@ -26367,7 +26367,7 @@ msgstr "Посилання перестає працювати. Тим, хто �
 
 #: src/components/ai/prices.tsx
 msgid "The listing has no prices Kept can use."
-msgstr "У переліку немає цін, які міг би використати Kept."
+msgstr "У переліку немає цін, які міг би використати Tingfinder."
 
 #: src/components/admin/embeddings-source.tsx
 msgid "The local model isn't installed on this server, so it can't be chosen."
@@ -26415,7 +26415,7 @@ msgstr "Карта показує поверхи локації, кімнати 
 
 #: src/map/map-view.tsx
 msgid "The map goes back to how it was. Rooms and floors you added stay in Kept."
-msgstr "Карта повернеться до попереднього вигляду. Додані вами кімнати й поверхи залишаться в Kept."
+msgstr "Карта повернеться до попереднього вигляду. Додані вами кімнати й поверхи залишаться в Tingfinder."
 
 #. placeholder {0}: f.num(view.things.length)
 #: src/map/whats-in.tsx
@@ -26522,7 +26522,7 @@ msgstr "Старий строк залишається в його історі�
 #. placeholder {0}: th.name
 #: src/components/inbox/duplicate-review.tsx
 msgid "The one already in Kept, <0>{0}</0>"
-msgstr "Та, що вже є в Kept, <0>{0}</0>"
+msgstr "Та, що вже є в Tingfinder, <0>{0}</0>"
 
 #: src/components/claims/claim-sheet.tsx
 msgid "The one that covers longest."
@@ -26607,7 +26607,7 @@ msgstr "Ціна, сплачена за одну, як зафіксовано в
 
 #: src/components/ai/labels.ts
 msgid "the provider asked Kept to slow down"
-msgstr "провайдер попросив Kept сповільнитися"
+msgstr "провайдер попросив Tingfinder сповільнитися"
 
 #: src/components/ai/labels.ts
 msgid "the provider couldn't be reached"
@@ -26615,7 +26615,7 @@ msgstr "не вдалося зв’язатися з провайдером"
 
 #: src/components/admin/oidc-status.tsx
 msgid "The provider couldn't be reached when Kept started."
-msgstr "Не вдалося зв’язатися з провайдером, коли запускався Kept."
+msgstr "Не вдалося зв’язатися з провайдером, коли запускався Tingfinder."
 
 #: src/components/ai/labels.ts
 msgid "the provider declined it"
@@ -26719,7 +26719,7 @@ msgstr "Секрети буде імпортовано"
 
 #: src/components/home/checklist.tsx
 msgid "the sender, for example <0>Kept <kept@example.org></0>"
-msgstr "відправник, наприклад <0>Kept <kept@example.org></0>"
+msgstr "відправник, наприклад <0>Tingfinder <kept@example.org></0>"
 
 #: src/components/inbox/labels.ts
 msgid "The server couldn't apply it."
@@ -26751,7 +26751,7 @@ msgstr "Це задає оточення сервера, тому тут йог�
 
 #: src/components/ops/backup-target-form.tsx
 msgid "The server's own key, as ssh-keyscan prints it without the host name. Kept connects to no other."
-msgstr "Власний ключ сервера, як його виводить ssh-keyscan без імені хоста. До жодного іншого Kept не підключається."
+msgstr "Власний ключ сервера, як його виводить ssh-keyscan без імені хоста. До жодного іншого Tingfinder не підключається."
 
 #: src/routes/auth/confirm.tsx
 msgid "The sign-in link is missing its code. Open it straight from the email, or ask for a new one."
@@ -26791,7 +26791,7 @@ msgstr "Речі залишаються як є; зникають лише ін�
 
 #: src/components/paperless/documents.tsx
 msgid "The titles below are as Kept last saw them."
-msgstr "Назви нижче — такими Kept бачив їх востаннє."
+msgstr "Назви нижче — такими Tingfinder бачив їх востаннє."
 
 #: src/components/connections/shortcut-recipe.tsx
 msgid "The token lives in the Shortcut"
@@ -26879,7 +26879,7 @@ msgstr "Тема"
 
 #: src/components/home/checklist.tsx
 msgid "Then set KEPT_PUBLIC_URL to the https address and restart Kept."
-msgstr "Потім задайте KEPT_PUBLIC_URL як https-адресу та перезапустіть Kept."
+msgstr "Потім задайте KEPT_PUBLIC_URL як https-адресу та перезапустіть Tingfinder."
 
 #: src/routes/_app/index.tsx
 msgid "Then: {after}"
@@ -27145,7 +27145,7 @@ msgstr "Цей обліковий запис створив для вас той
 
 #: src/components/not-found.tsx
 msgid "This address doesn't lead to a page in Kept. The link may be old."
-msgstr "Ця адреса не веде на сторінку в Kept. Посилання, можливо, застаріле."
+msgstr "Ця адреса не веде на сторінку в Tingfinder. Посилання, можливо, застаріле."
 
 #: src/components/paperless/connection-settings.tsx
 msgid "This address is plain http, so the token travels unencrypted on your network. Use https if Paperless has it."
@@ -27182,21 +27182,21 @@ msgstr "Сканер не запустився."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "This browser can't receive notifications from Kept. Email still reaches you."
-msgstr "Цей браузер не може отримувати сповіщення від Kept. Електронна пошта все ще вас знайде."
+msgstr "Цей браузер не може отримувати сповіщення від Tingfinder. Електронна пошта все ще вас знайде."
 
 #: src/components/reports/claim-pack.tsx
 msgid "This browser can't save files here. Open Kept in Safari to download it."
-msgstr "Цей браузер не може зберігати файли тут. Відкрийте Kept у Safari, щоб завантажити його."
+msgstr "Цей браузер не може зберігати файли тут. Відкрийте Tingfinder у Safari, щоб завантажити його."
 
 #: src/components/ai/call-list.tsx
 #: src/components/filters/list-export.household.tsx
 #: src/components/reports/insurance-report.tsx
 msgid "This browser can't save files here. Open Kept in Safari to export it."
-msgstr "Цей браузер не може зберігати файли тут. Відкрийте Kept у Safari, щоб експортувати його."
+msgstr "Цей браузер не може зберігати файли тут. Відкрийте Tingfinder у Safari, щоб експортувати його."
 
 #: src/components/sync-status.tsx
 msgid "This browser may clear Kept's offline copy after weeks unused. Open Kept to sync soon."
-msgstr "Цей браузер може видалити офлайн-копію Kept після кількох тижнів без використання. Незабаром відкрийте Kept, щоб синхронізувати."
+msgstr "Цей браузер може видалити офлайн-копію Tingfinder після кількох тижнів без використання. Незабаром відкрийте Tingfinder, щоб синхронізувати."
 
 #: src/components/registries/convert-field-sheet.household.tsx
 msgid "This can't be undone."
@@ -27220,7 +27220,7 @@ msgstr "Цей код уже на іншому, тож його не додан�
 
 #: src/components/scan/outcome-sheet.tsx
 msgid "This code isn't one of Kept's labels. It says:"
-msgstr "Цей код — не одна з етикеток Kept. Він показує:"
+msgstr "Цей код — не одна з етикеток Tingfinder. Він показує:"
 
 #. placeholder {0}: thing.name ?? ''
 #: src/components/things/label-sheet.tsx
@@ -27229,7 +27229,7 @@ msgstr "Цей код назавжди залишається з {0}, тому �
 
 #: src/components/import/labels.ts
 msgid "This currency isn't turned on in Kept; the prices are kept in the notes."
-msgstr "Цю валюту не ввімкнено в Kept; ціни зберігаються в нотатках."
+msgstr "Цю валюту не ввімкнено в Tingfinder; ціни зберігаються в нотатках."
 
 #: src/components/notifications/settings/channels.tsx
 #: src/routes/_app/settings.device.tsx
@@ -27244,7 +27244,7 @@ msgstr "Цей пристрій уже має ключ доступу для в�
 #: src/components/capture/file-fallback.tsx
 #: src/components/scan/scanner-view.tsx
 msgid "This device has no camera Kept can use."
-msgstr "Цей пристрій не має камери, яку міг би використати Kept."
+msgstr "Цей пристрій не має камери, яку міг би використати Tingfinder."
 
 #: src/components/sign-in-security.household.tsx
 msgid "This device only"
@@ -27368,23 +27368,23 @@ msgstr "Цього більше тут немає, або ви не можете
 
 #: src/routes/setup.tsx
 msgid "This Kept is already set up. Sign in instead."
-msgstr "Цей Kept уже налаштовано. Натомість увійдіть."
+msgstr "Цей Tingfinder уже налаштовано. Натомість увійдіть."
 
 #: src/components/page.tsx
 msgid "This Kept is set up for {address}. Open it there."
-msgstr "Цей Kept налаштовано для {address}. Відкрийте його там."
+msgstr "Цей Tingfinder налаштовано для {address}. Відкрийте його там."
 
 #: src/components/origin-mismatch.tsx
 msgid "This Kept is set up for <0>{expected}</0>. Open it there."
-msgstr "Цей Kept налаштовано для <0>{expected}</0>. Відкрийте його там."
+msgstr "Цей Tingfinder налаштовано для <0>{expected}</0>. Відкрийте його там."
 
 #: src/components/page.tsx
 msgid "This Kept is set up for a different address. Open it at the address you were given."
-msgstr "Цей Kept налаштовано для іншої адреси. Відкрийте його за адресою, яку вам дали."
+msgstr "Цей Tingfinder налаштовано для іншої адреси. Відкрийте його за адресою, яку вам дали."
 
 #: src/components/oidc-sign-in.tsx
 msgid "This Kept lets people in by invite. Ask someone who uses it to invite you, then join from the invite link."
-msgstr "Цей Kept впускає людей за запрошенням. Попросіть когось, хто ним користується, запросити вас, а потім приєднайтеся за посиланням-запрошенням."
+msgstr "Цей Tingfinder впускає людей за запрошенням. Попросіть когось, хто ним користується, запросити вас, а потім приєднайтеся за посиланням-запрошенням."
 
 #: src/components/ai/key-scope.tsx
 msgid "This key pays for all of <0>{ownerName}</0>'s homes: <1>{list}</1>. <2>{personal}</2> uses your personal key if you add one."
@@ -27469,7 +27469,7 @@ msgstr "Це перемістить його в {target}"
 #: src/components/ops/backup-target-form.tsx
 #: src/components/page.tsx
 msgid "This needs a secure (HTTPS) connection to Kept."
-msgstr "Це потребує захищеного (HTTPS) з’єднання з Kept."
+msgstr "Це потребує захищеного (HTTPS) з’єднання з Tingfinder."
 
 #: src/components/things/edit-form.tsx
 msgid "This needs a value."
@@ -27511,7 +27511,7 @@ msgstr "Цей формат для телефону ще не можна пер�
 
 #: src/components/sync-status.tsx
 msgid "This phone is out of space for Kept. Free some space to keep capturing offline."
-msgstr "На цьому телефоні закінчилося місце для Kept. Звільніть трохи місця, щоб продовжувати додавання офлайн."
+msgstr "На цьому телефоні закінчилося місце для Tingfinder. Звільніть трохи місця, щоб продовжувати додавання офлайн."
 
 #: src/components/readings/log-reading-sheet.tsx
 msgid "This phone isn't ready to save offline yet. Try again in a moment."
@@ -27566,7 +27566,7 @@ msgstr "Цей сервер"
 
 #: src/components/ops/update-line.tsx
 msgid "This server runs <0>{current}</0>. Upgrading is the release notes' steps; Kept never updates itself."
-msgstr "Цей сервер працює на версії <0>{current}</0>. Оновлення — це кроки з нотаток до релізу; Kept ніколи не оновлюється сам."
+msgstr "Цей сервер працює на версії <0>{current}</0>. Оновлення — це кроки з нотаток до релізу; Tingfinder ніколи не оновлюється сам."
 
 #: src/components/ai/cap-bars.tsx
 #: src/components/ai/caps.tsx
@@ -27594,7 +27594,7 @@ msgstr "Ключ цього сервера оплачує кожну локац�
 
 #: src/components/ops/status-tiles.tsx
 msgid "This server's source code address isn't a GitHub repository, so Kept doesn't ask."
-msgstr "Адреса вихідного коду цього сервера не є репозиторієм GitHub, тому Kept не питає."
+msgstr "Адреса вихідного коду цього сервера не є репозиторієм GitHub, тому Tingfinder не питає."
 
 #: src/components/scan/session/session-screen.tsx
 msgid "This session is full: finish it, then start another."
@@ -27606,7 +27606,7 @@ msgstr "Час входу минув. Почніть знову зі сторі�
 
 #: src/components/home/install-sheet.tsx
 msgid "This step ticks itself the first time you open Kept from its icon."
-msgstr "Цей крок відмічається сам, коли ви вперше відкриєте Kept з його іконки."
+msgstr "Цей крок відмічається сам, коли ви вперше відкриєте Tingfinder з його іконки."
 
 #: src/components/things/links.tsx
 msgid "This thing is…"
@@ -27837,7 +27837,7 @@ msgstr "Забагато спроб. Зачекайте хвилину й спр
 
 #: src/components/ops/status-tiles.tsx
 msgid "Too many requests came from this server's address. Kept asks again tomorrow."
-msgstr "З адреси цього сервера надійшло забагато запитів. Kept запитає знову завтра."
+msgstr "З адреси цього сервера надійшло забагато запитів. Tingfinder запитає знову завтра."
 
 #: src/components/import/kept-choices.tsx
 msgid "Too many tries. Try again in an hour."
@@ -28583,7 +28583,7 @@ msgstr "Розблокувати за допомогою Face ID або відб
 
 #: src/components/device/app-lock-settings.tsx
 msgid "Unlocks Kept on this device only. To sign in with a passkey, add one in <0>Sign-in and security</0>."
-msgstr "Розблоковує Kept лише на цьому пристрої. Щоб увійти з ключем доступу, додайте його у <0>«Вхід і безпека»</0>."
+msgstr "Розблоковує Tingfinder лише на цьому пристрої. Щоб увійти з ключем доступу, додайте його у <0>«Вхід і безпека»</0>."
 
 #. placeholder {0}: n(sum.unmatched.length)
 #: src/components/scan/session/summary.tsx
@@ -28788,7 +28788,7 @@ msgstr "Актуально"
 
 #: src/components/hints/hint-copy.ts
 msgid "Up to five photos of a room. AI lists what's in them as drafts, skipping what Kept already has."
-msgstr "До п’яти фото кімнати. ШІ перелічує, що на них, як чернетки, пропускаючи те, що Kept уже має."
+msgstr "До п’яти фото кімнати. ШІ перелічує, що на них, як чернетки, пропускаючи те, що Tingfinder уже має."
 
 #: src/components/templates/place-template-list.tsx
 msgid "Up, standing upright"
@@ -28814,7 +28814,7 @@ msgstr "Оновити його стан"
 
 #: src/components/sync-status.tsx
 msgid "Update Kept to finish syncing."
-msgstr "Оновіть Kept, щоб завершити синхронізацію."
+msgstr "Оновіть Tingfinder, щоб завершити синхронізацію."
 
 #: src/components/claims/claim-sheet.tsx
 msgid "Update the claim"
@@ -29004,7 +29004,7 @@ msgstr "Витрачено"
 
 #: src/components/display-prefs.tsx
 msgid "Used when Kept is in Arabic, for amounts, dates and counts. Short IDs, codes and serials always stay 0–9."
-msgstr "Використовується, коли Kept арабською, для сум, дат і кількостей. Короткі ID, коди та серійні номери завжди залишаються 0–9."
+msgstr "Використовується, коли Tingfinder арабською, для сум, дат і кількостей. Короткі ID, коди та серійні номери завжди залишаються 0–9."
 
 #: src/components/ops/backup-target-form.tsx
 msgid "User"
@@ -29025,11 +29025,11 @@ msgstr "Користувачі"
 
 #: src/components/lending/thing-loans.tsx
 msgid "uses Kept"
-msgstr "користується Kept"
+msgstr "користується Tingfinder"
 
 #: src/components/lending/person-picker.tsx
 msgid "Uses Kept"
-msgstr "Користується Kept"
+msgstr "Користується Tingfinder"
 
 #: src/routes/_app/settings.location.$id.track.tsx
 msgid "Uses the AI provider connected for {name}."
@@ -29806,7 +29806,7 @@ msgstr "Що відстежується, змінилося"
 
 #: src/components/ai/what-uses-ai.tsx
 msgid "What uses AI in Kept"
-msgstr "Де в Kept використовується ШІ"
+msgstr "Де в Tingfinder використовується ШІ"
 
 #: src/components/capture/reading-target.tsx
 msgid "What was read?"
@@ -29877,7 +29877,7 @@ msgstr "Що нового"
 #: src/components/whats-new.tsx
 #: src/routes/_app/help.tsx
 msgid "What's new in Kept"
-msgstr "Що нового в Kept"
+msgstr "Що нового в Tingfinder"
 
 #: src/routes/_app/locations.new.tsx
 msgid "What's this place called?"
@@ -29912,15 +29912,15 @@ msgstr "Коли застосунок змінює щось за допомог�
 
 #: src/components/claims/claims-section.tsx
 msgid "When it breaks, open a claim: Kept fills in the warranty that covers longest and remembers where it went for repair."
-msgstr "Коли воно зламається, відкрийте претензію: Kept підставить гарантію, яка діє найдовше, і запам’ятає, куди його віддали в ремонт."
+msgstr "Коли воно зламається, відкрийте претензію: Tingfinder підставить гарантію, яка діє найдовше, і запам’ятає, куди його віддали в ремонт."
 
 #: src/routes/_app/admin.settings.tsx
 msgid "When Kept moves to a new address, list the old names here and point them at this server. A label printed under an old address still opens: the request is sent to this one."
-msgstr "Коли Kept переходить на нову адресу, перелічіть старі назви тут і вкажіть їх на цей сервер. Етикетка, надрукована за старою адресою, все одно відкриється: запит надсилається на цю."
+msgstr "Коли Tingfinder переходить на нову адресу, перелічіть старі назви тут і вкажіть їх на цей сервер. Етикетка, надрукована за старою адресою, все одно відкриється: запит надсилається на цю."
 
 #: src/routes/setup.tsx
 msgid "When Kept started for the first time, it printed a one-time setup code in the server's logs. Entering it shows you're the person who installed this server. The code stops working once it's used."
-msgstr "Коли Kept запустився вперше, він вивів одноразовий код налаштування в журналі сервера. Увівши його, ви показуєте, що ви — людина, яка встановила цей сервер. Код перестає працювати після використання."
+msgstr "Коли Tingfinder запустився вперше, він вивів одноразовий код налаштування в журналі сервера. Увівши його, ви показуєте, що ви — людина, яка встановила цей сервер. Код перестає працювати після використання."
 
 #: src/routes/_app/p.$id.tsx
 msgid "When two places are really the same one"
@@ -29932,7 +29932,7 @@ msgstr "Коли ви запитали"
 
 #: src/routes/_app/settings.location.$id.general.tsx
 msgid "When you photograph a room, Kept cuts a picture for each thing it finds. Once you close the room in the inbox, the full photos are deleted, unless this is on: then they stay on the room's page."
-msgstr "Коли ви фотографуєте кімнату, Kept вирізає картинку для кожної знайденої речі. Коли ви закриєте кімнату у вхідних, повні фото видаляться, якщо це не ввімкнено: тоді вони залишаться на сторінці кімнати."
+msgstr "Коли ви фотографуєте кімнату, Tingfinder вирізає картинку для кожної знайденої речі. Коли ви закриєте кімнату у вхідних, повні фото видаляться, якщо це не ввімкнено: тоді вони залишаться на сторінці кімнати."
 
 #: src/routes/_app/settings.location.$id.track.tsx
 msgid "When you save"
@@ -29999,7 +29999,7 @@ msgstr "Місце, де воно було, досі в кошику, тож т�
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Where Kept posts. Only its host is shown after this."
-msgstr "Куди надсилає Kept. Після цього показується лише його хост."
+msgstr "Куди надсилає Tingfinder. Після цього показується лише його хост."
 
 #: src/components/admin/embeddings-source.tsx
 msgid "Where meaning comes from"
@@ -30093,16 +30093,16 @@ msgstr "Хто її бачить"
 
 #: src/components/device/keep-offline.tsx
 msgid "Whoever unlocks Kept on this phone sees prices and documents for this location."
-msgstr "Той, хто розблокує Kept на цьому телефоні, бачитиме ціни та документи цієї локації."
+msgstr "Той, хто розблокує Tingfinder на цьому телефоні, бачитиме ціни та документи цієї локації."
 
 #. placeholder {0}: size(about.totalBytes)
 #: src/components/device/keep-offline.tsx
 msgid "Whoever unlocks Kept on this phone sees prices and documents for this location. About {0} to download."
-msgstr "Той, хто розблокує Kept на цьому телефоні, бачитиме ціни та документи цієї локації. Близько {0} до завантаження."
+msgstr "Той, хто розблокує Tingfinder на цьому телефоні, бачитиме ціни та документи цієї локації. Близько {0} до завантаження."
 
 #: src/components/device/keep-offline.tsx
 msgid "Whoever unlocks Kept sees prices and documents for these locations. The PIN keeps out someone holding the phone, not someone who has copied the browser’s storage."
-msgstr "Той, хто розблокує Kept, бачитиме ціни та документи цих локацій. PIN не пропускає того, хто тримає телефон, але не того, хто скопіював сховище браузера."
+msgstr "Той, хто розблокує Tingfinder, бачитиме ціни та документи цих локацій. PIN не пропускає того, хто тримає телефон, але не того, хто скопіював сховище браузера."
 
 #: src/components/history/labels.ts
 msgid "Whole instance exported"
@@ -30217,7 +30217,7 @@ msgstr "з PDF-інвентарем"
 
 #: src/components/home/checklist.tsx
 msgid "Without it, Kept sends no sign-in links, password resets, email invites or reminders."
-msgstr "Без нього Kept не надсилає посилання для входу, скидання пароля, запрошення електронною поштою чи нагадування."
+msgstr "Без нього Tingfinder не надсилає посилання для входу, скидання пароля, запрошення електронною поштою чи нагадування."
 
 #: src/map/labels.ts
 msgid "Wood"
@@ -30333,7 +30333,7 @@ msgstr "У вас уже є <0>{0}</0>."
 
 #: src/components/delete-account.tsx
 msgid "You asked for it, with your own location and everything in it. Until then nothing else in Kept opens. Keep the account to go back to it as it was."
-msgstr "Ви попросили про це, разом із вашою власною локацією та всім у ній. До того часу більше нічого в Kept не відкриється. Зберігайте обліковий запис, щоб повернутися до нього таким, яким він був."
+msgstr "Ви попросили про це, разом із вашою власною локацією та всім у ній. До того часу більше нічого в Tingfinder не відкриється. Зберігайте обліковий запис, щоб повернутися до нього таким, яким він був."
 
 #: src/routes/setup.tsx
 msgid "You can change these any time in Settings → Admin."
@@ -30382,7 +30382,7 @@ msgstr "У вас немає дозволу на це."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "You have {MAX_RELAY_CHANNELS}, the most Kept allows."
-msgstr "У вас {MAX_RELAY_CHANNELS} — щонайбільше, що дозволяє Kept."
+msgstr "У вас {MAX_RELAY_CHANNELS} — щонайбільше, що дозволяє Tingfinder."
 
 #: src/components/filters/views.tsx
 msgid "You have 100 saved views, the most there can be. Delete one to save this."
@@ -30442,7 +30442,7 @@ msgstr "Ви учасник"
 
 #: src/components/notifications/settings/kinds.tsx
 msgid "You're a member here: Kept starts with only the loans you record."
-msgstr "Ви тут учасник: Kept починає лише з позик, які ви записуєте."
+msgstr "Ви тут учасник: Tingfinder починає лише з позик, які ви записуєте."
 
 #: src/lib/labels.ts
 msgid "You're a viewer"
@@ -30480,7 +30480,7 @@ msgstr "ви більше не власник або адміністратор 
 
 #: src/components/delete-account.tsx
 msgid "You're the only person who runs this Kept. Make someone else an instance admin first."
-msgstr "Ви — єдина людина, яка керує цим Kept. Спершу зробіть когось іншого адміністратором сервера."
+msgstr "Ви — єдина людина, яка керує цим Tingfinder. Спершу зробіть когось іншого адміністратором сервера."
 
 #: src/routes/_app/loc.$id.tsx
 msgid "Your access ends {until}"
@@ -30501,7 +30501,7 @@ msgstr "Ваш обліковий запис ще не можна видалит
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Your account has no email address, so Kept tells you here, in the app."
-msgstr "У вашому обліковому записі немає адреси електронної пошти, тому Kept повідомляє вас тут, у застосунку."
+msgstr "У вашому обліковому записі немає адреси електронної пошти, тому Tingfinder повідомляє вас тут, у застосунку."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Your account has no email address."
@@ -30514,7 +30514,7 @@ msgstr "У вашого облікового запису немає парол�
 
 #: src/components/page.tsx
 msgid "Your account is going to be deleted. Keep it to use Kept again."
-msgstr "Ваш обліковий запис буде видалено. Залиште його, щоб знову користуватися Kept."
+msgstr "Ваш обліковий запис буде видалено. Залиште його, щоб знову користуватися Tingfinder."
 
 #: src/routes/invite.tsx
 msgid "Your account is ready. Sign in to continue."
@@ -30546,7 +30546,7 @@ msgstr "ваш ШІ-провайдер"
 
 #: src/components/sign-in-security.household.tsx
 msgid "Your browser asks for Face ID, a fingerprint or your screen lock. The passkey is kept by this device or your password manager; Kept never sees it."
-msgstr "Ваш браузер запитує Face ID, відбиток пальця або блокування екрана. Ключ доступу зберігає цей пристрій або ваш менеджер паролів; Kept його ніколи не бачить."
+msgstr "Ваш браузер запитує Face ID, відбиток пальця або блокування екрана. Ключ доступу зберігає цей пристрій або ваш менеджер паролів; Tingfinder його ніколи не бачить."
 
 #: src/components/notifications/settings/channels.tsx
 msgid "Your chat with the bot, a group's number, or a channel's @name. Send the bot a message first."
@@ -30653,7 +30653,7 @@ msgstr "Ваші власні коди"
 
 #: src/components/reports/progress.tsx
 msgid "Your own Kept makes the PDF here. This demo has no files."
-msgstr "Ваш власний Kept створює тут PDF. У цій демоверсії файлів немає."
+msgstr "Ваш власний Tingfinder створює тут PDF. У цій демоверсії файлів немає."
 
 #: src/components/ai/settings-page.tsx
 msgid "Your own key is for <0>{personal}</0>, your private threads, and questions that span owners."
@@ -30690,7 +30690,7 @@ msgstr "Ваш сервер не відповів"
 
 #: src/components/webhooks/edit.tsx
 msgid "Your server's address. Kept sends a signed POST there."
-msgstr "Адреса вашого сервера. Kept надсилає туди підписаний POST."
+msgstr "Адреса вашого сервера. Tingfinder надсилає туди підписаний POST."
 
 #: src/components/page.tsx
 msgid "Your session ended. Sign in again."
@@ -30805,7 +30805,7 @@ msgstr "Ваш власний ключ призначений для ваших 
 
 #: src/components/import/labels.ts
 msgid "{count, plural, one {# link keeps its Homebox title: Kept couldn't get one from Paperless.} other {# links keep their Homebox titles: Kept couldn't get them from Paperless.}}"
-msgstr "{count, plural, one {# посилання зберігає назву з Homebox: Kept не зміг отримати її з Paperless.} few {# посилання зберігають назви з Homebox: Kept не зміг отримати їх із Paperless.} many {# посилань зберігають назви з Homebox: Kept не зміг отримати їх із Paperless.} other {# посилання зберігають назви з Homebox: Kept не зміг отримати їх із Paperless.}}"
+msgstr "{count, plural, one {# посилання зберігає назву з Homebox: Tingfinder не зміг отримати її з Paperless.} few {# посилання зберігають назви з Homebox: Tingfinder не зміг отримати їх із Paperless.} many {# посилань зберігають назви з Homebox: Tingfinder не зміг отримати їх із Paperless.} other {# посилання зберігають назви з Homebox: Tingfinder не зміг отримати їх із Paperless.}}"
 
 #: src/routes/signin/index.tsx
 msgid "Passkeys work only at <0/>, because browsers tie a passkey to one address. Here, use your password or an email link."
@@ -31040,7 +31040,7 @@ msgstr "Під’єднати Home Assistant"
 
 #: src/components/connections/token-create.tsx
 msgid "Home Assistant reads Kept as you, in the locations you pick, and gets its token by itself: there is nothing to copy. Revoke it here any time."
-msgstr "Home Assistant читає Kept від вашого імені, у вибраних вами локаціях, і сам отримує свій токен: копіювати нічого не треба. Відкличте його тут будь-коли."
+msgstr "Home Assistant читає Tingfinder від вашого імені, у вибраних вами локаціях, і сам отримує свій токен: копіювати нічого не треба. Відкличте його тут будь-коли."
 
 #: src/components/connections/token-create.tsx
 msgid "Home Assistant is connected"

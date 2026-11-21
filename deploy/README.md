@@ -68,9 +68,11 @@ shared caching. Private data and API endpoints must never be cached by an outer 
 The server's reference instance uses `KEPT_PUBLIC_URL=https://dev-kept.laugesbin.win`.
 Open [Kept](https://dev-kept.laugesbin.win/). Its entire origin is behind the
 existing device-access server password, followed by Kept's own user login.
-A single-use, seven-day invitation is exposed only after shared login at `/start`.
+A single-use, seven-day invitation is exposed only after shared login at `/api/preview-start`.
 It creates the owner's chosen account in the synthetic `Prøvehjem` location;
-ordinary sign-up remains closed. After joining, use `/` to reopen the app.
+ordinary sign-up remains closed. After joining, use `/` to reopen the app. The
+onboarding entry uses `/api/` because Kept's service worker excludes it from the
+navigation fallback; the original `/start` can be swallowed by an existing worker.
 The invitation URL and all test credentials live only in private server files.
 
 `https-preview.caddy` is the reviewed site for the existing shared gateway on

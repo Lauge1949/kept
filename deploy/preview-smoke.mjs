@@ -58,7 +58,7 @@ async function perimeter(path, expected) {
 
 }
 try {
-  for (const path of ['/', '/start', '/api/v1/me', '/f/probe', '/assets/probe.js']) {
+  for (const path of ['/', '/start', '/api/preview-start', '/api/v1/me', '/f/probe', '/assets/probe.js']) {
     await perimeter(path, [303, 401]);
   }
   await perimeter('/_device/verify', [404]);
@@ -67,8 +67,9 @@ try {
   pass('public HTTPS requires shared login for pages, onboarding, API, images and assets; verifier hidden');
   const publicContext = await browser.newContext({ serviceWorkers: 'block' });
   const loginPage = await publicContext.newPage();
-  await loginPage.goto(origin + '/start');
+  await loginPage.goto(origin + '/api/preview-start');
   await loginPage.waitForURL(url => url.pathname === '/_device/login');
+  assert.equal(new URL(loginPage.url()).searchParams.get('next'), '/api/preview-start');
   await loginPage.locator('input[type=password]').waitFor();
   for (const width of [320, 390, 430]) {
     await loginPage.setViewportSize({ width, height: 844 });

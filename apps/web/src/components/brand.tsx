@@ -41,14 +41,14 @@ function MarkArt() {
 }
 
 /** Original mark and typography, with this edition's name. */
-export function BrandLockup({ className, width = 160 }: { className?: string; width?: number }) {
+export function BrandLockup({ className, width = 180 }: { className?: string; width?: number }) {
   return (
     <svg
       role="img"
       aria-label="Tingfinder"
       width={width}
-      height={(width * 64) / 320}
-      viewBox="0 0 320 64"
+      height={(width * 64) / 360}
+      viewBox="0 0 360 64"
       className={cn('shrink-0 text-ink', className)}
     >
       <MarkArt />

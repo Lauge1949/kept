@@ -25,6 +25,8 @@ RUN --network=none node /tmp/package-manager/package/bin/pnpm.cjs --dir apps/web
 RUN --network=none node /tmp/package-manager/package/bin/pnpm.cjs exec vitest run --config deploy/localization.vitest.ts
 RUN --network=none node scripts/check-i18n.mjs
 RUN --network=none KEPT_VERSION=1.14.7 node /tmp/package-manager/package/bin/pnpm.cjs --filter @kept/web build
+# Public assets can originate in a private editor umask; the runtime is non-root.
+RUN --network=none chmod -R a+rX /src/apps/web/dist /src/apps/server/src/reports/template
 
 FROM ghcr.io/keptinventory/kept:1.14.7@sha256:e346925dc007d16e2eaab91a20e1c5313734957acb54eeec456d40d5cf813ab3
 ARG REVISION

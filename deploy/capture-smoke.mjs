@@ -153,6 +153,7 @@ try {
   report.passed=true;
 } catch(error) {
   report.passed=false; report.errorType=error.name;
+  await writeFile(`${dir}/capture-error.log`, error.stack || String(error), {mode:0o600});
   console.error('Capture check failed; inspect the private report and current assertion.');
   process.exitCode=1;
 } finally {

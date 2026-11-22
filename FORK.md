@@ -3,6 +3,8 @@
 This fork builds on [Kept](https://github.com/keptinventory/kept) as a simple,
 self-hosted app for remembering where belongings are stored.
 
+For the next agent session, start with [the continuation plan](CONTINUE.md).
+
 ## Repository layout
 
 - `origin`: `https://github.com/Lauge1949/kept.git` (our fork).

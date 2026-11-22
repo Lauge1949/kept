@@ -2,7 +2,8 @@
 
 Vores selvhostede app til at huske, hvor ting er, med dansk brugerflade.
 Tingfinder bygger på [Kept](https://github.com/keptinventory/kept) under AGPL-3.0.
-Se [vores udgave og udviklingsstatus](FORK.md) og [bygning og drift](deploy/README.md).
+Se [fortsættelsesplan for kommende agentsessioner](CONTINUE.md),
+[vores udgave og udviklingsstatus](FORK.md) og [bygning og drift](deploy/README.md).
 Den oprindelige dokumentation følger nedenfor som upstream-reference.
 
 <p align="center">

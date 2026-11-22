@@ -10,6 +10,7 @@ export const PROMPT_VERSION = 'assistant-2';
 
 const LANGUAGES: Record<string, string> = {
   ar: 'Arabic',
+  da: 'Danish',
   de: 'German',
   en: 'English',
   es: 'Spanish',

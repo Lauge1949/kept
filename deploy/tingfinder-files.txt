@@ -1,4 +1,7 @@
 apps/server/src/assistant/prompt.ts
+apps/server/src/assistant/prompt.test.ts
+apps/server/src/extraction/prompts/common.ts
+apps/server/src/extraction/prompts/common.test.ts
 apps/server/src/assistant/select.ts
 apps/server/src/assistant/words.ts
 apps/server/src/auth/auth.ts

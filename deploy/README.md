@@ -83,6 +83,12 @@ Its `kept-entry.inc` import contains only the private onboarding redirect, under
 the same auth gate. This is a mandatory import: after the invitation is consumed or
 expires, retain an empty/comment-only include unless removing the importing site
 at the same time. Preserve the CLI collision guard when updating that tool.
+An installed iPhone PWA keeps Kept's worker, which answers every navigation (also
+`/_device/login`) from its cached shell, and the worker's update check cannot follow the
+gate redirect. The site therefore answers a `Service-Worker: script` request for `/sw.js`
+without a gate session with `kept-sw-reset.js` (copy it next to the live site): it
+unregisters itself and reloads the window through the network, so the gate login shows
+inside the PWA. With a session the request reaches Kept's real `sw.js`.
 Auth registration is marked `managed_by: kept-development`,
 so CLI sync does not remove it. Gateway configuration must validate before restart.
 The Cloudflare tunnel and proxied DNS add only this exact hostname.

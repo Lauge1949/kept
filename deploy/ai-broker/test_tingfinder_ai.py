@@ -57,6 +57,11 @@ class Translate(unittest.TestCase):
                 with self.assertRaises(t.Refused) as ctx: t.translate(b)
                 self.assertEqual(ctx.exception.status, status)
 
+    def test_json_object_adds_json_only_instruction(self):
+        system, _, _, _, must = t.translate(body(response_format={'type': 'json_object'}))
+        self.assertTrue(must)
+        self.assertEqual(system, 'App rules\n\n' + t.JSON_ONLY)
+
     def test_tool_choice_none_forces_answer(self):
         _, _, _, functions, must = t.translate(body(tools=TOOLS, tool_choice='none'))
         self.assertEqual(functions, []); self.assertTrue(must)

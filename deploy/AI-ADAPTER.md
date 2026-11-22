@@ -86,6 +86,9 @@ offline tests, `tingfinder-ai.service` (brugerunit) og `install-runtime.sh`.
   som struktureret JSON (`answer` eller `tool_calls`) og oversættes til
   chat.completion; ukendte tools droppes. Brokerens protokolprompt kan ikke erstattes
   af appens tekst, og transcript/billeder behandles som data.
+- **JSON-svar:** Kept sender `response_format: {"type":"json_object"}` ved fotoaflæsning
+  (skemaet står i prompten). Brokeren accepterer kun den form og tilføjer en fast
+  JSON-instruks; `json_schema` afvises stadig med 400.
 - **Model og kvote:** Haiku først, Codex `gpt-6-luna` som reserve via `duo-quota`
   (ukendt kvote er en begrænset prøve, ikke ledig). Opbrugt: `429` med `Retry-After`.
   Manglende login: `503`. Højst 2 samtidige kald, 70 s pr. kald, 8 billeder.
@@ -113,6 +116,15 @@ offline tests, `tingfinder-ai.service` (brugerunit) og `install-runtime.sh`.
 
 Isolationsprøven bestod for begge. Efter værnet: `GET /v1/models` 200 og
 `POST /v1/chat/completions` 503 fra Kept-containeren gennem relæet.
+
+### Opsætning i Kept 2026-11-22
+
+Lauges konto er ikke instansadmin; det er kun den syntetiske `owner@kept.test`. Agenten
+satte derfor via den konto (loopback, privat fixture) `ssrf_allow_private=true` og
+instansudbyderen *OpenAI-compatible* `http://ai:8080/v1` uden nøgle, vision
+`tingfinder-vision`, chat `tingfinder-chat`, embeddings tom. Første rigtige fotoaflæsning
+fik 400 på `json_object`; rettet ovenfor, og runtime er fastlåst igen og kræver ny
+root-godkendelse.
 
 ### Tilbage før appen bruger den
 

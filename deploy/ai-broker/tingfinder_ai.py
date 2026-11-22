@@ -62,6 +62,8 @@ Reply only through the required JSON output:
 Only call functions listed under available_functions. If none are listed you must answer.
 Never invent things, places or ids that are not in tool results."""
 
+JSON_ONLY = ("The app requires the answer content to be exactly one JSON object that follows the schema "
+             "in these instructions, with no other text and no code fences.")
 
 _digests = {}
 
@@ -260,7 +262,12 @@ def translate(body):
             raise Refused(400, 'Only function tools are accepted')
         functions.append({'name': f['name'], 'description': f.get('description', ''),
                           'parameters': f.get('parameters', {})})
-    if body.get('response_format') not in (None, {'type': 'text'}):
+    # Kept asks for json_object when the provider lacks structured outputs and puts the
+    # schema in its instructions; a json_schema request still has to fall back to that.
+    response_format = body.get('response_format')
+    if response_format == {'type': 'json_object'}:
+        system.append(JSON_ONLY)
+    elif response_format not in (None, {'type': 'text'}):
         raise Refused(400, 'response_format is not supported; use the schema in the prompt')
     must_answer = not functions or body.get('tool_choice') == 'none'
     if len(json.dumps(transcript)) + sum(map(len, system)) > MAX_TEXT: raise Refused(413, 'Conversation too long')

@@ -7,12 +7,15 @@ Opdatér denne plan efter hver afsluttet fase eller før et afbrudt forløb.
 
 ## Første handling i næste session
 
-Fase 1 er kortlagt: se [AI-ADAPTER.md](deploy/AI-ADAPTER.md). Kepts wire-form er
-prøvet offline; brokeren er ikke bygget. Få Lauges ok til de to åbne beslutninger dér
-(fars tekster/fotos til udbyderen under hans abonnement, og en vært-broker der læser
-abonnementslogin som DenBlåAgent). Byg derefter brokeren og prøv en rigtig Haiku-tur
-med syntetiske ting, før den kobles på den kørende instans. Hvis ejeren fortsat
-oplever loginfejl på telefonen, prioriteres den fejl først.
+Fase 1 er bygget: se [AI-ADAPTER.md](deploy/AI-ADAPTER.md). Lauge godkendte
+2026-11-22 begge beslutninger (fars tekster/fotos til Anthropic/OpenAI under hans
+abonnement; broker der bruger abonnementslogin som DenBlåAgent). Brokeren
+`tingfinder-ai.service` og relæet `ai` kører, men svarer 503 på modelkald, til Lauge
+har installeret den root-ejede godkendelse og slået udbyderen til i admin (to trin i
+AI-ADAPTER.md, "Tilbage før appen bruger den"). Kontrollér først med
+`journalctl --user -u tingfinder-ai.service` og et kald gennem relæet, om de er gjort;
+fortsæt derefter med fase 2-prøverne. Hvis ejeren fortsat oplever loginfejl på
+telefonen, prioriteres den fejl først.
 
 ## Formål og allerede trufne valg
 
@@ -45,7 +48,7 @@ Git er ren på `lauge/develop`, og efter fetch matcher HEAD origin:
 | Mistet loginformularsession gav rå CSRF-fejl | Rettet i det fælles loginlag; offentlig browserprøve består |
 | Bekræftelse af rettelsen på ejerens fysiske iPhone | Udestår |
 | AI-kontrakt: Kepts wire-form og serverens abonnementsmønster | Kortlagt 2026-11-22; offline prøve består |
-| AI via eksisterende abonnement/kvoterouter (broker) | Foreslået, ikke bygget; afventer ejerens ok |
+| AI via eksisterende abonnement/kvoterouter (broker) | Godkendt og bygget 2026-11-22; live syntetisk tur bestået (Haiku og Luna); kører fail-closed, venter på root-godkendelse og admin-opsætning |
 | Billedbaseret AI-søgning og valg af embeddings | Ikke implementeret/afklaret |
 | Fysisk iPhone/Android-PWA, WebKit og værtsboot | Ikke verificeret |
 
@@ -72,7 +75,7 @@ adgangskode. Claude-review fik timeout og tælles ikke som bestået.
 
 ## Arbejdsrækkefølge og acceptkrav
 
-1. **Afklar AI-kontrakten.** (Kortlagt, se `deploy/AI-ADAPTER.md`; mangler rigtig syntetisk tur.) Læs serverens kanoniske app-/routerdokumentation og
+1. **Afklar AI-kontrakten.** (Udført 2026-11-22, se `deploy/AI-ADAPTER.md`.) Læs serverens kanoniske app-/routerdokumentation og
    faktiske integrationskode. Undersøg Kepts `apps/server/src/ai/`,
    `apps/server/src/assistant/`, `apps/server/src/embeddings/provider.ts` og
    `packages/shared/src/assistant.ts`, både på grenen og i den stabile baseline.

@@ -117,6 +117,41 @@ class Quota(unittest.TestCase):
         self.assertEqual(quota.limits, ['claude'])
 
 
+class Approval(unittest.TestCase):
+    LIMITS = {'memory.max': str(2 * 1024**3), 'memory.swap.max': '0', 'pids.max': '128', 'cpu.max': '200000 100000'}
+
+    def manifest(self, **extra):
+        data = {'schema': 1, 'profile': t.PROFILE, 'providers': list(t.PROVIDERS), 'models': t.MODELS,
+                'exposed': list(t.EXPOSED), 'hashes': {'a': '1'}, 'native_canaries': {'claude': True, 'codex': True},
+                'negative_tests': True}
+        data.update(extra)
+        return data
+
+    def test_exact_approval_only(self):
+        self.assertTrue(t.approved(self.manifest(), {'a': '1'}, self.LIMITS))
+        for bad in ({'hashes': {'a': '2'}}, {'profile': 'dba-typed-v1'}, {'models': {'claude': 'opus', 'codex': 'gpt-6-luna'}},
+                    {'providers': ['claude', 'codex', 'cursor']}, {'native_canaries': {'claude': True, 'codex': False}},
+                    {'negative_tests': False}, {'exposed': ['tingfinder-chat', 'gpt-4o']}):
+            with self.subTest(bad=bad): self.assertFalse(t.approved(self.manifest(**bad), {'a': '1'}, self.LIMITS))
+        self.assertFalse(t.approved(self.manifest(), None, self.LIMITS))
+        for key, value in (('memory.swap.max', '1'), ('memory.max', 'max'), ('pids.max', 'max'), ('cpu.max', 'max 100000')):
+            with self.subTest(limit=key):
+                self.assertFalse(t.approved(self.manifest(), {'a': '1'}, dict(self.LIMITS, **{key: value})))
+
+    def test_user_owned_manifest_is_untrusted(self):
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / 'tingfinder-ai.json'; path.write_text(json.dumps(self.manifest()))
+            with self.assertRaises(ValueError): t.read_manifest(path)
+
+    def test_gate_fails_closed_outside_service(self):
+        self.assertFalse(t.make_gate({'a': '1'})())
+
+    def test_unapproved_broker_answers_503(self):
+        broker = t.Broker(KEY, quota=FixedQuota(), runner=None, gate=lambda: False)
+        with self.assertRaises(t.Refused) as ctx: broker.complete(body())
+        self.assertEqual(ctx.exception.status, 503)
+
+
 class Http(unittest.TestCase):
     def setUp(self):
         self.dir = tempfile.mkdtemp()
@@ -155,6 +190,12 @@ class Http(unittest.TestCase):
         self.assertIn('App rules', self.seen[0][2])
         self.assertEqual(self.call('POST', '/v1/responses', body())[0], 404)
         self.assertEqual(self.call('DELETE', '/v1/models')[0], 405)
+
+    def test_keyless_mode_accepts_without_header(self):
+        self.server.RequestHandlerClass = t.make_handler(t.Broker(None, quota=FixedQuota(),
+                                                                  runner=lambda *a: ({'kind': 'answer', 'content': 'ok', 'tool_calls': []}, (1, 1))))
+        self.assertEqual(self.call('GET', '/v1/models', key=None)[0], 200)
+        self.assertEqual(self.call('POST', '/v1/chat/completions', body(), key=None)[0], 200)
 
     def test_missing_login_is_503_not_401(self):
         status, r, _ = self.call('POST', '/v1/chat/completions',

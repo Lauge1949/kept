@@ -5,10 +5,13 @@ Kept (kind `openai_compatible`) sends non-streaming `/v1/chat/completions`. Each
 becomes one stateless run of the official `claude` or `codex` CLI inside DenBlaAgent's
 bwrap pattern: no network except one scoped provider socket, no host files, placeholder
 auth. Real subscription credentials stay in DenBlaAgent's ProviderProxy on the host.
+The service answers model requests only while a root-owned capability manifest approves
+exactly the loaded code, the pinned native CLIs and the unit's resource limits.
 See deploy/AI-ADAPTER.md. Standard library only.
 """
 import base64
 import binascii
+import hashlib
 import hmac
 import http.server
 import json
@@ -17,6 +20,7 @@ from pathlib import Path
 import re
 import shutil
 import socketserver
+import stat
 import subprocess
 import sys
 import tempfile
@@ -24,9 +28,16 @@ import threading
 import time
 import datetime
 
-DBA = Path(os.environ.get('TF_AI_DBA', '/srv/dba-platform'))
 SELF = Path(__file__).resolve()
-BINARIES = {'claude': Path('/home/lauge/.local/bin/claude'), 'codex': Path('/home/lauge/.local/bin/codex')}
+# A deployed runtime carries pinned copies of DBA's sandbox/proxy and the native CLIs, so
+# CLI auto-updates never change what runs. The repo copy falls back to the live ones.
+PINNED = (SELF.parent / 'provider_proxy.py').is_file()
+DBA = SELF.parent if PINNED else Path('/srv/dba-platform')
+BINARIES = {name: (SELF.parent / 'native' / name if PINNED else Path('/home/lauge/.local/bin') / name)
+            for name in ('claude', 'codex')}
+MANIFEST = Path('/etc/agent-capabilities/tingfinder-ai.json')
+PROFILE = 'tingfinder-ai-v1'
+CGROUP = '/user.slice/user-1000.slice/user@1000.service/app.slice/tingfinder-ai.service'
 MODELS = {'claude': 'haiku', 'codex': 'gpt-6-luna'}
 PROVIDERS = ('claude', 'codex')
 QUOTA = '/home/lauge/.local/share/agent-duo/bin/duo-quota'
@@ -50,6 +61,78 @@ Reply only through the required JSON output:
 - To call functions: kind "tool_calls", content empty, and one or more tool_calls with name and arguments_json (a JSON object encoded as a string that satisfies the function's parameters).
 Only call functions listed under available_functions. If none are listed you must answer.
 Never invent things, places or ids that are not in tool results."""
+
+
+_digests = {}
+
+
+def digest(path):
+    path = Path(path).resolve(strict=True)
+    info = path.stat()
+    key = (str(path), info.st_dev, info.st_ino, info.st_size, info.st_mtime_ns, info.st_ctime_ns)
+    if key not in _digests:
+        checksum = hashlib.sha256()
+        with path.open('rb') as source:
+            for chunk in iter(lambda: source.read(1024 * 1024), b''): checksum.update(chunk)
+        _digests[key] = checksum.hexdigest()
+    return _digests[key]
+
+
+def fingerprints():
+    codex = BINARIES['codex'].resolve(strict=True)
+    files = {'tingfinder_ai.py': SELF, 'sandbox_agent.py': DBA / 'sandbox_agent.py',
+             'provider_proxy.py': DBA / 'provider_proxy.py', 'native/claude': BINARIES['claude'],
+             'native/codex': codex, 'native/codex-code-mode-host': codex.with_name('codex-code-mode-host')}
+    return {name: digest(path) for name, path in files.items()}
+
+
+def resource_limits():
+    if Path('/proc/self/cgroup').read_text().strip().splitlines() != ['0::' + CGROUP]:
+        raise ValueError('Not the Tingfinder AI service cgroup')
+    root = Path('/sys/fs/cgroup' + CGROUP)
+    return {name: (root / name).read_text().strip()
+            for name in ('memory.max', 'memory.swap.max', 'pids.max', 'cpu.max')}
+
+
+def bounded_limits(limits):
+    try:
+        memory = int(limits['memory.max']); swap = int(limits['memory.swap.max'])
+        pids = int(limits['pids.max']); quota, period = map(int, limits['cpu.max'].split())
+        return (0 < memory <= 3 * 1024**3 and swap == 0 and 0 < pids <= 256 and
+                0 < quota <= period * 2 and period > 0)
+    except (KeyError, TypeError, ValueError):
+        return False
+
+
+def approved(data, hashes, limits):
+    return (isinstance(data, dict) and data.get('schema') == 1 and data.get('profile') == PROFILE and
+            data.get('providers') == list(PROVIDERS) and data.get('models') == MODELS and
+            data.get('exposed') == list(EXPOSED) and hashes is not None and data.get('hashes') == hashes and
+            data.get('native_canaries') == {p: True for p in PROVIDERS} and
+            data.get('negative_tests') is True and bounded_limits(limits))
+
+
+def read_manifest(manifest=None):
+    manifest = manifest or MANIFEST
+    # Only an administrator-owned file outside the runtime can approve it.
+    for path in (manifest.parent, manifest):
+        info = path.lstat()
+        if stat.S_ISLNK(info.st_mode) or info.st_uid != 0 or info.st_mode & 0o022:
+            raise ValueError('Untrusted capability approval')
+    if not manifest.is_file() or manifest.stat().st_size > 16384:
+        raise ValueError('Invalid capability approval')
+    return json.loads(manifest.read_text())
+
+
+def make_gate(loaded):
+    """Fail closed: approval must match the code loaded at start and what runs now."""
+    def ready():
+        try:
+            current = fingerprints()
+            return current == loaded and approved(read_manifest(), current, resource_limits())
+        except (OSError, ValueError, TypeError, KeyError):
+            return False
+    return ready
 
 
 class Refused(Exception):
@@ -385,12 +468,14 @@ def run_native(provider, system, prompt, images, schema, proxy_factory=None):
 
 
 class Broker:
-    def __init__(self, key, quota=None, runner=run_native):
-        self.key, self.quota, self.runner = key, quota or Quota(), runner
+    def __init__(self, key, quota=None, runner=run_native, gate=None):
+        self.key, self.quota, self.runner, self.gate = key, quota or Quota(), runner, gate
         self.slots = threading.BoundedSemaphore(CONCURRENCY)
 
     def complete(self, body):
         app_system, transcript, images, functions, _ = translate(body)
+        if self.gate is not None and not self.gate():
+            raise Refused(503, 'Capability approval missing or stale')
         if not self.slots.acquire(blocking=False):
             raise Refused(429, 'Busy', retry_after=5)
         try:
@@ -432,6 +517,7 @@ def make_handler(broker):
             self.reply(status, {'error': {'message': message, 'type': kind}}, retry_after)
 
         def authorized(self):
+            if broker.key is None: return True  # Reachable only via the socket and the app's internal network.
             given = self.headers.get('Authorization', '')
             return hmac.compare_digest(given.encode(), ('Bearer ' + broker.key).encode())
 
@@ -476,12 +562,52 @@ class UnixServer(socketserver.ThreadingMixIn, socketserver.UnixStreamServer):
         pass
 
 
-def serve(socket_path, key_file):
-    key = Path(key_file).read_text().strip()
-    if len(key) < 32: raise SystemExit('Adapter key too short')
+def canary(provider):
+    """Run the isolation probe and the pinned native CLI in the real sandbox. No model call."""
+    job = Path(tempfile.mkdtemp(prefix='tf-ai-'))
+    try:
+        os.chmod(job, 0o700)
+        argv = build_argv(provider, job)
+        probe = subprocess.run(argv[:-2] + ['--probe'], capture_output=True, text=True, timeout=30)
+        native = subprocess.run(argv[:-5] + ['/opt/native', '--version'], capture_output=True, text=True, timeout=30)
+        return (probe.returncode == 0 and json.loads(probe.stdout or '{}') == {'isolated': True} and
+                native.returncode == 0 and bool(native.stdout.strip()))
+    except (OSError, ValueError, subprocess.TimeoutExpired):
+        return False
+    finally:
+        shutil.rmtree(job, ignore_errors=True)
+
+
+def negative_tests():
+    tests = SELF.parent / 'test_tingfinder_ai.py'
+    return tests.is_file() and subprocess.run(
+        [sys.executable, '-I', '-m', 'unittest', 'discover', '-s', str(SELF.parent)],
+        capture_output=True, timeout=300).returncode == 0
+
+
+def review_manifest():
+    """Reviewable approval for this runtime. An administrator installs it root-owned."""
+    return {'schema': 1, 'profile': PROFILE, 'providers': list(PROVIDERS), 'models': MODELS,
+            'exposed': list(EXPOSED), 'hashes': fingerprints(),
+            'native_canaries': {p: canary(p) for p in PROVIDERS}, 'negative_tests': negative_tests(),
+            'authorization': ('Lauge 2026-11-22: Tingfinder item text and photos may go to Anthropic/OpenAI '
+                              'under his subscription; the broker may use his subscription logins like '
+                              'DenBlaAgent. Locked models, function tools only, no host tools, no paid tier.'),
+            'created_at': datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds')}
+
+
+def serve(socket_path, key_file=None):
+    # Optional: a key stored in Kept's database adds nothing over the 0660 socket and the
+    # app's internal network, and would have to pass through a person to reach the admin UI.
+    key = Path(key_file).read_text().strip() if key_file else None
+    if key is not None and len(key) < 32: raise SystemExit('Adapter key too short')
+    sys.path.insert(0, str(DBA))
+    import provider_proxy  # noqa: F401  Loaded before the start fingerprint.
+    gate = make_gate(fingerprints())
+    if not gate(): print(json.dumps({'approval': 'missing or stale; model requests get 503'}), flush=True)
     path = Path(socket_path)
     if path.exists() or path.is_symlink(): path.unlink()
-    server = UnixServer(str(path), make_handler(Broker(key)))
+    server = UnixServer(str(path), make_handler(Broker(key, gate=gate)))
     os.chmod(path, 0o660)
     print(json.dumps({'listening': str(path)}), flush=True)
     server.serve_forever()
@@ -491,5 +617,7 @@ if __name__ == '__main__':
     os.umask(0o077)
     if sys.argv[1:2] == ['--inside']: sys.exit(inside(sys.argv[2]))
     if sys.argv[1:2] == ['--probe']: sys.exit(probe())
-    if sys.argv[1:2] == ['--serve'] and len(sys.argv) == 4: serve(sys.argv[2], sys.argv[3])
-    else: raise SystemExit('Use --serve SOCKET KEYFILE')
+    if sys.argv[1:2] == ['--review']:
+        print(json.dumps(review_manifest(), indent=2)); sys.exit(0)
+    if sys.argv[1:2] == ['--serve'] and len(sys.argv) in (3, 4): serve(*sys.argv[2:])
+    else: raise SystemExit('Use --serve SOCKET [KEYFILE] or --review')

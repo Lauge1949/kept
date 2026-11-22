@@ -41,6 +41,23 @@ services:
     depends_on:
       kept:
         condition: service_healthy
+  ai:
+    # Relay only: forwards the app's OpenAI-compatible calls to the host Tingfinder AI
+    # broker socket (deploy/ai-broker). No credentials, no outbound network.
+    image: caddy@sha256:881bbc60f9986d5ab8e7cfd6cf7e4ef3c9c0439fef2429d035d065577882f028
+    user: '1000:1000'
+    read_only: true
+    tmpfs: [/data, /config, /tmp]
+    cap_drop: [ALL]
+    cap_add: [NET_BIND_SERVICE]  # Caddy's file capability; see preview.
+    security_opt: [no-new-privileges:true]
+    mem_limit: 64m
+    cpus: 0.25
+    pids_limit: 32
+    restart: unless-stopped
+    command: [caddy, reverse-proxy, --from, ':8080', --to, 'unix//run/tf-ai/broker.sock']
+    volumes: ['${HOME:?}/.local/state/tingfinder-ai/socket:/run/tf-ai:ro']
+    networks: [kept]
 networks:
   kept:
     internal: true

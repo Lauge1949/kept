@@ -1,0 +1,23 @@
+# User unit (linger). Installed by install-runtime.sh; answers only with a root-owned
+# /etc/agent-capabilities/tingfinder-ai.json matching this runtime and these limits.
+[Unit]
+Description=Tingfinder AI broker (subscription models for the Kept fork)
+After=default.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -I -B %h/.local/share/tingfinder-ai/runtime/tingfinder_ai.py --serve %h/.local/state/tingfinder-ai/socket/broker.sock
+Restart=always
+RestartSec=15
+TimeoutStopSec=15
+KillMode=control-group
+UMask=0077
+NoNewPrivileges=true
+MemoryMax=2G
+MemorySwapMax=0
+TasksMax=256
+CPUQuota=200%
+
+[Install]
+WantedBy=default.target

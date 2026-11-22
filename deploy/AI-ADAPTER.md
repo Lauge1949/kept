@@ -1,7 +1,10 @@
-# Tingfinder AI-adapter: kontrakt (fase 1)
+# Tingfinder AI-adapter (fase 1)
 
-Status 2026-11-22: kontrakten er kortlagt og Kept-siden er prøvet offline med syntetiske
-data. Broker/adapter er **ikke** bygget, og der er ikke sendt data til nogen modeludbyder.
+Status 2026-11-22: Lauge har godkendt begge beslutninger (fars tingtekster og fotos må
+sendes til Anthropic/OpenAI under hans abonnement; en servertjeneste må bruge
+abonnementslogin som DenBlåAgent). Brokeren er bygget, prøvet live med syntetiske ting
+og kører som brugertjeneste, men **afviser modelkald (503), indtil Lauge installerer
+den root-ejede godkendelse**. Kept er endnu ikke sat til at bruge den.
 Fortsættelse og rækkefølge ejes af [CONTINUE.md](../CONTINUE.md); drift af serverens
 dokumenter.
 
@@ -68,26 +71,63 @@ ikke tæller som ledig. Abonnementerne er OAuth-logins, ikke API-nøgler, og pro
 taler udbydernes egne protokoller (Anthropic Messages, Codex Responses), ikke
 chat/completions.
 
-## Foreslået adapter (kræver ejerens ok før bygning)
+## Den byggede broker
 
-1. **Vært-broker** som systemd-tjeneste, der genbruger DBA-proxyens login- og
-   kvotelogik. Den lytter kun på en privat Unix-socket og oversætter
-   chat/completions til Anthropic Messages (Haiku, vision og tools) med Codex Luna som
-   reserve efter samme kvoteregler. Ingen ny port, ingen API-nøgle, ingen betalt tier.
-2. **Lille sidecar** i appnetværket med det eksisterende Tingfinder-image (Node findes),
-   som kun videresender HTTP fra appen til socketten. Appen får ingen loginfiler,
-   hjemmemappe, Docker-socket eller udgående net.
-3. Adapteren udstiller faste navne (`tingfinder-chat`, `tingfinder-vision`) og vælger
-   selv den faktiske model. Kvote opbrugt eller ukendt: `429` med `Retry-After`.
-   Manglende login: `503`, ikke `401`. Svar inden 70 s. Kun function-tools, ingen
-   streaming, logning af metadata uden indhold.
-4. **Embeddings fra start slået fra**: Kept falder tilbage til nøgleordssøgning.
-   Billedindhold dækkes i fase 3 af afledte beskrivelser via vision-pladsen. Immich ML
-   (CLIP/OCR på `immich_default`) er eneste lokale embeddingkilde; den har ikke
-   OpenAI-form og vælges kun ved dokumenteret behov.
+Kode i [`ai-broker/`](ai-broker/): `tingfinder_ai.py` (kun standardbibliotek), 16
+offline tests, `tingfinder-ai.service` (brugerunit) og `install-runtime.sh`.
 
-Åbne beslutninger for Lauge: at fars tingtekster og fotos sendes til Anthropic/OpenAI
-under Lauges abonnement, og at broker-tjenesten må læse abonnementslogin som DBA gør.
-Inden bygning: tjek om automatisk-agent-profilen og installationsværnet gælder for
-brokeren, prøv en rigtig Haiku-tur med syntetiske ting, og prøv afvisning af andre
-tools, for stor krop og manglende login.
+- **Vej:** Kept → `http://ai:8080/v1` (Caddy-relæ i `development.compose.yaml`, kun på
+  det interne appnetværk, uden credentials) → Unix-socket
+  `~/.local/state/tingfinder-ai/socket/broker.sock` (0660) → broker.
+- **Hvert kald** bliver én tilstandsløs kørsel af den officielle `claude`- eller
+  `codex`-CLI i DenBlåAgents bwrap-mønster: intet net ud over én kortlivet
+  udbydersocket (DBA's `ProviderProxy`, der læser login uden for sandkassen), ingen
+  værtsfiler, pladsholder-login, ingen indbyggede værktøjer eller MCP. Svaret kommer
+  som struktureret JSON (`answer` eller `tool_calls`) og oversættes til
+  chat.completion; ukendte tools droppes. Brokerens protokolprompt kan ikke erstattes
+  af appens tekst, og transcript/billeder behandles som data.
+- **Model og kvote:** Haiku først, Codex `gpt-6-luna` som reserve via `duo-quota`
+  (ukendt kvote er en begrænset prøve, ikke ledig). Opbrugt: `429` med `Retry-After`.
+  Manglende login: `503`. Højst 2 samtidige kald, 70 s pr. kald, 8 billeder.
+- **Ingen adapternøgle:** en nøgle ville ligge i Kepts database og beskytter ikke mere
+  end socketrettighederne og det interne netværk; den skulle desuden gennem en person
+  til admin-UI'et. `--serve SOCKET KEYFILE` understøtter stadig en nøgle.
+- **Godkendelse (fail-closed):** tjenesten svarer kun på modelkald, når
+  `/etc/agent-capabilities/tingfinder-ai.json` er root-ejet, ikke gruppe/andre-skrivbar,
+  har profil `tingfinder-ai-v1` og præcis de hashes, der blev indlæst ved start og
+  køres nu (broker, DBA's `sandbox_agent.py` og `provider_proxy.py`, fastlåste kopier
+  af `claude`, `codex` og `codex-code-mode-host`), låste modeller, beståede negative
+  tests og sandkasse-canaries, og når unitens cgroup-grænser holder (≤3 GiB, ingen
+  swap, ≤256 tasks, ≤2 CPU). Ellers `503`.
+- **Fastlåst runtime:** `install-runtime.sh` kopierer kode og CLI'er til
+  `~/.local/share/tingfinder-ai/runtime/`, så CLI-autoopdateringer ikke ændrer det
+  godkendte. Scriptet kører testene og canaries (isolationsprøve og `--version` i
+  sandkassen, intet modelkald) og skriver `~/.config/tingfinder-ai/review.json`.
+
+### Live prøve 2026-11-22 (syntetiske ting, før godkendelsesværnet)
+
+| Udbyder | Tool-kald | Svar med `kept:thing`-link | Vision (farve) |
+|---|---|---|---|
+| Claude Haiku | 1,9 s | 2,4 s | 2,9 s |
+| Codex Luna | 7,2 s | 7,7 s | 6,7 s |
+
+Isolationsprøven bestod for begge. Efter værnet: `GET /v1/models` 200 og
+`POST /v1/chat/completions` 503 fra Kept-containeren gennem relæet.
+
+### Tilbage før appen bruger den
+
+1. Lauge godkender runtime (root):
+   `sudo install -o root -g root -m 0644 ~/.config/tingfinder-ai/review.json /etc/agent-capabilities/tingfinder-ai.json`
+   (sti udfoldet til `/home/lauge/...`). Ingen genstart nødvendig; næste kald prøves.
+2. Lauge i Tingfinder, Admin → Indstillinger: slå `ssrf_allow_private` til (gælder også
+   OIDC, Homebox-import, mail-ind og webhooks), og under AI: udbyder
+   *OpenAI-compatible*, base-URL `http://ai:8080/v1`, ingen nøgle, vision
+   `tingfinder-vision`, chat `tingfinder-chat`, embeddings tom. Kept giver brugerne
+   besked om den nye AI-udbyder (D180).
+3. Fase 2-prøver i appen med syntetiske ting (se CONTINUE.md).
+
+Ved ny CLI-version eller kodeændring: kør `install-runtime.sh` igen og få en ny
+godkendelse; indtil da svarer brokeren 503 (fail-closed). Stop: `systemctl --user
+disable --now tingfinder-ai.service` og fjern `ai`-tjenesten fra compose-overlayet.
+Embeddings forbliver slået fra (nøgleordssøgning); Immich ML er eneste lokale kilde
+og vælges kun ved dokumenteret behov.

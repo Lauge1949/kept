@@ -7,11 +7,12 @@ Opdatér denne plan efter hver afsluttet fase eller før et afbrudt forløb.
 
 ## Første handling i næste session
 
-Kortlæg forbindelsen mellem Kepts AI-interface og serverens eksisterende
-kvotestyrede modelvalg. Lever en konkret adapterkontrakt og en afgrænset prøve med
-syntetiske data, før integrationen får adgang til rigtige inventarer. Antag ikke,
-at serverens abonnementer kan bruges som almindelige OpenAI-kompatible API-nøgler.
-Hvis ejeren fortsat oplever loginfejl på telefonen, prioriteres den fejl først.
+Fase 1 er kortlagt: se [AI-ADAPTER.md](deploy/AI-ADAPTER.md). Kepts wire-form er
+prøvet offline; brokeren er ikke bygget. Få Lauges ok til de to åbne beslutninger dér
+(fars tekster/fotos til udbyderen under hans abonnement, og en vært-broker der læser
+abonnementslogin som DenBlåAgent). Byg derefter brokeren og prøv en rigtig Haiku-tur
+med syntetiske ting, før den kobles på den kørende instans. Hvis ejeren fortsat
+oplever loginfejl på telefonen, prioriteres den fejl først.
 
 ## Formål og allerede trufne valg
 
@@ -43,7 +44,8 @@ Git er ren på `lauge/develop`, og efter fetch matcher HEAD origin:
 | Tingfinder-navn, bevaret logo og dansk oversættelse | Udført og udrullet |
 | Mistet loginformularsession gav rå CSRF-fejl | Rettet i det fælles loginlag; offentlig browserprøve består |
 | Bekræftelse af rettelsen på ejerens fysiske iPhone | Udestår |
-| AI via eksisterende abonnement/kvoterouter | Ikke implementeret |
+| AI-kontrakt: Kepts wire-form og serverens abonnementsmønster | Kortlagt 2026-11-22; offline prøve består |
+| AI via eksisterende abonnement/kvoterouter (broker) | Foreslået, ikke bygget; afventer ejerens ok |
 | Billedbaseret AI-søgning og valg af embeddings | Ikke implementeret/afklaret |
 | Fysisk iPhone/Android-PWA, WebKit og værtsboot | Ikke verificeret |
 
@@ -70,7 +72,7 @@ adgangskode. Claude-review fik timeout og tælles ikke som bestået.
 
 ## Arbejdsrækkefølge og acceptkrav
 
-1. **Afklar AI-kontrakten.** Læs serverens kanoniske app-/routerdokumentation og
+1. **Afklar AI-kontrakten.** (Kortlagt, se `deploy/AI-ADAPTER.md`; mangler rigtig syntetisk tur.) Læs serverens kanoniske app-/routerdokumentation og
    faktiske integrationskode. Undersøg Kepts `apps/server/src/ai/`,
    `apps/server/src/assistant/`, `apps/server/src/embeddings/provider.ts` og
    `packages/shared/src/assistant.ts`, både på grenen og i den stabile baseline.

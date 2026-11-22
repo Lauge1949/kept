@@ -7,16 +7,15 @@ Opdatér denne plan efter hver afsluttet fase eller før et afbrudt forløb.
 
 ## Første handling i næste session
 
-Fase 1 er bygget: se [AI-ADAPTER.md](deploy/AI-ADAPTER.md). Lauge godkendte
-2026-11-22 begge beslutninger (fars tekster/fotos til Anthropic/OpenAI under hans
-abonnement; broker der bruger abonnementslogin som DenBlåAgent). Brokeren
-`tingfinder-ai.service` og relæet `ai` kører. Udbyder og `ssrf_allow_private` er sat
-i Kept 2026-11-22 (via den syntetiske instansadmin; Lauges konto er ikke admin). Efter
-`json_object`-rettelsen svarer brokeren 503 på modelkald, til Lauge har installeret den
-nye root-ejede godkendelse (AI-ADAPTER.md, "Tilbage før appen bruger den"). Kontrollér først med
-`journalctl --user -u tingfinder-ai.service` og et kald gennem relæet, om de er gjort;
-fortsæt derefter med fase 2-prøverne. Hvis ejeren fortsat oplever loginfejl på
-telefonen, prioriteres den fejl først.
+Fase 1 er i drift: se [AI-ADAPTER.md](deploy/AI-ADAPTER.md). Lauge godkendte
+2026-11-22 begge beslutninger og installerede den root-ejede godkendelse. Kepts
+forbindelsestest gennem appen bestod (billede og JSON). Fase 2 (tekstassistent) er
+prøvet med syntetiske ting og består, se AI-ADAPTER.md, "Fase 2-prøver". Næste
+arbejde er fase 3 (billedforståelse) og fase 4's enklere svar: assistenten nævner i
+næsten hvert svar, at søgning efter betydning er slået fra, med en henvisning til
+Admin. Det er forvirrende for far og bør skjules eller formuleres enkelt. Lauges egen
+konto er ikke instansadmin. Hvis ejeren oplever loginfejl på telefonen, prioriteres
+den fejl først.
 
 ## Formål og allerede trufne valg
 
@@ -49,7 +48,8 @@ Git er ren på `lauge/develop`, og efter fetch matcher HEAD origin:
 | Mistet loginformularsession gav rå CSRF-fejl | Rettet i det fælles loginlag; offentlig browserprøve består |
 | Bekræftelse af rettelsen på ejerens fysiske iPhone | Udestår |
 | AI-kontrakt: Kepts wire-form og serverens abonnementsmønster | Kortlagt 2026-11-22; offline prøve består |
-| AI via eksisterende abonnement/kvoterouter (broker) | Godkendt og bygget 2026-11-22; live syntetisk tur bestået (Haiku og Luna); kører fail-closed, udbyder sat i Kept; venter på ny root-godkendelse efter `json_object`-rettelsen |
+| AI via eksisterende abonnement/kvoterouter (broker) | I drift 2026-11-22; root-godkendt, Kepts forbindelsestest består |
+| Tekstassistent på dansk (fase 2) | Syntetiske prøver består 2026-11-22 efter rettelse af dansk svarsprog (image `tingfinder:20261122`) |
 | Billedbaseret AI-søgning og valg af embeddings | Ikke implementeret/afklaret |
 | Fysisk iPhone/Android-PWA, WebKit og værtsboot | Ikke verificeret |
 
@@ -60,9 +60,9 @@ konto og været logget ind. Genudsted ikke invitationer og nulstil ikke opsætni
 **Kilde og runtime er forskellige:** Git-grenen bygger på nyere upstream-kode,
 men den kørende server er stabil **1.14.7**, kildebaseline
 `f74f2f39161ab8caa5992978a5ac0aa2580e0672`, med et udtrykkeligt overlay.
-Det kørende image `tingfinder:20261121` har overlay-kildecommit
-`f8f42a054ef4beb8af07ba87e6a1f7911843bfa3`. De efterfølgende commits til
-`2ad27e5d` ændrer tests. Deploy aldrig hele nyere develop med migrationer som en
+Det kørende image `tingfinder:20261122` har overlay-kildecommit
+`784eb23da8d9194948e97223c7a2e09a685bbbd1` (dansk svarsprog i assistent og
+fotoaflæsning); forrige image `tingfinder:20261121` er bevaret til rollback. Deploy aldrig hele nyere develop med migrationer som en
 genvej til næste funktion. Brug [det aktuelle build](deploy/build-tingfinder.sh)
 og [overlaylisten](deploy/tingfinder-files.txt), og kontrollér også den stabile kilde.
 

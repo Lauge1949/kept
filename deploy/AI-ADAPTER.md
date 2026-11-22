@@ -131,7 +131,7 @@ root-godkendelse.
 1. Lauge godkender runtime (root):
    `sudo install -o root -g root -m 0644 ~/.config/tingfinder-ai/review.json /etc/agent-capabilities/tingfinder-ai.json`
    (sti udfoldet til `/home/lauge/...`). Ingen genstart nødvendig; næste kald prøves.
-2. Lauge i Tingfinder, Admin → Indstillinger: slå `ssrf_allow_private` til (gælder også
+2. *Udført 2026-11-22 af agenten, se ovenfor.* Tingfinder, Admin → Indstillinger: slå `ssrf_allow_private` til (gælder også
    OIDC, Homebox-import, mail-ind og webhooks), og under AI: udbyder
    *OpenAI-compatible*, base-URL `http://ai:8080/v1`, ingen nøgle, vision
    `tingfinder-vision`, chat `tingfinder-chat`, embeddings tom. Kept giver brugerne

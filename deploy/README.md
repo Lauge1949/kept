@@ -59,63 +59,37 @@ Chromium as Safari. No physical-phone installation is claimed.
 
 Kept serves photos via five-minute signed bearer URLs: someone possessing such a
 URL can read it until expiry without a session. Tests verify unauthorised users
-cannot obtain new URLs and tampered links fail. The HTTPS preview protects
-the entire origin, including `/f/`, with the server's shared login and disables
-shared caching. Private data and API endpoints must never be cached by an outer proxy.
+cannot obtain new URLs and tampered links fail. Native app authentication protects
+private API data; possession of a valid signed photo URL grants temporary access.
+Private data must never be cached by an outer proxy.
 
-## Authenticated HTTPS preview
+## HTTPS instance with native authentication
 
-The server's reference instance uses `KEPT_PUBLIC_URL=https://tingfinder.laugesbin.win`.
-Open [Kept](https://tingfinder.laugesbin.win/). Its entire origin is behind the
-existing device-access server password, followed by Kept's own user login.
-A single-use, seven-day invitation is exposed only after shared login at `/api/preview-start`.
-It creates the owner's chosen account in the synthetic `Prøvehjem` location;
-ordinary sign-up remains closed. After joining, use `/` to reopen the app. The
-onboarding entry uses `/api/` because Kept's service worker excludes it from the
-navigation fallback; the original `/start` can be swallowed by an existing worker.
-The invitation URL and all test credentials live only in private server files.
+Per owner decision 2026-11-25, [Tingfinder](https://tingfinder.laugesbin.win/)
+uses only its own account login. The extra device-access login is removed for both
+this hostname and `dev-kept.laugesbin.win`. The old origin still serves the app so
+installed PWAs can sync their origin-bound offline queues. Never clear their data.
+Ordinary signup remains closed. The owner already has an account; do not reset it.
 
-`https-preview.caddy` is the reviewed site for the existing shared gateway on
-loopback 18600, which proxies Kept's loopback 18740. The live site has the extension
-`.preview`, outside the `dev-preview` CLI's managed `*.caddy` files. The gateway's
-main Caddyfile imports `*.preview`; a CLI guard reserves names with that extension.
-Its `kept-entry.inc` import contains only the private onboarding redirect, under
-the same auth gate. This is a mandatory import: after the invitation is consumed or
-expires, retain an empty/comment-only include unless removing the importing site
-at the same time. Preserve the CLI collision guard when updating that tool.
-An installed iPhone PWA keeps Kept's worker, which answers every navigation (also
-`/_device/login`) from its cached shell, and the worker's update check cannot follow the
-gate redirect. The site therefore answers a `Service-Worker: script` request for `/sw.js`
-without a gate session with `kept-sw-reset.js` (copy it next to the live site): it
-unregisters itself and reloads the window through the network, so the gate login shows
-inside the PWA. With a session the request reaches Kept's real `sw.js`.
-Auth registration is marked `managed_by: kept-development`,
-so CLI sync does not remove it. Gateway configuration must validate before restart.
-The Cloudflare tunnel and proxied DNS add only this exact hostname.
+`https-preview.caddy` is the source for the shared gateway's `kept.preview` on
+loopback 18600, proxying Kept's loopback 18740. Preserve the CLI collision guard.
+The private onboarding include and gate worker-reset route are no longer imported.
+Retired `/_device/*`, `/start` and `/api/preview-start` redirect to native `/signin`
+with 303; `/_device/verify` returns 404. `/sw.js` always reaches Kept's real worker.
+Other sites retain their existing authentication. Dormant device-access host entries
+are retained, but these two proxy routes never call that service.
 
-The upstream application and storage remain isolated. No AI keys are connected.
-The outer proxy strips Authorization, so this preview is for browser use, without
-personal API-token, MCP or unauthenticated feed/webhook access. All users currently
-share Kept's inner proxy IP for login rate limits. Synthetic SMTP/AI traffic remains
-blocked by the internal network. Private configuration and rollback locations are
-recorded in the server's canonical development documentation.
+The gateway preserves public Host, HTTPS forwarding and private/no-store responses;
+it still strips Authorization, so personal API-token/MCP access remains unsupported.
+Validate the complete gateway config before restart; its admin API is disabled.
+No app rebuild, database change or device-access restart is needed for this change.
 
-The original `smoke.mjs` expects an HTTP-only instance and is not the acceptance
-command for the running HTTPS configuration: its Origin and Secure cookies differ.
-Do not switch a published instance to HTTP to run it. Run `preview-smoke.mjs` with
-the same Playwright/Chrome/private-state variables instead. That checks public
-unauthenticated HTTPS gating, real signed-photo and JavaScript URLs, no-store and
-Secure Kept cookies. An optional `KEPT_PREVIEW_RESOLVER=1.1.1.1` avoids stale local
-NXDOMAIN immediately after hostname creation; TLS verification stays enabled.
-
-For inner UI checks the browser keeps the canonical HTTPS origin, but Playwright
-routes requests directly to the isolated loopback backend. This verifies Kept's
-Origin/cookie behavior and existing data independently of the outer password.
-It does **not** prove a successful device-access password login through Cloudflare.
-It previews the unconsumed invitation form without submitting it. Physical iPhone,
-Android installation, WebKit and full public authenticated flows remain to test
-on the owner's devices. Browser service workers are blocked in this inner check;
-the original baseline separately checked the manifest and private cache behavior.
+Run `tingfinder-smoke.mjs` with the private fixture directory and installed
+Playwright/Chrome variables. It now uses actual public HTTPS, checks unauthenticated
+API denial on both hosts, retired login links, native account sign-in, Danish/English
+and mobile layouts. `preview-smoke.mjs` and `capture-smoke.mjs` record historical
+acceptance for the retired outer gate; their perimeter assertions no longer apply.
+Physical iPhone/Android installation and WebKit still require device testing.
 
 ### Required capture details and web-only builds
 

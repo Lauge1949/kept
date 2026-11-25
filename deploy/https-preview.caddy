@@ -1,144 +1,16 @@
-# Kept standalone Docker preview. Source: /mnt/SSD1000/github/kept/deploy/https-preview.caddy
-http://tingfinder.laugesbin.win:18600 {
+# Tingfinder uses native Kept authentication, per owner decision 2026-11-25.
+# Keep the old origin serving the app so existing offline queues can sync.
+http://tingfinder.laugesbin.win:18600, http://dev-kept.laugesbin.win:18600 {
 	bind 127.0.0.1
 	import security
 	header >Cache-Control "private, no-store"
 	route {
 		respond /_device/verify 404
-		# A cached Kept worker answers every PWA navigation, also the gate login, and
-		# its update check cannot follow the gate's redirect. Without a gate session
-		# the worker script is a self-removing reset; with one, Kept's real sw.js.
-		@sw_script {
-			path /sw.js
-			header Service-Worker script
-		}
-		handle @sw_script {
-			reverse_proxy 127.0.0.1:18510 {
-				rewrite /_device/verify
-				method GET
-				header_up Host tingfinder.laugesbin.win
-				header_up X-Forwarded-Proto https
-				header_up X-Forwarded-Method {method}
-				header_up X-Forwarded-Uri {uri}
-				header_up X-Device-Verify {env.QBT_PROXY_PASSWORD_HASH}
-				@gate_ok status 2xx
-				handle_response @gate_ok {
-					reverse_proxy 127.0.0.1:18740 {
-						header_up Host tingfinder.laugesbin.win
-						header_up X-Forwarded-Proto https
-						header_up -Authorization
-						header_up -X-Device-Verify
-					}
-				}
-				handle_response {
-					rewrite * /kept-sw-reset.js
-					file_server {
-						root /etc/caddy/sites
-					}
-				}
-			}
-		}
-		handle /_device/* {
-			reverse_proxy 127.0.0.1:18510 {
-				header_up Host tingfinder.laugesbin.win
-				header_up X-Forwarded-Proto https
-				header_up -X-Device-Verify
-			}
-		}
-		handle /manifest.webmanifest {
-			reverse_proxy 127.0.0.1:18740
-		}
-		@brand_assets path /favicon.svg /favicon-32.png /apple-touch-icon.png /icon-192.png /icon-512.png /icon-maskable-512.png
-		handle @brand_assets {
-			reverse_proxy 127.0.0.1:18740
-		}
-		forward_auth 127.0.0.1:18510 {
-			uri /_device/verify
-			header_up X-Forwarded-Upgrade {http.request.header.Upgrade}
-			header_up -Upgrade
-			header_up -Connection
-			header_up Host tingfinder.laugesbin.win
-			header_up X-Forwarded-Proto https
-			header_up X-Device-Verify {env.QBT_PROXY_PASSWORD_HASH}
-		}
-		# Private, seven-day, single-use onboarding invitation; never commit its URL.
-		import /etc/caddy/sites/kept-entry.inc
+		# Retired device login/onboarding links must not expose a private invitation.
+		@retired path /_device/* /api/preview-start /start
+		redir @retired /signin 303
 		reverse_proxy 127.0.0.1:18740 {
-			header_up Host tingfinder.laugesbin.win
-			header_up X-Forwarded-Proto https
-			header_up -Authorization
-			header_up -X-Device-Verify
-		}
-	}
-}
-
-# Preserve the old origin so installed PWAs can sync their existing offline queue.
-http://dev-kept.laugesbin.win:18600 {
-	bind 127.0.0.1
-	import security
-	header >Cache-Control "private, no-store"
-	route {
-		respond /_device/verify 404
-		# A cached Kept worker answers every PWA navigation, also the gate login, and
-		# its update check cannot follow the gate's redirect. Without a gate session
-		# the worker script is a self-removing reset; with one, Kept's real sw.js.
-		@sw_script {
-			path /sw.js
-			header Service-Worker script
-		}
-		handle @sw_script {
-			reverse_proxy 127.0.0.1:18510 {
-				rewrite /_device/verify
-				method GET
-				header_up Host dev-kept.laugesbin.win
-				header_up X-Forwarded-Proto https
-				header_up X-Forwarded-Method {method}
-				header_up X-Forwarded-Uri {uri}
-				header_up X-Device-Verify {env.QBT_PROXY_PASSWORD_HASH}
-				@gate_ok status 2xx
-				handle_response @gate_ok {
-					reverse_proxy 127.0.0.1:18740 {
-						header_up Host dev-kept.laugesbin.win
-						header_up X-Forwarded-Proto https
-						header_up -Authorization
-						header_up -X-Device-Verify
-					}
-				}
-				handle_response {
-					rewrite * /kept-sw-reset.js
-					file_server {
-						root /etc/caddy/sites
-					}
-				}
-			}
-		}
-		handle /_device/* {
-			reverse_proxy 127.0.0.1:18510 {
-				header_up Host dev-kept.laugesbin.win
-				header_up X-Forwarded-Proto https
-				header_up -X-Device-Verify
-			}
-		}
-		handle /manifest.webmanifest {
-			reverse_proxy 127.0.0.1:18740
-		}
-		@brand_assets path /favicon.svg /favicon-32.png /apple-touch-icon.png /icon-192.png /icon-512.png /icon-maskable-512.png
-		handle @brand_assets {
-			reverse_proxy 127.0.0.1:18740
-		}
-		forward_auth 127.0.0.1:18510 {
-			uri /_device/verify
-			header_up X-Forwarded-Upgrade {http.request.header.Upgrade}
-			header_up -Upgrade
-			header_up -Connection
-			header_up Host dev-kept.laugesbin.win
-			header_up X-Forwarded-Proto https
-			header_up X-Device-Verify {env.QBT_PROXY_PASSWORD_HASH}
-		}
-		# Private, seven-day, single-use onboarding invitation; never commit its URL.
-		import /etc/caddy/sites/kept-entry.inc
-		reverse_proxy 127.0.0.1:18740 {
-			header_up Host dev-kept.laugesbin.win
+			header_up Host {host}
 			header_up X-Forwarded-Proto https
 			header_up -Authorization
 			header_up -X-Device-Verify

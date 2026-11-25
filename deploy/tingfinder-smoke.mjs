@@ -1,19 +1,17 @@
 // Development preview checks. Uses private synthetic fixtures, never a real user's login.
-// Inner UI requests travel straight to loopback under the canonical HTTPS browser origin.
-// The public perimeter is tested separately WITHOUT a device-access session.
+// Exercises real public HTTPS and native app login without a device-access session.
 import assert from 'node:assert/strict';
 import { readFile, writeFile } from 'node:fs/promises';
 
 const dir = process.env.KEPT_SMOKE_STATE;
 assert(dir, 'Set KEPT_SMOKE_STATE to the private fixture directory');
 const origin = 'https://tingfinder.laugesbin.win';
-const internal = 'http://127.0.0.1:18740';
 const fixture = JSON.parse(await readFile(`${dir}/fixtures.json`, 'utf8'));
 const { chromium } = await import(process.env.KEPT_PLAYWRIGHT_MODULE || '@playwright/test');
 const report = {
   checks: [],
   layouts: [],
-  transport: 'inner UI: loopback route substitution; public: unauthenticated HTTPS',
+  transport: 'public HTTPS; native app authentication',
   physicalPhone: false,
 };
 const pass = (s) => {
@@ -27,25 +25,26 @@ async function innerContext() {
     serviceWorkers: 'block',
     locale: 'da-DK',
   });
-  await context.route(`${origin}/**`, async (route) => {
-    const req = route.request(),
-      url = new URL(req.url());
-    const headers = await req.allHeaders();
-    // Explicit empty Cookie also disables route.fetch's loopback cookie-jar fallback.
-    headers.cookie ??= '';
-    const response = await route.fetch({
-      url: internal + url.pathname + url.search,
-      headers: { ...headers, host: new URL(origin).host },
-      maxRedirects: 0,
-    });
-    await route.fulfill({ response });
-  });
   return context;
 }
 
 let page;
 try {
   const context = await innerContext();
+  for (const host of ['tingfinder.laugesbin.win', 'dev-kept.laugesbin.win']) {
+    const base = `https://${host}`;
+    assert.equal((await context.request.get(`${base}/api/v1/me`)).status(), 401);
+    assert.equal((await context.request.get(`${base}/_device/verify`)).status(), 404);
+    for (const path of ['/_device/login', '/api/preview-start', '/start']) {
+      const response = await context.request.get(base + path, { maxRedirects: 0 });
+      assert.equal(response.status(), 303);
+      assert.equal(response.headers().location, '/signin');
+    }
+    const worker = await context.request.get(`${base}/sw.js`);
+    assert.equal(worker.status(), 200);
+    assert(!(await worker.text()).includes('unregister()'));
+  }
+  pass('both public hosts require native API authentication and retire outer login safely');
   page = await context.newPage();
   await page.goto('/signin');
   await page.getByRole('heading', { name: 'Log ind på Tingfinder', exact: true }).waitFor();

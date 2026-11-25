@@ -63,8 +63,8 @@ Git er ren på `lauge/develop`, og efter fetch matcher HEAD origin:
 | Billedbaseret AI-søgning og valg af embeddings | Ikke implementeret/afklaret |
 | Fysisk iPhone/Android-PWA, WebKit og værtsboot | Ikke verificeret |
 
-Preview: <https://dev-kept.laugesbin.win/>. Teknisk URL og `KEPT_*`-nøgler er bevaret.
-Der er både fælles serverlogin og en indre appkonto. Ejeren har allerede oprettet
+Preview: <https://tingfinder.laugesbin.win/>; gammel origin bevares til offlinekøer.
+Kun appkonto kræves efter ejerens valg 2026-11-25; det fælles serverlogin er fjernet. Ejeren har allerede oprettet
 konto og været logget ind. Genudsted ikke invitationer og nulstil ikke opsætningen.
 
 **Kilde og runtime er forskellige:** Git-grenen bygger på nyere upstream-kode,
@@ -78,8 +78,8 @@ og [overlaylisten](deploy/tingfinder-files.txt), og kontrollér også den stabil
 
 Testbevis fra 2026-11-21: 98 webtests og 278 shared-/sprog-/gendannelsestests,
 TypeScript, produktionsbuild, bundlebudget og 6989 aktive oversættelser består.
-`deploy/tingfinder-smoke.mjs` og `deploy/capture-smoke.mjs` består på den kørende
-udgave i Chromium ved mobil- og desktopbredder. Dansk PDF er kompileret i faktisk
+`deploy/tingfinder-smoke.mjs` tester nu faktisk offentlig HTTPS med appkonto.
+Capture-prøvens gamle perimeterkrav er historiske efter fjernelsen af serverlogin. Dansk PDF er kompileret i faktisk
 runtime. Loginrettelsen har 55 isolerede tests og offentlig HTTPS-browserprøve.
 Det er ikke bevis for fysisk Safari/PWA eller fuldt offentligt login med ejerens
 adgangskode. Claude-review fik timeout og tælles ikke som bestået.

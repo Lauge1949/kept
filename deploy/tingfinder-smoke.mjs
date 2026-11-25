@@ -6,7 +6,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 
 const dir = process.env.KEPT_SMOKE_STATE;
 assert(dir, 'Set KEPT_SMOKE_STATE to the private fixture directory');
-const origin = 'https://dev-kept.laugesbin.win';
+const origin = 'https://tingfinder.laugesbin.win';
 const internal = 'http://127.0.0.1:18740';
 const fixture = JSON.parse(await readFile(`${dir}/fixtures.json`, 'utf8'));
 const { chromium } = await import(process.env.KEPT_PLAYWRIGHT_MODULE || '@playwright/test');
@@ -121,6 +121,9 @@ try {
   await page.locator('main').waitFor({ state: 'visible' });
   await page.locator('main').getByRole('heading').first().waitFor({ state: 'visible' });
   await page.evaluate(() => document.fonts.ready);
+  await page.getByRole('link', { name: 'Forside', exact: true }).first().waitFor();
+  assert(!/\b(?:i0qMbr|2FYpfJ|A1taO8|7MuXko)\b/.test(await page.locator('body').innerText()), 'No raw translation IDs in the signed-in UI');
+  pass('Authenticated Danish navigation uses readable text rather than translation IDs');
   for (const width of [320, 390, 430, 844, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     await page.waitForFunction(() => document.documentElement.scrollWidth <= innerWidth + 1);

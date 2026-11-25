@@ -20,7 +20,7 @@ FROM tools AS checked
 RUN --network=none cp -a /app/node_modules/.pnpm/@img+sharp-libvips-linux-x64@1.3.4/. /src/node_modules/.pnpm/@img+sharp-libvips-linux-x64@1.3.4/
 ENV KEPT_DATABASE_URL=postgres://test:test@127.0.0.1/test KEPT_AUTH_DATABASE_URL=postgres://test:test@127.0.0.1/test KEPT_SYSTEM_DATABASE_URL=postgres://test:test@127.0.0.1/test KEPT_PUBLIC_URL=http://kept.test
 
-RUN --network=none NODE_ENV=test node /tmp/package-manager/package/bin/pnpm.cjs --dir apps/web exec vitest run src/components/capture/capture-screen.test.tsx src/components/capture/required-details.test.tsx src/components/capture/enqueue.test.ts src/offline/dexie-store.test.ts src/lib/prefs.test.ts src/i18n/start-locale.test.ts
+RUN --network=none NODE_ENV=test node /tmp/package-manager/package/bin/pnpm.cjs --dir apps/web exec vitest run src/components/capture/capture-screen.test.tsx src/components/capture/required-details.test.tsx src/components/capture/enqueue.test.ts src/offline/dexie-store.test.ts src/lib/prefs.test.ts src/i18n/start-locale.test.ts src/i18n/fallback-locale.test.ts
 RUN --network=none node /tmp/package-manager/package/bin/pnpm.cjs --dir apps/web exec tsc --noEmit && node /tmp/package-manager/package/bin/pnpm.cjs --dir apps/server exec tsc -p tsconfig.build.json
 RUN --network=none node /tmp/package-manager/package/bin/pnpm.cjs exec vitest run --config deploy/localization.vitest.ts
 RUN --network=none node scripts/check-i18n.mjs

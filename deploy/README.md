@@ -65,8 +65,8 @@ shared caching. Private data and API endpoints must never be cached by an outer 
 
 ## Authenticated HTTPS preview
 
-The server's reference instance uses `KEPT_PUBLIC_URL=https://dev-kept.laugesbin.win`.
-Open [Kept](https://dev-kept.laugesbin.win/). Its entire origin is behind the
+The server's reference instance uses `KEPT_PUBLIC_URL=https://tingfinder.laugesbin.win`.
+Open [Kept](https://tingfinder.laugesbin.win/). Its entire origin is behind the
 existing device-access server password, followed by Kept's own user login.
 A single-use, seven-day invitation is exposed only after shared login at `/api/preview-start`.
 It creates the owner's chosen account in the synthetic `Prøvehjem` location;
@@ -149,11 +149,11 @@ source and applies the explicit overlay plus task-only stable patches. It compil
 the stable server without running migrations, retains existing runtime assets, and
 copies the renamed report templates. It runs capture/preferences tests, TypeScript
 checks, Danish mail/report/assistant checks, shared shape tests, the full catalogue
-check and the production web build offline. The original icon geometry is retained.
+check and the production web build offline. The custom Tingfinder mark is a magnifying glass around a storage box.
 
 The product is Tingfinder; Danish (`da`, including browser tags such as `da-DK`)
 is selectable alongside all existing languages. Technical Kept identifiers remain
-compatible. The existing preview URL is unchanged. Build after committing so the
+compatible. The canonical URL is https://tingfinder.laugesbin.win; the old dev-kept host remains an authenticated compatibility origin so installed PWAs retain access to their offline queues. Danish is bundled in the offline shell, with a deliberate 3900 KiB precache budget, so a failed on-demand language load falls back to readable Danish rather than raw message IDs. Build after committing so the
 image revision and source link identify the actual fork commit.
 
 `deploy/tingfinder-smoke.mjs` checks Danish startup, language switching, installation

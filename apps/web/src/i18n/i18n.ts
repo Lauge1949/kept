@@ -3,6 +3,8 @@
  * import by @lingui/vite-plugin. `pnpm --filter @kept/web i18n:extract` refreshes the catalogues.
  */
 import { i18n, type Messages } from '@lingui/core';
+// Danish is part of the app shell: a failed on-demand catalogue must never show IDs.
+import { messages as danishMessages } from '../locales/da/messages.po';
 import { localiseSeparators } from '@/lib/format';
 import {
   type Digits,
@@ -16,7 +18,7 @@ import {
 
 const loaders: Record<Locale, () => Promise<{ messages: Messages }>> = {
   ar: () => import('../locales/ar/messages.po'),
-  da: () => import('../locales/da/messages.po'),
+  da: async () => ({ messages: danishMessages }),
   de: () => import('../locales/de/messages.po'),
   en: () => import('../locales/en/messages.po'),
   es: () => import('../locales/es/messages.po'),
@@ -42,16 +44,22 @@ export async function activateLocale(locale: Locale, digits: Digits = 'eastern')
 /**
  * The language a page starts in: the one picked on this device, else the browser's, shown and not
  * stored (#474): only a language the person picks is kept. Offline, a catalogue never loaded online
- * isn't cached (sw.ts): English, then no catalogue, so the shell still renders.
+ * isn't cached (sw.ts): the bundled Danish catalogue keeps the shell readable.
  */
 export async function startLocale(): Promise<Locale> {
   settleStoredLocale();
   const locale = initialLocale();
-  await activateLocale(locale, storedDigits()).catch(() =>
-    activateLocale('en').catch(() => i18n.loadAndActivate({ locale: 'en', messages: {} })),
-  );
-  showLocale(locale);
-  return locale;
+  let active = locale;
+  try {
+    await activateLocale(locale, storedDigits());
+  } catch {
+    // The static Danish catalogue travels with the shell, including offline starts.
+    // Never activate an empty catalogue: production macros otherwise display opaque IDs.
+    active = 'da';
+    await activateLocale(active, storedDigits());
+  }
+  showLocale(active);
+  return active;
 }
 
 export { i18n };

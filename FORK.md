@@ -44,7 +44,7 @@ with individual item deletion from the session summary. The explicit stable over
 Danish is an official selectable language across the UI, email, notifications,
 reports, readable exports and the web recovery kit. Product names change while
 storage keys, protocol IDs, environment names and URLs remain compatible. The preview preserves the original
-UI and original amber K logo, rebranded as Tingfinder. Both shared server access and a Tingfinder account are required.
+UI and a custom amber magnifying-glass/storage-box logo for Tingfinder. Both shared server access and a Tingfinder account are required.
 
 The baseline acceptance flow covers item/photo creation, recorded location,
 description, search, separate-user access and Chromium mobile layouts. Physical

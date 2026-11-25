@@ -1,26 +1,4 @@
-#!/usr/bin/env node
-// Every Kept logo file (D135, "B · Label tape"), from one geometry. The mark is a square of amber
-// label tape with a heavy mono "K" (Plex Mono SemiBold's outline, so no font is needed) and the
-// tape's punched hole at the top start, at every size. The lockup is that mark with KEPT beside it
-// in the same outlines. Writes the SVG sources and rasterises them with sharp:
-//
-//   apps/web/public/favicon.svg            tab icon, any size; the hole is cut out
-//   apps/web/public/favicon-32.png         the PNG fallback, the same
-//   apps/web/public/apple-touch-icon.png   180, full bleed (iOS rounds the corners itself)
-//   apps/web/public/icon-192.png           192, rounded tape with the hole
-//   apps/web/public/icon-512.png           512, the same
-//   apps/web/public/icon-maskable-512.png  512, full bleed, everything inside the central 80%
-//   apps/docs/public/favicon.svg           the docs site's tab icon (= the app's)
-//   apps/docs/src/assets/logo.svg          the docs site's logo (= the app's favicon)
-//   docs/assets/kept-lockup-light.svg      the README lockup, on GitHub's light page
-//   docs/assets/kept-lockup-dark.svg       the same, on GitHub's dark page
-//   homeassistant/kept/icon.png            the Home Assistant app's icon, 128, the hole cut out
-//   homeassistant/kept/logo.png            its logo, 256×100: the lockup on a paper label, so it
-//                                          reads on Home Assistant's light and dark themes alike
-//
-// The geometry matches AppMark and BrandLockup in apps/web/src/components/brand.tsx. Dev only: run
-// it after changing either, and commit the outputs (`node scripts/render-icons.mjs`).
-// scripts/render-social-preview.mjs draws the GitHub social preview from lockupSvg().
+// Generate all Tingfinder brand assets from the custom storage-search symbol.
 import { mkdirSync, renameSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -28,55 +6,23 @@ import sharp from 'sharp';
 
 const TAPE = '#F0B03A';
 const INK = '#2E2100';
-/** The paper behind the tape, seen through the hole in the opaque app icons. */
+/** Paper background for the Home Assistant lockup. */
 const HOLE = '#FBFAF7';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 
-/** The Plex Mono SemiBold outlines (1000 units per em, advance 600, baseline y=0), as in brand.tsx. */
-export const GLYPHS = {
-  K: 'M277 306 204 210V0H73V698H204V384H210L291 500L438 698H586L367 404L596 0H448Z',
-  E: 'M83 0V698H524V590H214V408H513V300H214V108H524V0Z',
-  P: 'M80 0V698H345Q447 698 501 640Q555 582 555 482Q555 382 501 324Q447 266 345 266H211V0ZM211 373H318Q371 373 394 394.5Q417 416 417 463V501Q417 548 394 569.5Q371 591 318 591H211Z',
-  T: 'M365 590V0H235V590H25V698H575V590Z',
-};
-
-/** The tape, rounded, with the hole cut out (even-odd), so it shows whatever the mark sits on. */
-export const TAPE_CUT =
-  'M9 2H55A7 7 0 0 1 62 9V55A7 7 0 0 1 55 62H9A7 7 0 0 1 2 55V9A7 7 0 0 1 9 2ZM12 8.5A3.5 3.5 0 1 0 12 15.5A3.5 3.5 0 1 0 12 8.5Z';
-const K_MARK = 'translate(21.4 48) scale(0.042 -0.042)';
-
-/** The lockup's width in mark units (the mark is 64): KEPT at the mark's K size and baseline. */
+/** Custom Tingfinder geometry, shared visually with components/brand.tsx. */
 export const LOCKUP_W = 360;
-/** KEPT: the mark's K scale (0.042) and baseline (48), 0.12 em tracking, from x=74. */
-const WORDMARK =
-  '<text x="76" y="46" font-family="IBM Plex Mono, monospace" font-size="42" font-weight="600" letter-spacing="1">TINGFINDER</text>';
-
-/** The mark's art in its 64-unit square. `hole` fills the hole instead of cutting it. */
-function markArt(hole) {
-  return hole
-    ? `<rect x="2" y="2" width="60" height="60" rx="7" fill="${TAPE}"/><circle cx="12" cy="12" r="3.5" fill="${hole}"/><path d="${GLYPHS.K}" fill="${INK}" transform="${K_MARK}"/>`
-    : `<path d="${TAPE_CUT}" fill="${TAPE}" fill-rule="evenodd"/><path d="${GLYPHS.K}" fill="${INK}" transform="${K_MARK}"/>`;
+const WORDMARK = '<text x="76" y="46" font-family="IBM Plex Mono, monospace" font-size="42" font-weight="600" letter-spacing="1">TINGFINDER</text>';
+function markArt() {
+  return `<rect width="64" height="64" rx="14" fill="${TAPE}"/><g fill="none" stroke="${INK}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="27" r="17"/><path d="m41 40 12 13 M19 22l9-5 9 5v11l-9 5-9-5Z M19 22l9 5 9-5 M28 27v11"/></g>`;
 }
-
-/**
- * The square mark. By default the hole is cut out (favicons, logos). `hole` paints it instead, for
- * the opaque app icons; `bleed` squares the tape off to the edges for icons the platform masks
- * itself; `inset` shrinks the artwork towards the centre (the maskable safe zone).
- */
-export function markSvg({ hole, bleed = false, inset = 0, size = 64 } = {}) {
-  const head = `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 64 64"><title>Tingfinder</title>`;
-  if (!bleed) return `${head}${markArt(hole)}</svg>`;
-  // Full bleed: the whole square is tape; the hole and K keep the mark's places, scaled by inset.
+export function markSvg({ bleed = false, inset = 0, size = 64 } = {}) {
   const scale = 1 - inset * 2;
-  const art = `<circle cx="12" cy="12" r="3.5" fill="${hole ?? HOLE}"/><path d="${GLYPHS.K}" fill="${INK}" transform="${K_MARK}"/>`;
-  const body = inset
-    ? `<g transform="translate(${32 * (1 - scale)} ${32 * (1 - scale)}) scale(${scale})">${art}</g>`
-    : art;
-  return `${head}<rect width="64" height="64" fill="${TAPE}"/>${body}</svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 64 64"><title>Tingfinder</title>${bleed ? `<rect width="64" height="64" fill="${TAPE}"/>` : ''}<g transform="translate(${64 * inset} ${64 * inset}) scale(${scale})">${markArt()}</g></svg>`;
 }
 
-/** The lockup: the mark (hole cut out) and KEPT in `ink`, `height` px tall. */
+/** The Tingfinder mark and wordmark in the requested text colour. */
 export function lockupSvg({ ink, height = 64 } = {}) {
   const width = +((height * LOCKUP_W) / 64).toFixed(1);
   return [
@@ -91,14 +37,14 @@ export function lockupSvg({ ink, height = 64 } = {}) {
  * `width`×`height`. Home Assistant shows it on its light and its dark theme. */
 export function haLogoSvg({ width = 256, height = 100 } = {}) {
   const pad = 14;
-  const h = height - pad * 2;
+  const h = Math.min(height - pad * 2, ((width - pad * 2) * 64) / LOCKUP_W);
   const w = +((h * LOCKUP_W) / 64).toFixed(1);
   const x = +((width - w) / 2).toFixed(1);
   return [
     `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">`,
     `<rect x="1" y="1" width="${width - 2}" height="${height - 2}" rx="14" fill="${HOLE}" stroke="#E4E1D8" stroke-width="2"/>`,
-    `<svg x="${x}" y="${pad}" width="${w}" height="${h}" viewBox="0 0 ${LOCKUP_W} 64">`,
-    markArt(HOLE),
+    `<svg x="${x}" y="${(height - h) / 2}" width="${w}" height="${h}" viewBox="0 0 ${LOCKUP_W} 64">`,
+    markArt(),
     `<g fill="#1C1B19">${WORDMARK}</g>`,
     '</svg></svg>',
   ].join('');
@@ -128,14 +74,14 @@ async function main() {
   write('apps/docs/src/assets/logo.svg', favicon);
   await png(markSvg(), 32, 'apps/web/public/favicon-32.png');
   await png(markSvg({ bleed: true }), 180, 'apps/web/public/apple-touch-icon.png');
-  await png(markSvg({ hole: HOLE }), 192, 'apps/web/public/icon-192.png');
-  await png(markSvg({ hole: HOLE }), 512, 'apps/web/public/icon-512.png');
+  await png(markSvg(), 192, 'apps/web/public/icon-192.png');
+  await png(markSvg(), 512, 'apps/web/public/icon-512.png');
   // Maskable: the platform may cut the icon to a circle of 80% diameter; keep the art inside.
   await png(markSvg({ bleed: true, inset: 0.1 }), 512, 'apps/web/public/icon-maskable-512.png');
   // The README's lockup, in the kit's ink for each GitHub theme (light: --ink; dark: dark --ink).
   write('docs/assets/kept-lockup-light.svg', `${lockupSvg({ ink: '#1C1B19', height: 80 })}\n`);
   write('docs/assets/kept-lockup-dark.svg', `${lockupSvg({ ink: '#F2EFE9', height: 80 })}\n`);
-  // The Home Assistant app (homeassistant/kept): the mark with its hole cut out, and the logo.
+  // Home Assistant icon and lockup, with upstream-compatible file paths.
   await png(markSvg(), 128, 'homeassistant/kept/icon.png');
   write(
     'homeassistant/kept/logo.png',

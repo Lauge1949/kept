@@ -7,7 +7,7 @@ import https from 'node:https';
 import { Resolver } from 'node:dns/promises';
 const dir = process.env.KEPT_SMOKE_STATE;
 assert(dir, 'Set KEPT_SMOKE_STATE to the private fixture directory');
-const origin = 'https://dev-kept.laugesbin.win';
+const origin = 'https://tingfinder.laugesbin.win';
 const internal = 'http://127.0.0.1:18740';
 const fixture = JSON.parse(await readFile(`${dir}/fixtures.json`, 'utf8'));
 const { chromium } = await import(process.env.KEPT_PLAYWRIGHT_MODULE || '@playwright/test');

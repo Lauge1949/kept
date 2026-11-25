@@ -5,6 +5,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { chosenLocale, LOCALE_KEY, setLocale } from '@/lib/prefs';
 import { startLocale } from './i18n';
+import { t } from '@lingui/core/macro';
 
 afterEach(() => {
   vi.unstubAllGlobals();
@@ -15,6 +16,8 @@ describe('the language a page starts in (#474)', () => {
   it('follows the browser, and stores nothing', async () => {
     vi.stubGlobal('navigator', { language: 'da-DK' });
     expect(await startLocale()).toBe('da');
+    expect(t`Home`).toBe('Forside');
+    expect(t`More`).toBe('Mere');
     vi.stubGlobal('navigator', { language: 'de-DE' });
     expect(await startLocale()).toBe('de');
     expect(localStorage.getItem(LOCALE_KEY)).toBeNull();

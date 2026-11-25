@@ -1,9 +1,19 @@
 # Tingfinder: fortsæt her
 
-Senest ajourført 2026-11-22. Dette er projektets fortsættelsesplan, så en ny
+Senest ajourført 2026-11-25. Dette er projektets fortsættelsesplan, så en ny
 agentsession kan arbejde videre uden chathistorikken. Produktbeslutninger ejes af
 [FORK.md](FORK.md); build og test af [deploy/README.md](deploy/README.md).
 Opdatér denne plan efter hver afsluttet fase eller før et afbrudt forløb.
+
+## Rettelse 2026-11-25
+
+Ny kanonisk adresse: https://tingfinder.laugesbin.win. Den gamle adresse bevares som
+beskyttet kompatibilitetsorigin, så eksisterende installerede PWA'er kan synkronisere
+lokale køer. Flyt ikke eller ryd browserdata automatisk ved domæneskiftet.
+Dansk følger nu med appens shell, og fejl ved hentning af andre sprog falder tilbage
+til dansk. Den tidligere tomme katalogfallback kunne vise interne beskednøgler;
+den præcise udløser på ejerens iPhone er ikke verificeret. Build-/browsertest og
+aktuel deployment dokumenteres i serverens development.md.
 
 ## Første handling i næste session
 
@@ -23,7 +33,7 @@ Appen er en gave til Lauges far: tag et foto af en ting, giv den titel og fysisk
 lokation, og find den igen via søgning eller en enkel AI-chat. Beskrivelse er valgfri.
 
 - Vi videreudvikler den eksisterende Kept-fork, ikke en ny app fra bunden.
-- Navnet er **Tingfinder**; det oprindelige ravgule K-logo og design bevares.
+- Navnet er **Tingfinder**; eget ravgult logo med lup og opbevaringskasse (ejerordre 2026-11-25).
 - Dansk er et officielt sprog. Nye funktioner skal også være oversat.
 - Kepts oversigt over chattråde er accepteret. Vis en almindelig chat, uden
   agentjobs, sessions-ID'er eller teknisk harness i brugerfladen.
@@ -44,7 +54,7 @@ Git er ren på `lauge/develop`, og efter fetch matcher HEAD origin:
 | --- | --- |
 | Fork, egen database, fotolager og beskyttet HTTPS-preview | Udført |
 | Capture kræver titel og konkret rum/beholder; slet én uden at kassere resten | Udført og browserprøvet |
-| Tingfinder-navn, bevaret logo og dansk oversættelse | Udført og udrullet |
+| Tingfinder-navn, custom logo og dansk oversættelse | Udført og udrullet |
 | Mistet loginformularsession gav rå CSRF-fejl | Rettet i det fælles loginlag; offentlig browserprøve består |
 | Bekræftelse af rettelsen på ejerens fysiske iPhone | Udestår |
 | AI-kontrakt: Kepts wire-form og serverens abonnementsmønster | Kortlagt 2026-11-22; offline prøve består |

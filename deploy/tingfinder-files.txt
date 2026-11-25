@@ -95,3 +95,11 @@ apps/web/src/components/reports/progress.tsx
 apps/web/src/components/reports/claim-pack.tsx
 apps/web/src/components/ops/kit-download.tsx
 apps/server/src/setup/recovery-kit-content.test.ts
+
+apps/web/public/favicon-32.png
+apps/web/public/apple-touch-icon.png
+apps/web/public/icon-192.png
+apps/web/public/icon-512.png
+apps/web/public/icon-maskable-512.png
+apps/web/src/i18n/fallback-locale.test.ts
+apps/web/scripts/check-bundle.mjs
